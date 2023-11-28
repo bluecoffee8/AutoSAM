@@ -39,9 +39,9 @@ from evaluate import test_synapse, test_acdc
 parser = argparse.ArgumentParser(description='PyTorch ImageNet Training')
 
 
-parser.add_argument('-j', '--workers', default=32, type=int, metavar='N',
+parser.add_argument('-j', '--workers', default=1, type=int, metavar='N',
                     help='number of data loading workers (default: 32)')
-parser.add_argument('--epochs', default=120, type=int, metavar='N',
+parser.add_argument('--epochs', default=5, type=int, metavar='N',
                     help='number of total epochs to run')
 parser.add_argument('--start-epoch', default=0, type=int, metavar='N',
                     help='manual epoch number (useful on restarts)')
@@ -73,7 +73,7 @@ parser.add_argument('--dist-backend', default='nccl', type=str,
                     help='distributed backend')
 parser.add_argument('--seed', default=None, type=int,
                     help='seed for initializing training. ')
-parser.add_argument('--gpu', default=None, type=int,
+parser.add_argument('--gpu', default=0, type=int,
                     help='GPU id to use.')
 parser.add_argument('--multiprocessing-distributed', action='store_true',
                     help='Use multi-processing distributed training to launch '
@@ -81,22 +81,22 @@ parser.add_argument('--multiprocessing-distributed', action='store_true',
                          'fastest way to use PyTorch for either single node or '
                          'multi node data parallel training')
 
-parser.add_argument('--model_type', type=str, default="vit_l", help='path to splits file')
-parser.add_argument('--src_dir', type=str, default=None, help='path to splits file')
-parser.add_argument('--data_dir', type=str, default=None, help='path to datafolder')
+parser.add_argument('--model_type', type=str, default="vit_b", help='path to splits file')
+parser.add_argument('--src_dir', type=str, default="ACDC/", help='path to splits file')
+parser.add_argument('--data_dir', type=str, default="ACDC/imgs/", help='path to datafolder')
 parser.add_argument("--img_size", type=int, default=256)
-parser.add_argument("--classes", type=int, default=8)
+parser.add_argument("--classes", type=int, default=4)
 parser.add_argument("--do_contrast", default=False, action='store_true')
 parser.add_argument("--slice_threshold", type=float, default=0.05)
-parser.add_argument("--num_classes", type=int, default=14)
+parser.add_argument("--num_classes", type=int, default=4)
 parser.add_argument("--fold", type=int, default=0)
 parser.add_argument("--tr_size", type=int, default=1)
-parser.add_argument("--save_dir", type=str, default=None)
+parser.add_argument("--save_dir", type=str, default='basic')
 parser.add_argument("--load_saved_model", action='store_true',
                         help='whether freeze encoder of the segmenter')
 parser.add_argument("--saved_model_path", type=str, default=None)
 parser.add_argument("--load_pseudo_label", default=False, action='store_true')
-parser.add_argument("--dataset", type=str, default="synapse")
+parser.add_argument("--dataset", type=str, default="ACDC")
 
 def main():
     args = parser.parse_args()
@@ -161,7 +161,7 @@ def main_worker(gpu, ngpus_per_node, args):
     elif args.model_type == 'vit_l':
         model_checkpoint = 'sam_vit_l_0b3195.pth'
     elif args.model_type == 'vit_b':
-        model_checkpoint = 'sam_vit_b_01ec64.pth'
+        model_checkpoint = 'medsam_vit_b.pth'
 
     model = sam_feat_seg_model_registry[args.model_type](num_classes=args.num_classes, checkpoint=model_checkpoint)
 
