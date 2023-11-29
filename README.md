@@ -68,8 +68,31 @@ If you find our codes useful, please cite
 ## Basic Setup
 
 1. Clone repository 
-2. Follow setup steps for installing libraries (medsam conda env) above. In addition, need to separately install tensorboard (via conda), batchgenerators, and medpy (both via pip). 
-3. Repo for MedSAM (forked) is here: https://github.com/bluecoffee8/MedSAM/tree/main
+2. Instructions for setting up environment:
+
+First create conda env named medsam and activate.
+```
+conda create -n medsam python=3.10 -y
+```
+Install pytorch 2.0 compatible with CUDA 11.7 using
+```
+conda install pytorch==2.0.0 torchvision==0.15.0 torchaudio==2.0.0 pytorch-cuda=11.7 -c pytorch -c nvidia
+```
+In the AutoSAM folder, please run
+```
+pip install -e .
+```
+Need to separately install tensorboard as follows:
+```
+conda install -c conda-forge tensorboard
+```
+Also run 
+```
+pip install requirements.txt
+```
+
+If there are any other missing packages, install as needed within the conda env using pip. Make sure to activate conda env before running any code.
+3. Repo for MedSAM (forked) is here: https://github.com/bluecoffee8/MedSAM/tree/main This is where we will be getting the MedSAM image encoder weights.
 4. Download medsam_vit_b model checkpoint from https://drive.google.com/drive/folders/1ETWmi4AiniJeWOt6HAsYgTjYv_fkgzoN and place in AutoSAM/ folder.
 5. Ensure that in main_feat_seg and main_autosam_seg, in main_worker() function, the case where args.model_type == 'vit_b', the model_checkpoint should be 'medsam_vit_b.pth'
 6. Download ACDC data from https://drive.google.com/drive/folders/1RcpWYJ7EkwPiCR9u6HRrg7JHQ_Dr7494 and unzip annotations.zip and imgs.zip. Create an ACDC/ folder within AutoSAM/ folder and place splits.pkl, annotations, and imgs inside ACDC/
