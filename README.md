@@ -62,3 +62,29 @@ If you find our codes useful, please cite
   year={2023}
 }
 ```
+
+# Additional Notes by Kevin Li
+
+## Basic Setup
+
+1. Clone repository 
+2. Follow setup steps for installing libraries (medsam conda env) above. In addition, need to separately install tensorboard (via conda), batchgenerators, and medpy (both via pip). 
+3. Repo for MedSAM (forked) is here: https://github.com/bluecoffee8/MedSAM/tree/main
+4. Download medsam_vit_b model checkpoint from https://drive.google.com/drive/folders/1ETWmi4AiniJeWOt6HAsYgTjYv_fkgzoN and place in AutoSAM/ folder.
+5. Ensure that in main_feat_seg and main_autosam_seg, in main_worker() function, the case where args.model_type == 'vit_b', the model_checkpoint should be 'medsam_vit_b.pth'
+6. Download ACDC data from https://drive.google.com/drive/folders/1RcpWYJ7EkwPiCR9u6HRrg7JHQ_Dr7494 and unzip annotations.zip and imgs.zip. Create an ACDC/ folder within AutoSAM/ folder and place splits.pkl, annotations, and imgs inside ACDC/
+
+## Novel Experiments
+
+### Finetune CNN or ViT
+1. In scripts folder, in 'main_feat_seg' (for CNN) or 'main_autosam_seg' (for ViT), in function save_checkpoint() change the location to where best model is copied to desired path. Also near the end of main_worker() make sure the code block involving save_checkpoint() is uncommented. This ensures that the best model over all epochs is saved somewhere. 
+2. Simply run finetune_cnn.sh file for CNN (finetune_vit.sh for ViT). For input arguments, if running on 1 GPU, ensure --workers=1. Finetune for 120 epochs. We use 1 GPU so ensure --gpu=0. Ensure --model_type=vit_b, --src_dir=ACDC/, --data_dir=ACDC/imgs/, --classes=4, --num_classes=4. So far we run experiment only on fold 0, so --fold=0. One can run two kinds of experiments, one with --tr_size=1 and other with --tr_size=5 (size of volume to use during training). --save_dir should equal the name of folder within AutoSAM/output_experiment where you wish to store results. Ensure --dataset=ACDC. 
+
+### Finetune MLP
+1. In models folder, in 'build_sam_feat_seg_model.py', in '_build_feat_seg_model', uncomment the MLP model for SegDecoder and comment out CNN model. Then just run finetune_cnn.sh. 
+2. Simply remember to change the best_model path in 'main_feat_seg' save_checkpoint() function, and also make sure --save_dir is changed to folder you wish to save results in. Also ensure that tr_size is the volume size you want (either 1 or 5). 
+
+### Evalute on Best Model
+
+1. In the test.py file, uncomment the correct model ('sam_feat_seg_model_registry' for MLP/CNN, 'sam_seg_model_registry' for ViT). Load the correct checkpoint (have a path to the desired best model checkpoint file), for MLP/CNN use test_cnn, else if ViT use test_vit. 
+2. Simply run run_test.sh.

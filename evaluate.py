@@ -113,9 +113,9 @@ def test_acdc(args):
     Dice_myo = []
     Dice_lv = []
 
-    hd_rv = []
-    hd_myo = []
-    hd_lv = []
+    # hd_rv = []
+    # hd_myo = []
+    # hd_lv = []
 
     def process_label(label):
         rv = label == 1
@@ -138,24 +138,24 @@ def test_acdc(args):
         Dice_myo.append(dice(infer_myo, label_myo))
         Dice_lv.append(dice(infer_lv, label_lv))
 
-        hd_rv.append(hd(infer_rv, label_rv))
-        hd_myo.append(hd(infer_myo, label_myo))
-        hd_lv.append(hd(infer_lv, label_lv))
+        # hd_rv.append(hd(infer_rv, label_rv))
+        # hd_myo.append(hd(infer_myo, label_myo))
+        # hd_lv.append(hd(infer_lv, label_lv))
 
         fw.write('*' * 20 + '\n', )
         fw.write(infer_path.split('/')[-1] + '\n')
-        fw.write('hd_rv: {:.4f}\n'.format(hd_rv[-1]))
-        fw.write('hd_myo: {:.4f}\n'.format(hd_myo[-1]))
-        fw.write('hd_lv: {:.4f}\n'.format(hd_lv[-1]))
+        # fw.write('hd_rv: {:.4f}\n'.format(hd_rv[-1]))
+        # fw.write('hd_myo: {:.4f}\n'.format(hd_myo[-1]))
+        # fw.write('hd_lv: {:.4f}\n'.format(hd_lv[-1]))
         # fw.write('*'*20+'\n')
         fw.write('*' * 20 + '\n', )
         fw.write(infer_path.split('/')[-1] + '\n')
         fw.write('Dice_rv: {:.4f}\n'.format(Dice_rv[-1]))
         fw.write('Dice_myo: {:.4f}\n'.format(Dice_myo[-1]))
         fw.write('Dice_lv: {:.4f}\n'.format(Dice_lv[-1]))
-        fw.write('hd_rv: {:.4f}\n'.format(hd_rv[-1]))
-        fw.write('hd_myo: {:.4f}\n'.format(hd_myo[-1]))
-        fw.write('hd_lv: {:.4f}\n'.format(hd_lv[-1]))
+        # fw.write('hd_rv: {:.4f}\n'.format(hd_rv[-1]))
+        # fw.write('hd_myo: {:.4f}\n'.format(hd_myo[-1]))
+        # fw.write('hd_lv: {:.4f}\n'.format(hd_lv[-1]))
         fw.write('*' * 20 + '\n')
 
     # fw.write('*'*20+'\n')
@@ -171,9 +171,9 @@ def test_acdc(args):
     fw.write('Dice_myo' + str(np.mean(Dice_myo)) + '\n')
     fw.write('Dice_lv' + str(np.mean(Dice_lv)) + '\n')
     fw.write('Mean_HD\n')
-    fw.write('HD_rv' + str(np.mean(hd_rv)) + '\n')
-    fw.write('HD_myo' + str(np.mean(hd_myo)) + '\n')
-    fw.write('HD_lv' + str(np.mean(hd_lv)) + '\n')
+    # fw.write('HD_rv' + str(np.mean(hd_rv)) + '\n')
+    # fw.write('HD_myo' + str(np.mean(hd_myo)) + '\n')
+    # fw.write('HD_lv' + str(np.mean(hd_lv)) + '\n')
     fw.write('*' * 20 + '\n')
 
     dsc = []
@@ -181,9 +181,9 @@ def test_acdc(args):
     dsc.append(np.mean(Dice_myo))
     dsc.append(np.mean(Dice_lv))
     avg_hd = []
-    avg_hd.append(np.mean(hd_rv))
-    avg_hd.append(np.mean(hd_myo))
-    avg_hd.append(np.mean(hd_lv))
+    # avg_hd.append(np.mean(hd_rv))
+    # avg_hd.append(np.mean(hd_myo))
+    # avg_hd.append(np.mean(hd_lv))
     fw.write('avg_hd:' + str(np.mean(avg_hd)) + '\n')
 
     fw.write('DSC:' + str(np.mean(dsc)) + '\n')

@@ -1,0 +1,212 @@
+loaded keys: dict_keys(['image_encoder.neck.0.weight', 'image_encoder.neck.1.weight', 'image_encoder.neck.1.bias', 'image_encoder.neck.2.weight', 'image_encoder.neck.3.weight', 'image_encoder.neck.3.bias', 'image_encoder.patch_embed.proj.weight', 'image_encoder.patch_embed.proj.bias', 'image_encoder.blocks.0.norm1.weight', 'image_encoder.blocks.0.norm1.bias', 'image_encoder.blocks.0.attn.rel_pos_h', 'image_encoder.blocks.0.attn.rel_pos_w', 'image_encoder.blocks.0.attn.qkv.weight', 'image_encoder.blocks.0.attn.qkv.bias', 'image_encoder.blocks.0.attn.proj.weight', 'image_encoder.blocks.0.attn.proj.bias', 'image_encoder.blocks.0.norm2.weight', 'image_encoder.blocks.0.norm2.bias', 'image_encoder.blocks.0.mlp.lin1.weight', 'image_encoder.blocks.0.mlp.lin1.bias', 'image_encoder.blocks.0.mlp.lin2.weight', 'image_encoder.blocks.0.mlp.lin2.bias', 'image_encoder.blocks.1.norm1.weight', 'image_encoder.blocks.1.norm1.bias', 'image_encoder.blocks.1.attn.rel_pos_h', 'image_encoder.blocks.1.attn.rel_pos_w', 'image_encoder.blocks.1.attn.qkv.weight', 'image_encoder.blocks.1.attn.qkv.bias', 'image_encoder.blocks.1.attn.proj.weight', 'image_encoder.blocks.1.attn.proj.bias', 'image_encoder.blocks.1.norm2.weight', 'image_encoder.blocks.1.norm2.bias', 'image_encoder.blocks.1.mlp.lin1.weight', 'image_encoder.blocks.1.mlp.lin1.bias', 'image_encoder.blocks.1.mlp.lin2.weight', 'image_encoder.blocks.1.mlp.lin2.bias', 'image_encoder.blocks.2.norm1.weight', 'image_encoder.blocks.2.norm1.bias', 'image_encoder.blocks.2.attn.rel_pos_h', 'image_encoder.blocks.2.attn.rel_pos_w', 'image_encoder.blocks.2.attn.qkv.weight', 'image_encoder.blocks.2.attn.qkv.bias', 'image_encoder.blocks.2.attn.proj.weight', 'image_encoder.blocks.2.attn.proj.bias', 'image_encoder.blocks.2.norm2.weight', 'image_encoder.blocks.2.norm2.bias', 'image_encoder.blocks.2.mlp.lin1.weight', 'image_encoder.blocks.2.mlp.lin1.bias', 'image_encoder.blocks.2.mlp.lin2.weight', 'image_encoder.blocks.2.mlp.lin2.bias', 'image_encoder.blocks.3.norm1.weight', 'image_encoder.blocks.3.norm1.bias', 'image_encoder.blocks.3.attn.rel_pos_h', 'image_encoder.blocks.3.attn.rel_pos_w', 'image_encoder.blocks.3.attn.qkv.weight', 'image_encoder.blocks.3.attn.qkv.bias', 'image_encoder.blocks.3.attn.proj.weight', 'image_encoder.blocks.3.attn.proj.bias', 'image_encoder.blocks.3.norm2.weight', 'image_encoder.blocks.3.norm2.bias', 'image_encoder.blocks.3.mlp.lin1.weight', 'image_encoder.blocks.3.mlp.lin1.bias', 'image_encoder.blocks.3.mlp.lin2.weight', 'image_encoder.blocks.3.mlp.lin2.bias', 'image_encoder.blocks.4.norm1.weight', 'image_encoder.blocks.4.norm1.bias', 'image_encoder.blocks.4.attn.rel_pos_h', 'image_encoder.blocks.4.attn.rel_pos_w', 'image_encoder.blocks.4.attn.qkv.weight', 'image_encoder.blocks.4.attn.qkv.bias', 'image_encoder.blocks.4.attn.proj.weight', 'image_encoder.blocks.4.attn.proj.bias', 'image_encoder.blocks.4.norm2.weight', 'image_encoder.blocks.4.norm2.bias', 'image_encoder.blocks.4.mlp.lin1.weight', 'image_encoder.blocks.4.mlp.lin1.bias', 'image_encoder.blocks.4.mlp.lin2.weight', 'image_encoder.blocks.4.mlp.lin2.bias', 'image_encoder.blocks.5.norm1.weight', 'image_encoder.blocks.5.norm1.bias', 'image_encoder.blocks.5.attn.rel_pos_h', 'image_encoder.blocks.5.attn.rel_pos_w', 'image_encoder.blocks.5.attn.qkv.weight', 'image_encoder.blocks.5.attn.qkv.bias', 'image_encoder.blocks.5.attn.proj.weight', 'image_encoder.blocks.5.attn.proj.bias', 'image_encoder.blocks.5.norm2.weight', 'image_encoder.blocks.5.norm2.bias', 'image_encoder.blocks.5.mlp.lin1.weight', 'image_encoder.blocks.5.mlp.lin1.bias', 'image_encoder.blocks.5.mlp.lin2.weight', 'image_encoder.blocks.5.mlp.lin2.bias', 'image_encoder.blocks.6.norm1.weight', 'image_encoder.blocks.6.norm1.bias', 'image_encoder.blocks.6.attn.rel_pos_h', 'image_encoder.blocks.6.attn.rel_pos_w', 'image_encoder.blocks.6.attn.qkv.weight', 'image_encoder.blocks.6.attn.qkv.bias', 'image_encoder.blocks.6.attn.proj.weight', 'image_encoder.blocks.6.attn.proj.bias', 'image_encoder.blocks.6.norm2.weight', 'image_encoder.blocks.6.norm2.bias', 'image_encoder.blocks.6.mlp.lin1.weight', 'image_encoder.blocks.6.mlp.lin1.bias', 'image_encoder.blocks.6.mlp.lin2.weight', 'image_encoder.blocks.6.mlp.lin2.bias', 'image_encoder.blocks.7.norm1.weight', 'image_encoder.blocks.7.norm1.bias', 'image_encoder.blocks.7.attn.rel_pos_h', 'image_encoder.blocks.7.attn.rel_pos_w', 'image_encoder.blocks.7.attn.qkv.weight', 'image_encoder.blocks.7.attn.qkv.bias', 'image_encoder.blocks.7.attn.proj.weight', 'image_encoder.blocks.7.attn.proj.bias', 'image_encoder.blocks.7.norm2.weight', 'image_encoder.blocks.7.norm2.bias', 'image_encoder.blocks.7.mlp.lin1.weight', 'image_encoder.blocks.7.mlp.lin1.bias', 'image_encoder.blocks.7.mlp.lin2.weight', 'image_encoder.blocks.7.mlp.lin2.bias', 'image_encoder.blocks.8.norm1.weight', 'image_encoder.blocks.8.norm1.bias', 'image_encoder.blocks.8.attn.rel_pos_h', 'image_encoder.blocks.8.attn.rel_pos_w', 'image_encoder.blocks.8.attn.qkv.weight', 'image_encoder.blocks.8.attn.qkv.bias', 'image_encoder.blocks.8.attn.proj.weight', 'image_encoder.blocks.8.attn.proj.bias', 'image_encoder.blocks.8.norm2.weight', 'image_encoder.blocks.8.norm2.bias', 'image_encoder.blocks.8.mlp.lin1.weight', 'image_encoder.blocks.8.mlp.lin1.bias', 'image_encoder.blocks.8.mlp.lin2.weight', 'image_encoder.blocks.8.mlp.lin2.bias', 'image_encoder.blocks.9.norm1.weight', 'image_encoder.blocks.9.norm1.bias', 'image_encoder.blocks.9.attn.rel_pos_h', 'image_encoder.blocks.9.attn.rel_pos_w', 'image_encoder.blocks.9.attn.qkv.weight', 'image_encoder.blocks.9.attn.qkv.bias', 'image_encoder.blocks.9.attn.proj.weight', 'image_encoder.blocks.9.attn.proj.bias', 'image_encoder.blocks.9.norm2.weight', 'image_encoder.blocks.9.norm2.bias', 'image_encoder.blocks.9.mlp.lin1.weight', 'image_encoder.blocks.9.mlp.lin1.bias', 'image_encoder.blocks.9.mlp.lin2.weight', 'image_encoder.blocks.9.mlp.lin2.bias', 'image_encoder.blocks.10.norm1.weight', 'image_encoder.blocks.10.norm1.bias', 'image_encoder.blocks.10.attn.rel_pos_h', 'image_encoder.blocks.10.attn.rel_pos_w', 'image_encoder.blocks.10.attn.qkv.weight', 'image_encoder.blocks.10.attn.qkv.bias', 'image_encoder.blocks.10.attn.proj.weight', 'image_encoder.blocks.10.attn.proj.bias', 'image_encoder.blocks.10.norm2.weight', 'image_encoder.blocks.10.norm2.bias', 'image_encoder.blocks.10.mlp.lin1.weight', 'image_encoder.blocks.10.mlp.lin1.bias', 'image_encoder.blocks.10.mlp.lin2.weight', 'image_encoder.blocks.10.mlp.lin2.bias', 'image_encoder.blocks.11.norm1.weight', 'image_encoder.blocks.11.norm1.bias', 'image_encoder.blocks.11.attn.rel_pos_h', 'image_encoder.blocks.11.attn.rel_pos_w', 'image_encoder.blocks.11.attn.qkv.weight', 'image_encoder.blocks.11.attn.qkv.bias', 'image_encoder.blocks.11.attn.proj.weight', 'image_encoder.blocks.11.attn.proj.bias', 'image_encoder.blocks.11.norm2.weight', 'image_encoder.blocks.11.norm2.bias', 'image_encoder.blocks.11.mlp.lin1.weight', 'image_encoder.blocks.11.mlp.lin1.bias', 'image_encoder.blocks.11.mlp.lin2.weight', 'image_encoder.blocks.11.mlp.lin2.bias', 'mask_decoder.transformer.layers.0.self_attn.q_proj.weight', 'mask_decoder.transformer.layers.0.self_attn.q_proj.bias', 'mask_decoder.transformer.layers.0.self_attn.k_proj.weight', 'mask_decoder.transformer.layers.0.self_attn.k_proj.bias', 'mask_decoder.transformer.layers.0.self_attn.v_proj.weight', 'mask_decoder.transformer.layers.0.self_attn.v_proj.bias', 'mask_decoder.transformer.layers.0.self_attn.out_proj.weight', 'mask_decoder.transformer.layers.0.self_attn.out_proj.bias', 'mask_decoder.transformer.layers.0.norm1.weight', 'mask_decoder.transformer.layers.0.norm1.bias', 'mask_decoder.transformer.layers.0.cross_attn_token_to_image.q_proj.weight', 'mask_decoder.transformer.layers.0.cross_attn_token_to_image.q_proj.bias', 'mask_decoder.transformer.layers.0.cross_attn_token_to_image.k_proj.weight', 'mask_decoder.transformer.layers.0.cross_attn_token_to_image.k_proj.bias', 'mask_decoder.transformer.layers.0.cross_attn_token_to_image.v_proj.weight', 'mask_decoder.transformer.layers.0.cross_attn_token_to_image.v_proj.bias', 'mask_decoder.transformer.layers.0.cross_attn_token_to_image.out_proj.weight', 'mask_decoder.transformer.layers.0.cross_attn_token_to_image.out_proj.bias', 'mask_decoder.transformer.layers.0.norm2.weight', 'mask_decoder.transformer.layers.0.norm2.bias', 'mask_decoder.transformer.layers.0.mlp.lin1.weight', 'mask_decoder.transformer.layers.0.mlp.lin1.bias', 'mask_decoder.transformer.layers.0.mlp.lin2.weight', 'mask_decoder.transformer.layers.0.mlp.lin2.bias', 'mask_decoder.transformer.layers.0.norm3.weight', 'mask_decoder.transformer.layers.0.norm3.bias', 'mask_decoder.transformer.layers.0.norm4.weight', 'mask_decoder.transformer.layers.0.norm4.bias', 'mask_decoder.transformer.layers.0.cross_attn_image_to_token.q_proj.weight', 'mask_decoder.transformer.layers.0.cross_attn_image_to_token.q_proj.bias', 'mask_decoder.transformer.layers.0.cross_attn_image_to_token.k_proj.weight', 'mask_decoder.transformer.layers.0.cross_attn_image_to_token.k_proj.bias', 'mask_decoder.transformer.layers.0.cross_attn_image_to_token.v_proj.weight', 'mask_decoder.transformer.layers.0.cross_attn_image_to_token.v_proj.bias', 'mask_decoder.transformer.layers.0.cross_attn_image_to_token.out_proj.weight', 'mask_decoder.transformer.layers.0.cross_attn_image_to_token.out_proj.bias', 'mask_decoder.transformer.layers.1.self_attn.q_proj.weight', 'mask_decoder.transformer.layers.1.self_attn.q_proj.bias', 'mask_decoder.transformer.layers.1.self_attn.k_proj.weight', 'mask_decoder.transformer.layers.1.self_attn.k_proj.bias', 'mask_decoder.transformer.layers.1.self_attn.v_proj.weight', 'mask_decoder.transformer.layers.1.self_attn.v_proj.bias', 'mask_decoder.transformer.layers.1.self_attn.out_proj.weight', 'mask_decoder.transformer.layers.1.self_attn.out_proj.bias', 'mask_decoder.transformer.layers.1.norm1.weight', 'mask_decoder.transformer.layers.1.norm1.bias', 'mask_decoder.transformer.layers.1.cross_attn_token_to_image.q_proj.weight', 'mask_decoder.transformer.layers.1.cross_attn_token_to_image.q_proj.bias', 'mask_decoder.transformer.layers.1.cross_attn_token_to_image.k_proj.weight', 'mask_decoder.transformer.layers.1.cross_attn_token_to_image.k_proj.bias', 'mask_decoder.transformer.layers.1.cross_attn_token_to_image.v_proj.weight', 'mask_decoder.transformer.layers.1.cross_attn_token_to_image.v_proj.bias', 'mask_decoder.transformer.layers.1.cross_attn_token_to_image.out_proj.weight', 'mask_decoder.transformer.layers.1.cross_attn_token_to_image.out_proj.bias', 'mask_decoder.transformer.layers.1.norm2.weight', 'mask_decoder.transformer.layers.1.norm2.bias', 'mask_decoder.transformer.layers.1.mlp.lin1.weight', 'mask_decoder.transformer.layers.1.mlp.lin1.bias', 'mask_decoder.transformer.layers.1.mlp.lin2.weight', 'mask_decoder.transformer.layers.1.mlp.lin2.bias', 'mask_decoder.transformer.layers.1.norm3.weight', 'mask_decoder.transformer.layers.1.norm3.bias', 'mask_decoder.transformer.layers.1.norm4.weight', 'mask_decoder.transformer.layers.1.norm4.bias', 'mask_decoder.transformer.layers.1.cross_attn_image_to_token.q_proj.weight', 'mask_decoder.transformer.layers.1.cross_attn_image_to_token.q_proj.bias', 'mask_decoder.transformer.layers.1.cross_attn_image_to_token.k_proj.weight', 'mask_decoder.transformer.layers.1.cross_attn_image_to_token.k_proj.bias', 'mask_decoder.transformer.layers.1.cross_attn_image_to_token.v_proj.weight', 'mask_decoder.transformer.layers.1.cross_attn_image_to_token.v_proj.bias', 'mask_decoder.transformer.layers.1.cross_attn_image_to_token.out_proj.weight', 'mask_decoder.transformer.layers.1.cross_attn_image_to_token.out_proj.bias', 'mask_decoder.transformer.final_attn_token_to_image.q_proj.weight', 'mask_decoder.transformer.final_attn_token_to_image.q_proj.bias', 'mask_decoder.transformer.final_attn_token_to_image.k_proj.weight', 'mask_decoder.transformer.final_attn_token_to_image.k_proj.bias', 'mask_decoder.transformer.final_attn_token_to_image.v_proj.weight', 'mask_decoder.transformer.final_attn_token_to_image.v_proj.bias', 'mask_decoder.transformer.final_attn_token_to_image.out_proj.weight', 'mask_decoder.transformer.final_attn_token_to_image.out_proj.bias', 'mask_decoder.transformer.norm_final_attn.weight', 'mask_decoder.transformer.norm_final_attn.bias', 'mask_decoder.output_upscaling.0.weight', 'mask_decoder.output_upscaling.0.bias', 'mask_decoder.output_upscaling.1.weight', 'mask_decoder.output_upscaling.1.bias', 'mask_decoder.output_upscaling.3.weight', 'mask_decoder.output_upscaling.3.bias', 'mask_decoder.output_hypernetworks_mlps.0.layers.0.weight', 'mask_decoder.output_hypernetworks_mlps.0.layers.0.bias', 'mask_decoder.output_hypernetworks_mlps.0.layers.1.weight', 'mask_decoder.output_hypernetworks_mlps.0.layers.1.bias', 'mask_decoder.output_hypernetworks_mlps.0.layers.2.weight', 'mask_decoder.output_hypernetworks_mlps.0.layers.2.bias', 'mask_decoder.output_hypernetworks_mlps.1.layers.0.weight', 'mask_decoder.output_hypernetworks_mlps.1.layers.0.bias', 'mask_decoder.output_hypernetworks_mlps.1.layers.1.weight', 'mask_decoder.output_hypernetworks_mlps.1.layers.1.bias', 'mask_decoder.output_hypernetworks_mlps.1.layers.2.weight', 'mask_decoder.output_hypernetworks_mlps.1.layers.2.bias', 'image_encoder.pos_embed'])
+Test
+dataset length: 20
+(20, 224, 224) (20, 224, 224)
+finish saving file: patient_014
+dataset length: 18
+(18, 224, 224) (18, 224, 224)
+finish saving file: patient_060
+dataset length: 18
+(18, 224, 224) (18, 224, 224)
+finish saving file: patient_044
+dataset length: 16
+(16, 224, 224) (16, 224, 224)
+finish saving file: patient_036
+dataset length: 20
+(20, 224, 224) (20, 224, 224)
+finish saving file: patient_003
+dataset length: 16
+(16, 224, 224) (16, 224, 224)
+finish saving file: patient_100
+dataset length: 16
+(16, 224, 224) (16, 224, 224)
+finish saving file: patient_065
+dataset length: 20
+(20, 224, 224) (20, 224, 224)
+finish saving file: patient_013
+dataset length: 16
+(16, 224, 224) (16, 224, 224)
+finish saving file: patient_038
+dataset length: 20
+(20, 224, 224) (20, 224, 224)
+finish saving file: patient_093
+dataset length: 24
+(24, 224, 224) (24, 224, 224)
+finish saving file: patient_043
+dataset length: 32
+(32, 224, 224) (32, 224, 224)
+finish saving file: patient_082
+dataset length: 20
+(20, 224, 224) (20, 224, 224)
+finish saving file: patient_031
+dataset length: 20
+(20, 224, 224) (20, 224, 224)
+finish saving file: patient_005
+dataset length: 20
+/home/kl321/miniconda3/envs/medsam/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3504: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/kl321/miniconda3/envs/medsam/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+(20, 224, 224) (20, 224, 224)
+finish saving file: patient_016
+patient_003.nii
+patient_003.nii
+patient_005.nii
+patient_005.nii
+patient_013.nii
+patient_013.nii
+patient_014.nii
+patient_014.nii
+patient_016.nii
+patient_016.nii
+patient_031.nii
+patient_031.nii
+patient_036.nii
+patient_036.nii
+patient_038.nii
+patient_038.nii
+patient_043.nii
+patient_043.nii
+patient_044.nii
+patient_044.nii
+patient_060.nii
+patient_060.nii
+patient_065.nii
+patient_065.nii
+patient_082.nii
+patient_082.nii
+patient_093.nii
+patient_093.nii
+patient_100.nii
+patient_100.nii
+done
+********************
+patient_003.nii
+********************
+patient_003.nii
+Dice_rv: 0.3243
+Dice_myo: 0.6906
+Dice_lv: 0.8986
+********************
+********************
+patient_005.nii
+********************
+patient_005.nii
+Dice_rv: 0.0658
+Dice_myo: 0.5723
+Dice_lv: 0.8837
+********************
+********************
+patient_013.nii
+********************
+patient_013.nii
+Dice_rv: 0.4234
+Dice_myo: 0.6407
+Dice_lv: 0.8830
+********************
+********************
+patient_014.nii
+********************
+patient_014.nii
+Dice_rv: 0.1345
+Dice_myo: 0.5177
+Dice_lv: 0.9043
+********************
+********************
+patient_016.nii
+********************
+patient_016.nii
+Dice_rv: 0.2010
+Dice_myo: 0.5230
+Dice_lv: 0.9294
+********************
+********************
+patient_031.nii
+********************
+patient_031.nii
+Dice_rv: 0.6717
+Dice_myo: 0.6888
+Dice_lv: 0.7655
+********************
+********************
+patient_036.nii
+********************
+patient_036.nii
+Dice_rv: 0.6499
+Dice_myo: 0.7349
+Dice_lv: 0.8859
+********************
+********************
+patient_038.nii
+********************
+patient_038.nii
+Dice_rv: 0.2311
+Dice_myo: 0.2383
+Dice_lv: 0.7913
+********************
+********************
+patient_043.nii
+********************
+patient_043.nii
+Dice_rv: 0.3738
+Dice_myo: 0.5236
+Dice_lv: 0.7860
+********************
+********************
+patient_044.nii
+********************
+patient_044.nii
+Dice_rv: 0.0869
+Dice_myo: 0.6944
+Dice_lv: 0.6588
+********************
+********************
+patient_060.nii
+********************
+patient_060.nii
+Dice_rv: 0.2653
+Dice_myo: 0.2119
+Dice_lv: 0.4791
+********************
+********************
+patient_065.nii
+********************
+patient_065.nii
+Dice_rv: 0.3220
+Dice_myo: 0.2164
+Dice_lv: 0.4966
+********************
+********************
+patient_082.nii
+********************
+patient_082.nii
+Dice_rv: 0.1855
+Dice_myo: 0.4946
+Dice_lv: 0.8235
+********************
+********************
+patient_093.nii
+********************
+patient_093.nii
+Dice_rv: 0.4240
+Dice_myo: 0.6819
+Dice_lv: 0.6335
+********************
+********************
+patient_100.nii
+********************
+patient_100.nii
+Dice_rv: 0.4286
+Dice_myo: 0.6900
+Dice_lv: 0.5668
+********************
+********************
+Mean_Dice
+Dice_rv0.31919833552127663
+Dice_myo0.5412804659822792
+Dice_lv0.7590640738070689
+Mean_HD
+********************
+avg_hd:nan
+DSC:0.5398476251035416
+HD:nan

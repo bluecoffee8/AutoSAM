@@ -1,0 +1,164 @@
+/home/kl321/AutoSAM/scripts/main_feat_seg.py:115: UserWarning: You have chosen a specific GPU. This will completely disable data parallelism.
+  warnings.warn('You have chosen a specific GPU. This will completely '
+Use GPU: 0 for training
+loaded keys: ['image_encoder.neck.0.weight', 'image_encoder.neck.1.weight', 'image_encoder.neck.1.bias', 'image_encoder.neck.2.weight', 'image_encoder.neck.3.weight', 'image_encoder.neck.3.bias', 'image_encoder.patch_embed.proj.weight', 'image_encoder.patch_embed.proj.bias', 'image_encoder.blocks.0.norm1.weight', 'image_encoder.blocks.0.norm1.bias', 'image_encoder.blocks.0.attn.rel_pos_h', 'image_encoder.blocks.0.attn.rel_pos_w', 'image_encoder.blocks.0.attn.qkv.weight', 'image_encoder.blocks.0.attn.qkv.bias', 'image_encoder.blocks.0.attn.proj.weight', 'image_encoder.blocks.0.attn.proj.bias', 'image_encoder.blocks.0.norm2.weight', 'image_encoder.blocks.0.norm2.bias', 'image_encoder.blocks.0.mlp.lin1.weight', 'image_encoder.blocks.0.mlp.lin1.bias', 'image_encoder.blocks.0.mlp.lin2.weight', 'image_encoder.blocks.0.mlp.lin2.bias', 'image_encoder.blocks.1.norm1.weight', 'image_encoder.blocks.1.norm1.bias', 'image_encoder.blocks.1.attn.rel_pos_h', 'image_encoder.blocks.1.attn.rel_pos_w', 'image_encoder.blocks.1.attn.qkv.weight', 'image_encoder.blocks.1.attn.qkv.bias', 'image_encoder.blocks.1.attn.proj.weight', 'image_encoder.blocks.1.attn.proj.bias', 'image_encoder.blocks.1.norm2.weight', 'image_encoder.blocks.1.norm2.bias', 'image_encoder.blocks.1.mlp.lin1.weight', 'image_encoder.blocks.1.mlp.lin1.bias', 'image_encoder.blocks.1.mlp.lin2.weight', 'image_encoder.blocks.1.mlp.lin2.bias', 'image_encoder.blocks.2.norm1.weight', 'image_encoder.blocks.2.norm1.bias', 'image_encoder.blocks.2.attn.rel_pos_h', 'image_encoder.blocks.2.attn.rel_pos_w', 'image_encoder.blocks.2.attn.qkv.weight', 'image_encoder.blocks.2.attn.qkv.bias', 'image_encoder.blocks.2.attn.proj.weight', 'image_encoder.blocks.2.attn.proj.bias', 'image_encoder.blocks.2.norm2.weight', 'image_encoder.blocks.2.norm2.bias', 'image_encoder.blocks.2.mlp.lin1.weight', 'image_encoder.blocks.2.mlp.lin1.bias', 'image_encoder.blocks.2.mlp.lin2.weight', 'image_encoder.blocks.2.mlp.lin2.bias', 'image_encoder.blocks.3.norm1.weight', 'image_encoder.blocks.3.norm1.bias', 'image_encoder.blocks.3.attn.rel_pos_h', 'image_encoder.blocks.3.attn.rel_pos_w', 'image_encoder.blocks.3.attn.qkv.weight', 'image_encoder.blocks.3.attn.qkv.bias', 'image_encoder.blocks.3.attn.proj.weight', 'image_encoder.blocks.3.attn.proj.bias', 'image_encoder.blocks.3.norm2.weight', 'image_encoder.blocks.3.norm2.bias', 'image_encoder.blocks.3.mlp.lin1.weight', 'image_encoder.blocks.3.mlp.lin1.bias', 'image_encoder.blocks.3.mlp.lin2.weight', 'image_encoder.blocks.3.mlp.lin2.bias', 'image_encoder.blocks.4.norm1.weight', 'image_encoder.blocks.4.norm1.bias', 'image_encoder.blocks.4.attn.rel_pos_h', 'image_encoder.blocks.4.attn.rel_pos_w', 'image_encoder.blocks.4.attn.qkv.weight', 'image_encoder.blocks.4.attn.qkv.bias', 'image_encoder.blocks.4.attn.proj.weight', 'image_encoder.blocks.4.attn.proj.bias', 'image_encoder.blocks.4.norm2.weight', 'image_encoder.blocks.4.norm2.bias', 'image_encoder.blocks.4.mlp.lin1.weight', 'image_encoder.blocks.4.mlp.lin1.bias', 'image_encoder.blocks.4.mlp.lin2.weight', 'image_encoder.blocks.4.mlp.lin2.bias', 'image_encoder.blocks.5.norm1.weight', 'image_encoder.blocks.5.norm1.bias', 'image_encoder.blocks.5.attn.rel_pos_h', 'image_encoder.blocks.5.attn.rel_pos_w', 'image_encoder.blocks.5.attn.qkv.weight', 'image_encoder.blocks.5.attn.qkv.bias', 'image_encoder.blocks.5.attn.proj.weight', 'image_encoder.blocks.5.attn.proj.bias', 'image_encoder.blocks.5.norm2.weight', 'image_encoder.blocks.5.norm2.bias', 'image_encoder.blocks.5.mlp.lin1.weight', 'image_encoder.blocks.5.mlp.lin1.bias', 'image_encoder.blocks.5.mlp.lin2.weight', 'image_encoder.blocks.5.mlp.lin2.bias', 'image_encoder.blocks.6.norm1.weight', 'image_encoder.blocks.6.norm1.bias', 'image_encoder.blocks.6.attn.rel_pos_h', 'image_encoder.blocks.6.attn.rel_pos_w', 'image_encoder.blocks.6.attn.qkv.weight', 'image_encoder.blocks.6.attn.qkv.bias', 'image_encoder.blocks.6.attn.proj.weight', 'image_encoder.blocks.6.attn.proj.bias', 'image_encoder.blocks.6.norm2.weight', 'image_encoder.blocks.6.norm2.bias', 'image_encoder.blocks.6.mlp.lin1.weight', 'image_encoder.blocks.6.mlp.lin1.bias', 'image_encoder.blocks.6.mlp.lin2.weight', 'image_encoder.blocks.6.mlp.lin2.bias', 'image_encoder.blocks.7.norm1.weight', 'image_encoder.blocks.7.norm1.bias', 'image_encoder.blocks.7.attn.rel_pos_h', 'image_encoder.blocks.7.attn.rel_pos_w', 'image_encoder.blocks.7.attn.qkv.weight', 'image_encoder.blocks.7.attn.qkv.bias', 'image_encoder.blocks.7.attn.proj.weight', 'image_encoder.blocks.7.attn.proj.bias', 'image_encoder.blocks.7.norm2.weight', 'image_encoder.blocks.7.norm2.bias', 'image_encoder.blocks.7.mlp.lin1.weight', 'image_encoder.blocks.7.mlp.lin1.bias', 'image_encoder.blocks.7.mlp.lin2.weight', 'image_encoder.blocks.7.mlp.lin2.bias', 'image_encoder.blocks.8.norm1.weight', 'image_encoder.blocks.8.norm1.bias', 'image_encoder.blocks.8.attn.rel_pos_h', 'image_encoder.blocks.8.attn.rel_pos_w', 'image_encoder.blocks.8.attn.qkv.weight', 'image_encoder.blocks.8.attn.qkv.bias', 'image_encoder.blocks.8.attn.proj.weight', 'image_encoder.blocks.8.attn.proj.bias', 'image_encoder.blocks.8.norm2.weight', 'image_encoder.blocks.8.norm2.bias', 'image_encoder.blocks.8.mlp.lin1.weight', 'image_encoder.blocks.8.mlp.lin1.bias', 'image_encoder.blocks.8.mlp.lin2.weight', 'image_encoder.blocks.8.mlp.lin2.bias', 'image_encoder.blocks.9.norm1.weight', 'image_encoder.blocks.9.norm1.bias', 'image_encoder.blocks.9.attn.rel_pos_h', 'image_encoder.blocks.9.attn.rel_pos_w', 'image_encoder.blocks.9.attn.qkv.weight', 'image_encoder.blocks.9.attn.qkv.bias', 'image_encoder.blocks.9.attn.proj.weight', 'image_encoder.blocks.9.attn.proj.bias', 'image_encoder.blocks.9.norm2.weight', 'image_encoder.blocks.9.norm2.bias', 'image_encoder.blocks.9.mlp.lin1.weight', 'image_encoder.blocks.9.mlp.lin1.bias', 'image_encoder.blocks.9.mlp.lin2.weight', 'image_encoder.blocks.9.mlp.lin2.bias', 'image_encoder.blocks.10.norm1.weight', 'image_encoder.blocks.10.norm1.bias', 'image_encoder.blocks.10.attn.rel_pos_h', 'image_encoder.blocks.10.attn.rel_pos_w', 'image_encoder.blocks.10.attn.qkv.weight', 'image_encoder.blocks.10.attn.qkv.bias', 'image_encoder.blocks.10.attn.proj.weight', 'image_encoder.blocks.10.attn.proj.bias', 'image_encoder.blocks.10.norm2.weight', 'image_encoder.blocks.10.norm2.bias', 'image_encoder.blocks.10.mlp.lin1.weight', 'image_encoder.blocks.10.mlp.lin1.bias', 'image_encoder.blocks.10.mlp.lin2.weight', 'image_encoder.blocks.10.mlp.lin2.bias', 'image_encoder.blocks.11.norm1.weight', 'image_encoder.blocks.11.norm1.bias', 'image_encoder.blocks.11.attn.rel_pos_h', 'image_encoder.blocks.11.attn.rel_pos_w', 'image_encoder.blocks.11.attn.qkv.weight', 'image_encoder.blocks.11.attn.qkv.bias', 'image_encoder.blocks.11.attn.proj.weight', 'image_encoder.blocks.11.attn.proj.bias', 'image_encoder.blocks.11.norm2.weight', 'image_encoder.blocks.11.norm2.bias', 'image_encoder.blocks.11.mlp.lin1.weight', 'image_encoder.blocks.11.mlp.lin1.bias', 'image_encoder.blocks.11.mlp.lin2.weight', 'image_encoder.blocks.11.mlp.lin2.bias', 'mask_decoder.output_upscaling.0.weight', 'mask_decoder.output_upscaling.0.bias', 'mask_decoder.output_upscaling.1.weight', 'mask_decoder.output_upscaling.1.bias', 'mask_decoder.output_upscaling.3.weight', 'mask_decoder.output_upscaling.3.bias', 'image_encoder.pos_embed']
+['patient_035']
+['patient_057', 'patient_028', 'patient_087', 'patient_061', 'patient_032', 'patient_011', 'patient_078', 'patient_009', 'patient_068', 'patient_021', 'patient_079', 'patient_004', 'patient_089', 'patient_023', 'patient_070']
+['patient_014', 'patient_060', 'patient_044', 'patient_036', 'patient_003', 'patient_100', 'patient_065', 'patient_013', 'patient_038', 'patient_093', 'patient_043', 'patient_082', 'patient_031', 'patient_005', 'patient_016']
+dataset length: 26
+dataset length: 258
+dataset length: 296
+output_experiment/mlp120
+Train: [0][0/7]	loss 2.2898
+VALIDATE
+Epoch:  0 Loss: 0.9171
+Train: [1][0/7]	loss 2.2099
+VALIDATE
+Epoch:  1 Loss: 0.9144
+Train: [2][0/7]	loss 2.1342
+VALIDATE
+Epoch:  2 Loss: 0.9100
+Train: [3][0/7]	loss 2.0277
+VALIDATE
+Epoch:  3 Loss: 0.9046
+Train: [4][0/7]	loss 1.9666
+VALIDATE
+Epoch:  4 Loss: 0.8958
+Train: [5][0/7]	loss 1.7576
+VALIDATE
+Epoch:  5 Loss: 0.8836
+Train: [6][0/7]	loss 1.6169
+VALIDATE
+Epoch:  6 Loss: 0.8665
+Train: [7][0/7]	loss 1.4360
+VALIDATE
+Epoch:  7 Loss: 0.8415
+Train: [8][0/7]	loss 1.3210
+VALIDATE
+Epoch:  8 Loss: 0.8144
+Train: [9][0/7]	loss 1.1925
+VALIDATE
+Epoch:  9 Loss: 0.7911
+Train: [10][0/7]	loss 1.2030
+VALIDATE
+Epoch: 10 Loss: 0.7716
+Train: [11][0/7]	loss 0.9708
+VALIDATE
+Epoch: 11 Loss: 0.7563
+Train: [12][0/7]	loss 1.1544
+VALIDATE
+Epoch: 12 Loss: 0.7447
+Train: [13][0/7]	loss 0.8581
+VALIDATE
+Epoch: 13 Loss: 0.7344
+Train: [14][0/7]	loss 1.0321
+VALIDATE
+Epoch: 14 Loss: 0.7258
+Train: [15][0/7]	loss 0.7850
+VALIDATE
+Epoch: 15 Loss: 0.7110
+Train: [16][0/7]	loss 0.9417
+VALIDATE
+Epoch: 16 Loss: 0.7052
+Train: [17][0/7]	loss 0.7777
+VALIDATE
+Epoch: 17 Loss: 0.6930
+Train: [18][0/7]	loss 0.9567
+VALIDATE
+Epoch: 18 Loss: 0.6801
+Train: [19][0/7]	loss 0.9381
+VALIDATE
+Epoch: 19 Loss: 0.6644
+Train: [20][0/7]	loss 0.9086
+VALIDATE
+Epoch: 20 Loss: 0.6542
+Train: [21][0/7]	loss 0.8467
+VALIDATE
+Epoch: 21 Loss: 0.6433
+Train: [22][0/7]	loss 0.8470
+VALIDATE
+Epoch: 22 Loss: 0.6352
+Train: [23][0/7]	loss 0.7417
+VALIDATE
+Epoch: 23 Loss: 0.6288
+Train: [24][0/7]	loss 0.7747
+VALIDATE
+Epoch: 24 Loss: 0.6192
+Train: [25][0/7]	loss 0.9063
+VALIDATE
+Epoch: 25 Loss: 0.6124
+Train: [26][0/7]	loss 1.1312
+VALIDATE
+Epoch: 26 Loss: 0.6034
+Train: [27][0/7]	loss 0.7418
+VALIDATE
+Epoch: 27 Loss: 0.6035
+Train: [28][0/7]	loss 0.9913
+VALIDATE
+Epoch: 28 Loss: 0.5948
+Train: [29][0/7]	loss 0.8603
+VALIDATE
+Epoch: 29 Loss: 0.5895
+Train: [30][0/7]	loss 0.7995
+VALIDATE
+Epoch: 30 Loss: 0.5869
+Train: [31][0/7]	loss 0.7928
+VALIDATE
+Epoch: 31 Loss: 0.5916
+Train: [32][0/7]	loss 0.7645
+VALIDATE
+Epoch: 32 Loss: 0.5863
+Train: [33][0/7]	loss 1.0534
+VALIDATE
+Epoch: 33 Loss: 0.5887
+Train: [34][0/7]	loss 1.0351
+VALIDATE
+Epoch: 34 Loss: 0.5851
+Train: [35][0/7]	loss 0.6384
+VALIDATE
+Epoch: 35 Loss: 0.5851
+Train: [36][0/7]	loss 0.6434
+VALIDATE
+Epoch: 36 Loss: 0.5804
+Train: [37][0/7]	loss 0.8724
+VALIDATE
+Epoch: 37 Loss: 0.5827
+Train: [38][0/7]	loss 0.8993
+VALIDATE
+Epoch: 38 Loss: 0.5808
+Train: [39][0/7]	loss 0.8209
+VALIDATE
+Epoch: 39 Loss: 0.5809
+Train: [40][0/7]	loss 0.6681
+VALIDATE
+Epoch: 40 Loss: 0.5784
+Train: [41][0/7]	loss 0.8146
+VALIDATE
+Epoch: 41 Loss: 0.5771
+Train: [42][0/7]	loss 0.6947
+VALIDATE
+Epoch: 42 Loss: 0.5788
+Train: [43][0/7]	loss 0.7446
+VALIDATE
+Epoch: 43 Loss: 0.5741
+Train: [44][0/7]	loss 0.8016
+VALIDATE
+Epoch: 44 Loss: 0.5786
+Train: [45][0/7]	loss 0.7389
+VALIDATE
+Epoch: 45 Loss: 0.5729
+Train: [46][0/7]	loss 0.9413
+VALIDATE
+Epoch: 46 Loss: 0.5764
+Train: [47][0/7]	loss 0.8745
+VALIDATE
+Epoch: 47 Loss: 0.5750
+Train: [48][0/7]	loss 0.7226
+VALIDATE
+Epoch: 48 Loss: 0.5735
+Train: [49][0/7]	loss 0.6887
+VALIDATE
+Epoch: 49 Loss: 0.5723
+Train: [50][0/7]	loss 0.7027
+VALIDATE
+Epoch: 50 Loss: 0.5709
