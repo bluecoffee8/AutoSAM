@@ -41,7 +41,7 @@ parser = argparse.ArgumentParser(description='PyTorch ImageNet Training')
 
 parser.add_argument('-j', '--workers', default=1, type=int, metavar='N',
                     help='number of data loading workers (default: 32)')
-parser.add_argument('--epochs', default=5, type=int, metavar='N',
+parser.add_argument('--epochs', default=120, type=int, metavar='N',
                     help='number of total epochs to run')
 parser.add_argument('--start-epoch', default=0, type=int, metavar='N',
                     help='manual epoch number (useful on restarts)')
@@ -90,8 +90,8 @@ parser.add_argument("--do_contrast", default=False, action='store_true')
 parser.add_argument("--slice_threshold", type=float, default=0.05)
 parser.add_argument("--num_classes", type=int, default=4)
 parser.add_argument("--fold", type=int, default=0)
-parser.add_argument("--tr_size", type=int, default=1)
-parser.add_argument("--save_dir", type=str, default='basic')
+parser.add_argument("--tr_size", type=int, default=5)
+parser.add_argument("--save_dir", type=str, default='mlp120_5')
 parser.add_argument("--load_saved_model", action='store_true',
                         help='whether freeze encoder of the segmenter')
 parser.add_argument("--saved_model_path", type=str, default=None)
@@ -253,13 +253,13 @@ def main_worker(gpu, ngpus_per_node, args):
             is_best = True
             best_loss = loss
 
-        # if not args.multiprocessing_distributed or (args.multiprocessing_distributed
-        #         and args.rank % ngpus_per_node == 0):
-        #     save_checkpoint({
-        #         'epoch': epoch + 1,
-        #         'state_dict': model.module.mask_decoder.state_dict(),
-        #         'optimizer' : optimizer.state_dict(),
-        #     }, is_best=is_best, filename=filename)
+        if not args.multiprocessing_distributed or (args.multiprocessing_distributed
+                and args.rank % ngpus_per_node == 0):
+            save_checkpoint({
+                'epoch': epoch + 1,
+                'state_dict': model.mask_decoder.state_dict(),
+                'optimizer' : optimizer.state_dict(),
+            }, is_best=is_best, filename=filename)
     test(model, args)
     if args.dataset == 'synapse':
         test_synapse(args)
@@ -392,11 +392,11 @@ def test(model, args):
         print("finish saving file:", key)
 
 
-def save_checkpoint(state, is_best, filename='checkpoint.pth.tar'):
+def save_checkpoint(state, is_best, filename='checkpoint_mlp_5.pth.tar'):
     # torch.save(state, filename)
     if is_best:
         torch.save(state, filename)
-        shutil.copyfile(filename, 'model_best.pth.tar')
+        shutil.copyfile(filename, 'model_best_mlp_5.pth.tar')
 
 
 class AverageMeter(object):
