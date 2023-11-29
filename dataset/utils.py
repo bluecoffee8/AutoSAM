@@ -63,10 +63,11 @@ def generate_test_loader(key, args):
     else:
         raise NotImplementedError("dataset is not supported:", args.dataset)
 
-    if args.distributed:
-        test_sampler = torch.utils.data.distributed.DistributedSampler(test_ds)
-    else:
-        test_sampler = None
+    # if args.distributed:
+    #     test_sampler = torch.utils.data.distributed.DistributedSampler(test_ds)
+    # else:
+    #     test_sampler = None
+    test_sampler = None
 
     test_loader = torch.utils.data.DataLoader(
         test_ds, batch_size=args.batch_size, shuffle=False,
