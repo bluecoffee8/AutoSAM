@@ -1,374 +1,4 @@
-/home/kl321/AutoSAM/scripts/main_feat_seg.py:115: UserWarning: You have chosen a specific GPU. This will completely disable data parallelism.
-  warnings.warn('You have chosen a specific GPU. This will completely '
-Use GPU: 0 for training
 loaded keys: ['image_encoder.neck.0.weight', 'image_encoder.neck.1.weight', 'image_encoder.neck.1.bias', 'image_encoder.neck.2.weight', 'image_encoder.neck.3.weight', 'image_encoder.neck.3.bias', 'image_encoder.patch_embed.proj.weight', 'image_encoder.patch_embed.proj.bias', 'image_encoder.blocks.0.norm1.weight', 'image_encoder.blocks.0.norm1.bias', 'image_encoder.blocks.0.attn.rel_pos_h', 'image_encoder.blocks.0.attn.rel_pos_w', 'image_encoder.blocks.0.attn.qkv.weight', 'image_encoder.blocks.0.attn.qkv.bias', 'image_encoder.blocks.0.attn.proj.weight', 'image_encoder.blocks.0.attn.proj.bias', 'image_encoder.blocks.0.norm2.weight', 'image_encoder.blocks.0.norm2.bias', 'image_encoder.blocks.0.mlp.lin1.weight', 'image_encoder.blocks.0.mlp.lin1.bias', 'image_encoder.blocks.0.mlp.lin2.weight', 'image_encoder.blocks.0.mlp.lin2.bias', 'image_encoder.blocks.1.norm1.weight', 'image_encoder.blocks.1.norm1.bias', 'image_encoder.blocks.1.attn.rel_pos_h', 'image_encoder.blocks.1.attn.rel_pos_w', 'image_encoder.blocks.1.attn.qkv.weight', 'image_encoder.blocks.1.attn.qkv.bias', 'image_encoder.blocks.1.attn.proj.weight', 'image_encoder.blocks.1.attn.proj.bias', 'image_encoder.blocks.1.norm2.weight', 'image_encoder.blocks.1.norm2.bias', 'image_encoder.blocks.1.mlp.lin1.weight', 'image_encoder.blocks.1.mlp.lin1.bias', 'image_encoder.blocks.1.mlp.lin2.weight', 'image_encoder.blocks.1.mlp.lin2.bias', 'image_encoder.blocks.2.norm1.weight', 'image_encoder.blocks.2.norm1.bias', 'image_encoder.blocks.2.attn.rel_pos_h', 'image_encoder.blocks.2.attn.rel_pos_w', 'image_encoder.blocks.2.attn.qkv.weight', 'image_encoder.blocks.2.attn.qkv.bias', 'image_encoder.blocks.2.attn.proj.weight', 'image_encoder.blocks.2.attn.proj.bias', 'image_encoder.blocks.2.norm2.weight', 'image_encoder.blocks.2.norm2.bias', 'image_encoder.blocks.2.mlp.lin1.weight', 'image_encoder.blocks.2.mlp.lin1.bias', 'image_encoder.blocks.2.mlp.lin2.weight', 'image_encoder.blocks.2.mlp.lin2.bias', 'image_encoder.blocks.3.norm1.weight', 'image_encoder.blocks.3.norm1.bias', 'image_encoder.blocks.3.attn.rel_pos_h', 'image_encoder.blocks.3.attn.rel_pos_w', 'image_encoder.blocks.3.attn.qkv.weight', 'image_encoder.blocks.3.attn.qkv.bias', 'image_encoder.blocks.3.attn.proj.weight', 'image_encoder.blocks.3.attn.proj.bias', 'image_encoder.blocks.3.norm2.weight', 'image_encoder.blocks.3.norm2.bias', 'image_encoder.blocks.3.mlp.lin1.weight', 'image_encoder.blocks.3.mlp.lin1.bias', 'image_encoder.blocks.3.mlp.lin2.weight', 'image_encoder.blocks.3.mlp.lin2.bias', 'image_encoder.blocks.4.norm1.weight', 'image_encoder.blocks.4.norm1.bias', 'image_encoder.blocks.4.attn.rel_pos_h', 'image_encoder.blocks.4.attn.rel_pos_w', 'image_encoder.blocks.4.attn.qkv.weight', 'image_encoder.blocks.4.attn.qkv.bias', 'image_encoder.blocks.4.attn.proj.weight', 'image_encoder.blocks.4.attn.proj.bias', 'image_encoder.blocks.4.norm2.weight', 'image_encoder.blocks.4.norm2.bias', 'image_encoder.blocks.4.mlp.lin1.weight', 'image_encoder.blocks.4.mlp.lin1.bias', 'image_encoder.blocks.4.mlp.lin2.weight', 'image_encoder.blocks.4.mlp.lin2.bias', 'image_encoder.blocks.5.norm1.weight', 'image_encoder.blocks.5.norm1.bias', 'image_encoder.blocks.5.attn.rel_pos_h', 'image_encoder.blocks.5.attn.rel_pos_w', 'image_encoder.blocks.5.attn.qkv.weight', 'image_encoder.blocks.5.attn.qkv.bias', 'image_encoder.blocks.5.attn.proj.weight', 'image_encoder.blocks.5.attn.proj.bias', 'image_encoder.blocks.5.norm2.weight', 'image_encoder.blocks.5.norm2.bias', 'image_encoder.blocks.5.mlp.lin1.weight', 'image_encoder.blocks.5.mlp.lin1.bias', 'image_encoder.blocks.5.mlp.lin2.weight', 'image_encoder.blocks.5.mlp.lin2.bias', 'image_encoder.blocks.6.norm1.weight', 'image_encoder.blocks.6.norm1.bias', 'image_encoder.blocks.6.attn.rel_pos_h', 'image_encoder.blocks.6.attn.rel_pos_w', 'image_encoder.blocks.6.attn.qkv.weight', 'image_encoder.blocks.6.attn.qkv.bias', 'image_encoder.blocks.6.attn.proj.weight', 'image_encoder.blocks.6.attn.proj.bias', 'image_encoder.blocks.6.norm2.weight', 'image_encoder.blocks.6.norm2.bias', 'image_encoder.blocks.6.mlp.lin1.weight', 'image_encoder.blocks.6.mlp.lin1.bias', 'image_encoder.blocks.6.mlp.lin2.weight', 'image_encoder.blocks.6.mlp.lin2.bias', 'image_encoder.blocks.7.norm1.weight', 'image_encoder.blocks.7.norm1.bias', 'image_encoder.blocks.7.attn.rel_pos_h', 'image_encoder.blocks.7.attn.rel_pos_w', 'image_encoder.blocks.7.attn.qkv.weight', 'image_encoder.blocks.7.attn.qkv.bias', 'image_encoder.blocks.7.attn.proj.weight', 'image_encoder.blocks.7.attn.proj.bias', 'image_encoder.blocks.7.norm2.weight', 'image_encoder.blocks.7.norm2.bias', 'image_encoder.blocks.7.mlp.lin1.weight', 'image_encoder.blocks.7.mlp.lin1.bias', 'image_encoder.blocks.7.mlp.lin2.weight', 'image_encoder.blocks.7.mlp.lin2.bias', 'image_encoder.blocks.8.norm1.weight', 'image_encoder.blocks.8.norm1.bias', 'image_encoder.blocks.8.attn.rel_pos_h', 'image_encoder.blocks.8.attn.rel_pos_w', 'image_encoder.blocks.8.attn.qkv.weight', 'image_encoder.blocks.8.attn.qkv.bias', 'image_encoder.blocks.8.attn.proj.weight', 'image_encoder.blocks.8.attn.proj.bias', 'image_encoder.blocks.8.norm2.weight', 'image_encoder.blocks.8.norm2.bias', 'image_encoder.blocks.8.mlp.lin1.weight', 'image_encoder.blocks.8.mlp.lin1.bias', 'image_encoder.blocks.8.mlp.lin2.weight', 'image_encoder.blocks.8.mlp.lin2.bias', 'image_encoder.blocks.9.norm1.weight', 'image_encoder.blocks.9.norm1.bias', 'image_encoder.blocks.9.attn.rel_pos_h', 'image_encoder.blocks.9.attn.rel_pos_w', 'image_encoder.blocks.9.attn.qkv.weight', 'image_encoder.blocks.9.attn.qkv.bias', 'image_encoder.blocks.9.attn.proj.weight', 'image_encoder.blocks.9.attn.proj.bias', 'image_encoder.blocks.9.norm2.weight', 'image_encoder.blocks.9.norm2.bias', 'image_encoder.blocks.9.mlp.lin1.weight', 'image_encoder.blocks.9.mlp.lin1.bias', 'image_encoder.blocks.9.mlp.lin2.weight', 'image_encoder.blocks.9.mlp.lin2.bias', 'image_encoder.blocks.10.norm1.weight', 'image_encoder.blocks.10.norm1.bias', 'image_encoder.blocks.10.attn.rel_pos_h', 'image_encoder.blocks.10.attn.rel_pos_w', 'image_encoder.blocks.10.attn.qkv.weight', 'image_encoder.blocks.10.attn.qkv.bias', 'image_encoder.blocks.10.attn.proj.weight', 'image_encoder.blocks.10.attn.proj.bias', 'image_encoder.blocks.10.norm2.weight', 'image_encoder.blocks.10.norm2.bias', 'image_encoder.blocks.10.mlp.lin1.weight', 'image_encoder.blocks.10.mlp.lin1.bias', 'image_encoder.blocks.10.mlp.lin2.weight', 'image_encoder.blocks.10.mlp.lin2.bias', 'image_encoder.blocks.11.norm1.weight', 'image_encoder.blocks.11.norm1.bias', 'image_encoder.blocks.11.attn.rel_pos_h', 'image_encoder.blocks.11.attn.rel_pos_w', 'image_encoder.blocks.11.attn.qkv.weight', 'image_encoder.blocks.11.attn.qkv.bias', 'image_encoder.blocks.11.attn.proj.weight', 'image_encoder.blocks.11.attn.proj.bias', 'image_encoder.blocks.11.norm2.weight', 'image_encoder.blocks.11.norm2.bias', 'image_encoder.blocks.11.mlp.lin1.weight', 'image_encoder.blocks.11.mlp.lin1.bias', 'image_encoder.blocks.11.mlp.lin2.weight', 'image_encoder.blocks.11.mlp.lin2.bias', 'mask_decoder.output_upscaling.0.weight', 'mask_decoder.output_upscaling.0.bias', 'mask_decoder.output_upscaling.1.weight', 'mask_decoder.output_upscaling.1.bias', 'mask_decoder.output_upscaling.3.weight', 'mask_decoder.output_upscaling.3.bias', 'image_encoder.pos_embed']
-['patient_035']
-['patient_057', 'patient_028', 'patient_087', 'patient_061', 'patient_032', 'patient_011', 'patient_078', 'patient_009', 'patient_068', 'patient_021', 'patient_079', 'patient_004', 'patient_089', 'patient_023', 'patient_070']
-['patient_014', 'patient_060', 'patient_044', 'patient_036', 'patient_003', 'patient_100', 'patient_065', 'patient_013', 'patient_038', 'patient_093', 'patient_043', 'patient_082', 'patient_031', 'patient_005', 'patient_016']
-dataset length: 26
-dataset length: 258
-dataset length: 296
-output_experiment/mlp120
-Train: [0][0/7]	loss 2.2898
-VALIDATE
-Epoch:  0 Loss: 0.9171
-Train: [1][0/7]	loss 2.2099
-VALIDATE
-Epoch:  1 Loss: 0.9144
-Train: [2][0/7]	loss 2.1342
-VALIDATE
-Epoch:  2 Loss: 0.9100
-Train: [3][0/7]	loss 2.0277
-VALIDATE
-Epoch:  3 Loss: 0.9046
-Train: [4][0/7]	loss 1.9666
-VALIDATE
-Epoch:  4 Loss: 0.8958
-Train: [5][0/7]	loss 1.7576
-VALIDATE
-Epoch:  5 Loss: 0.8836
-Train: [6][0/7]	loss 1.6169
-VALIDATE
-Epoch:  6 Loss: 0.8665
-Train: [7][0/7]	loss 1.4360
-VALIDATE
-Epoch:  7 Loss: 0.8415
-Train: [8][0/7]	loss 1.3210
-VALIDATE
-Epoch:  8 Loss: 0.8144
-Train: [9][0/7]	loss 1.1925
-VALIDATE
-Epoch:  9 Loss: 0.7911
-Train: [10][0/7]	loss 1.2030
-VALIDATE
-Epoch: 10 Loss: 0.7716
-Train: [11][0/7]	loss 0.9708
-VALIDATE
-Epoch: 11 Loss: 0.7563
-Train: [12][0/7]	loss 1.1544
-VALIDATE
-Epoch: 12 Loss: 0.7447
-Train: [13][0/7]	loss 0.8581
-VALIDATE
-Epoch: 13 Loss: 0.7344
-Train: [14][0/7]	loss 1.0321
-VALIDATE
-Epoch: 14 Loss: 0.7258
-Train: [15][0/7]	loss 0.7850
-VALIDATE
-Epoch: 15 Loss: 0.7110
-Train: [16][0/7]	loss 0.9417
-VALIDATE
-Epoch: 16 Loss: 0.7052
-Train: [17][0/7]	loss 0.7777
-VALIDATE
-Epoch: 17 Loss: 0.6930
-Train: [18][0/7]	loss 0.9567
-VALIDATE
-Epoch: 18 Loss: 0.6801
-Train: [19][0/7]	loss 0.9381
-VALIDATE
-Epoch: 19 Loss: 0.6644
-Train: [20][0/7]	loss 0.9086
-VALIDATE
-Epoch: 20 Loss: 0.6542
-Train: [21][0/7]	loss 0.8467
-VALIDATE
-Epoch: 21 Loss: 0.6433
-Train: [22][0/7]	loss 0.8470
-VALIDATE
-Epoch: 22 Loss: 0.6352
-Train: [23][0/7]	loss 0.7417
-VALIDATE
-Epoch: 23 Loss: 0.6288
-Train: [24][0/7]	loss 0.7747
-VALIDATE
-Epoch: 24 Loss: 0.6192
-Train: [25][0/7]	loss 0.9063
-VALIDATE
-Epoch: 25 Loss: 0.6124
-Train: [26][0/7]	loss 1.1312
-VALIDATE
-Epoch: 26 Loss: 0.6034
-Train: [27][0/7]	loss 0.7418
-VALIDATE
-Epoch: 27 Loss: 0.6035
-Train: [28][0/7]	loss 0.9913
-VALIDATE
-Epoch: 28 Loss: 0.5948
-Train: [29][0/7]	loss 0.8603
-VALIDATE
-Epoch: 29 Loss: 0.5895
-Train: [30][0/7]	loss 0.7995
-VALIDATE
-Epoch: 30 Loss: 0.5869
-Train: [31][0/7]	loss 0.7928
-VALIDATE
-Epoch: 31 Loss: 0.5916
-Train: [32][0/7]	loss 0.7645
-VALIDATE
-Epoch: 32 Loss: 0.5863
-Train: [33][0/7]	loss 1.0534
-VALIDATE
-Epoch: 33 Loss: 0.5887
-Train: [34][0/7]	loss 1.0351
-VALIDATE
-Epoch: 34 Loss: 0.5851
-Train: [35][0/7]	loss 0.6384
-VALIDATE
-Epoch: 35 Loss: 0.5851
-Train: [36][0/7]	loss 0.6434
-VALIDATE
-Epoch: 36 Loss: 0.5804
-Train: [37][0/7]	loss 0.8724
-VALIDATE
-Epoch: 37 Loss: 0.5827
-Train: [38][0/7]	loss 0.8993
-VALIDATE
-Epoch: 38 Loss: 0.5808
-Train: [39][0/7]	loss 0.8209
-VALIDATE
-Epoch: 39 Loss: 0.5809
-Train: [40][0/7]	loss 0.6681
-VALIDATE
-Epoch: 40 Loss: 0.5784
-Train: [41][0/7]	loss 0.8146
-VALIDATE
-Epoch: 41 Loss: 0.5771
-Train: [42][0/7]	loss 0.6947
-VALIDATE
-Epoch: 42 Loss: 0.5788
-Train: [43][0/7]	loss 0.7446
-VALIDATE
-Epoch: 43 Loss: 0.5741
-Train: [44][0/7]	loss 0.8016
-VALIDATE
-Epoch: 44 Loss: 0.5786
-Train: [45][0/7]	loss 0.7389
-VALIDATE
-Epoch: 45 Loss: 0.5729
-Train: [46][0/7]	loss 0.9413
-VALIDATE
-Epoch: 46 Loss: 0.5764
-Train: [47][0/7]	loss 0.8745
-VALIDATE
-Epoch: 47 Loss: 0.5750
-Train: [48][0/7]	loss 0.7226
-VALIDATE
-Epoch: 48 Loss: 0.5735
-Train: [49][0/7]	loss 0.6887
-VALIDATE
-Epoch: 49 Loss: 0.5723
-Train: [50][0/7]	loss 0.7027
-VALIDATE
-Epoch: 50 Loss: 0.5709
-Train: [51][0/7]	loss 0.8554
-VALIDATE
-Epoch: 51 Loss: 0.5732
-Train: [52][0/7]	loss 0.7682
-VALIDATE
-Epoch: 52 Loss: 0.5726
-Train: [53][0/7]	loss 0.7741
-VALIDATE
-Epoch: 53 Loss: 0.5708
-Train: [54][0/7]	loss 0.7268
-VALIDATE
-Epoch: 54 Loss: 0.5711
-Train: [55][0/7]	loss 0.6840
-VALIDATE
-Epoch: 55 Loss: 0.5718
-Train: [56][0/7]	loss 0.7250
-VALIDATE
-Epoch: 56 Loss: 0.5724
-Train: [57][0/7]	loss 0.8368
-VALIDATE
-Epoch: 57 Loss: 0.5720
-Train: [58][0/7]	loss 1.1405
-VALIDATE
-Epoch: 58 Loss: 0.5699
-Train: [59][0/7]	loss 0.9461
-VALIDATE
-Epoch: 59 Loss: 0.5744
-Train: [60][0/7]	loss 0.9687
-VALIDATE
-Epoch: 60 Loss: 0.5705
-Train: [61][0/7]	loss 0.8773
-VALIDATE
-Epoch: 61 Loss: 0.5692
-Train: [62][0/7]	loss 0.6816
-VALIDATE
-Epoch: 62 Loss: 0.5698
-Train: [63][0/7]	loss 1.0038
-VALIDATE
-Epoch: 63 Loss: 0.5704
-Train: [64][0/7]	loss 0.9264
-VALIDATE
-Epoch: 64 Loss: 0.5679
-Train: [65][0/7]	loss 1.2076
-VALIDATE
-Epoch: 65 Loss: 0.5717
-Train: [66][0/7]	loss 0.7353
-VALIDATE
-Epoch: 66 Loss: 0.5691
-Train: [67][0/7]	loss 0.8016
-VALIDATE
-Epoch: 67 Loss: 0.5681
-Train: [68][0/7]	loss 1.1442
-VALIDATE
-Epoch: 68 Loss: 0.5699
-Train: [69][0/7]	loss 0.7870
-VALIDATE
-Epoch: 69 Loss: 0.5685
-Train: [70][0/7]	loss 0.9452
-VALIDATE
-Epoch: 70 Loss: 0.5692
-Train: [71][0/7]	loss 1.0187
-VALIDATE
-Epoch: 71 Loss: 0.5719
-Train: [72][0/7]	loss 0.7439
-VALIDATE
-Epoch: 72 Loss: 0.5662
-Train: [73][0/7]	loss 0.8438
-VALIDATE
-Epoch: 73 Loss: 0.5705
-Train: [74][0/7]	loss 1.0679
-VALIDATE
-Epoch: 74 Loss: 0.5713
-Train: [75][0/7]	loss 0.9400
-VALIDATE
-Epoch: 75 Loss: 0.5691
-Train: [76][0/7]	loss 0.9921
-VALIDATE
-Epoch: 76 Loss: 0.5687
-Train: [77][0/7]	loss 1.0465
-VALIDATE
-Epoch: 77 Loss: 0.5695
-Train: [78][0/7]	loss 0.7007
-VALIDATE
-Epoch: 78 Loss: 0.5670
-Train: [79][0/7]	loss 1.1262
-VALIDATE
-Epoch: 79 Loss: 0.5682
-Train: [80][0/7]	loss 0.8850
-VALIDATE
-Epoch: 80 Loss: 0.5689
-Train: [81][0/7]	loss 1.2257
-VALIDATE
-Epoch: 81 Loss: 0.5671
-Train: [82][0/7]	loss 0.8999
-VALIDATE
-Epoch: 82 Loss: 0.5696
-Train: [83][0/7]	loss 0.9664
-VALIDATE
-Epoch: 83 Loss: 0.5702
-Train: [84][0/7]	loss 0.9573
-VALIDATE
-Epoch: 84 Loss: 0.5740
-Train: [85][0/7]	loss 0.8791
-VALIDATE
-Epoch: 85 Loss: 0.5712
-Train: [86][0/7]	loss 0.6848
-VALIDATE
-Epoch: 86 Loss: 0.5720
-Train: [87][0/7]	loss 0.9217
-VALIDATE
-Epoch: 87 Loss: 0.5695
-Train: [88][0/7]	loss 0.9769
-VALIDATE
-Epoch: 88 Loss: 0.5722
-Train: [89][0/7]	loss 0.8134
-VALIDATE
-Epoch: 89 Loss: 0.5717
-Train: [90][0/7]	loss 1.0024
-VALIDATE
-Epoch: 90 Loss: 0.5685
-Train: [91][0/7]	loss 0.8814
-VALIDATE
-Epoch: 91 Loss: 0.5697
-Train: [92][0/7]	loss 1.0038
-VALIDATE
-Epoch: 92 Loss: 0.5701
-Train: [93][0/7]	loss 0.9261
-VALIDATE
-Epoch: 93 Loss: 0.5719
-Train: [94][0/7]	loss 1.1343
-VALIDATE
-Epoch: 94 Loss: 0.5687
-Train: [95][0/7]	loss 1.0398
-VALIDATE
-Epoch: 95 Loss: 0.5734
-Train: [96][0/7]	loss 0.9614
-VALIDATE
-Epoch: 96 Loss: 0.5695
-Train: [97][0/7]	loss 0.8570
-VALIDATE
-Epoch: 97 Loss: 0.5687
-Train: [98][0/7]	loss 1.1201
-VALIDATE
-Epoch: 98 Loss: 0.5714
-Train: [99][0/7]	loss 0.9158
-VALIDATE
-Epoch: 99 Loss: 0.5675
-Train: [100][0/7]	loss 0.9279
-VALIDATE
-Epoch: 100 Loss: 0.5707
-Train: [101][0/7]	loss 0.6037
-VALIDATE
-Epoch: 101 Loss: 0.5733
-Train: [102][0/7]	loss 0.7636
-VALIDATE
-Epoch: 102 Loss: 0.5682
-Train: [103][0/7]	loss 0.7040
-VALIDATE
-Epoch: 103 Loss: 0.5714
-Train: [104][0/7]	loss 1.0273
-VALIDATE
-Epoch: 104 Loss: 0.5692
-Train: [105][0/7]	loss 0.6895
-VALIDATE
-Epoch: 105 Loss: 0.5710
-Train: [106][0/7]	loss 0.7825
-VALIDATE
-Epoch: 106 Loss: 0.5683
-Train: [107][0/7]	loss 1.0301
-VALIDATE
-Epoch: 107 Loss: 0.5668
-Train: [108][0/7]	loss 1.1770
-VALIDATE
-Epoch: 108 Loss: 0.5710
-Train: [109][0/7]	loss 0.7570
-VALIDATE
-Epoch: 109 Loss: 0.5734
-Train: [110][0/7]	loss 0.8547
-VALIDATE
-Epoch: 110 Loss: 0.5723
-Train: [111][0/7]	loss 0.8829
-VALIDATE
-Epoch: 111 Loss: 0.5671
-Train: [112][0/7]	loss 0.8523
-VALIDATE
-Epoch: 112 Loss: 0.5680
-Train: [113][0/7]	loss 0.7543
-VALIDATE
-Epoch: 113 Loss: 0.5684
-Train: [114][0/7]	loss 0.7069
-VALIDATE
-Epoch: 114 Loss: 0.5690
-Train: [115][0/7]	loss 0.8747
-VALIDATE
-Epoch: 115 Loss: 0.5694
-Train: [116][0/7]	loss 0.7968
-VALIDATE
-Epoch: 116 Loss: 0.5695
-Train: [117][0/7]	loss 0.8429
-VALIDATE
-Epoch: 117 Loss: 0.5724
-Train: [118][0/7]	loss 0.8214
-VALIDATE
-Epoch: 118 Loss: 0.5737
-Train: [119][0/7]	loss 0.6416
-VALIDATE
-Epoch: 119 Loss: 0.5704
 Test
 dataset length: 20
 (20, 224, 224) (20, 224, 224)
@@ -454,129 +84,129 @@ done
 patient_003.nii
 ********************
 patient_003.nii
-Dice_rv: 0.0002
-Dice_myo: 0.0000
-Dice_lv: 0.8078
+Dice_rv: 0.0000
+Dice_myo: 0.8159
+Dice_lv: 0.8398
 ********************
 ********************
 patient_005.nii
 ********************
 patient_005.nii
 Dice_rv: 0.0000
-Dice_myo: 0.0000
-Dice_lv: 0.7441
+Dice_myo: 0.7559
+Dice_lv: 0.7721
 ********************
 ********************
 patient_013.nii
 ********************
 patient_013.nii
 Dice_rv: 0.0000
-Dice_myo: 0.0000
-Dice_lv: 0.8119
+Dice_myo: 0.7908
+Dice_lv: 0.8536
 ********************
 ********************
 patient_014.nii
 ********************
 patient_014.nii
-Dice_rv: 0.0003
-Dice_myo: 0.0000
-Dice_lv: 0.7912
+Dice_rv: 0.0000
+Dice_myo: 0.7014
+Dice_lv: 0.8871
 ********************
 ********************
 patient_016.nii
 ********************
 patient_016.nii
-Dice_rv: 0.0002
-Dice_myo: 0.0000
-Dice_lv: 0.8104
+Dice_rv: 0.0000
+Dice_myo: 0.6969
+Dice_lv: 0.8479
 ********************
 ********************
 patient_031.nii
 ********************
 patient_031.nii
-Dice_rv: 0.0034
-Dice_myo: 0.0000
-Dice_lv: 0.5845
+Dice_rv: 0.0000
+Dice_myo: 0.7151
+Dice_lv: 0.6981
 ********************
 ********************
 patient_036.nii
 ********************
 patient_036.nii
-Dice_rv: 0.0018
-Dice_myo: 0.0000
-Dice_lv: 0.5536
+Dice_rv: 0.0000
+Dice_myo: 0.7547
+Dice_lv: 0.6947
 ********************
 ********************
 patient_038.nii
 ********************
 patient_038.nii
-Dice_rv: 0.0002
-Dice_myo: 0.0000
-Dice_lv: 0.6150
+Dice_rv: 0.0000
+Dice_myo: 0.6632
+Dice_lv: 0.7003
 ********************
 ********************
 patient_043.nii
 ********************
 patient_043.nii
-Dice_rv: 0.0009
-Dice_myo: 0.0000
-Dice_lv: 0.6769
+Dice_rv: 0.0000
+Dice_myo: 0.6170
+Dice_lv: 0.7731
 ********************
 ********************
 patient_044.nii
 ********************
 patient_044.nii
-Dice_rv: 0.0007
-Dice_myo: 0.0000
-Dice_lv: 0.5940
+Dice_rv: 0.0000
+Dice_myo: 0.6526
+Dice_lv: 0.6377
 ********************
 ********************
 patient_060.nii
 ********************
 patient_060.nii
 Dice_rv: 0.0000
-Dice_myo: 0.0000
-Dice_lv: 0.6283
+Dice_myo: 0.6684
+Dice_lv: 0.8253
 ********************
 ********************
 patient_065.nii
 ********************
 patient_065.nii
-Dice_rv: 0.0011
-Dice_myo: 0.0000
-Dice_lv: 0.4133
+Dice_rv: 0.0000
+Dice_myo: 0.4446
+Dice_lv: 0.5088
 ********************
 ********************
 patient_082.nii
 ********************
 patient_082.nii
-Dice_rv: 0.0001
-Dice_myo: 0.0000
-Dice_lv: 0.6906
+Dice_rv: 0.0000
+Dice_myo: 0.7679
+Dice_lv: 0.7696
 ********************
 ********************
 patient_093.nii
 ********************
 patient_093.nii
-Dice_rv: 0.0005
-Dice_myo: 0.0000
-Dice_lv: 0.3833
+Dice_rv: 0.0000
+Dice_myo: 0.5664
+Dice_lv: 0.4876
 ********************
 ********************
 patient_100.nii
 ********************
 patient_100.nii
 Dice_rv: 0.0000
-Dice_myo: 0.0000
-Dice_lv: 0.3389
+Dice_myo: 0.5459
+Dice_lv: 0.4103
 ********************
 ********************
 Mean_Dice
-Dice_rv0.0006110616085430144
-Dice_myo0.0
-Dice_lv0.6295787777129614
+Dice_rv0.0
+Dice_myo0.6771112897339678
+Dice_lv0.7137327973614658
 Mean_HD
 ********************
 avg_hd:nan
-DSC:0.2100632797738348
+DSC:0.46361469569847785
 HD:nan
