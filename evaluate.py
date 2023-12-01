@@ -196,6 +196,49 @@ def test_acdc(args):
         for line in lines:
             print(line)
 
+def test_kvasir(args):
+    label_list = sorted(glob.glob(os.path.join(args.save_dir, 'label', '*nii')))
+    infer_list = sorted(glob.glob(os.path.join(args.save_dir, 'infer', '*nii')))
+
+    Dice_polyp = []
+
+    def process_label(label):
+        polyp = label == 1
+
+        return polyp
+    
+    fw = open(args.save_dir + '/dice_pre.txt', 'a')
+
+    for label_path, infer_path in zip(label_list, infer_list):
+        print(label_path.split('/')[-1])
+        print(infer_path.split('/')[-1])
+        label = read_nii(label_path)
+        infer = read_nii(infer_path)
+        label_polyp = process_label(label)
+        infer_polyp = process_label(infer)
+
+        Dice_polyp.append(dice(infer_polyp, label_polyp))
+
+        fw.write('*' * 20 + '\n', )
+        fw.write(infer_path.split('/')[-1] + '\n')
+        fw.write('*' * 20 + '\n', )
+        fw.write(infer_path.split('/')[-1] + '\n')
+        fw.write('Dice_polyp: {:.4f}\n'.format(Dice_polyp[-1]))
+        fw.write('*' * 20 + '\n')
+
+    fw.write('*' * 20 + '\n')
+    fw.write('Mean_Dice\n')
+    fw.write('Dice_polyp' + str(np.mean(Dice_polyp)) + '\n')
+    fw.write('Mean_HD\n')
+    fw.write('*' * 20 + '\n')
+
+    print('done')
+    fw.close()
+    with open(args.save_dir + '/dice_pre.txt', 'r') as f:
+        lines = f.read().splitlines()
+        for line in lines:
+            print(line)
+        
 
 def test_synapse(args):
     label_list = sorted(glob.glob(os.path.join(args.save_dir, 'label', '*nii')))

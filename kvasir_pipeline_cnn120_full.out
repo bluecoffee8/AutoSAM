@@ -1,0 +1,4068 @@
+/home/kl321/AutoSAM/scripts/main_feat_seg.py:115: UserWarning: You have chosen a specific GPU. This will completely disable data parallelism.
+  warnings.warn('You have chosen a specific GPU. This will completely '
+Use GPU: 0 for training
+loaded keys: ['image_encoder.neck.0.weight', 'image_encoder.neck.1.weight', 'image_encoder.neck.1.bias', 'image_encoder.neck.2.weight', 'image_encoder.neck.3.weight', 'image_encoder.neck.3.bias', 'image_encoder.patch_embed.proj.weight', 'image_encoder.patch_embed.proj.bias', 'image_encoder.blocks.0.norm1.weight', 'image_encoder.blocks.0.norm1.bias', 'image_encoder.blocks.0.attn.rel_pos_h', 'image_encoder.blocks.0.attn.rel_pos_w', 'image_encoder.blocks.0.attn.qkv.weight', 'image_encoder.blocks.0.attn.qkv.bias', 'image_encoder.blocks.0.attn.proj.weight', 'image_encoder.blocks.0.attn.proj.bias', 'image_encoder.blocks.0.norm2.weight', 'image_encoder.blocks.0.norm2.bias', 'image_encoder.blocks.0.mlp.lin1.weight', 'image_encoder.blocks.0.mlp.lin1.bias', 'image_encoder.blocks.0.mlp.lin2.weight', 'image_encoder.blocks.0.mlp.lin2.bias', 'image_encoder.blocks.1.norm1.weight', 'image_encoder.blocks.1.norm1.bias', 'image_encoder.blocks.1.attn.rel_pos_h', 'image_encoder.blocks.1.attn.rel_pos_w', 'image_encoder.blocks.1.attn.qkv.weight', 'image_encoder.blocks.1.attn.qkv.bias', 'image_encoder.blocks.1.attn.proj.weight', 'image_encoder.blocks.1.attn.proj.bias', 'image_encoder.blocks.1.norm2.weight', 'image_encoder.blocks.1.norm2.bias', 'image_encoder.blocks.1.mlp.lin1.weight', 'image_encoder.blocks.1.mlp.lin1.bias', 'image_encoder.blocks.1.mlp.lin2.weight', 'image_encoder.blocks.1.mlp.lin2.bias', 'image_encoder.blocks.2.norm1.weight', 'image_encoder.blocks.2.norm1.bias', 'image_encoder.blocks.2.attn.rel_pos_h', 'image_encoder.blocks.2.attn.rel_pos_w', 'image_encoder.blocks.2.attn.qkv.weight', 'image_encoder.blocks.2.attn.qkv.bias', 'image_encoder.blocks.2.attn.proj.weight', 'image_encoder.blocks.2.attn.proj.bias', 'image_encoder.blocks.2.norm2.weight', 'image_encoder.blocks.2.norm2.bias', 'image_encoder.blocks.2.mlp.lin1.weight', 'image_encoder.blocks.2.mlp.lin1.bias', 'image_encoder.blocks.2.mlp.lin2.weight', 'image_encoder.blocks.2.mlp.lin2.bias', 'image_encoder.blocks.3.norm1.weight', 'image_encoder.blocks.3.norm1.bias', 'image_encoder.blocks.3.attn.rel_pos_h', 'image_encoder.blocks.3.attn.rel_pos_w', 'image_encoder.blocks.3.attn.qkv.weight', 'image_encoder.blocks.3.attn.qkv.bias', 'image_encoder.blocks.3.attn.proj.weight', 'image_encoder.blocks.3.attn.proj.bias', 'image_encoder.blocks.3.norm2.weight', 'image_encoder.blocks.3.norm2.bias', 'image_encoder.blocks.3.mlp.lin1.weight', 'image_encoder.blocks.3.mlp.lin1.bias', 'image_encoder.blocks.3.mlp.lin2.weight', 'image_encoder.blocks.3.mlp.lin2.bias', 'image_encoder.blocks.4.norm1.weight', 'image_encoder.blocks.4.norm1.bias', 'image_encoder.blocks.4.attn.rel_pos_h', 'image_encoder.blocks.4.attn.rel_pos_w', 'image_encoder.blocks.4.attn.qkv.weight', 'image_encoder.blocks.4.attn.qkv.bias', 'image_encoder.blocks.4.attn.proj.weight', 'image_encoder.blocks.4.attn.proj.bias', 'image_encoder.blocks.4.norm2.weight', 'image_encoder.blocks.4.norm2.bias', 'image_encoder.blocks.4.mlp.lin1.weight', 'image_encoder.blocks.4.mlp.lin1.bias', 'image_encoder.blocks.4.mlp.lin2.weight', 'image_encoder.blocks.4.mlp.lin2.bias', 'image_encoder.blocks.5.norm1.weight', 'image_encoder.blocks.5.norm1.bias', 'image_encoder.blocks.5.attn.rel_pos_h', 'image_encoder.blocks.5.attn.rel_pos_w', 'image_encoder.blocks.5.attn.qkv.weight', 'image_encoder.blocks.5.attn.qkv.bias', 'image_encoder.blocks.5.attn.proj.weight', 'image_encoder.blocks.5.attn.proj.bias', 'image_encoder.blocks.5.norm2.weight', 'image_encoder.blocks.5.norm2.bias', 'image_encoder.blocks.5.mlp.lin1.weight', 'image_encoder.blocks.5.mlp.lin1.bias', 'image_encoder.blocks.5.mlp.lin2.weight', 'image_encoder.blocks.5.mlp.lin2.bias', 'image_encoder.blocks.6.norm1.weight', 'image_encoder.blocks.6.norm1.bias', 'image_encoder.blocks.6.attn.rel_pos_h', 'image_encoder.blocks.6.attn.rel_pos_w', 'image_encoder.blocks.6.attn.qkv.weight', 'image_encoder.blocks.6.attn.qkv.bias', 'image_encoder.blocks.6.attn.proj.weight', 'image_encoder.blocks.6.attn.proj.bias', 'image_encoder.blocks.6.norm2.weight', 'image_encoder.blocks.6.norm2.bias', 'image_encoder.blocks.6.mlp.lin1.weight', 'image_encoder.blocks.6.mlp.lin1.bias', 'image_encoder.blocks.6.mlp.lin2.weight', 'image_encoder.blocks.6.mlp.lin2.bias', 'image_encoder.blocks.7.norm1.weight', 'image_encoder.blocks.7.norm1.bias', 'image_encoder.blocks.7.attn.rel_pos_h', 'image_encoder.blocks.7.attn.rel_pos_w', 'image_encoder.blocks.7.attn.qkv.weight', 'image_encoder.blocks.7.attn.qkv.bias', 'image_encoder.blocks.7.attn.proj.weight', 'image_encoder.blocks.7.attn.proj.bias', 'image_encoder.blocks.7.norm2.weight', 'image_encoder.blocks.7.norm2.bias', 'image_encoder.blocks.7.mlp.lin1.weight', 'image_encoder.blocks.7.mlp.lin1.bias', 'image_encoder.blocks.7.mlp.lin2.weight', 'image_encoder.blocks.7.mlp.lin2.bias', 'image_encoder.blocks.8.norm1.weight', 'image_encoder.blocks.8.norm1.bias', 'image_encoder.blocks.8.attn.rel_pos_h', 'image_encoder.blocks.8.attn.rel_pos_w', 'image_encoder.blocks.8.attn.qkv.weight', 'image_encoder.blocks.8.attn.qkv.bias', 'image_encoder.blocks.8.attn.proj.weight', 'image_encoder.blocks.8.attn.proj.bias', 'image_encoder.blocks.8.norm2.weight', 'image_encoder.blocks.8.norm2.bias', 'image_encoder.blocks.8.mlp.lin1.weight', 'image_encoder.blocks.8.mlp.lin1.bias', 'image_encoder.blocks.8.mlp.lin2.weight', 'image_encoder.blocks.8.mlp.lin2.bias', 'image_encoder.blocks.9.norm1.weight', 'image_encoder.blocks.9.norm1.bias', 'image_encoder.blocks.9.attn.rel_pos_h', 'image_encoder.blocks.9.attn.rel_pos_w', 'image_encoder.blocks.9.attn.qkv.weight', 'image_encoder.blocks.9.attn.qkv.bias', 'image_encoder.blocks.9.attn.proj.weight', 'image_encoder.blocks.9.attn.proj.bias', 'image_encoder.blocks.9.norm2.weight', 'image_encoder.blocks.9.norm2.bias', 'image_encoder.blocks.9.mlp.lin1.weight', 'image_encoder.blocks.9.mlp.lin1.bias', 'image_encoder.blocks.9.mlp.lin2.weight', 'image_encoder.blocks.9.mlp.lin2.bias', 'image_encoder.blocks.10.norm1.weight', 'image_encoder.blocks.10.norm1.bias', 'image_encoder.blocks.10.attn.rel_pos_h', 'image_encoder.blocks.10.attn.rel_pos_w', 'image_encoder.blocks.10.attn.qkv.weight', 'image_encoder.blocks.10.attn.qkv.bias', 'image_encoder.blocks.10.attn.proj.weight', 'image_encoder.blocks.10.attn.proj.bias', 'image_encoder.blocks.10.norm2.weight', 'image_encoder.blocks.10.norm2.bias', 'image_encoder.blocks.10.mlp.lin1.weight', 'image_encoder.blocks.10.mlp.lin1.bias', 'image_encoder.blocks.10.mlp.lin2.weight', 'image_encoder.blocks.10.mlp.lin2.bias', 'image_encoder.blocks.11.norm1.weight', 'image_encoder.blocks.11.norm1.bias', 'image_encoder.blocks.11.attn.rel_pos_h', 'image_encoder.blocks.11.attn.rel_pos_w', 'image_encoder.blocks.11.attn.qkv.weight', 'image_encoder.blocks.11.attn.qkv.bias', 'image_encoder.blocks.11.attn.proj.weight', 'image_encoder.blocks.11.attn.proj.bias', 'image_encoder.blocks.11.norm2.weight', 'image_encoder.blocks.11.norm2.bias', 'image_encoder.blocks.11.mlp.lin1.weight', 'image_encoder.blocks.11.mlp.lin1.bias', 'image_encoder.blocks.11.mlp.lin2.weight', 'image_encoder.blocks.11.mlp.lin2.bias', 'image_encoder.pos_embed']
+['cju1erep75us208553i4ofwwe.jpg', 'cju7g7ba42z310987bqzbi2bq.jpg', 'cju7dz5yy2i7z0801ausi7rna.jpg', 'cju85omszllp30850b6rm9mi3.jpg', 'cju77j66ez52p08019xygi0co.jpg', 'cju5ht88gedbu0755xrcuddcx.jpg', 'cju7fbndk2sl608015ravktum.jpg', 'cju8ashhnquqr0801rwduzt7d.jpg', 'cju774fmayxif0818u2g79usw.jpg', 'cju2s16zp317h0799gr67jqc2.jpg', 'cju88vx2uoocy075531lc63n3.jpg', 'cju334jzo261t0835yqudnfs1.jpg', 'cju2z45kuzf6d0988nz2c819m.jpg', 'cju6vifjlv55z0987un6y4zdo.jpg', 'cju8aj01yqeqm0850lhdz3xdw.jpg', 'cju2i8br1vqtd08784u6vmcjk.jpg', 'cju2z2x3nvd3c099350zgty7w.jpg', 'cju7b4mtw1n9n080186209f3d.jpg', 'cju3ya7goj6at0818v2l5ay7f.jpg', 'cju84ffdzkrjn08183jh1fxmb.jpg', 'cju1fj6axwfp30835ukhuzhw9.jpg', 'cju2oi8sq0i2y0801mektzvw8.jpg', 'cju43in5fm22c08175rxziqrk.jpg', 'cju5ufn3skquf0818dhapnhba.jpg', 'cju5i5oh2efg60987ez6cpf72.jpg', 'cju7fd6yt2p740987wkr8exo1.jpg', 'cju2y26c588bo07993ksd8eoz.jpg', 'cju6z9a9kwsl007552s49rx6i.jpg', 'cjyzurzvohqnr0794es1itzek.jpg', 'cju1fjsb4sipq09931lvd8e41.jpg', 'cju2rzpsmtb0f0835jabkbao1.jpg', 'cju8brv16rx7f0818uf5n89pv.jpg', 'cju2upu4evw7g08358guwozxv.jpg', 'cju5f0dezct4q08183ydw11dx.jpg', 'cju1cnnziug1l0835yh4ropyg.jpg', 'cju8clorgsuwn08714toqb7v6.jpg', 'cju3tx1qyg0c907552fglumhc.jpg', 'cju5hi52odyf90817prvcwg45.jpg', 'cju2ij9uiic2l09933ljiv6gm.jpg', 'cju6x97w4vwua0850x0997r0a.jpg', 'cju8abobpqbir08189u01huru.jpg', 'cju2ueb6j5ado0878vf5md13o.jpg', 'cju32gzs6xo8x0993r8tedbpb.jpg', 'cju6uy20suzbl0987rzuhz7z9.jpg', 'cju7dxffn2eam0817qxosfwch.jpg', 'cju15jr8jz8sb0855ukmkswkz.jpg', 'cju3y0pjrj1c30755nxekxccj.jpg', 'cju2pmhtr17a00855cvpelzb0.jpg', 'cju430pm2lz0y0755jkhcc3d1.jpg', 'cju85l4yjlops0801fvmnwptf.jpg', 'cju1d50a94qf50855wsowacrc.jpg', 'cju2txjfzv60w098839dcimys.jpg', 'cju13hp5rnbjx0835bf0jowgx.jpg', 'cju5clr68b48r0755cmuvponm.jpg', 'cju3xtufwiv9c0818djsc4cqd.jpg', 'cju5wi6bqlxy90755bu227nvb.jpg', 'cju7dymur2od30755eg8yv2ht.jpg', 'cju76lsehyia10987u54vn8rb.jpg', 'cju30k2z40ds308353kdew70n.jpg', 'cju1hs0za7jha0855vj0mdrjt.jpg', 'cju7b2l561oas0871decgslaf.jpg', 'cju5ccpvqash50850kb4bs22k.jpg', 'cju1cfhyg48bb0799cl5pr2jh.jpg', 'cju2hfqnmhisa0993gpleeldd.jpg', 'cju1c4fcu40hl07992b8gj0c8.jpg', 'cju1b75x63ddl0799sdp0i2j3.jpg', 'cju45qbf3n9sa0987oonbkly9.jpg', 'cju85a8h8llwm07559wxg4t5w.jpg', 'cju2i6acqvo6l0799u20fift8.jpg', 'cju85dx63lic408017f0l0400.jpg', 'cju7fq7mm2pw508176uk5ugtx.jpg', 'cju7dbppn28nx085097654msi.jpg', 'cju6xifswvwbo0987nibtdr50.jpg', 'cju0qoxqj9q6s0835b43399p4.jpg', 'cju5ft6mcd5q40987rhjgbrr6.jpg', 'cju30ywtc0oar0835bp2en7ec.jpg', 'cju1bhnfitmge0835ynls0l6b.jpg', 'cju7apr0c1qqm0755s7msqot4.jpg', 'cju7deifq2fzn0755lc8idyh8.jpg', 'cju1gi7jlwyld0835cdf6g6qz.jpg', 'cju3v3ac9gyz30755hfqwyp1i.jpg', 'cju45t5ddnbio0987qtqzx762.jpg', 'cju5k7r0yf98c09878csbxb4d.jpg', 'cju8aeei7q8k308173n9y4klv.jpg', 'cju2lz8vqktne0993fuym6drw.jpg', 'cjz14qsk2wci60794un9ozwmw.jpg', 'cju40w3hbkwpn08015rbs3wko.jpg', 'cju7d3oc82cho0755dajlwldz.jpg', 'ck2395w2mb4vu07480otsu6tw.jpg', 'cju83syhdk6gs0801rf1rekdl.jpg', 'cju5f26ebcuai0818xlwh6116.jpg', 'cju3x5u2tiihx0818914gzxy1.jpg', 'cju773hsyyosz0817pk1e7sjq.jpg', 'cju2uzabhs6er0993x3aaf87p.jpg', 'cju5chrxxawka0871qcj171yz.jpg', 'cju8d4jgatgpj0871q2ophhkm.jpg', 'cju2sszfq3uye0878sucelzk2.jpg', 'cju171py4qiha0835u8sl59ds.jpg', 'cju2ouil2mssu0993hvxsed6d.jpg', 'cju6yxyt0wh080871sqpepu47.jpg', 'cju30ov1oah920801mi8thuyg.jpg', 'cju45pm27n80u08174kyow1gj.jpg', 'cju83vvmik9wa08710yeh7cuk.jpg', 'cju15wdt3zla10801odjiw7sy.jpg', 'cju3ykamdj9u208503pygyuc8.jpg', 'cju887ftknop008177nnjt46y.jpg', 'cju2hx006vidl0799igm81vmh.jpg', 'cju8a56vxpy780850r45yu4wk.jpg', 'cju858eswlepn0871pzvdrhj1.jpg', 'cju7bf1lp1shi081835vs84lc.jpg', 'cju7ebe962hr409872ovibahw.jpg', 'cju7dp3dw2k4n0755zhe003ad.jpg', 'cju2qxxko229x08786gvxxhur.jpg', 'cju7f9umg2olj0987fj5y285w.jpg', 'cju88l66no10s0850rsda7ej1.jpg', 'cju30ia8da2bq0799klnehml2.jpg', 'cju2yljr0yzhw0988ecf271ly.jpg', 'cju32fhnhbds40799broyoptc.jpg', 'cju2uokeg5jm20799xwgsyz89.jpg', 'cju1bm8063nmh07996rsjjemq.jpg', 'cju5ygh1zmmdi0755uod5e17i.jpg', 'cju7ajnbo1gvm098749rdouk0.jpg', 'cju13cgqmnhwn0988yrainhcp.jpg', 'cju87vqa0ndwg0850onjdz7ol.jpg', 'cju2x7vw87mu30878hye2ca0m.jpg', 'cju7d7aut2a2p0818z4uxc6cd.jpg', 'cju7787c5yy3l080159mwqsnj.jpg', 'cju410dnfl0960755y8lu8d79.jpg', 'cju2rz4k434s70855wwx3ddtx.jpg', 'cju5yeqiwmkgl0801fzv2douc.jpg', 'cju1f5x1164xv08555654c24r.jpg', 'cju5gucasds9d0801019axylx.jpg', 'cju5h57xedz5h0755mjpc8694.jpg', 'cju2hos57llxm08359g92p6jj.jpg', 'cju5fs6j6d8350801vglraq4u.jpg', 'cju7adqyj1jcx08712r1ro5gx.jpg', 'cju85bf1algsq0871y9gtlq97.jpg', 'cju1cu1u2474n0878tt7v4tdr.jpg', 'cju14pxbaoksp0835qzorx6g6.jpg', 'cju8ceacrsqkr0755hdz145es.jpg', 'cju2ma647l0nj0993ot4deq2q.jpg', 'cju2qn2fzs1vy0988l243cvzy.jpg', 'cju7b3f5h1sm40755i572jden.jpg', 'cju1hyolc7aqu0878rrkfn1lr.jpg', 'cju5bf6hxa6m50817rbwettgu.jpg', 'cju2wzu8wxtgu09880ku9x1pg.jpg', 'cju5y4hgqmk0i08180rjhbwvp.jpg', 'cju77afzlz3kp07550x5nafzs.jpg', 'cju45n0oxn5vu08500yfrt9jn.jpg', 'cju7dizi82h2i0755doucgnt3.jpg', 'cju7da88w2eod0755wejzynvt.jpg', 'cju2hgsptlfam0835o3b59h1o.jpg', 'cju3y54kwj3nr0801biidlb4e.jpg', 'cju2sevf53lkx08558h5bpaig.jpg', 'cju85hguellg50818kwu3s8d1.jpg', 'cju5eq8c8ck690850vix98hv3.jpg', 'cju2zi4l09f5807991s8do2b2.jpg', 'cju83h9ysjwe808716nt35oah.jpg', 'cju8418jhkf7d0818ga2v0xq0.jpg', 'cju17v6ih0u7808783zcbg1jy.jpg', 'cju0vtox5ain6099360pu62rp.jpg', 'cju2hewssldzx0835ep795xu0.jpg', 'cju8bi8q7rlmn0871abc5ch8k.jpg', 'cju5udcufki0s09874ll1dbr5.jpg', 'cju2r7h21sj9608354gzks3ae.jpg', 'cju2yv4imv6cz099314jveiib.jpg', 'cju7f4sc62xqj075597xpmuoy.jpg', 'cju2yb31a8e8u0878wdashg7o.jpg', 'cju893jmdompz0817xn3g1w4h.jpg', 'cju6uzxk0v83p0801rcwnexdu.jpg', 'cju34zivp3fq80988opxbaqyn.jpg', 'cju3xuj20ivgp0818mij8bjrd.jpg', 'cju7ey10f2rvf0871bwbi9x82.jpg', 'cju14g8o4xui30878gkgbrvqj.jpg', 'cju1gv7106qd008784gk603mg.jpg', 'cju2t16vuucaq0835xcpsivn2.jpg', 'cju5uxjnol2r509871qv2yeia.jpg', 'cju7dda8w2br20818zhsuz8s7.jpg', 'cju2zjcvj9qma0801dk71hhi0.jpg', 'cju2i03ptvkiu0799xbbd4det.jpg', 'cju1haab178i70799tk9z8y8x.jpg', 'cju8bop5jrsid08716i24fqda.jpg', 'cju34ds2531520988qjpqt6e3.jpg', 'cju5xjn5mm78b09871spyqhhr.jpg', 'cju0rx1idathl0835detmsp84.jpg', 'cju8bff9nrfi10850fmfzbf8v.jpg', 'cju2r91dg2k090801bh0xzbxk.jpg', 'cju7cufm7298k0755j09uf3of.jpg', 'cju7b5afm1nfw0801xqm8bf8q.jpg', 'cju34i3qvcyog0855qiejxx5w.jpg', 'cju5hyi9yegob0755ho3do8en.jpg', 'cju2t2ivz43i10878zeg8r1br.jpg', 'cju7cp6dw244p0818gncdol4m.jpg', 'cju3x9lttikfb0818a0g104zn.jpg', 'cju3x4blzieu30850x10uuvbm.jpg', 'cju34uhepd3dd0799hs8782ad.jpg', 'cju3xga12iixg0817dijbvjxw.jpg', 'cju1gghyjwxt80835vx0wgxw0.jpg', 'cju7ehljc2or70871261br8ai.jpg', 'cju2uy8ox62jo0801g88hh42z.jpg', 'cju8c3xs7sauj0801ieyzezr5.jpg', 'cju3xl264ingx0850rcf0rshj.jpg', 'cju8cwy02t9eq08185qn12c02.jpg', 'cju324q101fhe08350wae9cif.jpg', 'cju6v1m1xv07w09870ah3njy1.jpg', 'ck2bxw18mmz1k0725litqq2mc.jpg', 'cju0ue769mxii08019zqgdbxn.jpg', 'cju33x0f22peh0988g0ln7w5v.jpg', 'cju6wi3akvn8r0801px8eligc.jpg', 'cju2yi9tz8vky0801yqip0xyl.jpg', 'cju77vvcwzcm50850lzoykuva.jpg', 'cju5x00l6m5j608503k78ptee.jpg', 'cju7ejm2l2ncl0801wq6y84nw.jpg', 'cju3uz4o6gr9z0850lhxyxvsj.jpg', 'cju1alwgo30z60855fm3y23sm.jpg', 'cju1cqc7n4gpy0855jt246k68.jpg', 'cju8bzzy2s66m08016z6mouqt.jpg', 'cju2rnkt22xep0801as160g9t.jpg', 'cju42qet0lsq90871e50xbnuv.jpg', 'cju1ddr6p4k5z08780uuuzit2.jpg', 'cju3v11mrgwwb0755u242ygye.jpg', 'cju8bafgqrf4x0818twisk3ea.jpg', 'cju43mkj9m8wb0871qiadahub.jpg', 'cju1amqw6p8pw0993d9gc5crl.jpg', 'cju2qu37qobl50993aw7ghcfq.jpg', 'cju88oh0po9gq0801nge4tgr1.jpg', 'cju45jpvfn6c809873pv1i34s.jpg', 'cju784jpdzeae0987q5ypq883.jpg', 'cju3uwz6ogsp10801h2r3bj5l.jpg', 'cju85c2d4ln1b0755zz1z3onx.jpg', 'cju1hhj6mxfp90835n3wofrap.jpg', 'cju2wtwj87kys0855kx6mddzw.jpg', 'cju7et17a2vjk0755e743npl1.jpg', 'cju35ldepdtlm0801yv79y8vu.jpg', 'cju32l161bi1v07990vm376in.jpg', 'cjyzul1qggwwj07216mhiv5sy.jpg', 'cju3381d8bz3h07991xtl7ra0.jpg', 'cju5thdbrjp1108715xdfx356.jpg', 'cju5woy82m07m08505dmjg7g1.jpg', 'cju1expq45zst0855rjqwwj4m.jpg', 'cju3uhb79gcgr0871orbrbi3x.jpg', 'cju8402x1kcy70801t6kz6bdi.jpg', 'cju85mpuglq8k0818d2it6hzb.jpg', 'cju5jx7jzf7c90871c2i9aiov.jpg', 'cju33jon3ygbj0993pu22a4k6.jpg', 'cju3xjqtpikx50817tppy6g84.jpg', 'cju2qz06823a40878ojcz9ccx.jpg', 'cju5bdwa3aatx0818b79i18zf.jpg', 'cju17g6ykn1cs0993dww6qdi8.jpg', 'cju2nyc5f02m40801ojqbtiea.jpg', 'cju2u4pymvc720988wsxrmi84.jpg', 'cju0tl3uz8blh0993wxvn7ly3.jpg', 'cju87z6o6nh73085045bzsx6o.jpg', 'cju0s690hkp960855tjuaqvv0.jpg', 'cju7dsrtb2f8i085064kwugfk.jpg', 'cju16d65tzw9d0799ouslsw25.jpg', 'cju1fr4etsmrr09933u4t4aql.jpg', 'cju7f6cqy2ur20818t1saazbm.jpg', 'cju8azmhcr66e0755t61atz72.jpg', 'cjyzufihqquiw0a46jatrbwln.jpg', 'cju428k5fldt108177s6g6f45.jpg', 'cju6z1bzbwfq50817b2alatvr.jpg', 'cju2hjrqcvi2j0801bx1i6gxg.jpg', 'cju7cue9b232j0801qdzk1ykj.jpg', 'cju5bwhapakm90987c1v4z46a.jpg', 'cju6wn57mvooj0850rp78hhy7.jpg', 'cju3v0fl3gwce0755qkjhzmd4.jpg', 'cju6vta3kvazg0817qbeppjtm.jpg', 'cju7dglf226g50987ohbthl19.jpg', 'cju7fazv92ywx0755xov2erga.jpg', 'cju87kbcen2av0987usezo8kn.jpg', 'cju2ysg748ru80878sp6j0gm0.jpg', 'cju2xjz2ju8pe0993ysv9wg17.jpg', 'cju33qpdvc9g0087825jhf3s9.jpg', 'cju8b7aqtr4a00987coba14b7.jpg', 'cju8c9akjsdjj0850s67uzlxq.jpg', 'cju2rpa30t07b0835im0erql0.jpg', 'cju7ezs7g2mxm098787atbran.jpg', 'cju1fuoa4wmc50835qfd11sp9.jpg', 'cju8b2rmgr52s0801p54eyflx.jpg', 'cju88z8bson4h0871nnd7fdxo.jpg', 'cju1819curo000988pd5xcqme.jpg', 'cju89z6pqpqfx0817mfv8ixjc.jpg', 'cju6x4t13vyw60755gtcf9ndu.jpg', 'cju5wphwwlu3m0987hh3ltg88.jpg', 'cju0roawvklrq0799vmjorwfv.jpg', 'cju2xs6na81t20878pt6nkfip.jpg', 'cju31w6goazci0799n014ly1q.jpg', 'cju8b542nr81x0871uxnkm9ih.jpg', 'ck2bxiswtxuw80838qkisqjwz.jpg', 'cju2r2obh2bjm08553kng0rh7.jpg', 'cju8bn7m2rmm70817hgxpb1uq.jpg', 'cju7dn24o296i09871qfxb8s2.jpg', 'cju2s9g11pnra0993gn4eh793.jpg', 'cju7dqcwi2dz00850gcmr2ert.jpg', 'cju7fmvpk2q170987v6i3ola8.jpg', 'cju8arof2qpf20850ifr1bnqj.jpg', 'cju42dwedlmk60871jbgu4ehi.jpg', 'cju2rqo702wpx0855fn7d5cxh.jpg', 'cju2y8s56ymqr083541ggdsml.jpg', 'cju1g20bdwq6u0835e16xugcd.jpg', 'cju310f6val1v0855xo8tc3gu.jpg', 'cju88nroho44508500129f1nh.jpg', 'cju7db7lp2f400755tntd1ohf.jpg', 'cju5eyfe9cpk90987laa7tsl3.jpg', 'cju7bc95p1mdm0817yqj5jc6j.jpg', 'cju7frtqu2xa20818wq8r9fzf.jpg', 'cju2spdagu1l50835da1f46fr.jpg', 'cju2srvy5440s0801y1ba9akr.jpg', 'cju88itqbny720987hxizbj5y.jpg', 'cju88msmoo3470817m441j4sg.jpg', 'cju6xlygpw7bs0818n691jsq4.jpg', 'cju5cjh3xattc0817j2vbulzi.jpg', 'cju6v6g6kvdw007552x6mb0po.jpg', 'cju84jdl9kv0i0871eog9b3i9.jpg', 'cju7d7tly27h408016fyp5nr7.jpg', 'cju1cyjb5qtie0993njqne9m3.jpg', 'cju2ro5jqsy680988pi6qsujw.jpg', 'cju1d31sp4d4k0878r3fr02ul.jpg', 'cju2tqfgw4oat0799rn0g5b2z.jpg', 'cju3v56bwgy8v0871w14pz8fx.jpg', 'cju2pag1f0s4r0878h52uq83s.jpg', 'cju17bz250pgd0799u1hqkj5u.jpg', 'cju5k3j3uf6de0817hszzfr7n.jpg', 'cju87ox0kncom0801b98hqnd2.jpg', 'cju2ycp1u8g2r0799jslnp7cz.jpg', 'cju5xneamme2p0801qdf7fdwv.jpg', 'cju5xq3tdm9fn0987pbedxdg5.jpg', 'cju35atpxdjot0855q46aqrd0.jpg', 'cju77bvg0yv4r0987yh60xmjo.jpg', 'cju7flevb2wii08188otgs9p2.jpg', 'cju32upim1z7u0988l883nqp6.jpg', 'cju8bssulrrcy0987h1vq5060.jpg', 'cju2okvco06xc0799kxe5n1qh.jpg', 'cju42romflni20817etb9a0fl.jpg', 'cju5vwbr4lhqn0987a1pji0ux.jpg', 'cju83u9ftk3ni0987qnhlcinv.jpg', 'cju2m56cryvqd0801gtn2yp8t.jpg', 'cjyzlw7f9faqr070129au64sq.jpg', 'cju2omjpeqj5a0988pjdlb8l1.jpg', 'cju7awzmu1ncs0871hziy65zx.jpg', 'cju77g99iyxc00817zqi2ppor.jpg', 'cju2yyhsp933j0855hp32e012.jpg', 'cju18kevfrojc0835bn90f1in.jpg', 'cju18gzrq18zw0878wbf4ftw6.jpg', 'cju8d2q30tfhs0801n7lx77xl.jpg', 'cjyzl833ndne80838pzuq6ila.jpg', 'cju5vcmrqla7i0817x4sp4pqw.jpg', 'cju1fm3id6gl50801r3fok20c.jpg', 'cju5hqz50e7o90850e0prlpa0.jpg', 'cju7f5ghb2r5s0801chwkxxh9.jpg', 'cju1egh885m1l0855ci1lt37c.jpg', 'cju8cgi2kspp308011nxdtjp6.jpg', 'cju418rckl3ur08012psrx1r1.jpg', 'cju426tomlhll0818fc0i7nvh.jpg', 'cju5ktjwofed70817eg58ef7u.jpg', 'cju303j5r062k098835zxfds5.jpg', 'cju35a77vdj4n08556jj2lgmc.jpg', 'cju8bgdmqrksy0801tozdmraa.jpg', 'cju1dnz61vfp40988e78bkjga.jpg', 'cju34sh43d8zm08019xbwhc0o.jpg', 'cju3x7xsaijq80818f0psavav.jpg', 'cju5c5xc7algd0817pb1ej5yo.jpg', 'cju1euuc65wm00799m4sjdnnn.jpg', 'cju34ymm8d6700799uop0cw33.jpg', 'cju5o4pk9h0720755lgp9jq8m.jpg', 'cju34ouumcznz07996gg1xq7v.jpg', 'cju8b1v3br45u087189kku66u.jpg', 'cju0sr5ghl0nd08789uzf1raf.jpg', 'cju7bgnvb1sf808717qa799ir.jpg', 'cju31rb7vb6110801p9rhacuw.jpg', 'cju88aq6vo1ij0755c2ey7z7n.jpg', 'cju85qefyln6v0850szeb9byi.jpg', 'cju42xpi8lw4w0871ve317a1p.jpg', 'cju1c3218411b08014g9f6gig.jpg', 'cju34o6dbd2lo0855aqlcy1hs.jpg', 'cju83wwn1k55e0850kw6i2d81.jpg', 'cju2tzypl4wss0799ow05oxb9.jpg', 'cju5o1vu9gz8a0818eyy92bns.jpg', 'cju33231uy4gi0993qc7b1jch.jpg', 'cju8dic9mtppa0987swn23wbc.jpg', 'cju77k828z46w0871r0avuoo9.jpg', 'cju5kre09fhka0850h7b1898j.jpg', 'cju6wll7wvo3y08502pagos8m.jpg', 'cju30bmab08bi0835mvlr6e0r.jpg', 'cju5x7iskmad90818frchyfwd.jpg', 'cju1dq3x1vgx109889c7wyirg.jpg', 'cju8c5223s8j80850b4kealt4.jpg', 'cju42m60jlpcm08186kqppzqv.jpg', 'cju2zblxw9848087853csbrx1.jpg', 'cju5nxkujgscq0817l9gss626.jpg', 'cju8914beokbf0850isxpocrk.jpg', 'cju6wt9jvvn500871hjn3t3g0.jpg', 'cju424hy5lckr085073fva1ok.jpg', 'cju43gfosm63n08714rpih8pe.jpg', 'cju2ti1du4idn0878giuozonw.jpg', 'cju7arvfe1ldu0850erdmphgj.jpg', 'cju8chdlqsu620755azjty1tj.jpg', 'cju2qvuj1s9ok0835tp2k4ozh.jpg', 'cju2iatlki5u309930zmgkv6h.jpg', 'cju1b0y2e396p08558ois175d.jpg', 'cju5w7xn0lrkq0801f9k0htgx.jpg', 'cju2nbdpmlmcj0993s1cht0dz.jpg', 'cju31ugmfb3dz0855xtqshki6.jpg', 'cju5fb86jd1jp0755b1ukbhq5.jpg', 'cju2z6ez69g4u0801qwt088lw.jpg', 'cju2wxv0hxs2f09884w48v8fi.jpg', 'cju2p91qir00k08350ddfif0w.jpg', 'cju8c6hnxsdvr0801wn0vrsa6.jpg', 'cju3y9difj6th0801kd1rqm3w.jpg', 'cju35k2fr3vc50988c85qkrwg.jpg', 'cju8c2rqzs5t80850d0zky5dy.jpg', 'cju83qd0yjyht0817ktkfl268.jpg', 'cju885ikhnmkn09878s2lqtuh.jpg', 'cju5bhv81abur0850ean02atv.jpg', 'cju2xa3i4y0160988i679zsqd.jpg', 'cju5jz5fff8c50871hbe6108f.jpg', 'cju5bycdkalkb09875f7bfrvx.jpg', 'cju2y0z6g87p10878fpk5d3rq.jpg', 'cju5c7oijaqmq09878qwgqv8n.jpg', 'cju8cattbsivm0818p446wgel.jpg', 'cju7dlk532dsh0871zvr6qz0r.jpg', 'cju890guyoiti098753yg6cdu.jpg', 'cju6z600qwh4z081700qimgl9.jpg', 'cju30ajhw09sx0988qyahx9s8.jpg', 'cju8b5p40r2c60987ofa0mu03.jpg', 'cju5ca9hcatkc0801jzwe7tfx.jpg', 'cju1drnhbrb9409935wi7vkhg.jpg', 'cju34repocy5208780gswillm.jpg', 'cju1efbr0rqxz09931z0lf4vf.jpg', 'cju7bmi1v1pnj0987pa52jjok.jpg', 'cju8b3ka8r64u0801fh18hk7l.jpg', 'cju34fojcctcf0799ebolbvkn.jpg', 'cju3tsh4lfsok0987w6x3a0v1.jpg', 'cju8doa16u5gh0818w1ywda3q.jpg', 'cju32qr9tbvsj08013pkpjenq.jpg', 'cju7dff9529h208503w60lbil.jpg', 'cju7bd1qu1mx409877xjxibox.jpg', 'cju5cetivauok0987ok3e5bre.jpg', 'cju7do8c72dbo0801vxfzxdc4.jpg', 'cju33eqwbcch208012jikwdky.jpg', 'cju7etr3y2p4t0801cdzjj8ab.jpg', 'cju7amjna1ly40871ugiokehb.jpg', 'cju41lojblbs307555jdci937.jpg', 'cju8bljw9rqk20801kr54akrl.jpg', 'cju8b0jr0r2oi0801jiquetd5.jpg', 'cju83rcnzkbsj0755x5anfrcg.jpg', 'cju5eftctcdbj08712gdp989f.jpg', 'cju45v0pungu40871acnwtmu5.jpg', 'cju306x7w05nb0835cunv799x.jpg', 'cju8828oxnool0801qno9luhr.jpg', 'cju76o55nymqd0871h31sph9w.jpg', 'cju35i2e63uxr0835h7zgkg9k.jpg', 'cju3u1c8tfyqx08503iedc3mx.jpg', 'cju6v5ilsv8hk0850rb5sgh6o.jpg', 'cju18849rrsgr0988p90hkygb.jpg', 'cju5vgawslbe30987ndeepc1b.jpg', 'cju5uhrdwkmsu0817ervv91l8.jpg', 'cju8dn0c3u2v50801k8rvq02f.jpg', 'cju77b3wyz4160755qis4ljsb.jpg', 'cju5wcc90lu020850mjrxppv6.jpg', 'cju42nm68lpyo0818xvvqmupq.jpg', 'cju30j1rgadut0801vuyrsnt8.jpg', 'cju6ur9l9v9jq0755paud9uka.jpg', 'cju320gyvbch60801v2amdi2g.jpg', 'cju16jgnyzp970878melv7r25.jpg', 'cju3tp94kfstl08181awh6z49.jpg', 'cju5f8hxdcxxn08188obby0ea.jpg', 'cju35eg0tdmjt085525sb4bua.jpg', 'cju336l68y7if0993wf092166.jpg', 'cju40sdwukv3k0755y99ug1k8.jpg', 'ck2bxknhjvs1x0794iogrq49k.jpg', 'cju7d2q1k27nf08715zshsckt.jpg', 'cju2pkwt3r8b90988v2ywq1px.jpg', 'cju30df2j09dd08351ayx2t6w.jpg', 'cju2yw4s7z7p20988lmf2gdgd.jpg', 'cju5xopi0md7q0871r1sjc1av.jpg', 'cju8bw697rwg308177tg8huas.jpg', 'cju40jl7skiuo0817p0smlgg8.jpg', 'cju14hjh2ob2o0835ouz3r5aa.jpg', 'cju33belnbyhm0878yxl42233.jpg', 'cju88k75inzyb0850ccv5x3vk.jpg', 'cju8dm2cau2km0818jsv9eeq2.jpg', 'cju3x2s11ibzi0817kk284k0j.jpg', 'cju42g865lorv07552ytz6xxa.jpg', 'cju785htizjzo08017tvlhtg4.jpg', 'cju16ach3m1da0993r1dq3sn2.jpg', 'cju7fpfzq2wyf0818xxd1oziv.jpg', 'cju30lncba3ny0878jwnous8n.jpg', 'cju2xwm1s84l50799i60mq0pu.jpg', 'cju84hibuktj80871u519o71q.jpg', 'cju8a2itsq4dv0755ntlovpxe.jpg', 'cju849c23kgnk0817cgv2hw1e.jpg', 'cju88t4fvokxf07558ymyh281.jpg', 'cju15czxqp3lv0835jvhgzurz.jpg', 'cju2ntxtdzlvu0799xl3j9pan.jpg', 'cju5tgbzhjllu08174ca41eus.jpg', 'cju5hjxaae3i40850h5z2laf5.jpg', 'cju76erapykj30871x5eaxh4q.jpg', 'cju41p90plcsx08018cnzpndc.jpg', 'cju8b8yair65w09878pyqtr96.jpg', 'cju8bqxxurs6i0850mu7mtef9.jpg', 'cju2lberzkdzm09938cl40pog.jpg', 'cju7el6xv2k520817qxx9wdr5.jpg', 'cju33w4sdcivk0855x879zht7.jpg', 'cju2r6mt2om21099352pny5gw.jpg', 'cju8ca4geseia0850i2ru11hw.jpg', 'cju30u1hbakn808019g15nb8b.jpg', 'cju35c4wzdhow0799h6eq4sgs.jpg', 'cju7d1tvt25bu08019dvw3uff.jpg', 'cju2zpw4q9vzr0801p0lysjdl.jpg', 'cju30mm25a53s0799qa5wiqe8.jpg', 'cju0sxqiclckk08551ycbwhno.jpg', 'cju1dg44i4z3w0801nyz4p6zf.jpg', 'cju6ut4l8va6y0755tyw3vfqq.jpg', 'cju2pjb9v0ywn0878j5g5n69j.jpg', 'cju5waeduln160817w0agirve.jpg', 'cju42tauqlo5p08171l3cuo4b.jpg', 'cju8at3s1qqqx0850hcq8nmnq.jpg', 'cju87zv8lni0o0850hbbecbq6.jpg', 'cju2sxf3iqbpv09937iksn8ep.jpg', 'cju7b10ce1mnm08011c5bwyr4.jpg', 'cju84ih17kp5l09876bkooocl.jpg', 'cju5es375cnzy0801nkq35ffs.jpg', 'cju40r6jrksyk0871wg98zgho.jpg', 'cju87tyddnnad0755bj0wxahe.jpg', 'cju7csvlb22fr0850lvm45n3x.jpg', 'cju8alhigqn2h0801zksudldd.jpg', 'cju7bfx651qr80801cs7epotb.jpg', 'cju87r56lnkyp0755hz30leew.jpg', 'cju2t9tdwuk700835kv0ljmtl.jpg', 'cju77re6fz5bb0817vp9redjg.jpg', 'cju5wkonqlrl409877y8zvnub.jpg', 'cju7b1ygu1msd0801hywhy0mc.jpg', 'cju5knbbqfipk080128cggukq.jpg', 'cju3wstckialg0871xs0vevsj.jpg', 'cju3umoh1geet0817cmpef5am.jpg', 'cju2zdvjn9h7r08553cp4eed5.jpg', 'cju1871y11d6r0799k6cw4yze.jpg', 'ck2bxpfgxu2mk0748gsh7xelu.jpg', 'cju8cbsyssiqj0871gr4jedjp.jpg', 'cju7bb3ss1uoo0755pmhyco7t.jpg', 'cjyzuio1qgh040763k56deohv.jpg', 'cju6xmqd9w0250817l5kxfnsk.jpg', 'cju7ae7bq1f820987toc8si1d.jpg', 'cju5u4pywk81x0817vn9pe14z.jpg', 'cju2rn0hasxri0835nfy3buay.jpg', 'cju2lcyfgkf5809932fn9gucn.jpg', 'cju77idwfz36d0871tzfzz51i.jpg', 'cju2hw5gjlr5h0988so2qqres.jpg', 'cju783tmkzkqu081803g7q5vk.jpg', 'cju2i3hzclw3o0988rrgh911i.jpg', 'cju1aqqv02qwz0878a5cyhr67.jpg', 'cju43kj2pm34f0850l28ahpni.jpg', 'cju7d5m0p23kn09871rk7pu3v.jpg', 'cju83yddek68q0850d2x7zfkm.jpg', 'cju8adb60qbiu080188mxpf8d.jpg', 'cju2p0eveqtdc0835gpi3p93i.jpg', 'cju41kd7yl4nm0850gil5qqwh.jpg', 'cju0qkwl35piu0993l0dewei2.jpg', 'cju1csmlc4ht10799b8ymmghg.jpg', 'cju88evxanv9r08176zkeovec.jpg', 'cju2zxja9w1eh09933609ho9z.jpg', 'cju3yht87j83m08507yk1u1fg.jpg', 'cju7bduyq1rjf08719giru9ho.jpg', 'cju43jcqim2cp08172dvjvyui.jpg', 'cju857ad0l88m0817qx4cwxnf.jpg', 'cju2uwz9f5yf1085506cfamfx.jpg', 'cju3v664kh0px0818y4y7wolf.jpg', 'cju2rxm8rpbaf0993o3qr2oph.jpg', 'cju6w733bveoz0817e600tw72.jpg', 'cju3yb47cj1xq0817zfotbni4.jpg', 'cjyzkmjy8evns070165gf9dmq.jpg', 'cju2htabevq9108015qjei0x7.jpg', 'cju2u2b9o4zvp08788qb9nqxj.jpg', 'cju30qbm1ad3x0855znuhpz9u.jpg', 'cju1g4nsb6ngy0799l4ezm8ab.jpg', 'cju32zhbnc1oy0801iyv1ix6p.jpg', 'cju3ua8u0g9rg0801uayhdxhu.jpg', 'cju1ats0y372e08011yazcsxm.jpg', 'cju32srle1xfq083575i3fl75.jpg', 'cju7ctvqn25dy08186g442m1r.jpg', 'cju1ftaji6isw0855108yqcse.jpg', 'cju30gxjq0djk0988jytm49rs.jpg', 'cju6vvb8svhed0801jjcquh5e.jpg', 'cju3y79ofj3va0871uqfb1mzo.jpg', 'cju6v3bb2v7xo085090blubyw.jpg', 'cju7emdni2py40871ivhxjtut.jpg', 'cju88gx09o2vk0818610zody3.jpg', 'cju2y5zas8m7f0801d34g5owq.jpg', 'cjyzu3reghjya0794w7pwoi50.jpg', 'cju7aifyo1p3n07552nxjx51f.jpg', 'cju8a1jtvpt9m081712iwkca7.jpg', 'cju357rxxdaz30878y2esjpjt.jpg', 'cju1fyb1d69et0878muzdak9u.jpg', 'cju5wmvsdlx1j0871npgj8j4b.jpg', 'cju85fc11ljr40818edpb0inh.jpg', 'cju5vi4nxlc530817uoqm2m7a.jpg', 'cju5nyu31gv8e0871zpk74a2n.jpg', 'cju8auylgqx0z0871u4o4db7o.jpg', 'cju2u73dj53oz0878486k8k4b.jpg', 'cju8bm24yrrdp081829mbo8ic.jpg', 'cju7ap09p1kz10850ldccjebj.jpg', 'cju7aqkue1i2k09879uzcpt8r.jpg', 'cju17z0qongpa0993de4boim4.jpg', 'cju77196iyshb0850ycbto50a.jpg', 'cju3ttznuftyf09875t11850w.jpg', 'cju3xiic0ilzp0850lusrb42j.jpg', 'cju2p4ddkmzxj0993p94o62av.jpg', 'cju300m3s04fg0988uzupuf7z.jpg', 'cju40wto5kxwi0755it190f2k.jpg', 'cju32a52lb9rc0799xi40qs00.jpg', 'cju5x15djm7ae0755h8czf6nt.jpg', 'cju76l27oyrw907551ri2a7fl.jpg', 'cju3u39fog1bo0871lxjrabks.jpg', 'cju5ukkg6kv7u08011x2b6zl5.jpg', 'cju5klveuff6w0871wbibgh3m.jpg', 'cju8567gdlcbq0801dwwyo2jt.jpg', 'cju8dpa89u6l80818dj6lldh9.jpg', 'cju2yo1j1v0qz09934o0e683p.jpg', 'cju2trbpkv0c00988hxla5dzz.jpg', 'cju772304yw5t0818vbw8kkjf.jpg', 'cju6vqarjv7yo0987q4b1btk1.jpg', 'cju5boicjagt20871b1fotkh4.jpg', 'cju5y84q3mdv50817eyp82xf3.jpg', 'cju1egx9pvz2n0988eoy8jp23.jpg', 'cju3u815rg4ek0850vvhtcvcm.jpg', 'cju183od81ff608017ekzif89.jpg', 'cju7d4jk723eu0817bqz2n39m.jpg', 'cju7agj961l2r0818z29iq8yn.jpg', 'cju3y21quj0ir0818kgjagr15.jpg', 'cju0qx73cjw570799j4n5cjze.jpg', 'cju7dtb1e2j0t0818deq51ib3.jpg', 'cju5ymyd8mmdc0801ry3by1xr.jpg', 'cju7ekbo32pft0871fv7kzwb9.jpg', 'cju5ekty5ckzf07550c9u3ckk.jpg', 'cju7fob3x301u0755x985pmmq.jpg', 'cju326h4v1gxw08352px40p7r.jpg', 'cju8axq24r4an0755yhv9d4ly.jpg', 'cju2tvrvm53ws0801a0jfjdxg.jpg', 'cju8bk8oirjhw0817hgkua2w8.jpg', 'cju77t0razbvm080106o56289.jpg', 'cju1f320ewfyu0988ndz6blh5.jpg', 'cju787jnjzjuj0871p94nck9g.jpg', 'cju5g163vd6mt0817uccuga6u.jpg', 'cju5vzjoslpj708186z2fusmz.jpg', 'cju88cddensj00987788yotmg.jpg', 'cju1hmff8tkp809931jps6fbr.jpg', 'cju5fi0yxd3ei0801v7u0yudn.jpg', 'cju2zgbj9zmrw0835nnlzxj4c.jpg', 'cju83k8fyjsxr0817d6nxs6r4.jpg', 'cju7eea9b2m0z0801ynqv1fqu.jpg', 'cju35740hzm0g0993zl5ic246.jpg', 'cju1f79yhsb5w0993txub59ol.jpg', 'cju15l5ubz9yh0855b3ivdpse.jpg', 'cju323ypb1fbb0988gx5rzudb.jpg', 'cju1ewnoh5z030855vpex9uzt.jpg', 'cju40poe4kt9s0755f9cnm3h5.jpg', 'cju31y80qbawn0801twwm2l5s.jpg', 'cju2osuru0ki00855txo0n3uu.jpg', 'cju847pxykriq0755268ktrk2.jpg', 'cju3xzvnzj0hd0755xprz39nj.jpg', 'cjyzk8qieoboa0848ogj51wwm.jpg', 'cju439oazm2fu0871ma0vvrft.jpg', 'cju5uzmaol56l0817flxh4w9p.jpg', 'cju1cvkfwqrec0993wbp1jlzm.jpg', 'cju5uget8krjy0818kvywd0zu.jpg', 'cju2sggy13na70855tbeoqgha.jpg', 'cju2nqapmzvk20801f9us40dx.jpg', 'cju1gkndf6yi10801o1qnje19.jpg', 'cju88v2f9oi8w0871hx9auh01.jpg', 'cju77u1sjz77b0817ft44r3fk.jpg', 'cju8cj10qsrau0871o2dr6ai1.jpg', 'cju2zm0axztpe0988r8s9twjr.jpg', 'cju2raxlosl630988jdbfy9b0.jpg', 'cju7eotqi2qea0871y8yc7tqh.jpg', 'cju2zo0fwzv580988qlijd2xa.jpg', 'cju2zdhsczmn50988z64qwg2q.jpg', 'cju40taxlkrho0987smigg0x0.jpg', 'cju17otoe119u0799nqcbl8n1.jpg', 'cju8chxndsre008015uisl4si.jpg', 'cju7aklv31h4309871m29l4e7.jpg', 'cju84aoa3ktwn0755pfl4gfwd.jpg', 'cju1euant5l960878iqj5vvto.jpg', 'cju2np2k9zi3v079992ypxqkn.jpg', 'cju7d6ux323ze0987xos3srkx.jpg', 'cju41r6v2lcww0871ps8k8pf5.jpg', 'cju17hw9hr9c5098800fu4u8e.jpg', 'cju7evxt12m730987rxivne3x.jpg', 'cju6x35ervu2808015c7eoqe4.jpg', 'cju8bbznkrf5g0871jncffynk.jpg', 'cju30nyxe0gfb0835p256yoju.jpg', 'cju88rl5eo94l0850kf5wtrm1.jpg', 'cju1brhsj3rls0855a1vgdlen.jpg', 'cju1c8ffau5770835g0g343o8.jpg', 'cju7alcgr1lsr0871riqk84z7.jpg', 'cju1ffnjn6ctm08015perkg37.jpg', 'cju2zp89k9q1g0855k1x0f1xa.jpg', 'cju7druhp2gp308715i6km7be.jpg', 'cju87nkyrnb970801q84m47yt.jpg']
+['cju5fw37edaae0801vkwvocn7.jpg', 'cju2z9vlp9j0w0801oag91sy9.jpg', 'cju7cq6su27qv075574dir0r3.jpg', 'cju7azuu31mia0801pf9ib5ed.jpg', 'cju7efffp2ivf0817etg3jehl.jpg', 'cju330ofbc2l30801th5g3hw6.jpg', 'ck2bxqz3evvg20794iiyv5v2m.jpg', 'cjyzkpsbjdsjq07211dfi4sru.jpg', 'cju32jcdabepz0878d0cznmfe.jpg', 'cju43lcnum9y10755bjs7z87f.jpg', 'cju7ahtkb1jr90801jck4kbds.jpg', 'cju32phw2bv130801yj7bkouq.jpg', 'cju7dvl5m2n4t0755hlnnjjet.jpg', 'cju87q6yoneim0871dl4phvkd.jpg', 'cju5vbo6jldrt0871jf6f1700.jpg', 'cju2wx0gh7fpz0878wwyd9ep8.jpg', 'cju7fnfv02tt90801djnix9m8.jpg', 'cju8dk7eztzup08182yxko5zh.jpg', 'cju6wjm81vgsc0987enk9n3pr.jpg', 'cju5enq1tcn1i0755hnkon787.jpg', 'cju7dmlgf2ebw0871ieqas5fh.jpg', 'cju2hlm19vjjf0801o69qnber.jpg', 'cju2phaksnahz0993yxogjcpv.jpg', 'cju2nd7l7z98o0799gfjvyfmw.jpg', 'cju88trl3ogi208716qvti51b.jpg', 'cju7ez7r22qbc08015xfoz2wb.jpg', 'cju5x28nzm7t907558ocq4bt7.jpg', 'cju8bj2ssrmlm0871gc2ug2rs.jpg', 'cju8c82iosagu0817l74s4m5g.jpg', 'cju0s2a9ekvms080138tjjpxr.jpg', 'cju8c5mxls96t0850wvkvsity.jpg', 'cju2zkpdl9h7t0799ix60teqg.jpg', 'cju2lyynuymli0855g7fxgbhe.jpg', 'cju2otvvv0l7z0855x7we8cb0.jpg', 'cju846ec0kj7z08012o10klrb.jpg', 'cju40m0rjkpw80871z6n6yg1u.jpg', 'cju3u4lxmg59o0755rz42b9en.jpg', 'ck2da7fwcjfis07218r1rvm95.jpg', 'cju84dsvaklpx098750hp83x4.jpg', 'cju1dfeupuzlw0835gnxip369.jpg', 'cju34m7h536wq0988xz7gx79v.jpg', 'cju7crgxa28550755wbsgqkel.jpg', 'cju43o6n7m9nk087191ijwqq9.jpg', 'cju1cj3f0qi5n0993ut8f49rj.jpg', 'cju87xn2snfmv0987sc3d9xnq.jpg', 'cju5wqonpm0e60801z88ewmy1.jpg', 'cju8432cmkgq90871cxe4iptl.jpg', 'cju886ryxnsl50801r93jai7q.jpg', 'cju42u5bjlvi10801dc13sskp.jpg', 'cju16fpvhzypl0799p9phnlx6.jpg', 'cju41z76wlgbz0801qdetlvby.jpg', 'cju34eqjpcpm508788b3lhp97.jpg', 'cju8amfdtqi4x09871tygrgqe.jpg', 'cju85rkbnlo1c08503uxcpax1.jpg', 'cju7avvi51iox0817ym55y6tt.jpg', 'cju2hqt33lmra0988fr5ijv8j.jpg', 'cju2qdj95ru8g09886gfi9rsz.jpg', 'cju30ftgja7170855xl9bkdm0.jpg', 'cju2xlcqxy9c60988vjacdznb.jpg', 'cju2trtjf4qjd0878a2zle9v9.jpg', 'cju84gpefknwm098714oq8q61.jpg', 'cju7fen322ou10817ziqkob4k.jpg', 'cju5buy2bal250818ipl6fqwv.jpg', 'cju3xhpvvimda0987ygrpzni2.jpg', 'cju7ecl9i2i060987xawjp4l0.jpg', 'cju7ff97z2ow40817u2r83my5.jpg', 'cju77q10sz9ug0801449wu1nu.jpg', 'cju2qqn5ys4uo0988ewrt2ip2.jpg', 'cju6vrs1ov8cr098788h8gs6j.jpg', 'cju2t62nq45jl0799odpufwx6.jpg', 'cju84kplnl1y30755ropua1b0.jpg', 'cju34xspwzenf0993cyzajv9n.jpg', 'ck2bxlujamu330725szlc2jdu.jpg', 'cju2qfie4rvz508357kad9z5o.jpg', 'cju33yemn2qb20988wfjxximx.jpg', 'cjyzu9th0qt4r0a46pyl4zik0.jpg', 'cju1hp9i2xu8e0988u2dazk7m.jpg', 'cju160wshltz10993i1gmqxbe.jpg', 'cju2zwg05a0oy0801yr73ig7g.jpg', 'cju5xkwzxmf0z0818gk4xabdm.jpg', 'cju8ayeq7r1fb0818z1junacy.jpg', 'cju45ty6zn9oz0850qy4qnck1.jpg', 'cju892fesoq2g0801n0e0jyia.jpg', 'cju2y40d8ulqo0993q0adtgtb.jpg', 'cju7aez2x1jtj0871ztezs3oi.jpg', 'cju8aw9n1qyg10801jkjlmors.jpg', 'cju5huurrecm70801y680y13m.jpg', 'cju30525w04r10835ygp257sb.jpg', 'cju43h43am1dy08176gwfhmnt.jpg', 'cju5vxuc5loxw0818u8xgf45p.jpg', 'cju6ywm40wdbo0987pbftsvtg.jpg', 'cju2syxa93yw40799x2iuwabz.jpg', 'cju40u30gkuzc0871rq7t666d.jpg', 'cju33mirdc8mj0799k33wzoes.jpg', 'cju2top2ruxxy0988p1svx36g.jpg', 'cju41nz76lcxu0755cya2qefx.jpg', 'cju7dhpsc2dnn0818025m6857.jpg', 'cju2m71z2ywwv080131bcrsd3.jpg', 'cju85nr8elly209872w9n5m0s.jpg', 'cju2ricdv2iys0878sv1adh0u.jpg', 'cju8dqkrqu83i0818ev74qpxq.jpg', 'cju5u6wf0kh1t0755bg1ssixv.jpg', 'cju16whaj0e7n0855q7b6cjkm.jpg', 'cju1djtprvd7b0988thwwrg09.jpg', 'cju83nwu1jxte0987h1krpfmv.jpg', 'cju2igw4gvxds0878808qj398.jpg', 'cju2nsmwjlzyl0993jl80chvz.jpg', 'cju8aqq8uqmoq0987hphto9gg.jpg', 'cju83mki1jv5w0817kubxm31r.jpg', 'cju1dhfok4mhe0878jlgrag0h.jpg', 'cju2zrojo9kcd0878ld2epejq.jpg', 'cju5wuhm1lwm40987vugqn3vv.jpg', 'cju2rlqdnoz9k0993cpjae3x0.jpg', 'cju5wrrs0m2af0818vmnajbtw.jpg', 'cju5ddda9bkkt0850enzwatb1.jpg', 'cju7es23b2vcp0755gpbm9s7v.jpg', 'cju8b6rp0r5st0850184f79xt.jpg', 'cju7ea4om2l910801bohqjccy.jpg', 'cju6yywx1whbb0871ksgfgf9f.jpg', 'cju8c1a0ws7o208181c6lbsom.jpg', 'cju3xeexgii1j0817zs68tb4g.jpg', 'cju2hugv9vget0799hhk7ksvg.jpg', 'cju175facms5f0993a5tjikvt.jpg', 'cju2xd75m82720801q4s4ik3n.jpg', 'cju1f15k3w4ct0835cmde6ypo.jpg', 'cju87mrypnb1e0818scv1mxxg.jpg', 'cju2t3ibkuecr0835o7si16zv.jpg', 'cju2qozsk20cq0855ugrg3cri.jpg', 'cju5k503sfa5f0871lx0rpu5y.jpg', 'cju85je7vlht70817c9jcjwi4.jpg', 'cju1hirfi7ekp0855q0vgm9qq.jpg', 'cju6xa0qmvzun0818xjukgncj.jpg', 'cju5b9oyda4yr0850g9viziyv.jpg', 'cju13fwthn9mq0835gacxgy01.jpg', 'cju41s6nbleqy0755e2mslg0b.jpg', 'cju6vgdmivcvb08018fra5lnv.jpg', 'cju1c0qb4tzi308355wtsnp0y.jpg', 'cju5von04litr08718j8po40a.jpg', 'cju2qs32r1vys07999conmbvx.jpg', 'cju8bh8surexp0987o5pzklk1.jpg', 'cju2suk42469908015ngmq6f2.jpg', 'cju2nfnvxzdkd0878399axlco.jpg', 'cju42py9mlqyd0818u3d1d7ga.jpg', 'cju2qh5le1ock0878oahaql7d.jpg', 'cju85ia1slh220987y7c20sm2.jpg', 'cju302fqq9spc0878rrygyzzz.jpg', 'cju2z1nxlzaj40835wj81s1iy.jpg', 'cju843yjskhq30818qre4rwm2.jpg', 'cju5wrapcm2290818jsh26ppb.jpg', 'cju88q6h6obpd0871ckmiabbo.jpg']
+['cju5wtdu4m0im0871mix0yvc0.jpg', 'cju2nguelpmlj0835rojdn097.jpg', 'cju2mfjndoz700988b9lc3zeq.jpg', 'cju88y1mwoln50871emyfny1g.jpg', 'cju7epwj82koz098713apjnzo.jpg', 'cju2s2527pfyr0993l3h1149a.jpg', 'cju7ddtz729960801uazp1knc.jpg', 'cju5hl8nee8a40755fm8qjj0o.jpg', 'cju5u8gz4kj5b07552e2wpkwp.jpg', 'cju2nnqrqzp580855z8mhzgd6.jpg', 'cju6z2616wqbk07555bvnuyr1.jpg', 'cju1h89h6xbnx08352k2790o9.jpg', 'cju8a3nhbpwnb0850d37fo2na.jpg', 'cju2qtee81yd708787bsjr75d.jpg', 'cju3v72v5h1qz0818fggilwtq.jpg', 'cju1h5w4wxajx0835mc954kxy.jpg', 'cju5bmhdcafs909878qfzrqzi.jpg', 'cju2tjrog4jy30878pawyazqc.jpg', 'cju2hdr06v2bq0799mbm3bks1.jpg', 'cju3ul8dogf1z09872y2ecowp.jpg', 'cju83kxitjv340987z09m0ezy.jpg', 'cju3518w2d838079939fqztbc.jpg', 'cju2rga4psq9n09881z519xx0.jpg', 'cju8bysfgrzkl081786jwac09.jpg', 'cju1b3zgj3d8e0801kpolea6c.jpg', 'cju8apjewqrk00801k5d71gky.jpg', 'cju32csyfblyh080170aa3x5p.jpg', 'cju2urqpwvxw70835rvndvtsi.jpg', 'cju1f8w0t65en0799m9oacq0q.jpg', 'cju2lejzcy4pc0878c9rlonot.jpg', 'cju2xbk0080y80801eghyddi2.jpg', 'cju8a84g0q76m0818hwiggkod.jpg', 'cju5yhgznmkzb0801cji2vi8j.jpg', 'cju7atnm31if40817pqclnjer.jpg', 'cju87li0zn3yb0817kbwgjiz8.jpg', 'cjyztzaqtrv430848l8xgcerw.jpg', 'cju5fydrud94708507vo6oy21.jpg', 'cju8c5zcbsdfz0801o5t6jag1.jpg', 'cju17r8il13910799dr2wme2e.jpg', 'cju5yimthmlv80850zhoc90c2.jpg', 'cju5y7buemcw80987p0r30g9f.jpg', 'cju7fcgbe2z3p07550vaflqdb.jpg', 'cjyzjzssvd8pq0838f4nolj5l.jpg', 'cju358pwtdby20878cg7nm0np.jpg', 'cju8czvnztbf40871b4m7t78w.jpg', 'cju2r11x7sdgx0988o8ule0wl.jpg', 'cju1fmsyf6gxb0801cimx2gle.jpg', 'cju1c6yfz42md08550zgoz3pw.jpg', 'cju5yclrymlgj0818k426ud6z.jpg', 'cju414lf2l1lt0801rl3hjllj.jpg', 'cju83ipu3jwpx0801z5pvguf8.jpg', 'cju45lbgznahl08180xz1h7u6.jpg', 'cju85plp7lmkw0850rx42jdpf.jpg', 'cju884985nlmx0817vzpax3y4.jpg', 'cju43eigtm6ev0801mv0m96t1.jpg', 'cju6us80mv1b50871ebyq2wxa.jpg', 'cju2oq5570avm079959o20op1.jpg', 'cju8djdqztu6408506pzhlo18.jpg', 'cju6z7e4bwgdd0987ogkzq9kt.jpg', 'cju0t4oil7vzk099370nun5h9.jpg', 'cju8b4ja9r2s808509d45ma86.jpg', 'cju35fxqyzt5p0993vusm54qz.jpg', 'cju0u82z3cuma0835wlxrnrjv.jpg', 'cju7afqon1ip40850ue2308b6.jpg', 'cju2rmd2rsw9g09888hh1efu0.jpg', 'cju5bj926aiec07559rshy4wa.jpg', 'cju35oyvd3y850988km12hdz1.jpg', 'cju16b6ynq8e40988m8vx0xnj.jpg', 'cju2tpfa5uyx408359datxqqj.jpg', 'cju3tvffffx5f0818t5ov22al.jpg', 'cju7er4kc2opa0801anuxc0eb.jpg', 'cju5cky5xb0ay0801oxet697t.jpg', 'cju6v4szov55u0871qmqz3v8n.jpg', 'cju2xyd9vyi7m098831qcucse.jpg', 'cju2zy1e49pqk0878t6ncqn12.jpg', 'cju5cu8qkb84x08186jwo8yin.jpg', 'ck2bxskgxxzfv08386xkqtqdy.jpg', 'cju2ulk385h170799rlklxob0.jpg', 'cju3xvoo2iqlc0817eku2r3wl.jpg', 'cju2xf8e5y2wm08359vcgk09b.jpg', 'cju5ew4h9cqaf0818rrczkmqh.jpg', 'cju5v8pgplg6k0755rvi2t63h.jpg', 'cju34aozyyy830993bn16u32n.jpg', 'cju15ptjtppz40988odsm9azx.jpg', 'cju422cm8lfxn0818ojicxejb.jpg', 'cju5wj0faly5008187n6530af.jpg', 'cju45ofd9ne1j0801ri8dup7t.jpg', 'cju1cbokpuiw70988j4lq1fpi.jpg', 'cju3280wv1ir009882jze27tc.jpg', 'cju8bpctzrqkr0850zeldv9kt.jpg', 'cju33o12x2jm50988944mxq0v.jpg', 'cju8cdeazsm8h0801jxifmzur.jpg', 'cju6vvxsev9y30987kespucdg.jpg', 'cju3xwpgviwlx0871rwm15q7v.jpg', 'cju5tenjojp1j0755ms4949h2.jpg', 'cju5bbtwsa8cl0987wgfsqpao.jpg', 'cju2yg5ht8i4p087800js8hp4.jpg', 'cju3521y5d5mq0878t3ezsu4p.jpg', 'cju32pzh9bpw10855q4vaxfhe.jpg', 'cju5hwonqedw10801vsd3w6kk.jpg', 'cju7eueum2oqn0850rodmx8zo.jpg', 'cju33za6l2qy70988jhrlp2ev.jpg', 'cju2oo0wh0bqy0878biujeyhe.jpg', 'cju8buos5rz9b08715lfr0f4f.jpg', 'cju1cdxvz48hw0801i0fjwcnk.jpg', 'cju1ejj7dvqfa0835ra184v5m.jpg', 'cju17x0j4nfc10993y31pvlgs.jpg', 'cju1dia8hvc6v098827mgffnm.jpg', 'cju888fr7nveu0818r9uwtiit.jpg', 'cju34c1xfyz920993itxkkfad.jpg', 'cju2zr3c3vwb00993jn06bbaz.jpg', 'cju5yjq1pmlgc0801z0t24bly.jpg', 'cju412uwlkva50850d1ps1ww7.jpg', 'cju6x0yqbvxqt0755dhxislgb.jpg', 'cju5i39mreass0817au8p22zy.jpg', 'cju85citjlnfm0755i4rk5tqj.jpg', 'cju0u2g7pmnux0801vkk47ivj.jpg', 'cju7d9seq29zd0871nzl2uu5m.jpg', 'cju2saez63gxl08559ucjq3kt.jpg', 'cju7cl8zm1xcu0817ado0jpas.jpg', 'cju18ibp219ub08783i6o98g7.jpg', 'cju7d8m3b2e210755l8fj1yph.jpg', 'cju89y9h0puti0818i5yw29e6.jpg', 'cju7f0ec32txj08184asb8w5f.jpg', 'cju7f900s2o0k08175gl1giid.jpg', 'cju2mh8t6p07008350e01tx2a.jpg', 'cju15mhjczc8z0801kit5c6di.jpg', 'cju7dwe282dc309876rco45ts.jpg', 'cju43c92lm5cj0755lorsorfg.jpg', 'cju3128yi0rpu0988o4oo5n8n.jpg', 'cju1d96gsv62d09881b3wecw2.jpg', 'cju5fu081d8gc0818l3yylujk.jpg', 'cju5vutu7ll8w0871dfp92n9p.jpg', 'cju31t8xd17bk0835rnb893jk.jpg', 'cju30xqmh0ni00835ix3batv1.jpg', 'cju7b9vcs1luz0987ta60j1dy.jpg', 'cju8ando2qqdo0818ck7i1be1.jpg', 'cju2wve9v7esz0878mxsdcy04.jpg', 'cju43b8daly4408170e5ev06g.jpg', 'cju42wamblrqn098798r2yyok.jpg', 'cju45rj7ln8980850a7821fov.jpg', 'cju7ev2b12owa08500bpfpwyw.jpg', 'cju7dubap2g0w0801fgl42mg9.jpg', 'cju35mdz73x890835eynq1h9v.jpg', 'cju6vucxvvlda0755j7msqnya.jpg', 'cju88fpm4o0tl0871w1i6a4ds.jpg', 'cju6wuojavt740818b5qcv3iw.jpg', 'cju1fb9236a110801yvg0fwju.jpg', 'cju353d1eda8c07992afde611.jpg', 'cju2rkjfwoxys0993x768l1j2.jpg']
+dataset length: 700
+dataset length: 150
+dataset length: 150
+output_experiment/kvasir_cnn120_full
+Train: [0][0/175]	loss 1.1915
+Train: [0][10/175]	loss 1.4707
+Train: [0][20/175]	loss 1.1255
+Train: [0][30/175]	loss 0.9468
+Train: [0][40/175]	loss 0.9832
+Train: [0][50/175]	loss 1.0742
+Train: [0][60/175]	loss 1.1656
+Train: [0][70/175]	loss 0.7844
+Train: [0][80/175]	loss 1.0347
+Train: [0][90/175]	loss 0.6452
+Train: [0][100/175]	loss 0.7035
+Train: [0][110/175]	loss 1.0570
+Train: [0][120/175]	loss 0.6815
+Train: [0][130/175]	loss 0.5887
+Train: [0][140/175]	loss 0.8346
+Train: [0][150/175]	loss 0.8233
+Train: [0][160/175]	loss 0.6961
+Train: [0][170/175]	loss 0.8166
+VALIDATE
+Epoch:  0 Loss: 0.1982
+Train: [1][0/175]	loss 0.5543
+Train: [1][10/175]	loss 0.7989
+Train: [1][20/175]	loss 1.2896
+Train: [1][30/175]	loss 0.5708
+Train: [1][40/175]	loss 0.7060
+Train: [1][50/175]	loss 1.0257
+Train: [1][60/175]	loss 0.7066
+Train: [1][70/175]	loss 0.5609
+Train: [1][80/175]	loss 0.9156
+Train: [1][90/175]	loss 0.9567
+Train: [1][100/175]	loss 0.9273
+Train: [1][110/175]	loss 0.5865
+Train: [1][120/175]	loss 1.0341
+Train: [1][130/175]	loss 0.7383
+Train: [1][140/175]	loss 1.1050
+Train: [1][150/175]	loss 1.1673
+Train: [1][160/175]	loss 1.1619
+Train: [1][170/175]	loss 0.6305
+VALIDATE
+Epoch:  1 Loss: 0.2050
+Train: [2][0/175]	loss 0.7014
+Train: [2][10/175]	loss 1.0979
+Train: [2][20/175]	loss 0.3140
+Train: [2][30/175]	loss 0.6555
+Train: [2][40/175]	loss 0.8551
+Train: [2][50/175]	loss 0.9022
+Train: [2][60/175]	loss 0.5240
+Train: [2][70/175]	loss 0.5446
+Train: [2][80/175]	loss 0.9498
+Train: [2][90/175]	loss 1.0327
+Train: [2][100/175]	loss 1.0437
+Train: [2][110/175]	loss 1.0625
+Train: [2][120/175]	loss 0.9197
+Train: [2][130/175]	loss 0.6177
+Train: [2][140/175]	loss 0.6126
+Train: [2][150/175]	loss 0.4818
+Train: [2][160/175]	loss 0.9888
+Train: [2][170/175]	loss 1.0563
+VALIDATE
+Epoch:  2 Loss: 0.1812
+Train: [3][0/175]	loss 0.6261
+Train: [3][10/175]	loss 0.9341
+Train: [3][20/175]	loss 0.8956
+Train: [3][30/175]	loss 0.6300
+Train: [3][40/175]	loss 0.7871
+Train: [3][50/175]	loss 1.0451
+Train: [3][60/175]	loss 0.8774
+Train: [3][70/175]	loss 0.6828
+Train: [3][80/175]	loss 0.9011
+Train: [3][90/175]	loss 0.7633
+Train: [3][100/175]	loss 0.6051
+Train: [3][110/175]	loss 0.5609
+Train: [3][120/175]	loss 0.7542
+Train: [3][130/175]	loss 0.7176
+Train: [3][140/175]	loss 0.8197
+Train: [3][150/175]	loss 0.1725
+Train: [3][160/175]	loss 0.5047
+Train: [3][170/175]	loss 0.5725
+VALIDATE
+Epoch:  3 Loss: 0.1821
+Train: [4][0/175]	loss 0.8914
+Train: [4][10/175]	loss 0.6859
+Train: [4][20/175]	loss 0.5665
+Train: [4][30/175]	loss 0.7616
+Train: [4][40/175]	loss 0.5579
+Train: [4][50/175]	loss 0.5718
+Train: [4][60/175]	loss 0.7036
+Train: [4][70/175]	loss 0.5382
+Train: [4][80/175]	loss 0.7883
+Train: [4][90/175]	loss 0.6903
+Train: [4][100/175]	loss 0.4741
+Train: [4][110/175]	loss 1.0698
+Train: [4][120/175]	loss 0.9603
+Train: [4][130/175]	loss 0.7998
+Train: [4][140/175]	loss 0.5089
+Train: [4][150/175]	loss 0.5483
+Train: [4][160/175]	loss 0.7135
+Train: [4][170/175]	loss 0.5907
+VALIDATE
+Epoch:  4 Loss: 0.1671
+Train: [5][0/175]	loss 0.7429
+Train: [5][10/175]	loss 1.0606
+Train: [5][20/175]	loss 0.0655
+Train: [5][30/175]	loss 0.7586
+Train: [5][40/175]	loss 0.7978
+Train: [5][50/175]	loss 0.7616
+Train: [5][60/175]	loss 0.8988
+Train: [5][70/175]	loss 0.8996
+Train: [5][80/175]	loss 0.7834
+Train: [5][90/175]	loss 1.0884
+Train: [5][100/175]	loss 0.8767
+Train: [5][110/175]	loss 0.8436
+Train: [5][120/175]	loss 0.6195
+Train: [5][130/175]	loss 0.7453
+Train: [5][140/175]	loss 1.3202
+Train: [5][150/175]	loss 0.8660
+Train: [5][160/175]	loss 0.2467
+Train: [5][170/175]	loss 0.8539
+VALIDATE
+Epoch:  5 Loss: 0.1608
+Train: [6][0/175]	loss 0.8388
+Train: [6][10/175]	loss 0.3236
+Train: [6][20/175]	loss 0.6007
+Train: [6][30/175]	loss 0.5163
+Train: [6][40/175]	loss 0.7748
+Train: [6][50/175]	loss 0.4844
+Train: [6][60/175]	loss 0.5769
+Train: [6][70/175]	loss 0.4993
+Train: [6][80/175]	loss 0.7263
+Train: [6][90/175]	loss 0.4979
+Train: [6][100/175]	loss 0.8965
+Train: [6][110/175]	loss 0.3739
+Train: [6][120/175]	loss 1.0942
+Train: [6][130/175]	loss 0.9678
+Train: [6][140/175]	loss 0.7488
+Train: [6][150/175]	loss 0.5474
+Train: [6][160/175]	loss 0.4180
+Train: [6][170/175]	loss 0.6336
+VALIDATE
+Epoch:  6 Loss: 0.1680
+Train: [7][0/175]	loss 0.5453
+Train: [7][10/175]	loss 0.3003
+Train: [7][20/175]	loss 0.4288
+Train: [7][30/175]	loss 0.9798
+Train: [7][40/175]	loss 0.8235
+Train: [7][50/175]	loss 0.6580
+Train: [7][60/175]	loss 0.7903
+Train: [7][70/175]	loss 0.8565
+Train: [7][80/175]	loss 0.8487
+Train: [7][90/175]	loss 0.5211
+Train: [7][100/175]	loss 0.6102
+Train: [7][110/175]	loss 0.6336
+Train: [7][120/175]	loss 0.8136
+Train: [7][130/175]	loss 0.5319
+Train: [7][140/175]	loss 0.4462
+Train: [7][150/175]	loss 0.3263
+Train: [7][160/175]	loss 0.9093
+Train: [7][170/175]	loss 0.5864
+VALIDATE
+Epoch:  7 Loss: 0.1583
+Train: [8][0/175]	loss 0.5124
+Train: [8][10/175]	loss 0.4261
+Train: [8][20/175]	loss 0.9064
+Train: [8][30/175]	loss 0.4712
+Train: [8][40/175]	loss 0.7306
+Train: [8][50/175]	loss 0.6314
+Train: [8][60/175]	loss 0.7672
+Train: [8][70/175]	loss 0.7797
+Train: [8][80/175]	loss 0.9058
+Train: [8][90/175]	loss 0.7752
+Train: [8][100/175]	loss 0.7930
+Train: [8][110/175]	loss 0.6067
+Train: [8][120/175]	loss 0.5310
+Train: [8][130/175]	loss 1.0662
+Train: [8][140/175]	loss 0.7077
+Train: [8][150/175]	loss 0.9037
+Train: [8][160/175]	loss 0.8929
+Train: [8][170/175]	loss 0.2748
+VALIDATE
+Epoch:  8 Loss: 0.1680
+Train: [9][0/175]	loss 0.9880
+Train: [9][10/175]	loss 0.7519
+Train: [9][20/175]	loss 0.3256
+Train: [9][30/175]	loss 0.5349
+Train: [9][40/175]	loss 0.7150
+Train: [9][50/175]	loss 0.8440
+Train: [9][60/175]	loss 0.7104
+Train: [9][70/175]	loss 0.8289
+Train: [9][80/175]	loss 0.6013
+Train: [9][90/175]	loss 0.4838
+Train: [9][100/175]	loss 0.5453
+Train: [9][110/175]	loss 1.0949
+Train: [9][120/175]	loss 0.4520
+Train: [9][130/175]	loss 0.9188
+Train: [9][140/175]	loss 0.4355
+Train: [9][150/175]	loss 0.7899
+Train: [9][160/175]	loss 0.5631
+Train: [9][170/175]	loss 0.9820
+VALIDATE
+Epoch:  9 Loss: 0.1546
+Train: [10][0/175]	loss 0.6329
+Train: [10][10/175]	loss 0.5387
+Train: [10][20/175]	loss 0.8605
+Train: [10][30/175]	loss 0.7299
+Train: [10][40/175]	loss 0.2714
+Train: [10][50/175]	loss 1.0911
+Train: [10][60/175]	loss 0.8528
+Train: [10][70/175]	loss 0.9078
+Train: [10][80/175]	loss 0.4276
+Train: [10][90/175]	loss 0.3201
+Train: [10][100/175]	loss 1.1132
+Train: [10][110/175]	loss 0.4239
+Train: [10][120/175]	loss 0.6769
+Train: [10][130/175]	loss 0.8598
+Train: [10][140/175]	loss 0.9720
+Train: [10][150/175]	loss 1.1307
+Train: [10][160/175]	loss 0.5689
+Train: [10][170/175]	loss 0.9203
+VALIDATE
+Epoch: 10 Loss: 0.1661
+Train: [11][0/175]	loss 0.5117
+Train: [11][10/175]	loss 0.9498
+Train: [11][20/175]	loss 1.1353
+Train: [11][30/175]	loss 0.4119
+Train: [11][40/175]	loss 0.4134
+Train: [11][50/175]	loss 0.5486
+Train: [11][60/175]	loss 0.6187
+Train: [11][70/175]	loss 0.9806
+Train: [11][80/175]	loss 0.5551
+Train: [11][90/175]	loss 0.4117
+Train: [11][100/175]	loss 0.9614
+Train: [11][110/175]	loss 1.1969
+Train: [11][120/175]	loss 0.7241
+Train: [11][130/175]	loss 0.9022
+Train: [11][140/175]	loss 0.5494
+Train: [11][150/175]	loss 0.4803
+Train: [11][160/175]	loss 0.5318
+Train: [11][170/175]	loss 1.1296
+VALIDATE
+Epoch: 11 Loss: 0.1772
+Train: [12][0/175]	loss 0.6183
+Train: [12][10/175]	loss 0.8468
+Train: [12][20/175]	loss 0.6118
+Train: [12][30/175]	loss 0.9360
+Train: [12][40/175]	loss 0.7366
+Train: [12][50/175]	loss 0.6268
+Train: [12][60/175]	loss 0.6992
+Train: [12][70/175]	loss 0.5352
+Train: [12][80/175]	loss 0.7215
+Train: [12][90/175]	loss 0.6688
+Train: [12][100/175]	loss 0.4387
+Train: [12][110/175]	loss 1.0914
+Train: [12][120/175]	loss 0.6059
+Train: [12][130/175]	loss 0.4482
+Train: [12][140/175]	loss 0.9056
+Train: [12][150/175]	loss 0.6277
+Train: [12][160/175]	loss 0.7413
+Train: [12][170/175]	loss 0.7221
+VALIDATE
+Epoch: 12 Loss: 0.1474
+Train: [13][0/175]	loss 0.5672
+Train: [13][10/175]	loss 0.6378
+Train: [13][20/175]	loss 0.5237
+Train: [13][30/175]	loss 0.7844
+Train: [13][40/175]	loss 0.5224
+Train: [13][50/175]	loss 0.4336
+Train: [13][60/175]	loss 0.8972
+Train: [13][70/175]	loss 0.3913
+Train: [13][80/175]	loss 0.8957
+Train: [13][90/175]	loss 0.7324
+Train: [13][100/175]	loss 0.8074
+Train: [13][110/175]	loss 0.6554
+Train: [13][120/175]	loss 0.3001
+Train: [13][130/175]	loss 0.5014
+Train: [13][140/175]	loss 0.6777
+Train: [13][150/175]	loss 0.2822
+Train: [13][160/175]	loss 0.9387
+Train: [13][170/175]	loss 0.7817
+VALIDATE
+Epoch: 13 Loss: 0.1438
+Train: [14][0/175]	loss 0.4351
+Train: [14][10/175]	loss 0.8589
+Train: [14][20/175]	loss 0.9355
+Train: [14][30/175]	loss 0.6034
+Train: [14][40/175]	loss 0.6969
+Train: [14][50/175]	loss 0.2218
+Train: [14][60/175]	loss 1.0872
+Train: [14][70/175]	loss 0.6258
+Train: [14][80/175]	loss 0.5791
+Train: [14][90/175]	loss 0.6852
+Train: [14][100/175]	loss 0.4409
+Train: [14][110/175]	loss 0.5112
+Train: [14][120/175]	loss 0.5274
+Train: [14][130/175]	loss 0.8235
+Train: [14][140/175]	loss 0.3934
+Train: [14][150/175]	loss 0.5766
+Train: [14][160/175]	loss 0.4455
+Train: [14][170/175]	loss 0.7824
+VALIDATE
+Epoch: 14 Loss: 0.1398
+Train: [15][0/175]	loss 0.4590
+Train: [15][10/175]	loss 0.4831
+Train: [15][20/175]	loss 1.0930
+Train: [15][30/175]	loss 0.4955
+Train: [15][40/175]	loss 0.8301
+Train: [15][50/175]	loss 0.3113
+Train: [15][60/175]	loss 0.5733
+Train: [15][70/175]	loss 0.5235
+Train: [15][80/175]	loss 0.3854
+Train: [15][90/175]	loss 0.4878
+Train: [15][100/175]	loss 0.6532
+Train: [15][110/175]	loss 0.6685
+Train: [15][120/175]	loss 0.4820
+Train: [15][130/175]	loss 0.6673
+Train: [15][140/175]	loss 0.5933
+Train: [15][150/175]	loss 0.2747
+Train: [15][160/175]	loss 0.4897
+Train: [15][170/175]	loss 0.7745
+VALIDATE
+Epoch: 15 Loss: 0.1459
+Train: [16][0/175]	loss 0.6721
+Train: [16][10/175]	loss 0.5368
+Train: [16][20/175]	loss 0.9436
+Train: [16][30/175]	loss 0.5802
+Train: [16][40/175]	loss 0.8904
+Train: [16][50/175]	loss 0.5600
+Train: [16][60/175]	loss 1.1190
+Train: [16][70/175]	loss 0.3485
+Train: [16][80/175]	loss 0.4407
+Train: [16][90/175]	loss 0.3778
+Train: [16][100/175]	loss 0.2493
+Train: [16][110/175]	loss 1.2406
+Train: [16][120/175]	loss 0.4078
+Train: [16][130/175]	loss 0.7864
+Train: [16][140/175]	loss 0.7915
+Train: [16][150/175]	loss 0.5438
+Train: [16][160/175]	loss 0.4492
+Train: [16][170/175]	loss 0.6086
+VALIDATE
+Epoch: 16 Loss: 0.1364
+Train: [17][0/175]	loss 0.4234
+Train: [17][10/175]	loss 0.6661
+Train: [17][20/175]	loss 0.7479
+Train: [17][30/175]	loss 1.1096
+Train: [17][40/175]	loss 0.7951
+Train: [17][50/175]	loss 0.7327
+Train: [17][60/175]	loss 0.6816
+Train: [17][70/175]	loss 0.6330
+Train: [17][80/175]	loss 0.4462
+Train: [17][90/175]	loss 0.3761
+Train: [17][100/175]	loss 0.6680
+Train: [17][110/175]	loss 0.2936
+Train: [17][120/175]	loss 0.2661
+Train: [17][130/175]	loss 0.3145
+Train: [17][140/175]	loss 0.4175
+Train: [17][150/175]	loss 0.5506
+Train: [17][160/175]	loss 0.1095
+Train: [17][170/175]	loss 0.5813
+VALIDATE
+Epoch: 17 Loss: 0.1803
+Train: [18][0/175]	loss 0.4983
+Train: [18][10/175]	loss 0.5486
+Train: [18][20/175]	loss 0.4298
+Train: [18][30/175]	loss 1.0540
+Train: [18][40/175]	loss 1.2687
+Train: [18][50/175]	loss 0.8036
+Train: [18][60/175]	loss 0.8287
+Train: [18][70/175]	loss 0.5133
+Train: [18][80/175]	loss 0.8209
+Train: [18][90/175]	loss 1.2390
+Train: [18][100/175]	loss 1.1337
+Train: [18][110/175]	loss 0.4593
+Train: [18][120/175]	loss 0.4439
+Train: [18][130/175]	loss 0.5600
+Train: [18][140/175]	loss 0.5595
+Train: [18][150/175]	loss 0.4926
+Train: [18][160/175]	loss 0.7801
+Train: [18][170/175]	loss 0.8403
+VALIDATE
+Epoch: 18 Loss: 0.2917
+Train: [19][0/175]	loss 0.5669
+Train: [19][10/175]	loss 0.6497
+Train: [19][20/175]	loss 0.6826
+Train: [19][30/175]	loss 1.0253
+Train: [19][40/175]	loss 0.6610
+Train: [19][50/175]	loss 0.9631
+Train: [19][60/175]	loss 0.9396
+Train: [19][70/175]	loss 0.6951
+Train: [19][80/175]	loss 0.7773
+Train: [19][90/175]	loss 0.3780
+Train: [19][100/175]	loss 0.6528
+Train: [19][110/175]	loss 0.7235
+Train: [19][120/175]	loss 0.6789
+Train: [19][130/175]	loss 0.6171
+Train: [19][140/175]	loss 0.8613
+Train: [19][150/175]	loss 0.8788
+Train: [19][160/175]	loss 0.6260
+Train: [19][170/175]	loss 0.8753
+VALIDATE
+Epoch: 19 Loss: 0.1429
+Train: [20][0/175]	loss 0.7772
+Train: [20][10/175]	loss 0.6523
+Train: [20][20/175]	loss 0.5587
+Train: [20][30/175]	loss 0.3755
+Train: [20][40/175]	loss 0.5914
+Train: [20][50/175]	loss 0.3215
+Train: [20][60/175]	loss 0.6952
+Train: [20][70/175]	loss 0.4837
+Train: [20][80/175]	loss 0.4817
+Train: [20][90/175]	loss 0.6247
+Train: [20][100/175]	loss 0.7773
+Train: [20][110/175]	loss 0.8394
+Train: [20][120/175]	loss 0.6394
+Train: [20][130/175]	loss 0.7987
+Train: [20][140/175]	loss 0.4094
+Train: [20][150/175]	loss 0.7334
+Train: [20][160/175]	loss 0.4622
+Train: [20][170/175]	loss 0.8013
+VALIDATE
+Epoch: 20 Loss: 0.1436
+Train: [21][0/175]	loss 0.6094
+Train: [21][10/175]	loss 0.7534
+Train: [21][20/175]	loss 0.8831
+Train: [21][30/175]	loss 0.4031
+Train: [21][40/175]	loss 0.4265
+Train: [21][50/175]	loss 0.7152
+Train: [21][60/175]	loss 0.5048
+Train: [21][70/175]	loss 1.0628
+Train: [21][80/175]	loss 0.8494
+Train: [21][90/175]	loss 0.1977
+Train: [21][100/175]	loss 0.7311
+Train: [21][110/175]	loss 0.7066
+Train: [21][120/175]	loss 0.9605
+Train: [21][130/175]	loss 0.6526
+Train: [21][140/175]	loss 0.3030
+Train: [21][150/175]	loss 0.6750
+Train: [21][160/175]	loss 0.7523
+Train: [21][170/175]	loss 0.8899
+VALIDATE
+Epoch: 21 Loss: 0.1227
+Train: [22][0/175]	loss 0.4779
+Train: [22][10/175]	loss 0.4872
+Train: [22][20/175]	loss 1.1716
+Train: [22][30/175]	loss 0.6774
+Train: [22][40/175]	loss 0.4613
+Train: [22][50/175]	loss 0.6632
+Train: [22][60/175]	loss 0.7322
+Train: [22][70/175]	loss 0.7066
+Train: [22][80/175]	loss 0.7587
+Train: [22][90/175]	loss 0.5870
+Train: [22][100/175]	loss 0.7687
+Train: [22][110/175]	loss 0.4135
+Train: [22][120/175]	loss 0.7476
+Train: [22][130/175]	loss 0.8885
+Train: [22][140/175]	loss 0.8877
+Train: [22][150/175]	loss 0.8381
+Train: [22][160/175]	loss 0.2530
+Train: [22][170/175]	loss 0.5350
+VALIDATE
+Epoch: 22 Loss: 0.1286
+Train: [23][0/175]	loss 0.6737
+Train: [23][10/175]	loss 0.9655
+Train: [23][20/175]	loss 0.6541
+Train: [23][30/175]	loss 0.8914
+Train: [23][40/175]	loss 0.5660
+Train: [23][50/175]	loss 0.5643
+Train: [23][60/175]	loss 0.6008
+Train: [23][70/175]	loss 0.4029
+Train: [23][80/175]	loss 0.5307
+Train: [23][90/175]	loss 0.9130
+Train: [23][100/175]	loss 1.4220
+Train: [23][110/175]	loss 0.4853
+Train: [23][120/175]	loss 0.5872
+Train: [23][130/175]	loss 0.4793
+Train: [23][140/175]	loss 0.7458
+Train: [23][150/175]	loss 0.6534
+Train: [23][160/175]	loss 0.6384
+Train: [23][170/175]	loss 0.6561
+VALIDATE
+Epoch: 23 Loss: 0.1192
+Train: [24][0/175]	loss 0.6435
+Train: [24][10/175]	loss 0.2449
+Train: [24][20/175]	loss 0.9253
+Train: [24][30/175]	loss 0.8398
+Train: [24][40/175]	loss 0.5454
+Train: [24][50/175]	loss 0.6548
+Train: [24][60/175]	loss 0.8497
+Train: [24][70/175]	loss 0.9972
+Train: [24][80/175]	loss 0.3992
+Train: [24][90/175]	loss 0.6497
+Train: [24][100/175]	loss 0.4244
+Train: [24][110/175]	loss 0.8903
+Train: [24][120/175]	loss 0.9892
+Train: [24][130/175]	loss 0.8111
+Train: [24][140/175]	loss 0.5805
+Train: [24][150/175]	loss 0.2469
+Train: [24][160/175]	loss 0.5742
+Train: [24][170/175]	loss 0.7630
+VALIDATE
+Epoch: 24 Loss: 0.1344
+Train: [25][0/175]	loss 0.4001
+Train: [25][10/175]	loss 0.7547
+Train: [25][20/175]	loss 0.4762
+Train: [25][30/175]	loss 0.2703
+Train: [25][40/175]	loss 0.6273
+Train: [25][50/175]	loss 0.6396
+Train: [25][60/175]	loss 0.4862
+Train: [25][70/175]	loss 0.7866
+Train: [25][80/175]	loss 0.5784
+Train: [25][90/175]	loss 0.7508
+Train: [25][100/175]	loss 0.4212
+Train: [25][110/175]	loss 0.9408
+Train: [25][120/175]	loss 0.5017
+Train: [25][130/175]	loss 0.7056
+Train: [25][140/175]	loss 0.6300
+Train: [25][150/175]	loss 0.9072
+Train: [25][160/175]	loss 0.5712
+Train: [25][170/175]	loss 0.1150
+VALIDATE
+Epoch: 25 Loss: 0.1297
+Train: [26][0/175]	loss 0.7534
+Train: [26][10/175]	loss 0.8048
+Train: [26][20/175]	loss 0.7207
+Train: [26][30/175]	loss 0.4677
+Train: [26][40/175]	loss 0.2236
+Train: [26][50/175]	loss 0.6703
+Train: [26][60/175]	loss 0.5951
+Train: [26][70/175]	loss 0.5775
+Train: [26][80/175]	loss 0.3814
+Train: [26][90/175]	loss 0.5182
+Train: [26][100/175]	loss 0.6440
+Train: [26][110/175]	loss 0.4994
+Train: [26][120/175]	loss 0.8029
+Train: [26][130/175]	loss 0.5728
+Train: [26][140/175]	loss 0.5489
+Train: [26][150/175]	loss 0.6935
+Train: [26][160/175]	loss 0.5749
+Train: [26][170/175]	loss 0.4491
+VALIDATE
+Epoch: 26 Loss: 0.1361
+Train: [27][0/175]	loss 0.2431
+Train: [27][10/175]	loss 0.7866
+Train: [27][20/175]	loss 0.5044
+Train: [27][30/175]	loss 0.4298
+Train: [27][40/175]	loss 0.9286
+Train: [27][50/175]	loss 0.8699
+Train: [27][60/175]	loss 0.6478
+Train: [27][70/175]	loss 0.6558
+Train: [27][80/175]	loss 0.7838
+Train: [27][90/175]	loss 0.3684
+Train: [27][100/175]	loss 0.5726
+Train: [27][110/175]	loss 0.9668
+Train: [27][120/175]	loss 0.5139
+Train: [27][130/175]	loss 0.2898
+Train: [27][140/175]	loss 0.3903
+Train: [27][150/175]	loss 0.7457
+Train: [27][160/175]	loss 0.3262
+Train: [27][170/175]	loss 0.7712
+VALIDATE
+Epoch: 27 Loss: 0.1228
+Train: [28][0/175]	loss 0.4797
+Train: [28][10/175]	loss 0.4861
+Train: [28][20/175]	loss 0.5820
+Train: [28][30/175]	loss 1.7085
+Train: [28][40/175]	loss 0.6513
+Train: [28][50/175]	loss 0.8108
+Train: [28][60/175]	loss 0.5468
+Train: [28][70/175]	loss 0.9786
+Train: [28][80/175]	loss 0.5369
+Train: [28][90/175]	loss 0.8030
+Train: [28][100/175]	loss 0.3614
+Train: [28][110/175]	loss 0.4498
+Train: [28][120/175]	loss 0.3811
+Train: [28][130/175]	loss 0.2555
+Train: [28][140/175]	loss 1.1178
+Train: [28][150/175]	loss 0.6361
+Train: [28][160/175]	loss 0.5197
+Train: [28][170/175]	loss 0.2683
+VALIDATE
+Epoch: 28 Loss: 0.1217
+Train: [29][0/175]	loss 0.8209
+Train: [29][10/175]	loss 0.9519
+Train: [29][20/175]	loss 0.6042
+Train: [29][30/175]	loss 0.7561
+Train: [29][40/175]	loss 0.6731
+Train: [29][50/175]	loss 0.6553
+Train: [29][60/175]	loss 0.5500
+Train: [29][70/175]	loss 0.8089
+Train: [29][80/175]	loss 0.4787
+Train: [29][90/175]	loss 0.7601
+Train: [29][100/175]	loss 0.2708
+Train: [29][110/175]	loss 0.6629
+Train: [29][120/175]	loss 0.8064
+Train: [29][130/175]	loss 1.0454
+Train: [29][140/175]	loss 0.9246
+Train: [29][150/175]	loss 0.9642
+Train: [29][160/175]	loss 0.4470
+Train: [29][170/175]	loss 0.6151
+VALIDATE
+Epoch: 29 Loss: 0.1190
+Train: [30][0/175]	loss 0.7303
+Train: [30][10/175]	loss 0.3576
+Train: [30][20/175]	loss 0.6212
+Train: [30][30/175]	loss 1.3277
+Train: [30][40/175]	loss 0.6441
+Train: [30][50/175]	loss 0.4923
+Train: [30][60/175]	loss 0.7119
+Train: [30][70/175]	loss 0.6586
+Train: [30][80/175]	loss 0.5400
+Train: [30][90/175]	loss 0.5002
+Train: [30][100/175]	loss 0.8206
+Train: [30][110/175]	loss 0.4417
+Train: [30][120/175]	loss 1.0034
+Train: [30][130/175]	loss 0.5729
+Train: [30][140/175]	loss 0.5280
+Train: [30][150/175]	loss 0.8915
+Train: [30][160/175]	loss 0.7459
+Train: [30][170/175]	loss 0.6350
+VALIDATE
+Epoch: 30 Loss: 0.1234
+Train: [31][0/175]	loss 0.4951
+Train: [31][10/175]	loss 1.1412
+Train: [31][20/175]	loss 0.7743
+Train: [31][30/175]	loss 0.5325
+Train: [31][40/175]	loss 0.3793
+Train: [31][50/175]	loss 0.4496
+Train: [31][60/175]	loss 0.2882
+Train: [31][70/175]	loss 0.8532
+Train: [31][80/175]	loss 0.3203
+Train: [31][90/175]	loss 0.5412
+Train: [31][100/175]	loss 0.0838
+Train: [31][110/175]	loss 0.7706
+Train: [31][120/175]	loss 0.4776
+Train: [31][130/175]	loss 0.6471
+Train: [31][140/175]	loss 0.3173
+Train: [31][150/175]	loss 0.4406
+Train: [31][160/175]	loss 0.7108
+Train: [31][170/175]	loss 0.7861
+VALIDATE
+Epoch: 31 Loss: 0.1218
+Train: [32][0/175]	loss 0.5056
+Train: [32][10/175]	loss 0.3541
+Train: [32][20/175]	loss 0.3046
+Train: [32][30/175]	loss 0.4483
+Train: [32][40/175]	loss 0.4632
+Train: [32][50/175]	loss 0.4373
+Train: [32][60/175]	loss 0.2380
+Train: [32][70/175]	loss 0.7129
+Train: [32][80/175]	loss 0.7266
+Train: [32][90/175]	loss 0.8055
+Train: [32][100/175]	loss 1.0478
+Train: [32][110/175]	loss 1.0572
+Train: [32][120/175]	loss 0.6310
+Train: [32][130/175]	loss 0.4725
+Train: [32][140/175]	loss 0.5367
+Train: [32][150/175]	loss 0.9547
+Train: [32][160/175]	loss 0.3665
+Train: [32][170/175]	loss 0.4139
+VALIDATE
+Epoch: 32 Loss: 0.1241
+Train: [33][0/175]	loss 0.5387
+Train: [33][10/175]	loss 0.6212
+Train: [33][20/175]	loss 0.6962
+Train: [33][30/175]	loss 0.5726
+Train: [33][40/175]	loss 0.5184
+Train: [33][50/175]	loss 0.2574
+Train: [33][60/175]	loss 0.6461
+Train: [33][70/175]	loss 1.0243
+Train: [33][80/175]	loss 0.4996
+Train: [33][90/175]	loss 0.3665
+Train: [33][100/175]	loss 0.6251
+Train: [33][110/175]	loss 0.4260
+Train: [33][120/175]	loss 0.5765
+Train: [33][130/175]	loss 0.4474
+Train: [33][140/175]	loss 0.5793
+Train: [33][150/175]	loss 0.1377
+Train: [33][160/175]	loss 0.4882
+Train: [33][170/175]	loss 0.5954
+VALIDATE
+Epoch: 33 Loss: 0.1208
+Train: [34][0/175]	loss 0.3358
+Train: [34][10/175]	loss 0.3551
+Train: [34][20/175]	loss 0.3479
+Train: [34][30/175]	loss 0.5088
+Train: [34][40/175]	loss 0.3709
+Train: [34][50/175]	loss 0.8145
+Train: [34][60/175]	loss 1.1821
+Train: [34][70/175]	loss 0.9428
+Train: [34][80/175]	loss 0.4086
+Train: [34][90/175]	loss 0.5838
+Train: [34][100/175]	loss 0.5770
+Train: [34][110/175]	loss 0.6869
+Train: [34][120/175]	loss 0.2118
+Train: [34][130/175]	loss 0.3855
+Train: [34][140/175]	loss 0.4795
+Train: [34][150/175]	loss 0.4969
+Train: [34][160/175]	loss 0.6347
+Train: [34][170/175]	loss 0.5900
+VALIDATE
+Epoch: 34 Loss: 0.1224
+Train: [35][0/175]	loss 0.3777
+Train: [35][10/175]	loss 0.5297
+Train: [35][20/175]	loss 0.4326
+Train: [35][30/175]	loss 0.6946
+Train: [35][40/175]	loss 0.3476
+Train: [35][50/175]	loss 0.3704
+Train: [35][60/175]	loss 0.5313
+Train: [35][70/175]	loss 0.3785
+Train: [35][80/175]	loss 0.5489
+Train: [35][90/175]	loss 0.4407
+Train: [35][100/175]	loss 0.5216
+Train: [35][110/175]	loss 0.4053
+Train: [35][120/175]	loss 0.4729
+Train: [35][130/175]	loss 0.6164
+Train: [35][140/175]	loss 0.4345
+Train: [35][150/175]	loss 0.4413
+Train: [35][160/175]	loss 0.4580
+Train: [35][170/175]	loss 0.4559
+VALIDATE
+Epoch: 35 Loss: 0.1162
+Train: [36][0/175]	loss 0.0962
+Train: [36][10/175]	loss 0.4834
+Train: [36][20/175]	loss 0.7619
+Train: [36][30/175]	loss 0.3782
+Train: [36][40/175]	loss 0.3408
+Train: [36][50/175]	loss 0.4977
+Train: [36][60/175]	loss 0.6189
+Train: [36][70/175]	loss 0.4113
+Train: [36][80/175]	loss 0.3690
+Train: [36][90/175]	loss 0.4735
+Train: [36][100/175]	loss 0.4805
+Train: [36][110/175]	loss 0.5425
+Train: [36][120/175]	loss 0.2824
+Train: [36][130/175]	loss 0.4815
+Train: [36][140/175]	loss 0.6955
+Train: [36][150/175]	loss 0.5455
+Train: [36][160/175]	loss 0.5630
+Train: [36][170/175]	loss 0.7267
+VALIDATE
+Epoch: 36 Loss: 0.1206
+Train: [37][0/175]	loss 0.3859
+Train: [37][10/175]	loss 0.2806
+Train: [37][20/175]	loss 0.7893
+Train: [37][30/175]	loss 0.4983
+Train: [37][40/175]	loss 0.8177
+Train: [37][50/175]	loss 0.5859
+Train: [37][60/175]	loss 0.4509
+Train: [37][70/175]	loss 0.2271
+Train: [37][80/175]	loss 0.5368
+Train: [37][90/175]	loss 0.1510
+Train: [37][100/175]	loss 1.0678
+Train: [37][110/175]	loss 0.3552
+Train: [37][120/175]	loss 0.8326
+Train: [37][130/175]	loss 0.4868
+Train: [37][140/175]	loss 0.3113
+Train: [37][150/175]	loss 0.3031
+Train: [37][160/175]	loss 0.4150
+Train: [37][170/175]	loss 0.3762
+VALIDATE
+Epoch: 37 Loss: 0.1155
+Train: [38][0/175]	loss 0.5843
+Train: [38][10/175]	loss 0.1899
+Train: [38][20/175]	loss 0.3707
+Train: [38][30/175]	loss 0.5207
+Train: [38][40/175]	loss 0.6650
+Train: [38][50/175]	loss 0.5949
+Train: [38][60/175]	loss 0.4742
+Train: [38][70/175]	loss 0.8391
+Train: [38][80/175]	loss 0.3576
+Train: [38][90/175]	loss 0.8567
+Train: [38][100/175]	loss 0.6385
+Train: [38][110/175]	loss 0.3269
+Train: [38][120/175]	loss 0.5323
+Train: [38][130/175]	loss 0.1922
+Train: [38][140/175]	loss 0.6394
+Train: [38][150/175]	loss 0.5070
+Train: [38][160/175]	loss 0.6004
+Train: [38][170/175]	loss 0.1789
+VALIDATE
+Epoch: 38 Loss: 0.1230
+Train: [39][0/175]	loss 0.7857
+Train: [39][10/175]	loss 0.5886
+Train: [39][20/175]	loss 0.5389
+Train: [39][30/175]	loss 0.3063
+Train: [39][40/175]	loss 0.4608
+Train: [39][50/175]	loss 0.4687
+Train: [39][60/175]	loss 0.1432
+Train: [39][70/175]	loss 0.6736
+Train: [39][80/175]	loss 0.5421
+Train: [39][90/175]	loss 0.4725
+Train: [39][100/175]	loss 0.7884
+Train: [39][110/175]	loss 0.5508
+Train: [39][120/175]	loss 0.5526
+Train: [39][130/175]	loss 0.6161
+Train: [39][140/175]	loss 1.0083
+Train: [39][150/175]	loss 0.2763
+Train: [39][160/175]	loss 0.2207
+Train: [39][170/175]	loss 0.3355
+VALIDATE
+Epoch: 39 Loss: 0.1280
+Train: [40][0/175]	loss 0.3150
+Train: [40][10/175]	loss 0.6850
+Train: [40][20/175]	loss 0.5236
+Train: [40][30/175]	loss 0.6158
+Train: [40][40/175]	loss 0.7570
+Train: [40][50/175]	loss 0.3805
+Train: [40][60/175]	loss 0.5532
+Train: [40][70/175]	loss 0.3145
+Train: [40][80/175]	loss 0.7178
+Train: [40][90/175]	loss 0.7917
+Train: [40][100/175]	loss 0.2227
+Train: [40][110/175]	loss 0.5411
+Train: [40][120/175]	loss 0.6000
+Train: [40][130/175]	loss 0.8444
+Train: [40][140/175]	loss 0.5036
+Train: [40][150/175]	loss 0.5150
+Train: [40][160/175]	loss 0.8127
+Train: [40][170/175]	loss 1.0369
+VALIDATE
+Epoch: 40 Loss: 0.1163
+Train: [41][0/175]	loss 0.3305
+Train: [41][10/175]	loss 0.4210
+Train: [41][20/175]	loss 0.4044
+Train: [41][30/175]	loss 0.8370
+Train: [41][40/175]	loss 0.2935
+Train: [41][50/175]	loss 0.6259
+Train: [41][60/175]	loss 0.7899
+Train: [41][70/175]	loss 0.6873
+Train: [41][80/175]	loss 0.8005
+Train: [41][90/175]	loss 0.3923
+Train: [41][100/175]	loss 0.7386
+Train: [41][110/175]	loss 0.6745
+Train: [41][120/175]	loss 0.7084
+Train: [41][130/175]	loss 0.5504
+Train: [41][140/175]	loss 0.7033
+Train: [41][150/175]	loss 0.7421
+Train: [41][160/175]	loss 0.6580
+Train: [41][170/175]	loss 0.8707
+VALIDATE
+Epoch: 41 Loss: 0.1199
+Train: [42][0/175]	loss 0.4658
+Train: [42][10/175]	loss 0.4189
+Train: [42][20/175]	loss 0.5271
+Train: [42][30/175]	loss 0.3461
+Train: [42][40/175]	loss 0.2375
+Train: [42][50/175]	loss 0.5578
+Train: [42][60/175]	loss 0.6898
+Train: [42][70/175]	loss 0.3131
+Train: [42][80/175]	loss 0.4244
+Train: [42][90/175]	loss 0.3251
+Train: [42][100/175]	loss 0.4360
+Train: [42][110/175]	loss 0.5383
+Train: [42][120/175]	loss 0.4688
+Train: [42][130/175]	loss 0.4929
+Train: [42][140/175]	loss 0.6976
+Train: [42][150/175]	loss 1.0828
+Train: [42][160/175]	loss 0.4246
+Train: [42][170/175]	loss 0.3954
+VALIDATE
+Epoch: 42 Loss: 0.1117
+Train: [43][0/175]	loss 0.3671
+Train: [43][10/175]	loss 0.8585
+Train: [43][20/175]	loss 0.2157
+Train: [43][30/175]	loss 0.2195
+Train: [43][40/175]	loss 0.4964
+Train: [43][50/175]	loss 0.4124
+Train: [43][60/175]	loss 1.0970
+Train: [43][70/175]	loss 0.4172
+Train: [43][80/175]	loss 0.5629
+Train: [43][90/175]	loss 0.4984
+Train: [43][100/175]	loss 0.3275
+Train: [43][110/175]	loss 0.1509
+Train: [43][120/175]	loss 0.6057
+Train: [43][130/175]	loss 0.6107
+Train: [43][140/175]	loss 0.3083
+Train: [43][150/175]	loss 0.2584
+Train: [43][160/175]	loss 0.6088
+Train: [43][170/175]	loss 0.6229
+VALIDATE
+Epoch: 43 Loss: 0.1210
+Train: [44][0/175]	loss 0.5282
+Train: [44][10/175]	loss 0.5044
+Train: [44][20/175]	loss 0.4909
+Train: [44][30/175]	loss 0.3219
+Train: [44][40/175]	loss 0.5969
+Train: [44][50/175]	loss 0.2089
+Train: [44][60/175]	loss 0.3765
+Train: [44][70/175]	loss 0.6460
+Train: [44][80/175]	loss 0.5359
+Train: [44][90/175]	loss 0.5510
+Train: [44][100/175]	loss 0.3281
+Train: [44][110/175]	loss 0.8183
+Train: [44][120/175]	loss 0.5527
+Train: [44][130/175]	loss 0.7019
+Train: [44][140/175]	loss 0.4053
+Train: [44][150/175]	loss 0.1959
+Train: [44][160/175]	loss 0.6542
+Train: [44][170/175]	loss 0.4262
+VALIDATE
+Epoch: 44 Loss: 0.1185
+Train: [45][0/175]	loss 0.4595
+Train: [45][10/175]	loss 0.5347
+Train: [45][20/175]	loss 0.4404
+Train: [45][30/175]	loss 0.3946
+Train: [45][40/175]	loss 0.6022
+Train: [45][50/175]	loss 0.4981
+Train: [45][60/175]	loss 0.4384
+Train: [45][70/175]	loss 0.7498
+Train: [45][80/175]	loss 0.5712
+Train: [45][90/175]	loss 0.4179
+Train: [45][100/175]	loss 0.6579
+Train: [45][110/175]	loss 0.9401
+Train: [45][120/175]	loss 0.8106
+Train: [45][130/175]	loss 0.6485
+Train: [45][140/175]	loss 0.7296
+Train: [45][150/175]	loss 0.5178
+Train: [45][160/175]	loss 0.3668
+Train: [45][170/175]	loss 0.4197
+VALIDATE
+Epoch: 45 Loss: 0.1181
+Train: [46][0/175]	loss 0.4102
+Train: [46][10/175]	loss 0.2546
+Train: [46][20/175]	loss 0.5046
+Train: [46][30/175]	loss 0.4669
+Train: [46][40/175]	loss 0.6892
+Train: [46][50/175]	loss 0.5171
+Train: [46][60/175]	loss 0.3860
+Train: [46][70/175]	loss 0.9725
+Train: [46][80/175]	loss 0.5942
+Train: [46][90/175]	loss 0.2921
+Train: [46][100/175]	loss 0.6095
+Train: [46][110/175]	loss 0.6772
+Train: [46][120/175]	loss 0.5568
+Train: [46][130/175]	loss 0.7690
+Train: [46][140/175]	loss 0.3824
+Train: [46][150/175]	loss 0.6312
+Train: [46][160/175]	loss 0.3549
+Train: [46][170/175]	loss 0.7642
+VALIDATE
+Epoch: 46 Loss: 0.1176
+Train: [47][0/175]	loss 0.8150
+Train: [47][10/175]	loss 0.6578
+Train: [47][20/175]	loss 0.2353
+Train: [47][30/175]	loss 0.7636
+Train: [47][40/175]	loss 0.2857
+Train: [47][50/175]	loss 0.2866
+Train: [47][60/175]	loss 0.5441
+Train: [47][70/175]	loss 0.3616
+Train: [47][80/175]	loss 0.6001
+Train: [47][90/175]	loss 0.6123
+Train: [47][100/175]	loss 0.2939
+Train: [47][110/175]	loss 0.3395
+Train: [47][120/175]	loss 0.3678
+Train: [47][130/175]	loss 0.3881
+Train: [47][140/175]	loss 0.4019
+Train: [47][150/175]	loss 0.3318
+Train: [47][160/175]	loss 0.4674
+Train: [47][170/175]	loss 0.5626
+VALIDATE
+Epoch: 47 Loss: 0.1168
+Train: [48][0/175]	loss 0.5842
+Train: [48][10/175]	loss 0.4690
+Train: [48][20/175]	loss 0.8804
+Train: [48][30/175]	loss 0.5669
+Train: [48][40/175]	loss 0.2337
+Train: [48][50/175]	loss 0.2757
+Train: [48][60/175]	loss 0.7936
+Train: [48][70/175]	loss 0.4171
+Train: [48][80/175]	loss 0.5752
+Train: [48][90/175]	loss 0.4998
+Train: [48][100/175]	loss 0.4239
+Train: [48][110/175]	loss 0.3283
+Train: [48][120/175]	loss 0.6788
+Train: [48][130/175]	loss 0.5236
+Train: [48][140/175]	loss 0.2942
+Train: [48][150/175]	loss 0.6291
+Train: [48][160/175]	loss 0.5811
+Train: [48][170/175]	loss 0.3692
+VALIDATE
+Epoch: 48 Loss: 0.1161
+Train: [49][0/175]	loss 0.6916
+Train: [49][10/175]	loss 0.7634
+Train: [49][20/175]	loss 0.4010
+Train: [49][30/175]	loss 0.5071
+Train: [49][40/175]	loss 0.5115
+Train: [49][50/175]	loss 0.5129
+Train: [49][60/175]	loss 0.9209
+Train: [49][70/175]	loss 0.4306
+Train: [49][80/175]	loss 0.4979
+Train: [49][90/175]	loss 0.4992
+Train: [49][100/175]	loss 0.3821
+Train: [49][110/175]	loss 0.2841
+Train: [49][120/175]	loss 0.5754
+Train: [49][130/175]	loss 0.9439
+Train: [49][140/175]	loss 0.9910
+Train: [49][150/175]	loss 0.2206
+Train: [49][160/175]	loss 0.8896
+Train: [49][170/175]	loss 0.7582
+VALIDATE
+Epoch: 49 Loss: 0.1154
+Train: [50][0/175]	loss 0.4655
+Train: [50][10/175]	loss 0.3684
+Train: [50][20/175]	loss 0.3390
+Train: [50][30/175]	loss 0.7495
+Train: [50][40/175]	loss 0.7537
+Train: [50][50/175]	loss 0.3309
+Train: [50][60/175]	loss 0.6487
+Train: [50][70/175]	loss 0.4418
+Train: [50][80/175]	loss 0.3541
+Train: [50][90/175]	loss 0.5929
+Train: [50][100/175]	loss 0.8290
+Train: [50][110/175]	loss 0.6974
+Train: [50][120/175]	loss 0.5035
+Train: [50][130/175]	loss 0.9737
+Train: [50][140/175]	loss 0.5930
+Train: [50][150/175]	loss 0.4902
+Train: [50][160/175]	loss 0.8593
+Train: [50][170/175]	loss 0.1186
+VALIDATE
+Epoch: 50 Loss: 0.1217
+Train: [51][0/175]	loss 0.4712
+Train: [51][10/175]	loss 0.2485
+Train: [51][20/175]	loss 0.2835
+Train: [51][30/175]	loss 0.5587
+Train: [51][40/175]	loss 0.8068
+Train: [51][50/175]	loss 0.6322
+Train: [51][60/175]	loss 0.8440
+Train: [51][70/175]	loss 0.3636
+Train: [51][80/175]	loss 1.0576
+Train: [51][90/175]	loss 0.3327
+Train: [51][100/175]	loss 0.8537
+Train: [51][110/175]	loss 0.5850
+Train: [51][120/175]	loss 0.6599
+Train: [51][130/175]	loss 0.6020
+Train: [51][140/175]	loss 0.6978
+Train: [51][150/175]	loss 0.6587
+Train: [51][160/175]	loss 0.2870
+Train: [51][170/175]	loss 0.8542
+VALIDATE
+Epoch: 51 Loss: 0.1103
+Train: [52][0/175]	loss 0.6563
+Train: [52][10/175]	loss 0.4316
+Train: [52][20/175]	loss 0.8552
+Train: [52][30/175]	loss 0.4524
+Train: [52][40/175]	loss 0.5920
+Train: [52][50/175]	loss 0.4010
+Train: [52][60/175]	loss 1.0009
+Train: [52][70/175]	loss 0.4863
+Train: [52][80/175]	loss 0.3494
+Train: [52][90/175]	loss 0.3749
+Train: [52][100/175]	loss 0.5636
+Train: [52][110/175]	loss 0.6261
+Train: [52][120/175]	loss 0.2772
+Train: [52][130/175]	loss 0.2186
+Train: [52][140/175]	loss 0.2660
+Train: [52][150/175]	loss 0.4236
+Train: [52][160/175]	loss 0.5899
+Train: [52][170/175]	loss 0.9854
+VALIDATE
+Epoch: 52 Loss: 0.1215
+Train: [53][0/175]	loss 0.3507
+Train: [53][10/175]	loss 0.6220
+Train: [53][20/175]	loss 0.6138
+Train: [53][30/175]	loss 0.6196
+Train: [53][40/175]	loss 0.6391
+Train: [53][50/175]	loss 0.8099
+Train: [53][60/175]	loss 0.3821
+Train: [53][70/175]	loss 0.5372
+Train: [53][80/175]	loss 0.5385
+Train: [53][90/175]	loss 0.4642
+Train: [53][100/175]	loss 0.6133
+Train: [53][110/175]	loss 0.7055
+Train: [53][120/175]	loss 0.6357
+Train: [53][130/175]	loss 0.4130
+Train: [53][140/175]	loss 0.1998
+Train: [53][150/175]	loss 0.6000
+Train: [53][160/175]	loss 0.8785
+Train: [53][170/175]	loss 0.5325
+VALIDATE
+Epoch: 53 Loss: 0.1118
+Train: [54][0/175]	loss 0.5097
+Train: [54][10/175]	loss 0.2684
+Train: [54][20/175]	loss 0.5284
+Train: [54][30/175]	loss 0.6398
+Train: [54][40/175]	loss 0.5381
+Train: [54][50/175]	loss 0.4195
+Train: [54][60/175]	loss 0.8894
+Train: [54][70/175]	loss 0.3883
+Train: [54][80/175]	loss 0.5065
+Train: [54][90/175]	loss 0.6717
+Train: [54][100/175]	loss 0.2642
+Train: [54][110/175]	loss 0.6856
+Train: [54][120/175]	loss 0.5408
+Train: [54][130/175]	loss 0.6070
+Train: [54][140/175]	loss 0.3858
+Train: [54][150/175]	loss 0.5455
+Train: [54][160/175]	loss 0.5012
+Train: [54][170/175]	loss 0.5930
+VALIDATE
+Epoch: 54 Loss: 0.1169
+Train: [55][0/175]	loss 0.6387
+Train: [55][10/175]	loss 0.6923
+Train: [55][20/175]	loss 1.1818
+Train: [55][30/175]	loss 0.5913
+Train: [55][40/175]	loss 0.3833
+Train: [55][50/175]	loss 0.4626
+Train: [55][60/175]	loss 0.5679
+Train: [55][70/175]	loss 0.2776
+Train: [55][80/175]	loss 0.8987
+Train: [55][90/175]	loss 0.4342
+Train: [55][100/175]	loss 0.2032
+Train: [55][110/175]	loss 0.4314
+Train: [55][120/175]	loss 0.5086
+Train: [55][130/175]	loss 0.3288
+Train: [55][140/175]	loss 0.2831
+Train: [55][150/175]	loss 0.6635
+Train: [55][160/175]	loss 0.4549
+Train: [55][170/175]	loss 0.6436
+VALIDATE
+Epoch: 55 Loss: 0.1212
+Train: [56][0/175]	loss 1.2512
+Train: [56][10/175]	loss 0.1746
+Train: [56][20/175]	loss 0.6420
+Train: [56][30/175]	loss 0.3054
+Train: [56][40/175]	loss 0.9025
+Train: [56][50/175]	loss 0.7738
+Train: [56][60/175]	loss 0.3347
+Train: [56][70/175]	loss 0.5688
+Train: [56][80/175]	loss 0.3517
+Train: [56][90/175]	loss 0.7912
+Train: [56][100/175]	loss 0.4775
+Train: [56][110/175]	loss 0.2341
+Train: [56][120/175]	loss 0.5669
+Train: [56][130/175]	loss 0.2705
+Train: [56][140/175]	loss 0.8513
+Train: [56][150/175]	loss 0.3668
+Train: [56][160/175]	loss 0.5016
+Train: [56][170/175]	loss 0.4391
+VALIDATE
+Epoch: 56 Loss: 0.1142
+Train: [57][0/175]	loss 0.4930
+Train: [57][10/175]	loss 0.3763
+Train: [57][20/175]	loss 0.4084
+Train: [57][30/175]	loss 1.1113
+Train: [57][40/175]	loss 0.8255
+Train: [57][50/175]	loss 0.8028
+Train: [57][60/175]	loss 0.3830
+Train: [57][70/175]	loss 0.2587
+Train: [57][80/175]	loss 0.2840
+Train: [57][90/175]	loss 0.7618
+Train: [57][100/175]	loss 1.0536
+Train: [57][110/175]	loss 0.5896
+Train: [57][120/175]	loss 0.2894
+Train: [57][130/175]	loss 0.4203
+Train: [57][140/175]	loss 0.4695
+Train: [57][150/175]	loss 0.4882
+Train: [57][160/175]	loss 0.4178
+Train: [57][170/175]	loss 0.6946
+VALIDATE
+Epoch: 57 Loss: 0.1249
+Train: [58][0/175]	loss 0.7460
+Train: [58][10/175]	loss 0.7095
+Train: [58][20/175]	loss 0.3841
+Train: [58][30/175]	loss 0.4152
+Train: [58][40/175]	loss 0.2450
+Train: [58][50/175]	loss 0.8204
+Train: [58][60/175]	loss 0.6959
+Train: [58][70/175]	loss 0.4822
+Train: [58][80/175]	loss 0.5021
+Train: [58][90/175]	loss 0.4781
+Train: [58][100/175]	loss 0.9349
+Train: [58][110/175]	loss 0.4664
+Train: [58][120/175]	loss 0.5886
+Train: [58][130/175]	loss 0.8240
+Train: [58][140/175]	loss 0.7211
+Train: [58][150/175]	loss 0.5190
+Train: [58][160/175]	loss 0.4331
+Train: [58][170/175]	loss 0.3557
+VALIDATE
+Epoch: 58 Loss: 0.1092
+Train: [59][0/175]	loss 0.6648
+Train: [59][10/175]	loss 0.7456
+Train: [59][20/175]	loss 0.5876
+Train: [59][30/175]	loss 0.7529
+Train: [59][40/175]	loss 0.4076
+Train: [59][50/175]	loss 0.7106
+Train: [59][60/175]	loss 0.8855
+Train: [59][70/175]	loss 0.5606
+Train: [59][80/175]	loss 0.8190
+Train: [59][90/175]	loss 0.8424
+Train: [59][100/175]	loss 0.4454
+Train: [59][110/175]	loss 0.2059
+Train: [59][120/175]	loss 0.4349
+Train: [59][130/175]	loss 0.1565
+Train: [59][140/175]	loss 0.3314
+Train: [59][150/175]	loss 0.7318
+Train: [59][160/175]	loss 0.6169
+Train: [59][170/175]	loss 0.6024
+VALIDATE
+Epoch: 59 Loss: 0.1150
+Train: [60][0/175]	loss 0.8432
+Train: [60][10/175]	loss 0.4207
+Train: [60][20/175]	loss 0.5957
+Train: [60][30/175]	loss 0.5189
+Train: [60][40/175]	loss 0.7836
+Train: [60][50/175]	loss 0.5585
+Train: [60][60/175]	loss 0.4592
+Train: [60][70/175]	loss 0.3487
+Train: [60][80/175]	loss 0.2217
+Train: [60][90/175]	loss 0.7702
+Train: [60][100/175]	loss 0.3284
+Train: [60][110/175]	loss 0.5902
+Train: [60][120/175]	loss 0.6858
+Train: [60][130/175]	loss 0.6473
+Train: [60][140/175]	loss 0.5580
+Train: [60][150/175]	loss 0.3978
+Train: [60][160/175]	loss 0.3530
+Train: [60][170/175]	loss 0.6682
+VALIDATE
+Epoch: 60 Loss: 0.1143
+Train: [61][0/175]	loss 0.4009
+Train: [61][10/175]	loss 0.4584
+Train: [61][20/175]	loss 0.3440
+Train: [61][30/175]	loss 0.6392
+Train: [61][40/175]	loss 0.6555
+Train: [61][50/175]	loss 0.5076
+Train: [61][60/175]	loss 0.7997
+Train: [61][70/175]	loss 0.9075
+Train: [61][80/175]	loss 0.5288
+Train: [61][90/175]	loss 0.1184
+Train: [61][100/175]	loss 0.4933
+Train: [61][110/175]	loss 0.6451
+Train: [61][120/175]	loss 0.8746
+Train: [61][130/175]	loss 0.3432
+Train: [61][140/175]	loss 0.3715
+Train: [61][150/175]	loss 0.3680
+Train: [61][160/175]	loss 0.6185
+Train: [61][170/175]	loss 0.5331
+VALIDATE
+Epoch: 61 Loss: 0.1153
+Train: [62][0/175]	loss 0.1737
+Train: [62][10/175]	loss 1.1072
+Train: [62][20/175]	loss 0.7842
+Train: [62][30/175]	loss 0.4724
+Train: [62][40/175]	loss 0.5098
+Train: [62][50/175]	loss 0.3806
+Train: [62][60/175]	loss 0.5930
+Train: [62][70/175]	loss 0.2261
+Train: [62][80/175]	loss 0.5428
+Train: [62][90/175]	loss 0.7083
+Train: [62][100/175]	loss 0.6973
+Train: [62][110/175]	loss 0.4260
+Train: [62][120/175]	loss 0.6561
+Train: [62][130/175]	loss 0.3963
+Train: [62][140/175]	loss 0.3321
+Train: [62][150/175]	loss 0.7268
+Train: [62][160/175]	loss 0.4405
+Train: [62][170/175]	loss 1.0055
+VALIDATE
+Epoch: 62 Loss: 0.1228
+Train: [63][0/175]	loss 0.5921
+Train: [63][10/175]	loss 0.2847
+Train: [63][20/175]	loss 0.4321
+Train: [63][30/175]	loss 0.3546
+Train: [63][40/175]	loss 0.4360
+Train: [63][50/175]	loss 0.2359
+Train: [63][60/175]	loss 0.5792
+Train: [63][70/175]	loss 1.0494
+Train: [63][80/175]	loss 0.9749
+Train: [63][90/175]	loss 0.4301
+Train: [63][100/175]	loss 0.6891
+Train: [63][110/175]	loss 1.0793
+Train: [63][120/175]	loss 0.6102
+Train: [63][130/175]	loss 0.7878
+Train: [63][140/175]	loss 0.6211
+Train: [63][150/175]	loss 0.1825
+Train: [63][160/175]	loss 0.7190
+Train: [63][170/175]	loss 0.3695
+VALIDATE
+Epoch: 63 Loss: 0.1136
+Train: [64][0/175]	loss 0.8179
+Train: [64][10/175]	loss 0.5026
+Train: [64][20/175]	loss 0.5127
+Train: [64][30/175]	loss 0.3843
+Train: [64][40/175]	loss 0.6202
+Train: [64][50/175]	loss 0.6721
+Train: [64][60/175]	loss 0.4078
+Train: [64][70/175]	loss 0.4939
+Train: [64][80/175]	loss 0.3571
+Train: [64][90/175]	loss 0.7687
+Train: [64][100/175]	loss 0.8914
+Train: [64][110/175]	loss 0.6328
+Train: [64][120/175]	loss 0.2182
+Train: [64][130/175]	loss 0.8998
+Train: [64][140/175]	loss 0.6672
+Train: [64][150/175]	loss 0.5249
+Train: [64][160/175]	loss 0.5558
+Train: [64][170/175]	loss 0.7632
+VALIDATE
+Epoch: 64 Loss: 0.1182
+Train: [65][0/175]	loss 0.6010
+Train: [65][10/175]	loss 0.6574
+Train: [65][20/175]	loss 0.6865
+Train: [65][30/175]	loss 0.3851
+Train: [65][40/175]	loss 0.7268
+Train: [65][50/175]	loss 0.2930
+Train: [65][60/175]	loss 0.4502
+Train: [65][70/175]	loss 0.3785
+Train: [65][80/175]	loss 0.4570
+Train: [65][90/175]	loss 0.1842
+Train: [65][100/175]	loss 0.4430
+Train: [65][110/175]	loss 0.1559
+Train: [65][120/175]	loss 0.4890
+Train: [65][130/175]	loss 0.4764
+Train: [65][140/175]	loss 0.4729
+Train: [65][150/175]	loss 0.4054
+Train: [65][160/175]	loss 0.6896
+Train: [65][170/175]	loss 0.6570
+VALIDATE
+Epoch: 65 Loss: 0.1250
+Train: [66][0/175]	loss 0.3416
+Train: [66][10/175]	loss 0.5902
+Train: [66][20/175]	loss 0.3967
+Train: [66][30/175]	loss 0.6307
+Train: [66][40/175]	loss 0.4997
+Train: [66][50/175]	loss 0.4247
+Train: [66][60/175]	loss 0.4936
+Train: [66][70/175]	loss 0.4092
+Train: [66][80/175]	loss 0.6669
+Train: [66][90/175]	loss 0.6845
+Train: [66][100/175]	loss 0.5740
+Train: [66][110/175]	loss 0.6112
+Train: [66][120/175]	loss 0.6868
+Train: [66][130/175]	loss 0.5442
+Train: [66][140/175]	loss 0.7494
+Train: [66][150/175]	loss 0.7931
+Train: [66][160/175]	loss 0.3583
+Train: [66][170/175]	loss 0.5759
+VALIDATE
+Epoch: 66 Loss: 0.1187
+Train: [67][0/175]	loss 0.7975
+Train: [67][10/175]	loss 0.3100
+Train: [67][20/175]	loss 0.5094
+Train: [67][30/175]	loss 0.5885
+Train: [67][40/175]	loss 0.6072
+Train: [67][50/175]	loss 0.3514
+Train: [67][60/175]	loss 0.4565
+Train: [67][70/175]	loss 0.3091
+Train: [67][80/175]	loss 0.5187
+Train: [67][90/175]	loss 0.5198
+Train: [67][100/175]	loss 0.3468
+Train: [67][110/175]	loss 0.7933
+Train: [67][120/175]	loss 0.5004
+Train: [67][130/175]	loss 0.1524
+Train: [67][140/175]	loss 0.7575
+Train: [67][150/175]	loss 0.9351
+Train: [67][160/175]	loss 0.6801
+Train: [67][170/175]	loss 0.2975
+VALIDATE
+Epoch: 67 Loss: 0.1208
+Train: [68][0/175]	loss 0.5438
+Train: [68][10/175]	loss 0.2091
+Train: [68][20/175]	loss 0.6387
+Train: [68][30/175]	loss 0.3532
+Train: [68][40/175]	loss 0.2984
+Train: [68][50/175]	loss 0.4076
+Train: [68][60/175]	loss 0.2956
+Train: [68][70/175]	loss 0.3360
+Train: [68][80/175]	loss 0.7019
+Train: [68][90/175]	loss 0.6044
+Train: [68][100/175]	loss 0.7348
+Train: [68][110/175]	loss 1.2330
+Train: [68][120/175]	loss 0.7626
+Train: [68][130/175]	loss 0.2437
+Train: [68][140/175]	loss 0.4606
+Train: [68][150/175]	loss 0.9541
+Train: [68][160/175]	loss 0.3726
+Train: [68][170/175]	loss 0.4342
+VALIDATE
+Epoch: 68 Loss: 0.1140
+Train: [69][0/175]	loss 0.5471
+Train: [69][10/175]	loss 0.5101
+Train: [69][20/175]	loss 0.2630
+Train: [69][30/175]	loss 0.1937
+Train: [69][40/175]	loss 0.2776
+Train: [69][50/175]	loss 0.3427
+Train: [69][60/175]	loss 0.3204
+Train: [69][70/175]	loss 0.7190
+Train: [69][80/175]	loss 0.5471
+Train: [69][90/175]	loss 0.4113
+Train: [69][100/175]	loss 0.2024
+Train: [69][110/175]	loss 1.1499
+Train: [69][120/175]	loss 0.8055
+Train: [69][130/175]	loss 0.3982
+Train: [69][140/175]	loss 0.2315
+Train: [69][150/175]	loss 0.7461
+Train: [69][160/175]	loss 0.4339
+Train: [69][170/175]	loss 0.5109
+VALIDATE
+Epoch: 69 Loss: 0.1175
+Train: [70][0/175]	loss 0.5192
+Train: [70][10/175]	loss 0.3039
+Train: [70][20/175]	loss 0.5682
+Train: [70][30/175]	loss 0.6968
+Train: [70][40/175]	loss 0.5440
+Train: [70][50/175]	loss 0.7385
+Train: [70][60/175]	loss 0.3139
+Train: [70][70/175]	loss 0.6295
+Train: [70][80/175]	loss 0.5252
+Train: [70][90/175]	loss 0.5734
+Train: [70][100/175]	loss 1.1609
+Train: [70][110/175]	loss 0.6401
+Train: [70][120/175]	loss 0.7481
+Train: [70][130/175]	loss 0.7891
+Train: [70][140/175]	loss 0.7073
+Train: [70][150/175]	loss 0.5088
+Train: [70][160/175]	loss 0.7481
+Train: [70][170/175]	loss 0.3952
+VALIDATE
+Epoch: 70 Loss: 0.1197
+Train: [71][0/175]	loss 0.3634
+Train: [71][10/175]	loss 0.6270
+Train: [71][20/175]	loss 0.5566
+Train: [71][30/175]	loss 0.3316
+Train: [71][40/175]	loss 0.2937
+Train: [71][50/175]	loss 0.7534
+Train: [71][60/175]	loss 0.2940
+Train: [71][70/175]	loss 0.6465
+Train: [71][80/175]	loss 0.7631
+Train: [71][90/175]	loss 0.3094
+Train: [71][100/175]	loss 0.3976
+Train: [71][110/175]	loss 0.9570
+Train: [71][120/175]	loss 0.3700
+Train: [71][130/175]	loss 0.5069
+Train: [71][140/175]	loss 0.3075
+Train: [71][150/175]	loss 0.9717
+Train: [71][160/175]	loss 0.6838
+Train: [71][170/175]	loss 0.6306
+VALIDATE
+Epoch: 71 Loss: 0.1125
+Train: [72][0/175]	loss 0.6224
+Train: [72][10/175]	loss 0.5807
+Train: [72][20/175]	loss 0.2683
+Train: [72][30/175]	loss 0.3043
+Train: [72][40/175]	loss 0.5761
+Train: [72][50/175]	loss 0.7130
+Train: [72][60/175]	loss 0.4780
+Train: [72][70/175]	loss 0.4564
+Train: [72][80/175]	loss 0.4148
+Train: [72][90/175]	loss 0.7699
+Train: [72][100/175]	loss 0.3488
+Train: [72][110/175]	loss 0.1797
+Train: [72][120/175]	loss 0.4763
+Train: [72][130/175]	loss 0.4749
+Train: [72][140/175]	loss 0.8108
+Train: [72][150/175]	loss 0.3259
+Train: [72][160/175]	loss 0.4572
+Train: [72][170/175]	loss 0.2824
+VALIDATE
+Epoch: 72 Loss: 0.1161
+Train: [73][0/175]	loss 0.5801
+Train: [73][10/175]	loss 0.6675
+Train: [73][20/175]	loss 0.4359
+Train: [73][30/175]	loss 0.2236
+Train: [73][40/175]	loss 0.3405
+Train: [73][50/175]	loss 0.5802
+Train: [73][60/175]	loss 0.6628
+Train: [73][70/175]	loss 0.8595
+Train: [73][80/175]	loss 0.5514
+Train: [73][90/175]	loss 0.5783
+Train: [73][100/175]	loss 0.9538
+Train: [73][110/175]	loss 0.4443
+Train: [73][120/175]	loss 0.1925
+Train: [73][130/175]	loss 0.4098
+Train: [73][140/175]	loss 0.4113
+Train: [73][150/175]	loss 0.5169
+Train: [73][160/175]	loss 0.7856
+Train: [73][170/175]	loss 0.7354
+VALIDATE
+Epoch: 73 Loss: 0.1138
+Train: [74][0/175]	loss 0.2584
+Train: [74][10/175]	loss 0.6281
+Train: [74][20/175]	loss 0.6438
+Train: [74][30/175]	loss 0.3681
+Train: [74][40/175]	loss 0.3594
+Train: [74][50/175]	loss 0.9914
+Train: [74][60/175]	loss 0.8975
+Train: [74][70/175]	loss 0.3930
+Train: [74][80/175]	loss 0.7286
+Train: [74][90/175]	loss 0.2146
+Train: [74][100/175]	loss 0.9004
+Train: [74][110/175]	loss 0.5016
+Train: [74][120/175]	loss 0.3028
+Train: [74][130/175]	loss 0.2110
+Train: [74][140/175]	loss 0.1802
+Train: [74][150/175]	loss 0.3249
+Train: [74][160/175]	loss 0.6897
+Train: [74][170/175]	loss 0.6554
+VALIDATE
+Epoch: 74 Loss: 0.1199
+Train: [75][0/175]	loss 0.7742
+Train: [75][10/175]	loss 0.4279
+Train: [75][20/175]	loss 0.3050
+Train: [75][30/175]	loss 0.2746
+Train: [75][40/175]	loss 0.5636
+Train: [75][50/175]	loss 0.9292
+Train: [75][60/175]	loss 0.4560
+Train: [75][70/175]	loss 0.6453
+Train: [75][80/175]	loss 0.5799
+Train: [75][90/175]	loss 0.8047
+Train: [75][100/175]	loss 0.3786
+Train: [75][110/175]	loss 0.1507
+Train: [75][120/175]	loss 0.6620
+Train: [75][130/175]	loss 0.5458
+Train: [75][140/175]	loss 0.3051
+Train: [75][150/175]	loss 0.6085
+Train: [75][160/175]	loss 0.5383
+Train: [75][170/175]	loss 0.6478
+VALIDATE
+Epoch: 75 Loss: 0.1184
+Train: [76][0/175]	loss 0.4379
+Train: [76][10/175]	loss 0.7926
+Train: [76][20/175]	loss 0.2470
+Train: [76][30/175]	loss 0.4807
+Train: [76][40/175]	loss 0.4147
+Train: [76][50/175]	loss 0.1853
+Train: [76][60/175]	loss 0.2438
+Train: [76][70/175]	loss 0.8138
+Train: [76][80/175]	loss 0.3989
+Train: [76][90/175]	loss 0.2294
+Train: [76][100/175]	loss 0.3834
+Train: [76][110/175]	loss 0.3132
+Train: [76][120/175]	loss 0.3738
+Train: [76][130/175]	loss 0.2332
+Train: [76][140/175]	loss 0.3144
+Train: [76][150/175]	loss 0.4988
+Train: [76][160/175]	loss 0.5525
+Train: [76][170/175]	loss 0.6187
+VALIDATE
+Epoch: 76 Loss: 0.1186
+Train: [77][0/175]	loss 0.3486
+Train: [77][10/175]	loss 0.6125
+Train: [77][20/175]	loss 0.1588
+Train: [77][30/175]	loss 0.2360
+Train: [77][40/175]	loss 0.4179
+Train: [77][50/175]	loss 0.5205
+Train: [77][60/175]	loss 0.6276
+Train: [77][70/175]	loss 0.3382
+Train: [77][80/175]	loss 0.4142
+Train: [77][90/175]	loss 0.6868
+Train: [77][100/175]	loss 0.4137
+Train: [77][110/175]	loss 0.6276
+Train: [77][120/175]	loss 0.6812
+Train: [77][130/175]	loss 0.3727
+Train: [77][140/175]	loss 0.6491
+Train: [77][150/175]	loss 0.1861
+Train: [77][160/175]	loss 0.6195
+Train: [77][170/175]	loss 0.7123
+VALIDATE
+Epoch: 77 Loss: 0.1112
+Train: [78][0/175]	loss 0.6392
+Train: [78][10/175]	loss 0.3492
+Train: [78][20/175]	loss 0.7964
+Train: [78][30/175]	loss 0.4138
+Train: [78][40/175]	loss 0.5893
+Train: [78][50/175]	loss 0.7358
+Train: [78][60/175]	loss 0.5919
+Train: [78][70/175]	loss 0.6536
+Train: [78][80/175]	loss 0.3086
+Train: [78][90/175]	loss 0.5019
+Train: [78][100/175]	loss 0.4191
+Train: [78][110/175]	loss 0.3930
+Train: [78][120/175]	loss 0.7611
+Train: [78][130/175]	loss 0.3192
+Train: [78][140/175]	loss 0.4158
+Train: [78][150/175]	loss 0.4942
+Train: [78][160/175]	loss 0.3199
+Train: [78][170/175]	loss 1.0129
+VALIDATE
+Epoch: 78 Loss: 0.1192
+Train: [79][0/175]	loss 0.4961
+Train: [79][10/175]	loss 0.5315
+Train: [79][20/175]	loss 0.5225
+Train: [79][30/175]	loss 0.2006
+Train: [79][40/175]	loss 0.6348
+Train: [79][50/175]	loss 0.9524
+Train: [79][60/175]	loss 0.4463
+Train: [79][70/175]	loss 0.2998
+Train: [79][80/175]	loss 0.1918
+Train: [79][90/175]	loss 0.4278
+Train: [79][100/175]	loss 0.2570
+Train: [79][110/175]	loss 1.7253
+Train: [79][120/175]	loss 0.7006
+Train: [79][130/175]	loss 0.5407
+Train: [79][140/175]	loss 0.7346
+Train: [79][150/175]	loss 0.1488
+Train: [79][160/175]	loss 0.4957
+Train: [79][170/175]	loss 0.4584
+VALIDATE
+Epoch: 79 Loss: 0.1171
+Train: [80][0/175]	loss 0.2651
+Train: [80][10/175]	loss 0.3538
+Train: [80][20/175]	loss 0.6524
+Train: [80][30/175]	loss 0.6536
+Train: [80][40/175]	loss 0.3858
+Train: [80][50/175]	loss 0.5153
+Train: [80][60/175]	loss 0.4829
+Train: [80][70/175]	loss 0.6908
+Train: [80][80/175]	loss 0.5552
+Train: [80][90/175]	loss 0.5768
+Train: [80][100/175]	loss 0.4048
+Train: [80][110/175]	loss 0.3544
+Train: [80][120/175]	loss 0.5607
+Train: [80][130/175]	loss 0.7106
+Train: [80][140/175]	loss 1.0309
+Train: [80][150/175]	loss 0.4398
+Train: [80][160/175]	loss 0.9808
+Train: [80][170/175]	loss 0.5876
+VALIDATE
+Epoch: 80 Loss: 0.1157
+Train: [81][0/175]	loss 0.4058
+Train: [81][10/175]	loss 0.8477
+Train: [81][20/175]	loss 0.2216
+Train: [81][30/175]	loss 0.4401
+Train: [81][40/175]	loss 0.7712
+Train: [81][50/175]	loss 0.3431
+Train: [81][60/175]	loss 0.5315
+Train: [81][70/175]	loss 1.2145
+Train: [81][80/175]	loss 0.6548
+Train: [81][90/175]	loss 0.9660
+Train: [81][100/175]	loss 0.8185
+Train: [81][110/175]	loss 0.8532
+Train: [81][120/175]	loss 0.6083
+Train: [81][130/175]	loss 0.3494
+Train: [81][140/175]	loss 0.2964
+Train: [81][150/175]	loss 0.5220
+Train: [81][160/175]	loss 0.8321
+Train: [81][170/175]	loss 0.7552
+VALIDATE
+Epoch: 81 Loss: 0.1207
+Train: [82][0/175]	loss 0.4897
+Train: [82][10/175]	loss 0.3862
+Train: [82][20/175]	loss 0.6003
+Train: [82][30/175]	loss 0.9302
+Train: [82][40/175]	loss 0.8736
+Train: [82][50/175]	loss 0.2843
+Train: [82][60/175]	loss 0.4405
+Train: [82][70/175]	loss 0.5804
+Train: [82][80/175]	loss 0.5477
+Train: [82][90/175]	loss 0.6688
+Train: [82][100/175]	loss 0.6002
+Train: [82][110/175]	loss 0.3254
+Train: [82][120/175]	loss 0.2689
+Train: [82][130/175]	loss 0.7651
+Train: [82][140/175]	loss 0.3698
+Train: [82][150/175]	loss 0.4130
+Train: [82][160/175]	loss 0.4105
+Train: [82][170/175]	loss 0.9345
+VALIDATE
+Epoch: 82 Loss: 0.1183
+Train: [83][0/175]	loss 0.4201
+Train: [83][10/175]	loss 0.8780
+Train: [83][20/175]	loss 0.4415
+Train: [83][30/175]	loss 0.1447
+Train: [83][40/175]	loss 0.4009
+Train: [83][50/175]	loss 0.3304
+Train: [83][60/175]	loss 0.5857
+Train: [83][70/175]	loss 0.6517
+Train: [83][80/175]	loss 0.3103
+Train: [83][90/175]	loss 0.9187
+Train: [83][100/175]	loss 0.6014
+Train: [83][110/175]	loss 0.4610
+Train: [83][120/175]	loss 0.3505
+Train: [83][130/175]	loss 0.5958
+Train: [83][140/175]	loss 0.5829
+Train: [83][150/175]	loss 0.8510
+Train: [83][160/175]	loss 0.7371
+Train: [83][170/175]	loss 0.7606
+VALIDATE
+Epoch: 83 Loss: 0.1131
+Train: [84][0/175]	loss 0.5357
+Train: [84][10/175]	loss 0.8366
+Train: [84][20/175]	loss 0.4212
+Train: [84][30/175]	loss 0.5038
+Train: [84][40/175]	loss 0.1852
+Train: [84][50/175]	loss 0.5172
+Train: [84][60/175]	loss 0.4265
+Train: [84][70/175]	loss 0.2677
+Train: [84][80/175]	loss 0.7307
+Train: [84][90/175]	loss 0.6968
+Train: [84][100/175]	loss 0.4244
+Train: [84][110/175]	loss 0.5563
+Train: [84][120/175]	loss 0.2297
+Train: [84][130/175]	loss 0.4401
+Train: [84][140/175]	loss 0.2710
+Train: [84][150/175]	loss 0.3464
+Train: [84][160/175]	loss 0.6805
+Train: [84][170/175]	loss 0.3588
+VALIDATE
+Epoch: 84 Loss: 0.1247
+Train: [85][0/175]	loss 0.4970
+Train: [85][10/175]	loss 0.4202
+Train: [85][20/175]	loss 0.8509
+Train: [85][30/175]	loss 0.6613
+Train: [85][40/175]	loss 0.4781
+Train: [85][50/175]	loss 0.5605
+Train: [85][60/175]	loss 0.6080
+Train: [85][70/175]	loss 0.3844
+Train: [85][80/175]	loss 0.5604
+Train: [85][90/175]	loss 0.9322
+Train: [85][100/175]	loss 0.6106
+Train: [85][110/175]	loss 0.4691
+Train: [85][120/175]	loss 0.3676
+Train: [85][130/175]	loss 0.2363
+Train: [85][140/175]	loss 0.2764
+Train: [85][150/175]	loss 0.6621
+Train: [85][160/175]	loss 0.4221
+Train: [85][170/175]	loss 0.2570
+VALIDATE
+Epoch: 85 Loss: 0.1188
+Train: [86][0/175]	loss 0.6855
+Train: [86][10/175]	loss 0.4712
+Train: [86][20/175]	loss 0.5989
+Train: [86][30/175]	loss 0.5638
+Train: [86][40/175]	loss 0.6586
+Train: [86][50/175]	loss 0.5993
+Train: [86][60/175]	loss 0.3351
+Train: [86][70/175]	loss 0.5643
+Train: [86][80/175]	loss 0.2135
+Train: [86][90/175]	loss 0.7750
+Train: [86][100/175]	loss 0.4990
+Train: [86][110/175]	loss 0.4363
+Train: [86][120/175]	loss 0.5616
+Train: [86][130/175]	loss 0.5839
+Train: [86][140/175]	loss 0.5293
+Train: [86][150/175]	loss 0.3077
+Train: [86][160/175]	loss 0.5770
+Train: [86][170/175]	loss 0.4254
+VALIDATE
+Epoch: 86 Loss: 0.1208
+Train: [87][0/175]	loss 0.7298
+Train: [87][10/175]	loss 0.6404
+Train: [87][20/175]	loss 0.4581
+Train: [87][30/175]	loss 0.6469
+Train: [87][40/175]	loss 0.3631
+Train: [87][50/175]	loss 0.4593
+Train: [87][60/175]	loss 0.4465
+Train: [87][70/175]	loss 0.3236
+Train: [87][80/175]	loss 0.3970
+Train: [87][90/175]	loss 0.6244
+Train: [87][100/175]	loss 0.6678
+Train: [87][110/175]	loss 0.4352
+Train: [87][120/175]	loss 0.8284
+Train: [87][130/175]	loss 0.6378
+Train: [87][140/175]	loss 0.3534
+Train: [87][150/175]	loss 0.4565
+Train: [87][160/175]	loss 0.4153
+Train: [87][170/175]	loss 0.6511
+VALIDATE
+Epoch: 87 Loss: 0.1232
+Train: [88][0/175]	loss 0.7514
+Train: [88][10/175]	loss 0.4245
+Train: [88][20/175]	loss 0.8674
+Train: [88][30/175]	loss 0.4933
+Train: [88][40/175]	loss 0.3441
+Train: [88][50/175]	loss 0.4207
+Train: [88][60/175]	loss 0.2767
+Train: [88][70/175]	loss 0.6997
+Train: [88][80/175]	loss 0.5343
+Train: [88][90/175]	loss 1.0340
+Train: [88][100/175]	loss 0.5254
+Train: [88][110/175]	loss 0.8002
+Train: [88][120/175]	loss 0.3498
+Train: [88][130/175]	loss 0.3862
+Train: [88][140/175]	loss 0.4939
+Train: [88][150/175]	loss 0.2180
+Train: [88][160/175]	loss 0.2735
+Train: [88][170/175]	loss 0.5940
+VALIDATE
+Epoch: 88 Loss: 0.1199
+Train: [89][0/175]	loss 0.2960
+Train: [89][10/175]	loss 0.6648
+Train: [89][20/175]	loss 0.3231
+Train: [89][30/175]	loss 0.5793
+Train: [89][40/175]	loss 0.6335
+Train: [89][50/175]	loss 0.7156
+Train: [89][60/175]	loss 0.7632
+Train: [89][70/175]	loss 0.1628
+Train: [89][80/175]	loss 0.8033
+Train: [89][90/175]	loss 0.4973
+Train: [89][100/175]	loss 0.1980
+Train: [89][110/175]	loss 0.4784
+Train: [89][120/175]	loss 0.2991
+Train: [89][130/175]	loss 0.9755
+Train: [89][140/175]	loss 0.3284
+Train: [89][150/175]	loss 0.6559
+Train: [89][160/175]	loss 0.4529
+Train: [89][170/175]	loss 0.5000
+VALIDATE
+Epoch: 89 Loss: 0.1195
+Train: [90][0/175]	loss 0.0709
+Train: [90][10/175]	loss 0.5391
+Train: [90][20/175]	loss 0.9193
+Train: [90][30/175]	loss 0.6139
+Train: [90][40/175]	loss 0.5856
+Train: [90][50/175]	loss 0.1828
+Train: [90][60/175]	loss 0.6263
+Train: [90][70/175]	loss 0.5294
+Train: [90][80/175]	loss 0.7246
+Train: [90][90/175]	loss 0.6548
+Train: [90][100/175]	loss 0.4939
+Train: [90][110/175]	loss 0.5655
+Train: [90][120/175]	loss 0.3270
+Train: [90][130/175]	loss 0.5972
+Train: [90][140/175]	loss 0.4256
+Train: [90][150/175]	loss 0.5705
+Train: [90][160/175]	loss 0.2558
+Train: [90][170/175]	loss 0.2527
+VALIDATE
+Epoch: 90 Loss: 0.1201
+Train: [91][0/175]	loss 0.3738
+Train: [91][10/175]	loss 0.2071
+Train: [91][20/175]	loss 0.6278
+Train: [91][30/175]	loss 0.4835
+Train: [91][40/175]	loss 1.1045
+Train: [91][50/175]	loss 0.3408
+Train: [91][60/175]	loss 0.6038
+Train: [91][70/175]	loss 0.1541
+Train: [91][80/175]	loss 0.4348
+Train: [91][90/175]	loss 0.3203
+Train: [91][100/175]	loss 0.5313
+Train: [91][110/175]	loss 0.8586
+Train: [91][120/175]	loss 0.6992
+Train: [91][130/175]	loss 0.5055
+Train: [91][140/175]	loss 0.6897
+Train: [91][150/175]	loss 0.3738
+Train: [91][160/175]	loss 0.7149
+Train: [91][170/175]	loss 0.6799
+VALIDATE
+Epoch: 91 Loss: 0.1170
+Train: [92][0/175]	loss 0.4688
+Train: [92][10/175]	loss 0.4400
+Train: [92][20/175]	loss 1.5048
+Train: [92][30/175]	loss 0.4147
+Train: [92][40/175]	loss 0.9237
+Train: [92][50/175]	loss 0.9338
+Train: [92][60/175]	loss 0.3097
+Train: [92][70/175]	loss 0.4707
+Train: [92][80/175]	loss 0.4370
+Train: [92][90/175]	loss 0.9153
+Train: [92][100/175]	loss 0.4187
+Train: [92][110/175]	loss 0.6593
+Train: [92][120/175]	loss 0.6243
+Train: [92][130/175]	loss 0.3783
+Train: [92][140/175]	loss 0.5853
+Train: [92][150/175]	loss 0.6764
+Train: [92][160/175]	loss 0.3550
+Train: [92][170/175]	loss 0.4672
+VALIDATE
+Epoch: 92 Loss: 0.1107
+Train: [93][0/175]	loss 0.4578
+Train: [93][10/175]	loss 0.3002
+Train: [93][20/175]	loss 0.9494
+Train: [93][30/175]	loss 0.7506
+Train: [93][40/175]	loss 0.2865
+Train: [93][50/175]	loss 0.7445
+Train: [93][60/175]	loss 0.2297
+Train: [93][70/175]	loss 0.5430
+Train: [93][80/175]	loss 0.3342
+Train: [93][90/175]	loss 0.4894
+Train: [93][100/175]	loss 0.7615
+Train: [93][110/175]	loss 1.0914
+Train: [93][120/175]	loss 0.5636
+Train: [93][130/175]	loss 0.4840
+Train: [93][140/175]	loss 0.2746
+Train: [93][150/175]	loss 0.5856
+Train: [93][160/175]	loss 0.2252
+Train: [93][170/175]	loss 0.6180
+VALIDATE
+Epoch: 93 Loss: 0.1112
+Train: [94][0/175]	loss 0.5364
+Train: [94][10/175]	loss 0.4192
+Train: [94][20/175]	loss 0.4694
+Train: [94][30/175]	loss 0.5715
+Train: [94][40/175]	loss 0.1796
+Train: [94][50/175]	loss 0.3018
+Train: [94][60/175]	loss 0.4420
+Train: [94][70/175]	loss 0.5574
+Train: [94][80/175]	loss 0.6792
+Train: [94][90/175]	loss 0.4660
+Train: [94][100/175]	loss 0.3583
+Train: [94][110/175]	loss 0.9091
+Train: [94][120/175]	loss 0.4261
+Train: [94][130/175]	loss 0.5992
+Train: [94][140/175]	loss 0.5817
+Train: [94][150/175]	loss 0.3095
+Train: [94][160/175]	loss 0.2318
+Train: [94][170/175]	loss 0.1548
+VALIDATE
+Epoch: 94 Loss: 0.1130
+Train: [95][0/175]	loss 0.6193
+Train: [95][10/175]	loss 0.8373
+Train: [95][20/175]	loss 0.4851
+Train: [95][30/175]	loss 0.2832
+Train: [95][40/175]	loss 0.6443
+Train: [95][50/175]	loss 0.3778
+Train: [95][60/175]	loss 0.2804
+Train: [95][70/175]	loss 0.9146
+Train: [95][80/175]	loss 0.5835
+Train: [95][90/175]	loss 0.5545
+Train: [95][100/175]	loss 0.3043
+Train: [95][110/175]	loss 0.7298
+Train: [95][120/175]	loss 0.5555
+Train: [95][130/175]	loss 0.4209
+Train: [95][140/175]	loss 1.0865
+Train: [95][150/175]	loss 0.8541
+Train: [95][160/175]	loss 0.3285
+Train: [95][170/175]	loss 0.5618
+VALIDATE
+Epoch: 95 Loss: 0.1171
+Train: [96][0/175]	loss 0.6208
+Train: [96][10/175]	loss 0.8703
+Train: [96][20/175]	loss 0.3962
+Train: [96][30/175]	loss 0.4777
+Train: [96][40/175]	loss 0.5814
+Train: [96][50/175]	loss 0.9735
+Train: [96][60/175]	loss 0.5236
+Train: [96][70/175]	loss 0.6213
+Train: [96][80/175]	loss 0.6297
+Train: [96][90/175]	loss 0.4302
+Train: [96][100/175]	loss 0.4974
+Train: [96][110/175]	loss 0.4484
+Train: [96][120/175]	loss 0.6138
+Train: [96][130/175]	loss 1.0182
+Train: [96][140/175]	loss 0.6030
+Train: [96][150/175]	loss 0.5739
+Train: [96][160/175]	loss 0.2269
+Train: [96][170/175]	loss 0.3161
+VALIDATE
+Epoch: 96 Loss: 0.1163
+Train: [97][0/175]	loss 0.6629
+Train: [97][10/175]	loss 0.6197
+Train: [97][20/175]	loss 0.8419
+Train: [97][30/175]	loss 0.5639
+Train: [97][40/175]	loss 0.4702
+Train: [97][50/175]	loss 0.3136
+Train: [97][60/175]	loss 0.2596
+Train: [97][70/175]	loss 1.1148
+Train: [97][80/175]	loss 0.6268
+Train: [97][90/175]	loss 0.6725
+Train: [97][100/175]	loss 0.4505
+Train: [97][110/175]	loss 0.2384
+Train: [97][120/175]	loss 0.5985
+Train: [97][130/175]	loss 0.5752
+Train: [97][140/175]	loss 0.4830
+Train: [97][150/175]	loss 0.7493
+Train: [97][160/175]	loss 0.5716
+Train: [97][170/175]	loss 0.5850
+VALIDATE
+Epoch: 97 Loss: 0.1201
+Train: [98][0/175]	loss 0.6211
+Train: [98][10/175]	loss 0.6529
+Train: [98][20/175]	loss 0.4077
+Train: [98][30/175]	loss 0.4127
+Train: [98][40/175]	loss 0.4040
+Train: [98][50/175]	loss 0.6797
+Train: [98][60/175]	loss 0.9525
+Train: [98][70/175]	loss 0.7333
+Train: [98][80/175]	loss 0.3139
+Train: [98][90/175]	loss 0.3754
+Train: [98][100/175]	loss 0.4206
+Train: [98][110/175]	loss 0.4061
+Train: [98][120/175]	loss 0.4450
+Train: [98][130/175]	loss 0.5580
+Train: [98][140/175]	loss 0.5835
+Train: [98][150/175]	loss 0.9399
+Train: [98][160/175]	loss 0.4606
+Train: [98][170/175]	loss 0.5022
+VALIDATE
+Epoch: 98 Loss: 0.1197
+Train: [99][0/175]	loss 0.6802
+Train: [99][10/175]	loss 0.4823
+Train: [99][20/175]	loss 0.5601
+Train: [99][30/175]	loss 0.4488
+Train: [99][40/175]	loss 0.7371
+Train: [99][50/175]	loss 0.7436
+Train: [99][60/175]	loss 0.6837
+Train: [99][70/175]	loss 0.3902
+Train: [99][80/175]	loss 0.3548
+Train: [99][90/175]	loss 0.3960
+Train: [99][100/175]	loss 0.4110
+Train: [99][110/175]	loss 0.5258
+Train: [99][120/175]	loss 0.1714
+Train: [99][130/175]	loss 0.2936
+Train: [99][140/175]	loss 0.6304
+Train: [99][150/175]	loss 0.6455
+Train: [99][160/175]	loss 0.8393
+Train: [99][170/175]	loss 0.8466
+VALIDATE
+Epoch: 99 Loss: 0.1130
+Train: [100][0/175]	loss 0.7913
+Train: [100][10/175]	loss 0.6941
+Train: [100][20/175]	loss 0.7815
+Train: [100][30/175]	loss 0.5467
+Train: [100][40/175]	loss 0.1199
+Train: [100][50/175]	loss 0.8522
+Train: [100][60/175]	loss 0.3650
+Train: [100][70/175]	loss 0.3938
+Train: [100][80/175]	loss 0.5810
+Train: [100][90/175]	loss 0.3652
+Train: [100][100/175]	loss 0.7759
+Train: [100][110/175]	loss 0.3185
+Train: [100][120/175]	loss 0.9542
+Train: [100][130/175]	loss 0.6482
+Train: [100][140/175]	loss 0.6656
+Train: [100][150/175]	loss 0.3219
+Train: [100][160/175]	loss 0.6274
+Train: [100][170/175]	loss 0.8163
+VALIDATE
+Epoch: 100 Loss: 0.1171
+Train: [101][0/175]	loss 0.1187
+Train: [101][10/175]	loss 0.5253
+Train: [101][20/175]	loss 1.0320
+Train: [101][30/175]	loss 0.3280
+Train: [101][40/175]	loss 0.4103
+Train: [101][50/175]	loss 0.2941
+Train: [101][60/175]	loss 0.4270
+Train: [101][70/175]	loss 0.4121
+Train: [101][80/175]	loss 0.4558
+Train: [101][90/175]	loss 0.7997
+Train: [101][100/175]	loss 0.3879
+Train: [101][110/175]	loss 0.4750
+Train: [101][120/175]	loss 0.7216
+Train: [101][130/175]	loss 0.9650
+Train: [101][140/175]	loss 0.5540
+Train: [101][150/175]	loss 0.3350
+Train: [101][160/175]	loss 0.5931
+Train: [101][170/175]	loss 0.3316
+VALIDATE
+Epoch: 101 Loss: 0.1168
+Train: [102][0/175]	loss 0.5879
+Train: [102][10/175]	loss 0.8532
+Train: [102][20/175]	loss 0.7963
+Train: [102][30/175]	loss 0.8640
+Train: [102][40/175]	loss 0.3667
+Train: [102][50/175]	loss 0.5800
+Train: [102][60/175]	loss 0.5081
+Train: [102][70/175]	loss 0.4070
+Train: [102][80/175]	loss 0.1863
+Train: [102][90/175]	loss 0.4886
+Train: [102][100/175]	loss 0.3474
+Train: [102][110/175]	loss 0.2856
+Train: [102][120/175]	loss 0.5960
+Train: [102][130/175]	loss 0.2934
+Train: [102][140/175]	loss 0.6355
+Train: [102][150/175]	loss 0.5583
+Train: [102][160/175]	loss 0.4090
+Train: [102][170/175]	loss 0.3548
+VALIDATE
+Epoch: 102 Loss: 0.1146
+Train: [103][0/175]	loss 0.5768
+Train: [103][10/175]	loss 0.7633
+Train: [103][20/175]	loss 0.4622
+Train: [103][30/175]	loss 0.5374
+Train: [103][40/175]	loss 0.7604
+Train: [103][50/175]	loss 1.0255
+Train: [103][60/175]	loss 0.4302
+Train: [103][70/175]	loss 0.2451
+Train: [103][80/175]	loss 0.4219
+Train: [103][90/175]	loss 0.2268
+Train: [103][100/175]	loss 0.2861
+Train: [103][110/175]	loss 0.7316
+Train: [103][120/175]	loss 0.1976
+Train: [103][130/175]	loss 0.9924
+Train: [103][140/175]	loss 0.5747
+Train: [103][150/175]	loss 0.5796
+Train: [103][160/175]	loss 1.0449
+Train: [103][170/175]	loss 0.4625
+VALIDATE
+Epoch: 103 Loss: 0.1189
+Train: [104][0/175]	loss 0.5240
+Train: [104][10/175]	loss 0.9316
+Train: [104][20/175]	loss 0.3400
+Train: [104][30/175]	loss 0.1271
+Train: [104][40/175]	loss 0.5978
+Train: [104][50/175]	loss 0.7232
+Train: [104][60/175]	loss 0.6788
+Train: [104][70/175]	loss 0.2033
+Train: [104][80/175]	loss 0.4570
+Train: [104][90/175]	loss 0.3849
+Train: [104][100/175]	loss 0.8443
+Train: [104][110/175]	loss 0.8631
+Train: [104][120/175]	loss 0.5989
+Train: [104][130/175]	loss 0.3841
+Train: [104][140/175]	loss 0.3203
+Train: [104][150/175]	loss 0.3014
+Train: [104][160/175]	loss 1.1149
+Train: [104][170/175]	loss 0.6959
+VALIDATE
+Epoch: 104 Loss: 0.1149
+Train: [105][0/175]	loss 0.5094
+Train: [105][10/175]	loss 0.5416
+Train: [105][20/175]	loss 0.1798
+Train: [105][30/175]	loss 0.7309
+Train: [105][40/175]	loss 0.4165
+Train: [105][50/175]	loss 0.9127
+Train: [105][60/175]	loss 0.8613
+Train: [105][70/175]	loss 0.5908
+Train: [105][80/175]	loss 0.3926
+Train: [105][90/175]	loss 0.3998
+Train: [105][100/175]	loss 0.6995
+Train: [105][110/175]	loss 0.9309
+Train: [105][120/175]	loss 0.9005
+Train: [105][130/175]	loss 0.2999
+Train: [105][140/175]	loss 0.3982
+Train: [105][150/175]	loss 0.5329
+Train: [105][160/175]	loss 0.4038
+Train: [105][170/175]	loss 0.3396
+VALIDATE
+Epoch: 105 Loss: 0.1165
+Train: [106][0/175]	loss 0.7884
+Train: [106][10/175]	loss 0.2565
+Train: [106][20/175]	loss 0.2385
+Train: [106][30/175]	loss 0.6875
+Train: [106][40/175]	loss 0.7682
+Train: [106][50/175]	loss 0.3962
+Train: [106][60/175]	loss 0.2899
+Train: [106][70/175]	loss 0.5149
+Train: [106][80/175]	loss 0.5072
+Train: [106][90/175]	loss 0.6283
+Train: [106][100/175]	loss 0.7050
+Train: [106][110/175]	loss 0.4884
+Train: [106][120/175]	loss 0.3615
+Train: [106][130/175]	loss 0.3041
+Train: [106][140/175]	loss 0.7072
+Train: [106][150/175]	loss 0.4108
+Train: [106][160/175]	loss 0.8284
+Train: [106][170/175]	loss 0.8372
+VALIDATE
+Epoch: 106 Loss: 0.1200
+Train: [107][0/175]	loss 0.8402
+Train: [107][10/175]	loss 0.6006
+Train: [107][20/175]	loss 0.3353
+Train: [107][30/175]	loss 0.5461
+Train: [107][40/175]	loss 0.5711
+Train: [107][50/175]	loss 0.5321
+Train: [107][60/175]	loss 0.5423
+Train: [107][70/175]	loss 0.4938
+Train: [107][80/175]	loss 0.7580
+Train: [107][90/175]	loss 0.6697
+Train: [107][100/175]	loss 0.5262
+Train: [107][110/175]	loss 0.6766
+Train: [107][120/175]	loss 0.7436
+Train: [107][130/175]	loss 0.2341
+Train: [107][140/175]	loss 0.7115
+Train: [107][150/175]	loss 0.3964
+Train: [107][160/175]	loss 0.5494
+Train: [107][170/175]	loss 0.5223
+VALIDATE
+Epoch: 107 Loss: 0.1206
+Train: [108][0/175]	loss 0.8652
+Train: [108][10/175]	loss 0.9227
+Train: [108][20/175]	loss 0.2658
+Train: [108][30/175]	loss 0.3783
+Train: [108][40/175]	loss 0.7832
+Train: [108][50/175]	loss 0.2194
+Train: [108][60/175]	loss 0.3570
+Train: [108][70/175]	loss 0.4368
+Train: [108][80/175]	loss 0.5595
+Train: [108][90/175]	loss 0.7700
+Train: [108][100/175]	loss 0.4052
+Train: [108][110/175]	loss 0.4885
+Train: [108][120/175]	loss 0.3817
+Train: [108][130/175]	loss 0.6727
+Train: [108][140/175]	loss 0.4015
+Train: [108][150/175]	loss 0.7320
+Train: [108][160/175]	loss 0.9774
+Train: [108][170/175]	loss 0.3557
+VALIDATE
+Epoch: 108 Loss: 0.1189
+Train: [109][0/175]	loss 0.1162
+Train: [109][10/175]	loss 0.7905
+Train: [109][20/175]	loss 0.2352
+Train: [109][30/175]	loss 0.7707
+Train: [109][40/175]	loss 0.2731
+Train: [109][50/175]	loss 0.7968
+Train: [109][60/175]	loss 0.5352
+Train: [109][70/175]	loss 0.2338
+Train: [109][80/175]	loss 0.1660
+Train: [109][90/175]	loss 0.5914
+Train: [109][100/175]	loss 0.3566
+Train: [109][110/175]	loss 0.2136
+Train: [109][120/175]	loss 0.9372
+Train: [109][130/175]	loss 0.5358
+Train: [109][140/175]	loss 0.6527
+Train: [109][150/175]	loss 0.3654
+Train: [109][160/175]	loss 0.4162
+Train: [109][170/175]	loss 0.3855
+VALIDATE
+Epoch: 109 Loss: 0.1133
+Train: [110][0/175]	loss 0.5255
+Train: [110][10/175]	loss 0.3236
+Train: [110][20/175]	loss 0.8130
+Train: [110][30/175]	loss 0.5481
+Train: [110][40/175]	loss 0.2070
+Train: [110][50/175]	loss 0.2765
+Train: [110][60/175]	loss 0.3212
+Train: [110][70/175]	loss 0.3253
+Train: [110][80/175]	loss 0.0753
+Train: [110][90/175]	loss 0.5787
+Train: [110][100/175]	loss 0.5850
+Train: [110][110/175]	loss 0.1486
+Train: [110][120/175]	loss 0.4211
+Train: [110][130/175]	loss 0.3933
+Train: [110][140/175]	loss 0.2399
+Train: [110][150/175]	loss 0.9315
+Train: [110][160/175]	loss 0.0725
+Train: [110][170/175]	loss 0.6643
+VALIDATE
+Epoch: 110 Loss: 0.1111
+Train: [111][0/175]	loss 0.9496
+Train: [111][10/175]	loss 0.3114
+Train: [111][20/175]	loss 0.3010
+Train: [111][30/175]	loss 0.5674
+Train: [111][40/175]	loss 0.4575
+Train: [111][50/175]	loss 0.5563
+Train: [111][60/175]	loss 0.7439
+Train: [111][70/175]	loss 0.6564
+Train: [111][80/175]	loss 0.1712
+Train: [111][90/175]	loss 0.5666
+Train: [111][100/175]	loss 0.5107
+Train: [111][110/175]	loss 0.5787
+Train: [111][120/175]	loss 1.0345
+Train: [111][130/175]	loss 0.2569
+Train: [111][140/175]	loss 0.8082
+Train: [111][150/175]	loss 0.5159
+Train: [111][160/175]	loss 0.3219
+Train: [111][170/175]	loss 0.5517
+VALIDATE
+Epoch: 111 Loss: 0.1146
+Train: [112][0/175]	loss 0.5531
+Train: [112][10/175]	loss 0.6746
+Train: [112][20/175]	loss 0.3585
+Train: [112][30/175]	loss 0.8027
+Train: [112][40/175]	loss 0.8097
+Train: [112][50/175]	loss 0.5754
+Train: [112][60/175]	loss 0.6936
+Train: [112][70/175]	loss 0.8267
+Train: [112][80/175]	loss 0.4163
+Train: [112][90/175]	loss 0.6041
+Train: [112][100/175]	loss 0.5633
+Train: [112][110/175]	loss 0.3554
+Train: [112][120/175]	loss 0.6771
+Train: [112][130/175]	loss 0.6353
+Train: [112][140/175]	loss 0.5207
+Train: [112][150/175]	loss 0.2905
+Train: [112][160/175]	loss 0.3328
+Train: [112][170/175]	loss 0.4221
+VALIDATE
+Epoch: 112 Loss: 0.1158
+Train: [113][0/175]	loss 0.7445
+Train: [113][10/175]	loss 0.9736
+Train: [113][20/175]	loss 0.6217
+Train: [113][30/175]	loss 0.9423
+Train: [113][40/175]	loss 0.8524
+Train: [113][50/175]	loss 0.5590
+Train: [113][60/175]	loss 0.5244
+Train: [113][70/175]	loss 0.7131
+Train: [113][80/175]	loss 0.3230
+Train: [113][90/175]	loss 0.4528
+Train: [113][100/175]	loss 0.2825
+Train: [113][110/175]	loss 0.3592
+Train: [113][120/175]	loss 0.4005
+Train: [113][130/175]	loss 0.6280
+Train: [113][140/175]	loss 0.8169
+Train: [113][150/175]	loss 0.7015
+Train: [113][160/175]	loss 0.4002
+Train: [113][170/175]	loss 0.3849
+VALIDATE
+Epoch: 113 Loss: 0.1138
+Train: [114][0/175]	loss 0.1245
+Train: [114][10/175]	loss 0.1524
+Train: [114][20/175]	loss 0.4383
+Train: [114][30/175]	loss 0.6320
+Train: [114][40/175]	loss 0.7192
+Train: [114][50/175]	loss 0.2655
+Train: [114][60/175]	loss 0.2687
+Train: [114][70/175]	loss 0.3229
+Train: [114][80/175]	loss 0.5705
+Train: [114][90/175]	loss 0.7679
+Train: [114][100/175]	loss 0.1696
+Train: [114][110/175]	loss 0.5454
+Train: [114][120/175]	loss 0.7969
+Train: [114][130/175]	loss 0.7081
+Train: [114][140/175]	loss 0.9783
+Train: [114][150/175]	loss 0.7649
+Train: [114][160/175]	loss 0.8044
+Train: [114][170/175]	loss 0.2380
+VALIDATE
+Epoch: 114 Loss: 0.1148
+Train: [115][0/175]	loss 0.4659
+Train: [115][10/175]	loss 0.4982
+Train: [115][20/175]	loss 0.2584
+Train: [115][30/175]	loss 0.5604
+Train: [115][40/175]	loss 0.3358
+Train: [115][50/175]	loss 0.7284
+Train: [115][60/175]	loss 0.4388
+Train: [115][70/175]	loss 0.1517
+Train: [115][80/175]	loss 0.6869
+Train: [115][90/175]	loss 0.2343
+Train: [115][100/175]	loss 0.6685
+Train: [115][110/175]	loss 0.8972
+Train: [115][120/175]	loss 0.6805
+Train: [115][130/175]	loss 0.5552
+Train: [115][140/175]	loss 0.5591
+Train: [115][150/175]	loss 0.6358
+Train: [115][160/175]	loss 0.3855
+Train: [115][170/175]	loss 0.4375
+VALIDATE
+Epoch: 115 Loss: 0.1155
+Train: [116][0/175]	loss 0.2036
+Train: [116][10/175]	loss 0.7433
+Train: [116][20/175]	loss 0.2537
+Train: [116][30/175]	loss 0.7822
+Train: [116][40/175]	loss 0.6087
+Train: [116][50/175]	loss 0.1358
+Train: [116][60/175]	loss 0.3912
+Train: [116][70/175]	loss 0.5973
+Train: [116][80/175]	loss 0.2903
+Train: [116][90/175]	loss 0.2621
+Train: [116][100/175]	loss 1.1035
+Train: [116][110/175]	loss 0.2367
+Train: [116][120/175]	loss 0.4733
+Train: [116][130/175]	loss 0.8105
+Train: [116][140/175]	loss 0.6718
+Train: [116][150/175]	loss 0.9029
+Train: [116][160/175]	loss 0.6988
+Train: [116][170/175]	loss 0.2381
+VALIDATE
+Epoch: 116 Loss: 0.1139
+Train: [117][0/175]	loss 0.4285
+Train: [117][10/175]	loss 0.3427
+Train: [117][20/175]	loss 0.5382
+Train: [117][30/175]	loss 1.0619
+Train: [117][40/175]	loss 0.5282
+Train: [117][50/175]	loss 0.4103
+Train: [117][60/175]	loss 0.5367
+Train: [117][70/175]	loss 0.3205
+Train: [117][80/175]	loss 0.7408
+Train: [117][90/175]	loss 0.5289
+Train: [117][100/175]	loss 0.4466
+Train: [117][110/175]	loss 0.3270
+Train: [117][120/175]	loss 0.7608
+Train: [117][130/175]	loss 0.5644
+Train: [117][140/175]	loss 0.3730
+Train: [117][150/175]	loss 0.3099
+Train: [117][160/175]	loss 0.3277
+Train: [117][170/175]	loss 0.8229
+VALIDATE
+Epoch: 117 Loss: 0.1197
+Train: [118][0/175]	loss 0.3856
+Train: [118][10/175]	loss 0.4847
+Train: [118][20/175]	loss 0.5748
+Train: [118][30/175]	loss 0.5416
+Train: [118][40/175]	loss 0.4089
+Train: [118][50/175]	loss 0.9256
+Train: [118][60/175]	loss 1.0153
+Train: [118][70/175]	loss 0.7678
+Train: [118][80/175]	loss 0.8440
+Train: [118][90/175]	loss 0.3322
+Train: [118][100/175]	loss 0.3271
+Train: [118][110/175]	loss 0.4169
+Train: [118][120/175]	loss 0.3241
+Train: [118][130/175]	loss 0.8834
+Train: [118][140/175]	loss 0.4411
+Train: [118][150/175]	loss 0.2572
+Train: [118][160/175]	loss 0.1398
+Train: [118][170/175]	loss 0.4844
+VALIDATE
+Epoch: 118 Loss: 0.1206
+Train: [119][0/175]	loss 0.4111
+Train: [119][10/175]	loss 0.3127
+Train: [119][20/175]	loss 0.5792
+Train: [119][30/175]	loss 0.1851
+Train: [119][40/175]	loss 0.3370
+Train: [119][50/175]	loss 0.7397
+Train: [119][60/175]	loss 0.4778
+Train: [119][70/175]	loss 0.6998
+Train: [119][80/175]	loss 0.4474
+Train: [119][90/175]	loss 0.6413
+Train: [119][100/175]	loss 0.2271
+Train: [119][110/175]	loss 0.4423
+Train: [119][120/175]	loss 0.3469
+Train: [119][130/175]	loss 0.5534
+Train: [119][140/175]	loss 0.6551
+Train: [119][150/175]	loss 0.5235
+Train: [119][160/175]	loss 0.7597
+Train: [119][170/175]	loss 0.5222
+VALIDATE
+Epoch: 119 Loss: 0.1148
+Test
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5wtdu4m0im0871mix0yvc0
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2nguelpmlj0835rojdn097
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2mfjndoz700988b9lc3zeq
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju88y1mwoln50871emyfny1g
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7epwj82koz098713apjnzo
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2s2527pfyr0993l3h1149a
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7ddtz729960801uazp1knc
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5hl8nee8a40755fm8qjj0o
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5u8gz4kj5b07552e2wpkwp
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2nnqrqzp580855z8mhzgd6
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju6z2616wqbk07555bvnuyr1
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1h89h6xbnx08352k2790o9
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8a3nhbpwnb0850d37fo2na
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2qtee81yd708787bsjr75d
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju3v72v5h1qz0818fggilwtq
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1h5w4wxajx0835mc954kxy
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5bmhdcafs909878qfzrqzi
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2tjrog4jy30878pawyazqc
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2hdr06v2bq0799mbm3bks1
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju3ul8dogf1z09872y2ecowp
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju83kxitjv340987z09m0ezy
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju3518w2d838079939fqztbc
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2rga4psq9n09881z519xx0
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8bysfgrzkl081786jwac09
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1b3zgj3d8e0801kpolea6c
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8apjewqrk00801k5d71gky
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju32csyfblyh080170aa3x5p
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2urqpwvxw70835rvndvtsi
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1f8w0t65en0799m9oacq0q
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2lejzcy4pc0878c9rlonot
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2xbk0080y80801eghyddi2
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8a84g0q76m0818hwiggkod
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5yhgznmkzb0801cji2vi8j
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7atnm31if40817pqclnjer
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju87li0zn3yb0817kbwgjiz8
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cjyztzaqtrv430848l8xgcerw
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5fydrud94708507vo6oy21
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8c5zcbsdfz0801o5t6jag1
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju17r8il13910799dr2wme2e
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5yimthmlv80850zhoc90c2
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5y7buemcw80987p0r30g9f
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7fcgbe2z3p07550vaflqdb
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cjyzjzssvd8pq0838f4nolj5l
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju358pwtdby20878cg7nm0np
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8czvnztbf40871b4m7t78w
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2r11x7sdgx0988o8ule0wl
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1fmsyf6gxb0801cimx2gle
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1c6yfz42md08550zgoz3pw
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5yclrymlgj0818k426ud6z
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju414lf2l1lt0801rl3hjllj
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju83ipu3jwpx0801z5pvguf8
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju45lbgznahl08180xz1h7u6
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju85plp7lmkw0850rx42jdpf
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju884985nlmx0817vzpax3y4
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju43eigtm6ev0801mv0m96t1
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju6us80mv1b50871ebyq2wxa
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2oq5570avm079959o20op1
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8djdqztu6408506pzhlo18
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju6z7e4bwgdd0987ogkzq9kt
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju0t4oil7vzk099370nun5h9
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8b4ja9r2s808509d45ma86
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju35fxqyzt5p0993vusm54qz
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju0u82z3cuma0835wlxrnrjv
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7afqon1ip40850ue2308b6
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2rmd2rsw9g09888hh1efu0
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5bj926aiec07559rshy4wa
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju35oyvd3y850988km12hdz1
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju16b6ynq8e40988m8vx0xnj
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2tpfa5uyx408359datxqqj
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju3tvffffx5f0818t5ov22al
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7er4kc2opa0801anuxc0eb
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5cky5xb0ay0801oxet697t
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju6v4szov55u0871qmqz3v8n
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2xyd9vyi7m098831qcucse
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2zy1e49pqk0878t6ncqn12
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5cu8qkb84x08186jwo8yin
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: ck2bxskgxxzfv08386xkqtqdy
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2ulk385h170799rlklxob0
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju3xvoo2iqlc0817eku2r3wl
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2xf8e5y2wm08359vcgk09b
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5ew4h9cqaf0818rrczkmqh
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5v8pgplg6k0755rvi2t63h
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju34aozyyy830993bn16u32n
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju15ptjtppz40988odsm9azx
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju422cm8lfxn0818ojicxejb
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5wj0faly5008187n6530af
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju45ofd9ne1j0801ri8dup7t
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1cbokpuiw70988j4lq1fpi
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju3280wv1ir009882jze27tc
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8bpctzrqkr0850zeldv9kt
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju33o12x2jm50988944mxq0v
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8cdeazsm8h0801jxifmzur
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju6vvxsev9y30987kespucdg
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju3xwpgviwlx0871rwm15q7v
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5tenjojp1j0755ms4949h2
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5bbtwsa8cl0987wgfsqpao
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2yg5ht8i4p087800js8hp4
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju3521y5d5mq0878t3ezsu4p
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju32pzh9bpw10855q4vaxfhe
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5hwonqedw10801vsd3w6kk
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7eueum2oqn0850rodmx8zo
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju33za6l2qy70988jhrlp2ev
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2oo0wh0bqy0878biujeyhe
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8buos5rz9b08715lfr0f4f
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1cdxvz48hw0801i0fjwcnk
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1ejj7dvqfa0835ra184v5m
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju17x0j4nfc10993y31pvlgs
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1dia8hvc6v098827mgffnm
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju888fr7nveu0818r9uwtiit
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju34c1xfyz920993itxkkfad
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2zr3c3vwb00993jn06bbaz
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5yjq1pmlgc0801z0t24bly
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju412uwlkva50850d1ps1ww7
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju6x0yqbvxqt0755dhxislgb
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5i39mreass0817au8p22zy
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju85citjlnfm0755i4rk5tqj
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju0u2g7pmnux0801vkk47ivj
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7d9seq29zd0871nzl2uu5m
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2saez63gxl08559ucjq3kt
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7cl8zm1xcu0817ado0jpas
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju18ibp219ub08783i6o98g7
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7d8m3b2e210755l8fj1yph
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju89y9h0puti0818i5yw29e6
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7f0ec32txj08184asb8w5f
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7f900s2o0k08175gl1giid
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2mh8t6p07008350e01tx2a
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju15mhjczc8z0801kit5c6di
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7dwe282dc309876rco45ts
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju43c92lm5cj0755lorsorfg
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju3128yi0rpu0988o4oo5n8n
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1d96gsv62d09881b3wecw2
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5fu081d8gc0818l3yylujk
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5vutu7ll8w0871dfp92n9p
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju31t8xd17bk0835rnb893jk
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju30xqmh0ni00835ix3batv1
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7b9vcs1luz0987ta60j1dy
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8ando2qqdo0818ck7i1be1
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2wve9v7esz0878mxsdcy04
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju43b8daly4408170e5ev06g
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju42wamblrqn098798r2yyok
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju45rj7ln8980850a7821fov
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7ev2b12owa08500bpfpwyw
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7dubap2g0w0801fgl42mg9
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju35mdz73x890835eynq1h9v
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju6vucxvvlda0755j7msqnya
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju88fpm4o0tl0871w1i6a4ds
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju6wuojavt740818b5qcv3iw
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1fb9236a110801yvg0fwju
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju353d1eda8c07992afde611
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2rkjfwoxys0993x768l1j2
+cju0t4oil7vzk099370nun5h9.nii
+cju0t4oil7vzk099370nun5h9.nii
+cju0u2g7pmnux0801vkk47ivj.nii
+cju0u2g7pmnux0801vkk47ivj.nii
+cju0u82z3cuma0835wlxrnrjv.nii
+cju0u82z3cuma0835wlxrnrjv.nii
+cju15mhjczc8z0801kit5c6di.nii
+cju15mhjczc8z0801kit5c6di.nii
+cju15ptjtppz40988odsm9azx.nii
+cju15ptjtppz40988odsm9azx.nii
+cju16b6ynq8e40988m8vx0xnj.nii
+cju16b6ynq8e40988m8vx0xnj.nii
+cju17r8il13910799dr2wme2e.nii
+cju17r8il13910799dr2wme2e.nii
+cju17x0j4nfc10993y31pvlgs.nii
+cju17x0j4nfc10993y31pvlgs.nii
+cju18ibp219ub08783i6o98g7.nii
+cju18ibp219ub08783i6o98g7.nii
+cju1b3zgj3d8e0801kpolea6c.nii
+cju1b3zgj3d8e0801kpolea6c.nii
+cju1c6yfz42md08550zgoz3pw.nii
+cju1c6yfz42md08550zgoz3pw.nii
+cju1cbokpuiw70988j4lq1fpi.nii
+cju1cbokpuiw70988j4lq1fpi.nii
+cju1cdxvz48hw0801i0fjwcnk.nii
+cju1cdxvz48hw0801i0fjwcnk.nii
+cju1d96gsv62d09881b3wecw2.nii
+cju1d96gsv62d09881b3wecw2.nii
+cju1dia8hvc6v098827mgffnm.nii
+cju1dia8hvc6v098827mgffnm.nii
+cju1ejj7dvqfa0835ra184v5m.nii
+cju1ejj7dvqfa0835ra184v5m.nii
+cju1f8w0t65en0799m9oacq0q.nii
+cju1f8w0t65en0799m9oacq0q.nii
+cju1fb9236a110801yvg0fwju.nii
+cju1fb9236a110801yvg0fwju.nii
+cju1fmsyf6gxb0801cimx2gle.nii
+cju1fmsyf6gxb0801cimx2gle.nii
+cju1h5w4wxajx0835mc954kxy.nii
+cju1h5w4wxajx0835mc954kxy.nii
+cju1h89h6xbnx08352k2790o9.nii
+cju1h89h6xbnx08352k2790o9.nii
+cju2hdr06v2bq0799mbm3bks1.nii
+cju2hdr06v2bq0799mbm3bks1.nii
+cju2lejzcy4pc0878c9rlonot.nii
+cju2lejzcy4pc0878c9rlonot.nii
+cju2mfjndoz700988b9lc3zeq.nii
+cju2mfjndoz700988b9lc3zeq.nii
+cju2mh8t6p07008350e01tx2a.nii
+cju2mh8t6p07008350e01tx2a.nii
+cju2nguelpmlj0835rojdn097.nii
+cju2nguelpmlj0835rojdn097.nii
+cju2nnqrqzp580855z8mhzgd6.nii
+cju2nnqrqzp580855z8mhzgd6.nii
+cju2oo0wh0bqy0878biujeyhe.nii
+cju2oo0wh0bqy0878biujeyhe.nii
+cju2oq5570avm079959o20op1.nii
+cju2oq5570avm079959o20op1.nii
+cju2qtee81yd708787bsjr75d.nii
+cju2qtee81yd708787bsjr75d.nii
+cju2r11x7sdgx0988o8ule0wl.nii
+cju2r11x7sdgx0988o8ule0wl.nii
+cju2rga4psq9n09881z519xx0.nii
+cju2rga4psq9n09881z519xx0.nii
+cju2rkjfwoxys0993x768l1j2.nii
+cju2rkjfwoxys0993x768l1j2.nii
+cju2rmd2rsw9g09888hh1efu0.nii
+cju2rmd2rsw9g09888hh1efu0.nii
+cju2s2527pfyr0993l3h1149a.nii
+cju2s2527pfyr0993l3h1149a.nii
+cju2saez63gxl08559ucjq3kt.nii
+cju2saez63gxl08559ucjq3kt.nii
+cju2tjrog4jy30878pawyazqc.nii
+cju2tjrog4jy30878pawyazqc.nii
+cju2tpfa5uyx408359datxqqj.nii
+cju2tpfa5uyx408359datxqqj.nii
+cju2ulk385h170799rlklxob0.nii
+cju2ulk385h170799rlklxob0.nii
+cju2urqpwvxw70835rvndvtsi.nii
+cju2urqpwvxw70835rvndvtsi.nii
+cju2wve9v7esz0878mxsdcy04.nii
+cju2wve9v7esz0878mxsdcy04.nii
+cju2xbk0080y80801eghyddi2.nii
+cju2xbk0080y80801eghyddi2.nii
+cju2xf8e5y2wm08359vcgk09b.nii
+cju2xf8e5y2wm08359vcgk09b.nii
+cju2xyd9vyi7m098831qcucse.nii
+cju2xyd9vyi7m098831qcucse.nii
+cju2yg5ht8i4p087800js8hp4.nii
+cju2yg5ht8i4p087800js8hp4.nii
+cju2zr3c3vwb00993jn06bbaz.nii
+cju2zr3c3vwb00993jn06bbaz.nii
+cju2zy1e49pqk0878t6ncqn12.nii
+cju2zy1e49pqk0878t6ncqn12.nii
+cju30xqmh0ni00835ix3batv1.nii
+cju30xqmh0ni00835ix3batv1.nii
+cju3128yi0rpu0988o4oo5n8n.nii
+cju3128yi0rpu0988o4oo5n8n.nii
+cju31t8xd17bk0835rnb893jk.nii
+cju31t8xd17bk0835rnb893jk.nii
+cju3280wv1ir009882jze27tc.nii
+cju3280wv1ir009882jze27tc.nii
+cju32csyfblyh080170aa3x5p.nii
+cju32csyfblyh080170aa3x5p.nii
+cju32pzh9bpw10855q4vaxfhe.nii
+cju32pzh9bpw10855q4vaxfhe.nii
+cju33o12x2jm50988944mxq0v.nii
+cju33o12x2jm50988944mxq0v.nii
+cju33za6l2qy70988jhrlp2ev.nii
+cju33za6l2qy70988jhrlp2ev.nii
+cju34aozyyy830993bn16u32n.nii
+cju34aozyyy830993bn16u32n.nii
+cju34c1xfyz920993itxkkfad.nii
+cju34c1xfyz920993itxkkfad.nii
+cju3518w2d838079939fqztbc.nii
+cju3518w2d838079939fqztbc.nii
+cju3521y5d5mq0878t3ezsu4p.nii
+cju3521y5d5mq0878t3ezsu4p.nii
+cju353d1eda8c07992afde611.nii
+cju353d1eda8c07992afde611.nii
+cju358pwtdby20878cg7nm0np.nii
+cju358pwtdby20878cg7nm0np.nii
+cju35fxqyzt5p0993vusm54qz.nii
+cju35fxqyzt5p0993vusm54qz.nii
+cju35mdz73x890835eynq1h9v.nii
+cju35mdz73x890835eynq1h9v.nii
+cju35oyvd3y850988km12hdz1.nii
+cju35oyvd3y850988km12hdz1.nii
+cju3tvffffx5f0818t5ov22al.nii
+cju3tvffffx5f0818t5ov22al.nii
+cju3ul8dogf1z09872y2ecowp.nii
+cju3ul8dogf1z09872y2ecowp.nii
+cju3v72v5h1qz0818fggilwtq.nii
+cju3v72v5h1qz0818fggilwtq.nii
+cju3xvoo2iqlc0817eku2r3wl.nii
+cju3xvoo2iqlc0817eku2r3wl.nii
+cju3xwpgviwlx0871rwm15q7v.nii
+cju3xwpgviwlx0871rwm15q7v.nii
+cju412uwlkva50850d1ps1ww7.nii
+cju412uwlkva50850d1ps1ww7.nii
+cju414lf2l1lt0801rl3hjllj.nii
+cju414lf2l1lt0801rl3hjllj.nii
+cju422cm8lfxn0818ojicxejb.nii
+cju422cm8lfxn0818ojicxejb.nii
+cju42wamblrqn098798r2yyok.nii
+cju42wamblrqn098798r2yyok.nii
+cju43b8daly4408170e5ev06g.nii
+cju43b8daly4408170e5ev06g.nii
+cju43c92lm5cj0755lorsorfg.nii
+cju43c92lm5cj0755lorsorfg.nii
+cju43eigtm6ev0801mv0m96t1.nii
+cju43eigtm6ev0801mv0m96t1.nii
+cju45lbgznahl08180xz1h7u6.nii
+cju45lbgznahl08180xz1h7u6.nii
+cju45ofd9ne1j0801ri8dup7t.nii
+cju45ofd9ne1j0801ri8dup7t.nii
+cju45rj7ln8980850a7821fov.nii
+cju45rj7ln8980850a7821fov.nii
+cju5bbtwsa8cl0987wgfsqpao.nii
+cju5bbtwsa8cl0987wgfsqpao.nii
+cju5bj926aiec07559rshy4wa.nii
+cju5bj926aiec07559rshy4wa.nii
+cju5bmhdcafs909878qfzrqzi.nii
+cju5bmhdcafs909878qfzrqzi.nii
+cju5cky5xb0ay0801oxet697t.nii
+cju5cky5xb0ay0801oxet697t.nii
+cju5cu8qkb84x08186jwo8yin.nii
+cju5cu8qkb84x08186jwo8yin.nii
+cju5ew4h9cqaf0818rrczkmqh.nii
+cju5ew4h9cqaf0818rrczkmqh.nii
+cju5fu081d8gc0818l3yylujk.nii
+cju5fu081d8gc0818l3yylujk.nii
+cju5fydrud94708507vo6oy21.nii
+cju5fydrud94708507vo6oy21.nii
+cju5hl8nee8a40755fm8qjj0o.nii
+cju5hl8nee8a40755fm8qjj0o.nii
+cju5hwonqedw10801vsd3w6kk.nii
+cju5hwonqedw10801vsd3w6kk.nii
+cju5i39mreass0817au8p22zy.nii
+cju5i39mreass0817au8p22zy.nii
+cju5tenjojp1j0755ms4949h2.nii
+cju5tenjojp1j0755ms4949h2.nii
+cju5u8gz4kj5b07552e2wpkwp.nii
+cju5u8gz4kj5b07552e2wpkwp.nii
+cju5v8pgplg6k0755rvi2t63h.nii
+cju5v8pgplg6k0755rvi2t63h.nii
+cju5vutu7ll8w0871dfp92n9p.nii
+cju5vutu7ll8w0871dfp92n9p.nii
+cju5wj0faly5008187n6530af.nii
+cju5wj0faly5008187n6530af.nii
+cju5wtdu4m0im0871mix0yvc0.nii
+cju5wtdu4m0im0871mix0yvc0.nii
+cju5y7buemcw80987p0r30g9f.nii
+cju5y7buemcw80987p0r30g9f.nii
+cju5yclrymlgj0818k426ud6z.nii
+cju5yclrymlgj0818k426ud6z.nii
+cju5yhgznmkzb0801cji2vi8j.nii
+cju5yhgznmkzb0801cji2vi8j.nii
+cju5yimthmlv80850zhoc90c2.nii
+cju5yimthmlv80850zhoc90c2.nii
+cju5yjq1pmlgc0801z0t24bly.nii
+cju5yjq1pmlgc0801z0t24bly.nii
+cju6us80mv1b50871ebyq2wxa.nii
+cju6us80mv1b50871ebyq2wxa.nii
+cju6v4szov55u0871qmqz3v8n.nii
+cju6v4szov55u0871qmqz3v8n.nii
+cju6vucxvvlda0755j7msqnya.nii
+cju6vucxvvlda0755j7msqnya.nii
+cju6vvxsev9y30987kespucdg.nii
+cju6vvxsev9y30987kespucdg.nii
+cju6wuojavt740818b5qcv3iw.nii
+cju6wuojavt740818b5qcv3iw.nii
+cju6x0yqbvxqt0755dhxislgb.nii
+cju6x0yqbvxqt0755dhxislgb.nii
+cju6z2616wqbk07555bvnuyr1.nii
+cju6z2616wqbk07555bvnuyr1.nii
+cju6z7e4bwgdd0987ogkzq9kt.nii
+cju6z7e4bwgdd0987ogkzq9kt.nii
+cju7afqon1ip40850ue2308b6.nii
+cju7afqon1ip40850ue2308b6.nii
+cju7atnm31if40817pqclnjer.nii
+cju7atnm31if40817pqclnjer.nii
+cju7b9vcs1luz0987ta60j1dy.nii
+cju7b9vcs1luz0987ta60j1dy.nii
+cju7cl8zm1xcu0817ado0jpas.nii
+cju7cl8zm1xcu0817ado0jpas.nii
+cju7d8m3b2e210755l8fj1yph.nii
+cju7d8m3b2e210755l8fj1yph.nii
+cju7d9seq29zd0871nzl2uu5m.nii
+cju7d9seq29zd0871nzl2uu5m.nii
+cju7ddtz729960801uazp1knc.nii
+cju7ddtz729960801uazp1knc.nii
+cju7dubap2g0w0801fgl42mg9.nii
+cju7dubap2g0w0801fgl42mg9.nii
+cju7dwe282dc309876rco45ts.nii
+cju7dwe282dc309876rco45ts.nii
+cju7epwj82koz098713apjnzo.nii
+cju7epwj82koz098713apjnzo.nii
+cju7er4kc2opa0801anuxc0eb.nii
+cju7er4kc2opa0801anuxc0eb.nii
+cju7eueum2oqn0850rodmx8zo.nii
+cju7eueum2oqn0850rodmx8zo.nii
+cju7ev2b12owa08500bpfpwyw.nii
+cju7ev2b12owa08500bpfpwyw.nii
+cju7f0ec32txj08184asb8w5f.nii
+cju7f0ec32txj08184asb8w5f.nii
+cju7f900s2o0k08175gl1giid.nii
+cju7f900s2o0k08175gl1giid.nii
+cju7fcgbe2z3p07550vaflqdb.nii
+cju7fcgbe2z3p07550vaflqdb.nii
+cju83ipu3jwpx0801z5pvguf8.nii
+cju83ipu3jwpx0801z5pvguf8.nii
+cju83kxitjv340987z09m0ezy.nii
+cju83kxitjv340987z09m0ezy.nii
+cju85citjlnfm0755i4rk5tqj.nii
+cju85citjlnfm0755i4rk5tqj.nii
+cju85plp7lmkw0850rx42jdpf.nii
+cju85plp7lmkw0850rx42jdpf.nii
+cju87li0zn3yb0817kbwgjiz8.nii
+cju87li0zn3yb0817kbwgjiz8.nii
+cju884985nlmx0817vzpax3y4.nii
+cju884985nlmx0817vzpax3y4.nii
+cju888fr7nveu0818r9uwtiit.nii
+cju888fr7nveu0818r9uwtiit.nii
+cju88fpm4o0tl0871w1i6a4ds.nii
+cju88fpm4o0tl0871w1i6a4ds.nii
+cju88y1mwoln50871emyfny1g.nii
+cju88y1mwoln50871emyfny1g.nii
+cju89y9h0puti0818i5yw29e6.nii
+cju89y9h0puti0818i5yw29e6.nii
+cju8a3nhbpwnb0850d37fo2na.nii
+cju8a3nhbpwnb0850d37fo2na.nii
+cju8a84g0q76m0818hwiggkod.nii
+cju8a84g0q76m0818hwiggkod.nii
+cju8ando2qqdo0818ck7i1be1.nii
+cju8ando2qqdo0818ck7i1be1.nii
+cju8apjewqrk00801k5d71gky.nii
+cju8apjewqrk00801k5d71gky.nii
+cju8b4ja9r2s808509d45ma86.nii
+cju8b4ja9r2s808509d45ma86.nii
+cju8bpctzrqkr0850zeldv9kt.nii
+cju8bpctzrqkr0850zeldv9kt.nii
+cju8buos5rz9b08715lfr0f4f.nii
+cju8buos5rz9b08715lfr0f4f.nii
+cju8bysfgrzkl081786jwac09.nii
+cju8bysfgrzkl081786jwac09.nii
+cju8c5zcbsdfz0801o5t6jag1.nii
+cju8c5zcbsdfz0801o5t6jag1.nii
+cju8cdeazsm8h0801jxifmzur.nii
+cju8cdeazsm8h0801jxifmzur.nii
+cju8czvnztbf40871b4m7t78w.nii
+cju8czvnztbf40871b4m7t78w.nii
+cju8djdqztu6408506pzhlo18.nii
+cju8djdqztu6408506pzhlo18.nii
+cjyzjzssvd8pq0838f4nolj5l.nii
+cjyzjzssvd8pq0838f4nolj5l.nii
+cjyztzaqtrv430848l8xgcerw.nii
+cjyztzaqtrv430848l8xgcerw.nii
+ck2bxskgxxzfv08386xkqtqdy.nii
+ck2bxskgxxzfv08386xkqtqdy.nii
+done
+********************
+cju0t4oil7vzk099370nun5h9.nii
+********************
+cju0t4oil7vzk099370nun5h9.nii
+Dice_polyp: 164.6493
+********************
+********************
+cju0u2g7pmnux0801vkk47ivj.nii
+********************
+cju0u2g7pmnux0801vkk47ivj.nii
+Dice_polyp: 59.8603
+********************
+********************
+cju0u82z3cuma0835wlxrnrjv.nii
+********************
+cju0u82z3cuma0835wlxrnrjv.nii
+Dice_polyp: 101.3990
+********************
+********************
+cju15mhjczc8z0801kit5c6di.nii
+********************
+cju15mhjczc8z0801kit5c6di.nii
+Dice_polyp: 5.2055
+********************
+********************
+cju15ptjtppz40988odsm9azx.nii
+********************
+cju15ptjtppz40988odsm9azx.nii
+Dice_polyp: 14.2722
+********************
+********************
+cju16b6ynq8e40988m8vx0xnj.nii
+********************
+cju16b6ynq8e40988m8vx0xnj.nii
+Dice_polyp: 33.9003
+********************
+********************
+cju17r8il13910799dr2wme2e.nii
+********************
+cju17r8il13910799dr2wme2e.nii
+Dice_polyp: 0.2935
+********************
+********************
+cju17x0j4nfc10993y31pvlgs.nii
+********************
+cju17x0j4nfc10993y31pvlgs.nii
+Dice_polyp: 147.8588
+********************
+********************
+cju18ibp219ub08783i6o98g7.nii
+********************
+cju18ibp219ub08783i6o98g7.nii
+Dice_polyp: 17.4820
+********************
+********************
+cju1b3zgj3d8e0801kpolea6c.nii
+********************
+cju1b3zgj3d8e0801kpolea6c.nii
+Dice_polyp: 90.2576
+********************
+********************
+cju1c6yfz42md08550zgoz3pw.nii
+********************
+cju1c6yfz42md08550zgoz3pw.nii
+Dice_polyp: 85.2805
+********************
+********************
+cju1cbokpuiw70988j4lq1fpi.nii
+********************
+cju1cbokpuiw70988j4lq1fpi.nii
+Dice_polyp: 25.7600
+********************
+********************
+cju1cdxvz48hw0801i0fjwcnk.nii
+********************
+cju1cdxvz48hw0801i0fjwcnk.nii
+Dice_polyp: 50.2191
+********************
+********************
+cju1d96gsv62d09881b3wecw2.nii
+********************
+cju1d96gsv62d09881b3wecw2.nii
+Dice_polyp: 36.2356
+********************
+********************
+cju1dia8hvc6v098827mgffnm.nii
+********************
+cju1dia8hvc6v098827mgffnm.nii
+Dice_polyp: 24.7179
+********************
+********************
+cju1ejj7dvqfa0835ra184v5m.nii
+********************
+cju1ejj7dvqfa0835ra184v5m.nii
+Dice_polyp: 61.4411
+********************
+********************
+cju1f8w0t65en0799m9oacq0q.nii
+********************
+cju1f8w0t65en0799m9oacq0q.nii
+Dice_polyp: 20.8153
+********************
+********************
+cju1fb9236a110801yvg0fwju.nii
+********************
+cju1fb9236a110801yvg0fwju.nii
+Dice_polyp: 116.9461
+********************
+********************
+cju1fmsyf6gxb0801cimx2gle.nii
+********************
+cju1fmsyf6gxb0801cimx2gle.nii
+Dice_polyp: 50.7389
+********************
+********************
+cju1h5w4wxajx0835mc954kxy.nii
+********************
+cju1h5w4wxajx0835mc954kxy.nii
+Dice_polyp: 51.1973
+********************
+********************
+cju1h89h6xbnx08352k2790o9.nii
+********************
+cju1h89h6xbnx08352k2790o9.nii
+Dice_polyp: 50.7750
+********************
+********************
+cju2hdr06v2bq0799mbm3bks1.nii
+********************
+cju2hdr06v2bq0799mbm3bks1.nii
+Dice_polyp: 5.4529
+********************
+********************
+cju2lejzcy4pc0878c9rlonot.nii
+********************
+cju2lejzcy4pc0878c9rlonot.nii
+Dice_polyp: 137.2190
+********************
+********************
+cju2mfjndoz700988b9lc3zeq.nii
+********************
+cju2mfjndoz700988b9lc3zeq.nii
+Dice_polyp: 26.6950
+********************
+********************
+cju2mh8t6p07008350e01tx2a.nii
+********************
+cju2mh8t6p07008350e01tx2a.nii
+Dice_polyp: 73.5005
+********************
+********************
+cju2nguelpmlj0835rojdn097.nii
+********************
+cju2nguelpmlj0835rojdn097.nii
+Dice_polyp: 99.1758
+********************
+********************
+cju2nnqrqzp580855z8mhzgd6.nii
+********************
+cju2nnqrqzp580855z8mhzgd6.nii
+Dice_polyp: 159.5661
+********************
+********************
+cju2oo0wh0bqy0878biujeyhe.nii
+********************
+cju2oo0wh0bqy0878biujeyhe.nii
+Dice_polyp: 52.9047
+********************
+********************
+cju2oq5570avm079959o20op1.nii
+********************
+cju2oq5570avm079959o20op1.nii
+Dice_polyp: 84.3810
+********************
+********************
+cju2qtee81yd708787bsjr75d.nii
+********************
+cju2qtee81yd708787bsjr75d.nii
+Dice_polyp: 35.0591
+********************
+********************
+cju2r11x7sdgx0988o8ule0wl.nii
+********************
+cju2r11x7sdgx0988o8ule0wl.nii
+Dice_polyp: 99.5171
+********************
+********************
+cju2rga4psq9n09881z519xx0.nii
+********************
+cju2rga4psq9n09881z519xx0.nii
+Dice_polyp: 45.6681
+********************
+********************
+cju2rkjfwoxys0993x768l1j2.nii
+********************
+cju2rkjfwoxys0993x768l1j2.nii
+Dice_polyp: 103.3030
+********************
+********************
+cju2rmd2rsw9g09888hh1efu0.nii
+********************
+cju2rmd2rsw9g09888hh1efu0.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2s2527pfyr0993l3h1149a.nii
+********************
+cju2s2527pfyr0993l3h1149a.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2saez63gxl08559ucjq3kt.nii
+********************
+cju2saez63gxl08559ucjq3kt.nii
+Dice_polyp: 88.4130
+********************
+********************
+cju2tjrog4jy30878pawyazqc.nii
+********************
+cju2tjrog4jy30878pawyazqc.nii
+Dice_polyp: 13.6413
+********************
+********************
+cju2tpfa5uyx408359datxqqj.nii
+********************
+cju2tpfa5uyx408359datxqqj.nii
+Dice_polyp: 102.0406
+********************
+********************
+cju2ulk385h170799rlklxob0.nii
+********************
+cju2ulk385h170799rlklxob0.nii
+Dice_polyp: 80.6668
+********************
+********************
+cju2urqpwvxw70835rvndvtsi.nii
+********************
+cju2urqpwvxw70835rvndvtsi.nii
+Dice_polyp: 1.4933
+********************
+********************
+cju2wve9v7esz0878mxsdcy04.nii
+********************
+cju2wve9v7esz0878mxsdcy04.nii
+Dice_polyp: 71.3103
+********************
+********************
+cju2xbk0080y80801eghyddi2.nii
+********************
+cju2xbk0080y80801eghyddi2.nii
+Dice_polyp: 23.6447
+********************
+********************
+cju2xf8e5y2wm08359vcgk09b.nii
+********************
+cju2xf8e5y2wm08359vcgk09b.nii
+Dice_polyp: 157.1302
+********************
+********************
+cju2xyd9vyi7m098831qcucse.nii
+********************
+cju2xyd9vyi7m098831qcucse.nii
+Dice_polyp: 106.4097
+********************
+********************
+cju2yg5ht8i4p087800js8hp4.nii
+********************
+cju2yg5ht8i4p087800js8hp4.nii
+Dice_polyp: 53.3810
+********************
+********************
+cju2zr3c3vwb00993jn06bbaz.nii
+********************
+cju2zr3c3vwb00993jn06bbaz.nii
+Dice_polyp: 31.3755
+********************
+********************
+cju2zy1e49pqk0878t6ncqn12.nii
+********************
+cju2zy1e49pqk0878t6ncqn12.nii
+Dice_polyp: 1.9063
+********************
+********************
+cju30xqmh0ni00835ix3batv1.nii
+********************
+cju30xqmh0ni00835ix3batv1.nii
+Dice_polyp: 87.0420
+********************
+********************
+cju3128yi0rpu0988o4oo5n8n.nii
+********************
+cju3128yi0rpu0988o4oo5n8n.nii
+Dice_polyp: 31.5790
+********************
+********************
+cju31t8xd17bk0835rnb893jk.nii
+********************
+cju31t8xd17bk0835rnb893jk.nii
+Dice_polyp: 0.1461
+********************
+********************
+cju3280wv1ir009882jze27tc.nii
+********************
+cju3280wv1ir009882jze27tc.nii
+Dice_polyp: 93.1394
+********************
+********************
+cju32csyfblyh080170aa3x5p.nii
+********************
+cju32csyfblyh080170aa3x5p.nii
+Dice_polyp: 103.1240
+********************
+********************
+cju32pzh9bpw10855q4vaxfhe.nii
+********************
+cju32pzh9bpw10855q4vaxfhe.nii
+Dice_polyp: 1.9604
+********************
+********************
+cju33o12x2jm50988944mxq0v.nii
+********************
+cju33o12x2jm50988944mxq0v.nii
+Dice_polyp: 51.5668
+********************
+********************
+cju33za6l2qy70988jhrlp2ev.nii
+********************
+cju33za6l2qy70988jhrlp2ev.nii
+Dice_polyp: 0.0919
+********************
+********************
+cju34aozyyy830993bn16u32n.nii
+********************
+cju34aozyyy830993bn16u32n.nii
+Dice_polyp: 100.4639
+********************
+********************
+cju34c1xfyz920993itxkkfad.nii
+********************
+cju34c1xfyz920993itxkkfad.nii
+Dice_polyp: 89.4011
+********************
+********************
+cju3518w2d838079939fqztbc.nii
+********************
+cju3518w2d838079939fqztbc.nii
+Dice_polyp: 76.7904
+********************
+********************
+cju3521y5d5mq0878t3ezsu4p.nii
+********************
+cju3521y5d5mq0878t3ezsu4p.nii
+Dice_polyp: 46.0973
+********************
+********************
+cju353d1eda8c07992afde611.nii
+********************
+cju353d1eda8c07992afde611.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju358pwtdby20878cg7nm0np.nii
+********************
+cju358pwtdby20878cg7nm0np.nii
+Dice_polyp: 16.2611
+********************
+********************
+cju35fxqyzt5p0993vusm54qz.nii
+********************
+cju35fxqyzt5p0993vusm54qz.nii
+Dice_polyp: 70.9451
+********************
+********************
+cju35mdz73x890835eynq1h9v.nii
+********************
+cju35mdz73x890835eynq1h9v.nii
+Dice_polyp: 108.1748
+********************
+********************
+cju35oyvd3y850988km12hdz1.nii
+********************
+cju35oyvd3y850988km12hdz1.nii
+Dice_polyp: 29.3755
+********************
+********************
+cju3tvffffx5f0818t5ov22al.nii
+********************
+cju3tvffffx5f0818t5ov22al.nii
+Dice_polyp: 96.2768
+********************
+********************
+cju3ul8dogf1z09872y2ecowp.nii
+********************
+cju3ul8dogf1z09872y2ecowp.nii
+Dice_polyp: 32.7053
+********************
+********************
+cju3v72v5h1qz0818fggilwtq.nii
+********************
+cju3v72v5h1qz0818fggilwtq.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju3xvoo2iqlc0817eku2r3wl.nii
+********************
+cju3xvoo2iqlc0817eku2r3wl.nii
+Dice_polyp: 10.6977
+********************
+********************
+cju3xwpgviwlx0871rwm15q7v.nii
+********************
+cju3xwpgviwlx0871rwm15q7v.nii
+Dice_polyp: 55.1831
+********************
+********************
+cju412uwlkva50850d1ps1ww7.nii
+********************
+cju412uwlkva50850d1ps1ww7.nii
+Dice_polyp: 173.7187
+********************
+********************
+cju414lf2l1lt0801rl3hjllj.nii
+********************
+cju414lf2l1lt0801rl3hjllj.nii
+Dice_polyp: 19.5222
+********************
+********************
+cju422cm8lfxn0818ojicxejb.nii
+********************
+cju422cm8lfxn0818ojicxejb.nii
+Dice_polyp: 0.0287
+********************
+********************
+cju42wamblrqn098798r2yyok.nii
+********************
+cju42wamblrqn098798r2yyok.nii
+Dice_polyp: 133.4928
+********************
+********************
+cju43b8daly4408170e5ev06g.nii
+********************
+cju43b8daly4408170e5ev06g.nii
+Dice_polyp: 96.1317
+********************
+********************
+cju43c92lm5cj0755lorsorfg.nii
+********************
+cju43c92lm5cj0755lorsorfg.nii
+Dice_polyp: 31.0218
+********************
+********************
+cju43eigtm6ev0801mv0m96t1.nii
+********************
+cju43eigtm6ev0801mv0m96t1.nii
+Dice_polyp: 137.9604
+********************
+********************
+cju45lbgznahl08180xz1h7u6.nii
+********************
+cju45lbgznahl08180xz1h7u6.nii
+Dice_polyp: 110.6565
+********************
+********************
+cju45ofd9ne1j0801ri8dup7t.nii
+********************
+cju45ofd9ne1j0801ri8dup7t.nii
+Dice_polyp: 105.0029
+********************
+********************
+cju45rj7ln8980850a7821fov.nii
+********************
+cju45rj7ln8980850a7821fov.nii
+Dice_polyp: 62.8186
+********************
+********************
+cju5bbtwsa8cl0987wgfsqpao.nii
+********************
+cju5bbtwsa8cl0987wgfsqpao.nii
+Dice_polyp: 18.3361
+********************
+********************
+cju5bj926aiec07559rshy4wa.nii
+********************
+cju5bj926aiec07559rshy4wa.nii
+Dice_polyp: 69.7721
+********************
+********************
+cju5bmhdcafs909878qfzrqzi.nii
+********************
+cju5bmhdcafs909878qfzrqzi.nii
+Dice_polyp: 96.0924
+********************
+********************
+cju5cky5xb0ay0801oxet697t.nii
+********************
+cju5cky5xb0ay0801oxet697t.nii
+Dice_polyp: 36.6386
+********************
+********************
+cju5cu8qkb84x08186jwo8yin.nii
+********************
+cju5cu8qkb84x08186jwo8yin.nii
+Dice_polyp: 61.1469
+********************
+********************
+cju5ew4h9cqaf0818rrczkmqh.nii
+********************
+cju5ew4h9cqaf0818rrczkmqh.nii
+Dice_polyp: 70.0545
+********************
+********************
+cju5fu081d8gc0818l3yylujk.nii
+********************
+cju5fu081d8gc0818l3yylujk.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5fydrud94708507vo6oy21.nii
+********************
+cju5fydrud94708507vo6oy21.nii
+Dice_polyp: 147.2128
+********************
+********************
+cju5hl8nee8a40755fm8qjj0o.nii
+********************
+cju5hl8nee8a40755fm8qjj0o.nii
+Dice_polyp: 36.6221
+********************
+********************
+cju5hwonqedw10801vsd3w6kk.nii
+********************
+cju5hwonqedw10801vsd3w6kk.nii
+Dice_polyp: 77.8288
+********************
+********************
+cju5i39mreass0817au8p22zy.nii
+********************
+cju5i39mreass0817au8p22zy.nii
+Dice_polyp: 100.6024
+********************
+********************
+cju5tenjojp1j0755ms4949h2.nii
+********************
+cju5tenjojp1j0755ms4949h2.nii
+Dice_polyp: 76.5452
+********************
+********************
+cju5u8gz4kj5b07552e2wpkwp.nii
+********************
+cju5u8gz4kj5b07552e2wpkwp.nii
+Dice_polyp: 64.9633
+********************
+********************
+cju5v8pgplg6k0755rvi2t63h.nii
+********************
+cju5v8pgplg6k0755rvi2t63h.nii
+Dice_polyp: 56.9039
+********************
+********************
+cju5vutu7ll8w0871dfp92n9p.nii
+********************
+cju5vutu7ll8w0871dfp92n9p.nii
+Dice_polyp: 121.5237
+********************
+********************
+cju5wj0faly5008187n6530af.nii
+********************
+cju5wj0faly5008187n6530af.nii
+Dice_polyp: 64.3550
+********************
+********************
+cju5wtdu4m0im0871mix0yvc0.nii
+********************
+cju5wtdu4m0im0871mix0yvc0.nii
+Dice_polyp: 0.1952
+********************
+********************
+cju5y7buemcw80987p0r30g9f.nii
+********************
+cju5y7buemcw80987p0r30g9f.nii
+Dice_polyp: 44.2942
+********************
+********************
+cju5yclrymlgj0818k426ud6z.nii
+********************
+cju5yclrymlgj0818k426ud6z.nii
+Dice_polyp: 38.3210
+********************
+********************
+cju5yhgznmkzb0801cji2vi8j.nii
+********************
+cju5yhgznmkzb0801cji2vi8j.nii
+Dice_polyp: 6.0751
+********************
+********************
+cju5yimthmlv80850zhoc90c2.nii
+********************
+cju5yimthmlv80850zhoc90c2.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5yjq1pmlgc0801z0t24bly.nii
+********************
+cju5yjq1pmlgc0801z0t24bly.nii
+Dice_polyp: 76.4000
+********************
+********************
+cju6us80mv1b50871ebyq2wxa.nii
+********************
+cju6us80mv1b50871ebyq2wxa.nii
+Dice_polyp: 0.3406
+********************
+********************
+cju6v4szov55u0871qmqz3v8n.nii
+********************
+cju6v4szov55u0871qmqz3v8n.nii
+Dice_polyp: 139.3091
+********************
+********************
+cju6vucxvvlda0755j7msqnya.nii
+********************
+cju6vucxvvlda0755j7msqnya.nii
+Dice_polyp: 0.2843
+********************
+********************
+cju6vvxsev9y30987kespucdg.nii
+********************
+cju6vvxsev9y30987kespucdg.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju6wuojavt740818b5qcv3iw.nii
+********************
+cju6wuojavt740818b5qcv3iw.nii
+Dice_polyp: 120.1972
+********************
+********************
+cju6x0yqbvxqt0755dhxislgb.nii
+********************
+cju6x0yqbvxqt0755dhxislgb.nii
+Dice_polyp: 2.7545
+********************
+********************
+cju6z2616wqbk07555bvnuyr1.nii
+********************
+cju6z2616wqbk07555bvnuyr1.nii
+Dice_polyp: 76.1570
+********************
+********************
+cju6z7e4bwgdd0987ogkzq9kt.nii
+********************
+cju6z7e4bwgdd0987ogkzq9kt.nii
+Dice_polyp: 78.1667
+********************
+********************
+cju7afqon1ip40850ue2308b6.nii
+********************
+cju7afqon1ip40850ue2308b6.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju7atnm31if40817pqclnjer.nii
+********************
+cju7atnm31if40817pqclnjer.nii
+Dice_polyp: 62.1219
+********************
+********************
+cju7b9vcs1luz0987ta60j1dy.nii
+********************
+cju7b9vcs1luz0987ta60j1dy.nii
+Dice_polyp: 101.7451
+********************
+********************
+cju7cl8zm1xcu0817ado0jpas.nii
+********************
+cju7cl8zm1xcu0817ado0jpas.nii
+Dice_polyp: 141.5275
+********************
+********************
+cju7d8m3b2e210755l8fj1yph.nii
+********************
+cju7d8m3b2e210755l8fj1yph.nii
+Dice_polyp: 46.7957
+********************
+********************
+cju7d9seq29zd0871nzl2uu5m.nii
+********************
+cju7d9seq29zd0871nzl2uu5m.nii
+Dice_polyp: 130.0128
+********************
+********************
+cju7ddtz729960801uazp1knc.nii
+********************
+cju7ddtz729960801uazp1knc.nii
+Dice_polyp: 56.6363
+********************
+********************
+cju7dubap2g0w0801fgl42mg9.nii
+********************
+cju7dubap2g0w0801fgl42mg9.nii
+Dice_polyp: 110.7298
+********************
+********************
+cju7dwe282dc309876rco45ts.nii
+********************
+cju7dwe282dc309876rco45ts.nii
+Dice_polyp: 100.9322
+********************
+********************
+cju7epwj82koz098713apjnzo.nii
+********************
+cju7epwj82koz098713apjnzo.nii
+Dice_polyp: 72.1232
+********************
+********************
+cju7er4kc2opa0801anuxc0eb.nii
+********************
+cju7er4kc2opa0801anuxc0eb.nii
+Dice_polyp: 111.2988
+********************
+********************
+cju7eueum2oqn0850rodmx8zo.nii
+********************
+cju7eueum2oqn0850rodmx8zo.nii
+Dice_polyp: 5.9166
+********************
+********************
+cju7ev2b12owa08500bpfpwyw.nii
+********************
+cju7ev2b12owa08500bpfpwyw.nii
+Dice_polyp: 8.9582
+********************
+********************
+cju7f0ec32txj08184asb8w5f.nii
+********************
+cju7f0ec32txj08184asb8w5f.nii
+Dice_polyp: 70.1026
+********************
+********************
+cju7f900s2o0k08175gl1giid.nii
+********************
+cju7f900s2o0k08175gl1giid.nii
+Dice_polyp: 67.5402
+********************
+********************
+cju7fcgbe2z3p07550vaflqdb.nii
+********************
+cju7fcgbe2z3p07550vaflqdb.nii
+Dice_polyp: 29.7261
+********************
+********************
+cju83ipu3jwpx0801z5pvguf8.nii
+********************
+cju83ipu3jwpx0801z5pvguf8.nii
+Dice_polyp: 39.4498
+********************
+********************
+cju83kxitjv340987z09m0ezy.nii
+********************
+cju83kxitjv340987z09m0ezy.nii
+Dice_polyp: 17.6839
+********************
+********************
+cju85citjlnfm0755i4rk5tqj.nii
+********************
+cju85citjlnfm0755i4rk5tqj.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju85plp7lmkw0850rx42jdpf.nii
+********************
+cju85plp7lmkw0850rx42jdpf.nii
+Dice_polyp: 101.1736
+********************
+********************
+cju87li0zn3yb0817kbwgjiz8.nii
+********************
+cju87li0zn3yb0817kbwgjiz8.nii
+Dice_polyp: 60.8514
+********************
+********************
+cju884985nlmx0817vzpax3y4.nii
+********************
+cju884985nlmx0817vzpax3y4.nii
+Dice_polyp: 17.1460
+********************
+********************
+cju888fr7nveu0818r9uwtiit.nii
+********************
+cju888fr7nveu0818r9uwtiit.nii
+Dice_polyp: 42.8048
+********************
+********************
+cju88fpm4o0tl0871w1i6a4ds.nii
+********************
+cju88fpm4o0tl0871w1i6a4ds.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju88y1mwoln50871emyfny1g.nii
+********************
+cju88y1mwoln50871emyfny1g.nii
+Dice_polyp: 116.6076
+********************
+********************
+cju89y9h0puti0818i5yw29e6.nii
+********************
+cju89y9h0puti0818i5yw29e6.nii
+Dice_polyp: 72.5467
+********************
+********************
+cju8a3nhbpwnb0850d37fo2na.nii
+********************
+cju8a3nhbpwnb0850d37fo2na.nii
+Dice_polyp: 1.6595
+********************
+********************
+cju8a84g0q76m0818hwiggkod.nii
+********************
+cju8a84g0q76m0818hwiggkod.nii
+Dice_polyp: 132.9283
+********************
+********************
+cju8ando2qqdo0818ck7i1be1.nii
+********************
+cju8ando2qqdo0818ck7i1be1.nii
+Dice_polyp: 4.5523
+********************
+********************
+cju8apjewqrk00801k5d71gky.nii
+********************
+cju8apjewqrk00801k5d71gky.nii
+Dice_polyp: 91.7381
+********************
+********************
+cju8b4ja9r2s808509d45ma86.nii
+********************
+cju8b4ja9r2s808509d45ma86.nii
+Dice_polyp: 130.6242
+********************
+********************
+cju8bpctzrqkr0850zeldv9kt.nii
+********************
+cju8bpctzrqkr0850zeldv9kt.nii
+Dice_polyp: 13.1698
+********************
+********************
+cju8buos5rz9b08715lfr0f4f.nii
+********************
+cju8buos5rz9b08715lfr0f4f.nii
+Dice_polyp: 32.4858
+********************
+********************
+cju8bysfgrzkl081786jwac09.nii
+********************
+cju8bysfgrzkl081786jwac09.nii
+Dice_polyp: 121.8680
+********************
+********************
+cju8c5zcbsdfz0801o5t6jag1.nii
+********************
+cju8c5zcbsdfz0801o5t6jag1.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju8cdeazsm8h0801jxifmzur.nii
+********************
+cju8cdeazsm8h0801jxifmzur.nii
+Dice_polyp: 97.7670
+********************
+********************
+cju8czvnztbf40871b4m7t78w.nii
+********************
+cju8czvnztbf40871b4m7t78w.nii
+Dice_polyp: 73.0577
+********************
+********************
+cju8djdqztu6408506pzhlo18.nii
+********************
+cju8djdqztu6408506pzhlo18.nii
+Dice_polyp: 0.0000
+********************
+********************
+cjyzjzssvd8pq0838f4nolj5l.nii
+********************
+cjyzjzssvd8pq0838f4nolj5l.nii
+Dice_polyp: 0.0000
+********************
+********************
+cjyztzaqtrv430848l8xgcerw.nii
+********************
+cjyztzaqtrv430848l8xgcerw.nii
+Dice_polyp: 119.4455
+********************
+********************
+ck2bxskgxxzfv08386xkqtqdy.nii
+********************
+ck2bxskgxxzfv08386xkqtqdy.nii
+Dice_polyp: 5.9000
+********************
+********************
+Mean_Dice
+Dice_polyp59.50170553941801
+Mean_HD
+********************

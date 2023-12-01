@@ -1,0 +1,703 @@
+/home/kl321/AutoSAM/scripts/main_autosam_seg2.py:116: UserWarning: You have chosen a specific GPU. This will completely disable data parallelism.
+  warnings.warn('You have chosen a specific GPU. This will completely '
+Use GPU: 0 for training
+ImageNet pretrained weights for HarDNet85 is loaded
+loaded keys: dict_keys(['image_encoder.neck.0.weight', 'image_encoder.neck.1.weight', 'image_encoder.neck.1.bias', 'image_encoder.neck.2.weight', 'image_encoder.neck.3.weight', 'image_encoder.neck.3.bias', 'image_encoder.patch_embed.proj.weight', 'image_encoder.patch_embed.proj.bias', 'image_encoder.blocks.0.norm1.weight', 'image_encoder.blocks.0.norm1.bias', 'image_encoder.blocks.0.attn.rel_pos_h', 'image_encoder.blocks.0.attn.rel_pos_w', 'image_encoder.blocks.0.attn.qkv.weight', 'image_encoder.blocks.0.attn.qkv.bias', 'image_encoder.blocks.0.attn.proj.weight', 'image_encoder.blocks.0.attn.proj.bias', 'image_encoder.blocks.0.norm2.weight', 'image_encoder.blocks.0.norm2.bias', 'image_encoder.blocks.0.mlp.lin1.weight', 'image_encoder.blocks.0.mlp.lin1.bias', 'image_encoder.blocks.0.mlp.lin2.weight', 'image_encoder.blocks.0.mlp.lin2.bias', 'image_encoder.blocks.1.norm1.weight', 'image_encoder.blocks.1.norm1.bias', 'image_encoder.blocks.1.attn.rel_pos_h', 'image_encoder.blocks.1.attn.rel_pos_w', 'image_encoder.blocks.1.attn.qkv.weight', 'image_encoder.blocks.1.attn.qkv.bias', 'image_encoder.blocks.1.attn.proj.weight', 'image_encoder.blocks.1.attn.proj.bias', 'image_encoder.blocks.1.norm2.weight', 'image_encoder.blocks.1.norm2.bias', 'image_encoder.blocks.1.mlp.lin1.weight', 'image_encoder.blocks.1.mlp.lin1.bias', 'image_encoder.blocks.1.mlp.lin2.weight', 'image_encoder.blocks.1.mlp.lin2.bias', 'image_encoder.blocks.2.norm1.weight', 'image_encoder.blocks.2.norm1.bias', 'image_encoder.blocks.2.attn.rel_pos_h', 'image_encoder.blocks.2.attn.rel_pos_w', 'image_encoder.blocks.2.attn.qkv.weight', 'image_encoder.blocks.2.attn.qkv.bias', 'image_encoder.blocks.2.attn.proj.weight', 'image_encoder.blocks.2.attn.proj.bias', 'image_encoder.blocks.2.norm2.weight', 'image_encoder.blocks.2.norm2.bias', 'image_encoder.blocks.2.mlp.lin1.weight', 'image_encoder.blocks.2.mlp.lin1.bias', 'image_encoder.blocks.2.mlp.lin2.weight', 'image_encoder.blocks.2.mlp.lin2.bias', 'image_encoder.blocks.3.norm1.weight', 'image_encoder.blocks.3.norm1.bias', 'image_encoder.blocks.3.attn.rel_pos_h', 'image_encoder.blocks.3.attn.rel_pos_w', 'image_encoder.blocks.3.attn.qkv.weight', 'image_encoder.blocks.3.attn.qkv.bias', 'image_encoder.blocks.3.attn.proj.weight', 'image_encoder.blocks.3.attn.proj.bias', 'image_encoder.blocks.3.norm2.weight', 'image_encoder.blocks.3.norm2.bias', 'image_encoder.blocks.3.mlp.lin1.weight', 'image_encoder.blocks.3.mlp.lin1.bias', 'image_encoder.blocks.3.mlp.lin2.weight', 'image_encoder.blocks.3.mlp.lin2.bias', 'image_encoder.blocks.4.norm1.weight', 'image_encoder.blocks.4.norm1.bias', 'image_encoder.blocks.4.attn.rel_pos_h', 'image_encoder.blocks.4.attn.rel_pos_w', 'image_encoder.blocks.4.attn.qkv.weight', 'image_encoder.blocks.4.attn.qkv.bias', 'image_encoder.blocks.4.attn.proj.weight', 'image_encoder.blocks.4.attn.proj.bias', 'image_encoder.blocks.4.norm2.weight', 'image_encoder.blocks.4.norm2.bias', 'image_encoder.blocks.4.mlp.lin1.weight', 'image_encoder.blocks.4.mlp.lin1.bias', 'image_encoder.blocks.4.mlp.lin2.weight', 'image_encoder.blocks.4.mlp.lin2.bias', 'image_encoder.blocks.5.norm1.weight', 'image_encoder.blocks.5.norm1.bias', 'image_encoder.blocks.5.attn.rel_pos_h', 'image_encoder.blocks.5.attn.rel_pos_w', 'image_encoder.blocks.5.attn.qkv.weight', 'image_encoder.blocks.5.attn.qkv.bias', 'image_encoder.blocks.5.attn.proj.weight', 'image_encoder.blocks.5.attn.proj.bias', 'image_encoder.blocks.5.norm2.weight', 'image_encoder.blocks.5.norm2.bias', 'image_encoder.blocks.5.mlp.lin1.weight', 'image_encoder.blocks.5.mlp.lin1.bias', 'image_encoder.blocks.5.mlp.lin2.weight', 'image_encoder.blocks.5.mlp.lin2.bias', 'image_encoder.blocks.6.norm1.weight', 'image_encoder.blocks.6.norm1.bias', 'image_encoder.blocks.6.attn.rel_pos_h', 'image_encoder.blocks.6.attn.rel_pos_w', 'image_encoder.blocks.6.attn.qkv.weight', 'image_encoder.blocks.6.attn.qkv.bias', 'image_encoder.blocks.6.attn.proj.weight', 'image_encoder.blocks.6.attn.proj.bias', 'image_encoder.blocks.6.norm2.weight', 'image_encoder.blocks.6.norm2.bias', 'image_encoder.blocks.6.mlp.lin1.weight', 'image_encoder.blocks.6.mlp.lin1.bias', 'image_encoder.blocks.6.mlp.lin2.weight', 'image_encoder.blocks.6.mlp.lin2.bias', 'image_encoder.blocks.7.norm1.weight', 'image_encoder.blocks.7.norm1.bias', 'image_encoder.blocks.7.attn.rel_pos_h', 'image_encoder.blocks.7.attn.rel_pos_w', 'image_encoder.blocks.7.attn.qkv.weight', 'image_encoder.blocks.7.attn.qkv.bias', 'image_encoder.blocks.7.attn.proj.weight', 'image_encoder.blocks.7.attn.proj.bias', 'image_encoder.blocks.7.norm2.weight', 'image_encoder.blocks.7.norm2.bias', 'image_encoder.blocks.7.mlp.lin1.weight', 'image_encoder.blocks.7.mlp.lin1.bias', 'image_encoder.blocks.7.mlp.lin2.weight', 'image_encoder.blocks.7.mlp.lin2.bias', 'image_encoder.blocks.8.norm1.weight', 'image_encoder.blocks.8.norm1.bias', 'image_encoder.blocks.8.attn.rel_pos_h', 'image_encoder.blocks.8.attn.rel_pos_w', 'image_encoder.blocks.8.attn.qkv.weight', 'image_encoder.blocks.8.attn.qkv.bias', 'image_encoder.blocks.8.attn.proj.weight', 'image_encoder.blocks.8.attn.proj.bias', 'image_encoder.blocks.8.norm2.weight', 'image_encoder.blocks.8.norm2.bias', 'image_encoder.blocks.8.mlp.lin1.weight', 'image_encoder.blocks.8.mlp.lin1.bias', 'image_encoder.blocks.8.mlp.lin2.weight', 'image_encoder.blocks.8.mlp.lin2.bias', 'image_encoder.blocks.9.norm1.weight', 'image_encoder.blocks.9.norm1.bias', 'image_encoder.blocks.9.attn.rel_pos_h', 'image_encoder.blocks.9.attn.rel_pos_w', 'image_encoder.blocks.9.attn.qkv.weight', 'image_encoder.blocks.9.attn.qkv.bias', 'image_encoder.blocks.9.attn.proj.weight', 'image_encoder.blocks.9.attn.proj.bias', 'image_encoder.blocks.9.norm2.weight', 'image_encoder.blocks.9.norm2.bias', 'image_encoder.blocks.9.mlp.lin1.weight', 'image_encoder.blocks.9.mlp.lin1.bias', 'image_encoder.blocks.9.mlp.lin2.weight', 'image_encoder.blocks.9.mlp.lin2.bias', 'image_encoder.blocks.10.norm1.weight', 'image_encoder.blocks.10.norm1.bias', 'image_encoder.blocks.10.attn.rel_pos_h', 'image_encoder.blocks.10.attn.rel_pos_w', 'image_encoder.blocks.10.attn.qkv.weight', 'image_encoder.blocks.10.attn.qkv.bias', 'image_encoder.blocks.10.attn.proj.weight', 'image_encoder.blocks.10.attn.proj.bias', 'image_encoder.blocks.10.norm2.weight', 'image_encoder.blocks.10.norm2.bias', 'image_encoder.blocks.10.mlp.lin1.weight', 'image_encoder.blocks.10.mlp.lin1.bias', 'image_encoder.blocks.10.mlp.lin2.weight', 'image_encoder.blocks.10.mlp.lin2.bias', 'image_encoder.blocks.11.norm1.weight', 'image_encoder.blocks.11.norm1.bias', 'image_encoder.blocks.11.attn.rel_pos_h', 'image_encoder.blocks.11.attn.rel_pos_w', 'image_encoder.blocks.11.attn.qkv.weight', 'image_encoder.blocks.11.attn.qkv.bias', 'image_encoder.blocks.11.attn.proj.weight', 'image_encoder.blocks.11.attn.proj.bias', 'image_encoder.blocks.11.norm2.weight', 'image_encoder.blocks.11.norm2.bias', 'image_encoder.blocks.11.mlp.lin1.weight', 'image_encoder.blocks.11.mlp.lin1.bias', 'image_encoder.blocks.11.mlp.lin2.weight', 'image_encoder.blocks.11.mlp.lin2.bias', 'mask_decoder.transformer.layers.0.self_attn.q_proj.weight', 'mask_decoder.transformer.layers.0.self_attn.q_proj.bias', 'mask_decoder.transformer.layers.0.self_attn.k_proj.weight', 'mask_decoder.transformer.layers.0.self_attn.k_proj.bias', 'mask_decoder.transformer.layers.0.self_attn.v_proj.weight', 'mask_decoder.transformer.layers.0.self_attn.v_proj.bias', 'mask_decoder.transformer.layers.0.self_attn.out_proj.weight', 'mask_decoder.transformer.layers.0.self_attn.out_proj.bias', 'mask_decoder.transformer.layers.0.norm1.weight', 'mask_decoder.transformer.layers.0.norm1.bias', 'mask_decoder.transformer.layers.0.cross_attn_token_to_image.q_proj.weight', 'mask_decoder.transformer.layers.0.cross_attn_token_to_image.q_proj.bias', 'mask_decoder.transformer.layers.0.cross_attn_token_to_image.k_proj.weight', 'mask_decoder.transformer.layers.0.cross_attn_token_to_image.k_proj.bias', 'mask_decoder.transformer.layers.0.cross_attn_token_to_image.v_proj.weight', 'mask_decoder.transformer.layers.0.cross_attn_token_to_image.v_proj.bias', 'mask_decoder.transformer.layers.0.cross_attn_token_to_image.out_proj.weight', 'mask_decoder.transformer.layers.0.cross_attn_token_to_image.out_proj.bias', 'mask_decoder.transformer.layers.0.norm2.weight', 'mask_decoder.transformer.layers.0.norm2.bias', 'mask_decoder.transformer.layers.0.mlp.lin1.weight', 'mask_decoder.transformer.layers.0.mlp.lin1.bias', 'mask_decoder.transformer.layers.0.mlp.lin2.weight', 'mask_decoder.transformer.layers.0.mlp.lin2.bias', 'mask_decoder.transformer.layers.0.norm3.weight', 'mask_decoder.transformer.layers.0.norm3.bias', 'mask_decoder.transformer.layers.0.norm4.weight', 'mask_decoder.transformer.layers.0.norm4.bias', 'mask_decoder.transformer.layers.0.cross_attn_image_to_token.q_proj.weight', 'mask_decoder.transformer.layers.0.cross_attn_image_to_token.q_proj.bias', 'mask_decoder.transformer.layers.0.cross_attn_image_to_token.k_proj.weight', 'mask_decoder.transformer.layers.0.cross_attn_image_to_token.k_proj.bias', 'mask_decoder.transformer.layers.0.cross_attn_image_to_token.v_proj.weight', 'mask_decoder.transformer.layers.0.cross_attn_image_to_token.v_proj.bias', 'mask_decoder.transformer.layers.0.cross_attn_image_to_token.out_proj.weight', 'mask_decoder.transformer.layers.0.cross_attn_image_to_token.out_proj.bias', 'mask_decoder.transformer.layers.1.self_attn.q_proj.weight', 'mask_decoder.transformer.layers.1.self_attn.q_proj.bias', 'mask_decoder.transformer.layers.1.self_attn.k_proj.weight', 'mask_decoder.transformer.layers.1.self_attn.k_proj.bias', 'mask_decoder.transformer.layers.1.self_attn.v_proj.weight', 'mask_decoder.transformer.layers.1.self_attn.v_proj.bias', 'mask_decoder.transformer.layers.1.self_attn.out_proj.weight', 'mask_decoder.transformer.layers.1.self_attn.out_proj.bias', 'mask_decoder.transformer.layers.1.norm1.weight', 'mask_decoder.transformer.layers.1.norm1.bias', 'mask_decoder.transformer.layers.1.cross_attn_token_to_image.q_proj.weight', 'mask_decoder.transformer.layers.1.cross_attn_token_to_image.q_proj.bias', 'mask_decoder.transformer.layers.1.cross_attn_token_to_image.k_proj.weight', 'mask_decoder.transformer.layers.1.cross_attn_token_to_image.k_proj.bias', 'mask_decoder.transformer.layers.1.cross_attn_token_to_image.v_proj.weight', 'mask_decoder.transformer.layers.1.cross_attn_token_to_image.v_proj.bias', 'mask_decoder.transformer.layers.1.cross_attn_token_to_image.out_proj.weight', 'mask_decoder.transformer.layers.1.cross_attn_token_to_image.out_proj.bias', 'mask_decoder.transformer.layers.1.norm2.weight', 'mask_decoder.transformer.layers.1.norm2.bias', 'mask_decoder.transformer.layers.1.mlp.lin1.weight', 'mask_decoder.transformer.layers.1.mlp.lin1.bias', 'mask_decoder.transformer.layers.1.mlp.lin2.weight', 'mask_decoder.transformer.layers.1.mlp.lin2.bias', 'mask_decoder.transformer.layers.1.norm3.weight', 'mask_decoder.transformer.layers.1.norm3.bias', 'mask_decoder.transformer.layers.1.norm4.weight', 'mask_decoder.transformer.layers.1.norm4.bias', 'mask_decoder.transformer.layers.1.cross_attn_image_to_token.q_proj.weight', 'mask_decoder.transformer.layers.1.cross_attn_image_to_token.q_proj.bias', 'mask_decoder.transformer.layers.1.cross_attn_image_to_token.k_proj.weight', 'mask_decoder.transformer.layers.1.cross_attn_image_to_token.k_proj.bias', 'mask_decoder.transformer.layers.1.cross_attn_image_to_token.v_proj.weight', 'mask_decoder.transformer.layers.1.cross_attn_image_to_token.v_proj.bias', 'mask_decoder.transformer.layers.1.cross_attn_image_to_token.out_proj.weight', 'mask_decoder.transformer.layers.1.cross_attn_image_to_token.out_proj.bias', 'mask_decoder.transformer.final_attn_token_to_image.q_proj.weight', 'mask_decoder.transformer.final_attn_token_to_image.q_proj.bias', 'mask_decoder.transformer.final_attn_token_to_image.k_proj.weight', 'mask_decoder.transformer.final_attn_token_to_image.k_proj.bias', 'mask_decoder.transformer.final_attn_token_to_image.v_proj.weight', 'mask_decoder.transformer.final_attn_token_to_image.v_proj.bias', 'mask_decoder.transformer.final_attn_token_to_image.out_proj.weight', 'mask_decoder.transformer.final_attn_token_to_image.out_proj.bias', 'mask_decoder.transformer.norm_final_attn.weight', 'mask_decoder.transformer.norm_final_attn.bias', 'mask_decoder.output_upscaling.0.weight', 'mask_decoder.output_upscaling.0.bias', 'mask_decoder.output_upscaling.1.weight', 'mask_decoder.output_upscaling.1.bias', 'mask_decoder.output_upscaling.3.weight', 'mask_decoder.output_upscaling.3.bias', 'mask_decoder.output_hypernetworks_mlps.0.layers.0.weight', 'mask_decoder.output_hypernetworks_mlps.0.layers.0.bias', 'mask_decoder.output_hypernetworks_mlps.0.layers.1.weight', 'mask_decoder.output_hypernetworks_mlps.0.layers.1.bias', 'mask_decoder.output_hypernetworks_mlps.0.layers.2.weight', 'mask_decoder.output_hypernetworks_mlps.0.layers.2.bias', 'mask_decoder.output_hypernetworks_mlps.1.layers.0.weight', 'mask_decoder.output_hypernetworks_mlps.1.layers.0.bias', 'mask_decoder.output_hypernetworks_mlps.1.layers.1.weight', 'mask_decoder.output_hypernetworks_mlps.1.layers.1.bias', 'mask_decoder.output_hypernetworks_mlps.1.layers.2.weight', 'mask_decoder.output_hypernetworks_mlps.1.layers.2.bias', 'image_encoder.pos_embed'])
+['patient_035', 'patient_083', 'patient_010', 'patient_086', 'patient_088']
+['patient_057', 'patient_028', 'patient_087', 'patient_061', 'patient_032', 'patient_011', 'patient_078', 'patient_009', 'patient_068', 'patient_021', 'patient_079', 'patient_004', 'patient_089', 'patient_023', 'patient_070']
+['patient_014', 'patient_060', 'patient_044', 'patient_036', 'patient_003', 'patient_100', 'patient_065', 'patient_013', 'patient_038', 'patient_093', 'patient_043', 'patient_082', 'patient_031', 'patient_005', 'patient_016']
+dataset length: 104
+dataset length: 258
+dataset length: 296
+output_experiment/g120_5
+Train: [0][0/26]	loss 3.8228
+Train: [0][10/26]	loss 1.1709
+Train: [0][20/26]	loss 1.1862
+Validating: Epoch:  0 Loss: 0.9147 IoU_pred: -0.3686
+Train: [1][0/26]	loss 1.2294
+Train: [1][10/26]	loss 1.2170
+Train: [1][20/26]	loss 1.1384
+Validating: Epoch:  1 Loss: 0.8546 IoU_pred: -0.3610
+Train: [2][0/26]	loss 1.1281
+Train: [2][10/26]	loss 1.0109
+Train: [2][20/26]	loss 1.0853
+Validating: Epoch:  2 Loss: 0.8165 IoU_pred: -0.2883
+Train: [3][0/26]	loss 1.0663
+Train: [3][10/26]	loss 0.9463
+Train: [3][20/26]	loss 0.9627
+Validating: Epoch:  3 Loss: 0.7651 IoU_pred: -0.2640
+Train: [4][0/26]	loss 0.9320
+Train: [4][10/26]	loss 0.8804
+Train: [4][20/26]	loss 0.8513
+Validating: Epoch:  4 Loss: 0.6815 IoU_pred: -0.2409
+Train: [5][0/26]	loss 0.8901
+Train: [5][10/26]	loss 0.9567
+Train: [5][20/26]	loss 0.7720
+Validating: Epoch:  5 Loss: 0.6928 IoU_pred: -0.2842
+Train: [6][0/26]	loss 0.6367
+Train: [6][10/26]	loss 0.9599
+Train: [6][20/26]	loss 0.8639
+Validating: Epoch:  6 Loss: 0.5695 IoU_pred: -0.3243
+Train: [7][0/26]	loss 0.5293
+Train: [7][10/26]	loss 0.6002
+Train: [7][20/26]	loss 0.5560
+Validating: Epoch:  7 Loss: 0.5374 IoU_pred: -0.3628
+Train: [8][0/26]	loss 0.9224
+Train: [8][10/26]	loss 0.5389
+Train: [8][20/26]	loss 0.6143
+Validating: Epoch:  8 Loss: 0.4786 IoU_pred: -0.2685
+Train: [9][0/26]	loss 0.4561
+Train: [9][10/26]	loss 0.6336
+Train: [9][20/26]	loss 0.4579
+Validating: Epoch:  9 Loss: 0.4574 IoU_pred: -0.2973
+Train: [10][0/26]	loss 0.2592
+Train: [10][10/26]	loss 0.3760
+Train: [10][20/26]	loss 0.9257
+Validating: Epoch: 10 Loss: 0.5079 IoU_pred: -0.3357
+Train: [11][0/26]	loss 0.3379
+Train: [11][10/26]	loss 0.3888
+Train: [11][20/26]	loss 0.2964
+Validating: Epoch: 11 Loss: 0.3571 IoU_pred: -0.2745
+Train: [12][0/26]	loss 0.4606
+Train: [12][10/26]	loss 0.2101
+Train: [12][20/26]	loss 0.2788
+Validating: Epoch: 12 Loss: 0.3167 IoU_pred: -0.2969
+Train: [13][0/26]	loss 0.5441
+Train: [13][10/26]	loss 0.2365
+Train: [13][20/26]	loss 0.1896
+Validating: Epoch: 13 Loss: 0.3507 IoU_pred: -0.3383
+Train: [14][0/26]	loss 0.3156
+Train: [14][10/26]	loss 0.2184
+Train: [14][20/26]	loss 0.2931
+Validating: Epoch: 14 Loss: 0.2964 IoU_pred: -0.3285
+Train: [15][0/26]	loss 0.2296
+Train: [15][10/26]	loss 0.8931
+Train: [15][20/26]	loss 0.2200
+Validating: Epoch: 15 Loss: 0.3623 IoU_pred: -0.2739
+Train: [16][0/26]	loss 0.3210
+Train: [16][10/26]	loss 0.2111
+Train: [16][20/26]	loss 0.1727
+Validating: Epoch: 16 Loss: 0.3041 IoU_pred: -0.2849
+Train: [17][0/26]	loss 0.1829
+Train: [17][10/26]	loss 0.4003
+Train: [17][20/26]	loss 0.2469
+Validating: Epoch: 17 Loss: 0.2528 IoU_pred: -0.3224
+Train: [18][0/26]	loss 0.2417
+Train: [18][10/26]	loss 0.1805
+Train: [18][20/26]	loss 0.1809
+Validating: Epoch: 18 Loss: 0.2504 IoU_pred: -0.2800
+Train: [19][0/26]	loss 0.2480
+Train: [19][10/26]	loss 0.2328
+Train: [19][20/26]	loss 0.1225
+Validating: Epoch: 19 Loss: 0.2389 IoU_pred: -0.2985
+Train: [20][0/26]	loss 0.1469
+Train: [20][10/26]	loss 0.1463
+Train: [20][20/26]	loss 0.1195
+Validating: Epoch: 20 Loss: 0.2515 IoU_pred: -0.2821
+Train: [21][0/26]	loss 0.1866
+Train: [21][10/26]	loss 0.1698
+Train: [21][20/26]	loss 0.1524
+Validating: Epoch: 21 Loss: 0.2530 IoU_pred: -0.2521
+Train: [22][0/26]	loss 0.1274
+Train: [22][10/26]	loss 0.3022
+Train: [22][20/26]	loss 0.1381
+Validating: Epoch: 22 Loss: 0.2148 IoU_pred: -0.2702
+Train: [23][0/26]	loss 0.2053
+Train: [23][10/26]	loss 0.1175
+Train: [23][20/26]	loss 0.1295
+Validating: Epoch: 23 Loss: 0.2277 IoU_pred: -0.2785
+Train: [24][0/26]	loss 0.1113
+Train: [24][10/26]	loss 0.2070
+Train: [24][20/26]	loss 0.1962
+Validating: Epoch: 24 Loss: 0.2644 IoU_pred: -0.2786
+Train: [25][0/26]	loss 0.4012
+Train: [25][10/26]	loss 0.2175
+Train: [25][20/26]	loss 0.1498
+Validating: Epoch: 25 Loss: 0.2447 IoU_pred: -0.3155
+Train: [26][0/26]	loss 0.3134
+Train: [26][10/26]	loss 0.1342
+Train: [26][20/26]	loss 0.1916
+Validating: Epoch: 26 Loss: 0.2195 IoU_pred: -0.2807
+Train: [27][0/26]	loss 0.1031
+Train: [27][10/26]	loss 0.1170
+Train: [27][20/26]	loss 0.1255
+Validating: Epoch: 27 Loss: 0.2304 IoU_pred: -0.2844
+Train: [28][0/26]	loss 0.2538
+Train: [28][10/26]	loss 0.1142
+Train: [28][20/26]	loss 0.1599
+Validating: Epoch: 28 Loss: 0.2225 IoU_pred: -0.2559
+Train: [29][0/26]	loss 0.1238
+Train: [29][10/26]	loss 0.1728
+Train: [29][20/26]	loss 0.1348
+Validating: Epoch: 29 Loss: 0.2098 IoU_pred: -0.2610
+Train: [30][0/26]	loss 0.0932
+Train: [30][10/26]	loss 0.1002
+Train: [30][20/26]	loss 0.1033
+Validating: Epoch: 30 Loss: 0.2475 IoU_pred: -0.2491
+Train: [31][0/26]	loss 0.1730
+Train: [31][10/26]	loss 0.1299
+Train: [31][20/26]	loss 0.1135
+Validating: Epoch: 31 Loss: 0.2058 IoU_pred: -0.2650
+Train: [32][0/26]	loss 0.1075
+Train: [32][10/26]	loss 0.1099
+Train: [32][20/26]	loss 0.2811
+Validating: Epoch: 32 Loss: 0.1919 IoU_pred: -0.2641
+Train: [33][0/26]	loss 0.1517
+Train: [33][10/26]	loss 0.1283
+Train: [33][20/26]	loss 0.1068
+Validating: Epoch: 33 Loss: 0.2159 IoU_pred: -0.2826
+Train: [34][0/26]	loss 0.1029
+Train: [34][10/26]	loss 0.1166
+Train: [34][20/26]	loss 0.1329
+Validating: Epoch: 34 Loss: 0.2111 IoU_pred: -0.3014
+Train: [35][0/26]	loss 0.1196
+Train: [35][10/26]	loss 0.2421
+Train: [35][20/26]	loss 0.0876
+Validating: Epoch: 35 Loss: 0.2944 IoU_pred: -0.3024
+Train: [36][0/26]	loss 0.1291
+Train: [36][10/26]	loss 0.1683
+Train: [36][20/26]	loss 0.3029
+Validating: Epoch: 36 Loss: 0.3192 IoU_pred: -0.3426
+Train: [37][0/26]	loss 0.1657
+Train: [37][10/26]	loss 0.6875
+Train: [37][20/26]	loss 0.2345
+Validating: Epoch: 37 Loss: 0.1907 IoU_pred: -0.3056
+Train: [38][0/26]	loss 0.0961
+Train: [38][10/26]	loss 0.3104
+Train: [38][20/26]	loss 0.0770
+Validating: Epoch: 38 Loss: 0.1807 IoU_pred: -0.2471
+Train: [39][0/26]	loss 0.1259
+Train: [39][10/26]	loss 0.1697
+Train: [39][20/26]	loss 0.1759
+Validating: Epoch: 39 Loss: 0.1686 IoU_pred: -0.2709
+Train: [40][0/26]	loss 0.1285
+Train: [40][10/26]	loss 0.1364
+Train: [40][20/26]	loss 0.1524
+Validating: Epoch: 40 Loss: 0.1957 IoU_pred: -0.2524
+Train: [41][0/26]	loss 0.0999
+Train: [41][10/26]	loss 0.1794
+Train: [41][20/26]	loss 0.1313
+Validating: Epoch: 41 Loss: 0.2010 IoU_pred: -0.3022
+Train: [42][0/26]	loss 0.1086
+Train: [42][10/26]	loss 0.0867
+Train: [42][20/26]	loss 0.1055
+Validating: Epoch: 42 Loss: 0.1821 IoU_pred: -0.2830
+Train: [43][0/26]	loss 0.0875
+Train: [43][10/26]	loss 0.1057
+Train: [43][20/26]	loss 0.0775
+Validating: Epoch: 43 Loss: 0.1838 IoU_pred: -0.2720
+Train: [44][0/26]	loss 0.0876
+Train: [44][10/26]	loss 0.2432
+Train: [44][20/26]	loss 0.0985
+Validating: Epoch: 44 Loss: 0.1881 IoU_pred: -0.2479
+Train: [45][0/26]	loss 0.1101
+Train: [45][10/26]	loss 0.0979
+Train: [45][20/26]	loss 0.1039
+Validating: Epoch: 45 Loss: 0.2255 IoU_pred: -0.2807
+Train: [46][0/26]	loss 0.1321
+Train: [46][10/26]	loss 0.1159
+Train: [46][20/26]	loss 0.2067
+Validating: Epoch: 46 Loss: 0.2028 IoU_pred: -0.2135
+Train: [47][0/26]	loss 0.0732
+Train: [47][10/26]	loss 0.0938
+Train: [47][20/26]	loss 0.1912
+Validating: Epoch: 47 Loss: 0.2017 IoU_pred: -0.2329
+Train: [48][0/26]	loss 0.1433
+Train: [48][10/26]	loss 0.1598
+Train: [48][20/26]	loss 0.0805
+Validating: Epoch: 48 Loss: 0.1859 IoU_pred: -0.2919
+Train: [49][0/26]	loss 0.1086
+Train: [49][10/26]	loss 0.0885
+Train: [49][20/26]	loss 0.1136
+Validating: Epoch: 49 Loss: 0.1968 IoU_pred: -0.3207
+Train: [50][0/26]	loss 0.1348
+Train: [50][10/26]	loss 0.1136
+Train: [50][20/26]	loss 0.0734
+Validating: Epoch: 50 Loss: 0.1708 IoU_pred: -0.2621
+Train: [51][0/26]	loss 0.0760
+Train: [51][10/26]	loss 0.1448
+Train: [51][20/26]	loss 0.1043
+Validating: Epoch: 51 Loss: 0.1808 IoU_pred: -0.2885
+Train: [52][0/26]	loss 0.0886
+Train: [52][10/26]	loss 0.0713
+Train: [52][20/26]	loss 0.1887
+Validating: Epoch: 52 Loss: 0.2159 IoU_pred: -0.3276
+Train: [53][0/26]	loss 0.1252
+Train: [53][10/26]	loss 0.2434
+Train: [53][20/26]	loss 0.1062
+Validating: Epoch: 53 Loss: 0.1957 IoU_pred: -0.2505
+Train: [54][0/26]	loss 0.0911
+Train: [54][10/26]	loss 0.1018
+Train: [54][20/26]	loss 0.0862
+Validating: Epoch: 54 Loss: 0.1730 IoU_pred: -0.2981
+Train: [55][0/26]	loss 0.0674
+Train: [55][10/26]	loss 0.0799
+Train: [55][20/26]	loss 0.0811
+Validating: Epoch: 55 Loss: 0.2031 IoU_pred: -0.2738
+Train: [56][0/26]	loss 0.1024
+Train: [56][10/26]	loss 0.0852
+Train: [56][20/26]	loss 0.1946
+Validating: Epoch: 56 Loss: 0.2181 IoU_pred: -0.3863
+Train: [57][0/26]	loss 0.0949
+Train: [57][10/26]	loss 0.0983
+Train: [57][20/26]	loss 0.1118
+Validating: Epoch: 57 Loss: 0.1540 IoU_pred: -0.3038
+Train: [58][0/26]	loss 0.1541
+Train: [58][10/26]	loss 0.2166
+Train: [58][20/26]	loss 0.1340
+Validating: Epoch: 58 Loss: 0.1772 IoU_pred: -0.3365
+Train: [59][0/26]	loss 0.1030
+Train: [59][10/26]	loss 0.2324
+Train: [59][20/26]	loss 0.1100
+Validating: Epoch: 59 Loss: 0.2004 IoU_pred: -0.3133
+Train: [60][0/26]	loss 0.0910
+Train: [60][10/26]	loss 0.1858
+Train: [60][20/26]	loss 0.0799
+Validating: Epoch: 60 Loss: 0.2267 IoU_pred: -0.3108
+Train: [61][0/26]	loss 0.0967
+Train: [61][10/26]	loss 0.1231
+Train: [61][20/26]	loss 0.1178
+Validating: Epoch: 61 Loss: 0.2001 IoU_pred: -0.2635
+Train: [62][0/26]	loss 0.1273
+Train: [62][10/26]	loss 0.1234
+Train: [62][20/26]	loss 0.1162
+Validating: Epoch: 62 Loss: 0.1599 IoU_pred: -0.2850
+Train: [63][0/26]	loss 0.0644
+Train: [63][10/26]	loss 0.2315
+Train: [63][20/26]	loss 0.1043
+Validating: Epoch: 63 Loss: 0.1479 IoU_pred: -0.3090
+Train: [64][0/26]	loss 0.0838
+Train: [64][10/26]	loss 0.0631
+Train: [64][20/26]	loss 0.0834
+Validating: Epoch: 64 Loss: 0.1419 IoU_pred: -0.2904
+Train: [65][0/26]	loss 0.0729
+Train: [65][10/26]	loss 0.0742
+Train: [65][20/26]	loss 0.0842
+Validating: Epoch: 65 Loss: 0.1402 IoU_pred: -0.3062
+Train: [66][0/26]	loss 0.0739
+Train: [66][10/26]	loss 0.0849
+Train: [66][20/26]	loss 0.0774
+Validating: Epoch: 66 Loss: 0.1466 IoU_pred: -0.2893
+Train: [67][0/26]	loss 0.1033
+Train: [67][10/26]	loss 0.0732
+Train: [67][20/26]	loss 0.0710
+Validating: Epoch: 67 Loss: 0.1514 IoU_pred: -0.2933
+Train: [68][0/26]	loss 0.0838
+Train: [68][10/26]	loss 0.0877
+Train: [68][20/26]	loss 0.0782
+Validating: Epoch: 68 Loss: 0.1293 IoU_pred: -0.2997
+Train: [69][0/26]	loss 0.0795
+Train: [69][10/26]	loss 0.1764
+Train: [69][20/26]	loss 0.1071
+Validating: Epoch: 69 Loss: 0.1291 IoU_pred: -0.2744
+Train: [70][0/26]	loss 0.0670
+Train: [70][10/26]	loss 0.0617
+Train: [70][20/26]	loss 0.0701
+Validating: Epoch: 70 Loss: 0.1408 IoU_pred: -0.2930
+Train: [71][0/26]	loss 0.0712
+Train: [71][10/26]	loss 0.0698
+Train: [71][20/26]	loss 0.0622
+Validating: Epoch: 71 Loss: 0.1420 IoU_pred: -0.2756
+Train: [72][0/26]	loss 0.1053
+Train: [72][10/26]	loss 0.1016
+Train: [72][20/26]	loss 0.0611
+Validating: Epoch: 72 Loss: 0.1422 IoU_pred: -0.3075
+Train: [73][0/26]	loss 0.0590
+Train: [73][10/26]	loss 0.0763
+Train: [73][20/26]	loss 0.0614
+Validating: Epoch: 73 Loss: 0.1481 IoU_pred: -0.2701
+Train: [74][0/26]	loss 0.1402
+Train: [74][10/26]	loss 0.0642
+Train: [74][20/26]	loss 0.1087
+Validating: Epoch: 74 Loss: 0.1475 IoU_pred: -0.3020
+Train: [75][0/26]	loss 0.0637
+Train: [75][10/26]	loss 0.0637
+Train: [75][20/26]	loss 0.0668
+Validating: Epoch: 75 Loss: 0.1449 IoU_pred: -0.2801
+Train: [76][0/26]	loss 0.0618
+Train: [76][10/26]	loss 0.0708
+Train: [76][20/26]	loss 0.0682
+Validating: Epoch: 76 Loss: 0.1259 IoU_pred: -0.2967
+Train: [77][0/26]	loss 0.0696
+Train: [77][10/26]	loss 0.0757
+Train: [77][20/26]	loss 0.0762
+Validating: Epoch: 77 Loss: 0.1362 IoU_pred: -0.2641
+Train: [78][0/26]	loss 0.0880
+Train: [78][10/26]	loss 0.0671
+Train: [78][20/26]	loss 0.0576
+Validating: Epoch: 78 Loss: 0.1299 IoU_pred: -0.2767
+Train: [79][0/26]	loss 0.0808
+Train: [79][10/26]	loss 0.0706
+Train: [79][20/26]	loss 0.0746
+Validating: Epoch: 79 Loss: 0.1244 IoU_pred: -0.2989
+Train: [80][0/26]	loss 0.0680
+Train: [80][10/26]	loss 0.1004
+Train: [80][20/26]	loss 0.0558
+Validating: Epoch: 80 Loss: 0.1328 IoU_pred: -0.2992
+Train: [81][0/26]	loss 0.0610
+Train: [81][10/26]	loss 0.0833
+Train: [81][20/26]	loss 0.1206
+Validating: Epoch: 81 Loss: 0.1234 IoU_pred: -0.2819
+Train: [82][0/26]	loss 0.0721
+Train: [82][10/26]	loss 0.0770
+Train: [82][20/26]	loss 0.0484
+Validating: Epoch: 82 Loss: 0.1343 IoU_pred: -0.2874
+Train: [83][0/26]	loss 0.0646
+Train: [83][10/26]	loss 0.0710
+Train: [83][20/26]	loss 0.0560
+Validating: Epoch: 83 Loss: 0.1280 IoU_pred: -0.3040
+Train: [84][0/26]	loss 0.1040
+Train: [84][10/26]	loss 0.0561
+Train: [84][20/26]	loss 0.0766
+Validating: Epoch: 84 Loss: 0.1528 IoU_pred: -0.3197
+Train: [85][0/26]	loss 0.1238
+Train: [85][10/26]	loss 0.0644
+Train: [85][20/26]	loss 0.0675
+Validating: Epoch: 85 Loss: 0.1373 IoU_pred: -0.3004
+Train: [86][0/26]	loss 0.1077
+Train: [86][10/26]	loss 0.0632
+Train: [86][20/26]	loss 0.0725
+Validating: Epoch: 86 Loss: 0.1311 IoU_pred: -0.3413
+Train: [87][0/26]	loss 0.0568
+Train: [87][10/26]	loss 0.0730
+Train: [87][20/26]	loss 0.0755
+Validating: Epoch: 87 Loss: 0.1252 IoU_pred: -0.3091
+Train: [88][0/26]	loss 0.0581
+Train: [88][10/26]	loss 0.0748
+Train: [88][20/26]	loss 0.0677
+Validating: Epoch: 88 Loss: 0.1275 IoU_pred: -0.2926
+Train: [89][0/26]	loss 0.1001
+Train: [89][10/26]	loss 0.0649
+Train: [89][20/26]	loss 0.0665
+Validating: Epoch: 89 Loss: 0.1231 IoU_pred: -0.3001
+Train: [90][0/26]	loss 0.0688
+Train: [90][10/26]	loss 0.0745
+Train: [90][20/26]	loss 0.0543
+Validating: Epoch: 90 Loss: 0.1215 IoU_pred: -0.2906
+Train: [91][0/26]	loss 0.2900
+Train: [91][10/26]	loss 0.0663
+Train: [91][20/26]	loss 0.2736
+Validating: Epoch: 91 Loss: 0.1326 IoU_pred: -0.2856
+Train: [92][0/26]	loss 0.0646
+Train: [92][10/26]	loss 0.1070
+Train: [92][20/26]	loss 0.0685
+Validating: Epoch: 92 Loss: 0.1411 IoU_pred: -0.2967
+Train: [93][0/26]	loss 0.0954
+Train: [93][10/26]	loss 0.0771
+Train: [93][20/26]	loss 0.0795
+Validating: Epoch: 93 Loss: 0.1363 IoU_pred: -0.3206
+Train: [94][0/26]	loss 0.0681
+Train: [94][10/26]	loss 0.0774
+Train: [94][20/26]	loss 0.0712
+Validating: Epoch: 94 Loss: 0.1529 IoU_pred: -0.2912
+Train: [95][0/26]	loss 0.0525
+Train: [95][10/26]	loss 0.1121
+Train: [95][20/26]	loss 0.0653
+Validating: Epoch: 95 Loss: 0.1317 IoU_pred: -0.3190
+Train: [96][0/26]	loss 0.0689
+Train: [96][10/26]	loss 0.0543
+Train: [96][20/26]	loss 0.0534
+Validating: Epoch: 96 Loss: 0.1268 IoU_pred: -0.2955
+Train: [97][0/26]	loss 0.0514
+Train: [97][10/26]	loss 0.0572
+Train: [97][20/26]	loss 0.0489
+Validating: Epoch: 97 Loss: 0.1288 IoU_pred: -0.2967
+Train: [98][0/26]	loss 0.1038
+Train: [98][10/26]	loss 0.0636
+Train: [98][20/26]	loss 0.0690
+Validating: Epoch: 98 Loss: 0.1403 IoU_pred: -0.2973
+Train: [99][0/26]	loss 0.0621
+Train: [99][10/26]	loss 0.1040
+Train: [99][20/26]	loss 0.0663
+Validating: Epoch: 99 Loss: 0.1277 IoU_pred: -0.3109
+Train: [100][0/26]	loss 0.0856
+Train: [100][10/26]	loss 0.0644
+Train: [100][20/26]	loss 0.0516
+Validating: Epoch: 100 Loss: 0.1478 IoU_pred: -0.2892
+Train: [101][0/26]	loss 0.0798
+Train: [101][10/26]	loss 0.0969
+Train: [101][20/26]	loss 0.0622
+Validating: Epoch: 101 Loss: 0.1472 IoU_pred: -0.2845
+Train: [102][0/26]	loss 0.0625
+Train: [102][10/26]	loss 0.0630
+Train: [102][20/26]	loss 0.0784
+Validating: Epoch: 102 Loss: 0.1292 IoU_pred: -0.2825
+Train: [103][0/26]	loss 0.0735
+Train: [103][10/26]	loss 0.0738
+Train: [103][20/26]	loss 0.0768
+Validating: Epoch: 103 Loss: 0.1334 IoU_pred: -0.2827
+Train: [104][0/26]	loss 0.0868
+Train: [104][10/26]	loss 0.0500
+Train: [104][20/26]	loss 0.0586
+Validating: Epoch: 104 Loss: 0.1274 IoU_pred: -0.2894
+Train: [105][0/26]	loss 0.0731
+Train: [105][10/26]	loss 0.0905
+Train: [105][20/26]	loss 0.0877
+Validating: Epoch: 105 Loss: 0.1424 IoU_pred: -0.2890
+Train: [106][0/26]	loss 0.0760
+Train: [106][10/26]	loss 0.0645
+Train: [106][20/26]	loss 0.0605
+Validating: Epoch: 106 Loss: 0.1292 IoU_pred: -0.2843
+Train: [107][0/26]	loss 0.0851
+Train: [107][10/26]	loss 0.0878
+Train: [107][20/26]	loss 0.0730
+Validating: Epoch: 107 Loss: 0.1412 IoU_pred: -0.2880
+Train: [108][0/26]	loss 0.1520
+Train: [108][10/26]	loss 0.0547
+Train: [108][20/26]	loss 0.0645
+Validating: Epoch: 108 Loss: 0.1327 IoU_pred: -0.2814
+Train: [109][0/26]	loss 0.0688
+Train: [109][10/26]	loss 0.0796
+Train: [109][20/26]	loss 0.0713
+Validating: Epoch: 109 Loss: 0.1314 IoU_pred: -0.2859
+Train: [110][0/26]	loss 0.0553
+Train: [110][10/26]	loss 0.0549
+Train: [110][20/26]	loss 0.0717
+Validating: Epoch: 110 Loss: 0.1287 IoU_pred: -0.2931
+Train: [111][0/26]	loss 0.0604
+Train: [111][10/26]	loss 0.0712
+Train: [111][20/26]	loss 0.0564
+Validating: Epoch: 111 Loss: 0.1492 IoU_pred: -0.3272
+Train: [112][0/26]	loss 0.1048
+Train: [112][10/26]	loss 0.0496
+Train: [112][20/26]	loss 0.0636
+Validating: Epoch: 112 Loss: 0.1480 IoU_pred: -0.2839
+Train: [113][0/26]	loss 0.0841
+Train: [113][10/26]	loss 0.0708
+Train: [113][20/26]	loss 0.0640
+Validating: Epoch: 113 Loss: 0.1409 IoU_pred: -0.3125
+Train: [114][0/26]	loss 0.0605
+Train: [114][10/26]	loss 0.0914
+Train: [114][20/26]	loss 0.0719
+Validating: Epoch: 114 Loss: 0.1311 IoU_pred: -0.2829
+Train: [115][0/26]	loss 0.1441
+Train: [115][10/26]	loss 0.0814
+Train: [115][20/26]	loss 0.0626
+Validating: Epoch: 115 Loss: 0.1257 IoU_pred: -0.2840
+Train: [116][0/26]	loss 0.0580
+Train: [116][10/26]	loss 0.0814
+Train: [116][20/26]	loss 0.0867
+Validating: Epoch: 116 Loss: 0.1272 IoU_pred: -0.2744
+Train: [117][0/26]	loss 0.0530
+Train: [117][10/26]	loss 0.0602
+Train: [117][20/26]	loss 0.0609
+Validating: Epoch: 117 Loss: 0.1384 IoU_pred: -0.2921
+Train: [118][0/26]	loss 0.0614
+Train: [118][10/26]	loss 0.0659
+Train: [118][20/26]	loss 0.0494
+Validating: Epoch: 118 Loss: 0.1208 IoU_pred: -0.2707
+Train: [119][0/26]	loss 0.0549
+Train: [119][10/26]	loss 0.0594
+Train: [119][20/26]	loss 0.0603
+Validating: Epoch: 119 Loss: 0.1352 IoU_pred: -0.3145
+Test
+dataset length: 20
+(20, 224, 224) (20, 224, 224)
+finish saving file: patient_014
+dataset length: 18
+(18, 224, 224) (18, 224, 224)
+finish saving file: patient_060
+dataset length: 18
+(18, 224, 224) (18, 224, 224)
+finish saving file: patient_044
+dataset length: 16
+(16, 224, 224) (16, 224, 224)
+finish saving file: patient_036
+dataset length: 20
+(20, 224, 224) (20, 224, 224)
+finish saving file: patient_003
+dataset length: 16
+(16, 224, 224) (16, 224, 224)
+finish saving file: patient_100
+dataset length: 16
+(16, 224, 224) (16, 224, 224)
+finish saving file: patient_065
+dataset length: 20
+(20, 224, 224) (20, 224, 224)
+finish saving file: patient_013
+dataset length: 16
+(16, 224, 224) (16, 224, 224)
+finish saving file: patient_038
+dataset length: 20
+(20, 224, 224) (20, 224, 224)
+finish saving file: patient_093
+dataset length: 24
+(24, 224, 224) (24, 224, 224)
+finish saving file: patient_043
+dataset length: 32
+(32, 224, 224) (32, 224, 224)
+finish saving file: patient_082
+dataset length: 20
+(20, 224, 224) (20, 224, 224)
+finish saving file: patient_031
+dataset length: 20
+(20, 224, 224) (20, 224, 224)
+finish saving file: patient_005
+dataset length: 20
+/home/kl321/miniconda3/envs/medsam/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3504: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/kl321/miniconda3/envs/medsam/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+(20, 224, 224) (20, 224, 224)
+finish saving file: patient_016
+patient_003.nii
+patient_003.nii
+patient_005.nii
+patient_005.nii
+patient_013.nii
+patient_013.nii
+patient_014.nii
+patient_014.nii
+patient_016.nii
+patient_016.nii
+patient_031.nii
+patient_031.nii
+patient_036.nii
+patient_036.nii
+patient_038.nii
+patient_038.nii
+patient_043.nii
+patient_043.nii
+patient_044.nii
+patient_044.nii
+patient_060.nii
+patient_060.nii
+patient_065.nii
+patient_065.nii
+patient_082.nii
+patient_082.nii
+patient_093.nii
+patient_093.nii
+patient_100.nii
+patient_100.nii
+done
+********************
+patient_003.nii
+********************
+patient_003.nii
+Dice_rv: 0.9012
+Dice_myo: 0.8534
+Dice_lv: 0.9362
+********************
+********************
+patient_005.nii
+********************
+patient_005.nii
+Dice_rv: 0.8446
+Dice_myo: 0.8580
+Dice_lv: 0.9336
+********************
+********************
+patient_013.nii
+********************
+patient_013.nii
+Dice_rv: 0.6954
+Dice_myo: 0.8736
+Dice_lv: 0.9556
+********************
+********************
+patient_014.nii
+********************
+patient_014.nii
+Dice_rv: 0.9116
+Dice_myo: 0.8195
+Dice_lv: 0.9472
+********************
+********************
+patient_016.nii
+********************
+patient_016.nii
+Dice_rv: 0.8157
+Dice_myo: 0.7649
+Dice_lv: 0.9560
+********************
+********************
+patient_031.nii
+********************
+patient_031.nii
+Dice_rv: 0.8427
+Dice_myo: 0.8325
+Dice_lv: 0.9397
+********************
+********************
+patient_036.nii
+********************
+patient_036.nii
+Dice_rv: 0.8646
+Dice_myo: 0.8915
+Dice_lv: 0.9501
+********************
+********************
+patient_038.nii
+********************
+patient_038.nii
+Dice_rv: 0.7306
+Dice_myo: 0.8455
+Dice_lv: 0.9193
+********************
+********************
+patient_043.nii
+********************
+patient_043.nii
+Dice_rv: 0.5875
+Dice_myo: 0.6873
+Dice_lv: 0.6768
+********************
+********************
+patient_044.nii
+********************
+patient_044.nii
+Dice_rv: 0.8528
+Dice_myo: 0.7606
+Dice_lv: 0.8726
+********************
+********************
+patient_060.nii
+********************
+patient_060.nii
+Dice_rv: 0.4244
+Dice_myo: 0.7872
+Dice_lv: 0.9499
+********************
+********************
+patient_065.nii
+********************
+patient_065.nii
+Dice_rv: 0.6799
+Dice_myo: 0.8112
+Dice_lv: 0.9311
+********************
+********************
+patient_082.nii
+********************
+patient_082.nii
+Dice_rv: 0.9172
+Dice_myo: 0.8501
+Dice_lv: 0.9476
+********************
+********************
+patient_093.nii
+********************
+patient_093.nii
+Dice_rv: 0.8835
+Dice_myo: 0.8062
+Dice_lv: 0.9342
+********************
+********************
+patient_100.nii
+********************
+patient_100.nii
+Dice_rv: 0.8350
+Dice_myo: 0.8608
+Dice_lv: 0.9062
+********************
+********************
+Mean_Dice
+Dice_rv0.785788646123112
+Dice_myo0.8201519754168379
+Dice_lv0.917064369413135
+Mean_HD
+********************
+avg_hd:nan
+DSC:0.8410016636510282
+HD:nan

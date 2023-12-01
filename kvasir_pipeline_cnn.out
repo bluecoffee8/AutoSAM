@@ -1,0 +1,1683 @@
+/home/kl321/AutoSAM/scripts/main_feat_seg.py:115: UserWarning: You have chosen a specific GPU. This will completely disable data parallelism.
+  warnings.warn('You have chosen a specific GPU. This will completely '
+Use GPU: 0 for training
+loaded keys: ['image_encoder.neck.0.weight', 'image_encoder.neck.1.weight', 'image_encoder.neck.1.bias', 'image_encoder.neck.2.weight', 'image_encoder.neck.3.weight', 'image_encoder.neck.3.bias', 'image_encoder.patch_embed.proj.weight', 'image_encoder.patch_embed.proj.bias', 'image_encoder.blocks.0.norm1.weight', 'image_encoder.blocks.0.norm1.bias', 'image_encoder.blocks.0.attn.rel_pos_h', 'image_encoder.blocks.0.attn.rel_pos_w', 'image_encoder.blocks.0.attn.qkv.weight', 'image_encoder.blocks.0.attn.qkv.bias', 'image_encoder.blocks.0.attn.proj.weight', 'image_encoder.blocks.0.attn.proj.bias', 'image_encoder.blocks.0.norm2.weight', 'image_encoder.blocks.0.norm2.bias', 'image_encoder.blocks.0.mlp.lin1.weight', 'image_encoder.blocks.0.mlp.lin1.bias', 'image_encoder.blocks.0.mlp.lin2.weight', 'image_encoder.blocks.0.mlp.lin2.bias', 'image_encoder.blocks.1.norm1.weight', 'image_encoder.blocks.1.norm1.bias', 'image_encoder.blocks.1.attn.rel_pos_h', 'image_encoder.blocks.1.attn.rel_pos_w', 'image_encoder.blocks.1.attn.qkv.weight', 'image_encoder.blocks.1.attn.qkv.bias', 'image_encoder.blocks.1.attn.proj.weight', 'image_encoder.blocks.1.attn.proj.bias', 'image_encoder.blocks.1.norm2.weight', 'image_encoder.blocks.1.norm2.bias', 'image_encoder.blocks.1.mlp.lin1.weight', 'image_encoder.blocks.1.mlp.lin1.bias', 'image_encoder.blocks.1.mlp.lin2.weight', 'image_encoder.blocks.1.mlp.lin2.bias', 'image_encoder.blocks.2.norm1.weight', 'image_encoder.blocks.2.norm1.bias', 'image_encoder.blocks.2.attn.rel_pos_h', 'image_encoder.blocks.2.attn.rel_pos_w', 'image_encoder.blocks.2.attn.qkv.weight', 'image_encoder.blocks.2.attn.qkv.bias', 'image_encoder.blocks.2.attn.proj.weight', 'image_encoder.blocks.2.attn.proj.bias', 'image_encoder.blocks.2.norm2.weight', 'image_encoder.blocks.2.norm2.bias', 'image_encoder.blocks.2.mlp.lin1.weight', 'image_encoder.blocks.2.mlp.lin1.bias', 'image_encoder.blocks.2.mlp.lin2.weight', 'image_encoder.blocks.2.mlp.lin2.bias', 'image_encoder.blocks.3.norm1.weight', 'image_encoder.blocks.3.norm1.bias', 'image_encoder.blocks.3.attn.rel_pos_h', 'image_encoder.blocks.3.attn.rel_pos_w', 'image_encoder.blocks.3.attn.qkv.weight', 'image_encoder.blocks.3.attn.qkv.bias', 'image_encoder.blocks.3.attn.proj.weight', 'image_encoder.blocks.3.attn.proj.bias', 'image_encoder.blocks.3.norm2.weight', 'image_encoder.blocks.3.norm2.bias', 'image_encoder.blocks.3.mlp.lin1.weight', 'image_encoder.blocks.3.mlp.lin1.bias', 'image_encoder.blocks.3.mlp.lin2.weight', 'image_encoder.blocks.3.mlp.lin2.bias', 'image_encoder.blocks.4.norm1.weight', 'image_encoder.blocks.4.norm1.bias', 'image_encoder.blocks.4.attn.rel_pos_h', 'image_encoder.blocks.4.attn.rel_pos_w', 'image_encoder.blocks.4.attn.qkv.weight', 'image_encoder.blocks.4.attn.qkv.bias', 'image_encoder.blocks.4.attn.proj.weight', 'image_encoder.blocks.4.attn.proj.bias', 'image_encoder.blocks.4.norm2.weight', 'image_encoder.blocks.4.norm2.bias', 'image_encoder.blocks.4.mlp.lin1.weight', 'image_encoder.blocks.4.mlp.lin1.bias', 'image_encoder.blocks.4.mlp.lin2.weight', 'image_encoder.blocks.4.mlp.lin2.bias', 'image_encoder.blocks.5.norm1.weight', 'image_encoder.blocks.5.norm1.bias', 'image_encoder.blocks.5.attn.rel_pos_h', 'image_encoder.blocks.5.attn.rel_pos_w', 'image_encoder.blocks.5.attn.qkv.weight', 'image_encoder.blocks.5.attn.qkv.bias', 'image_encoder.blocks.5.attn.proj.weight', 'image_encoder.blocks.5.attn.proj.bias', 'image_encoder.blocks.5.norm2.weight', 'image_encoder.blocks.5.norm2.bias', 'image_encoder.blocks.5.mlp.lin1.weight', 'image_encoder.blocks.5.mlp.lin1.bias', 'image_encoder.blocks.5.mlp.lin2.weight', 'image_encoder.blocks.5.mlp.lin2.bias', 'image_encoder.blocks.6.norm1.weight', 'image_encoder.blocks.6.norm1.bias', 'image_encoder.blocks.6.attn.rel_pos_h', 'image_encoder.blocks.6.attn.rel_pos_w', 'image_encoder.blocks.6.attn.qkv.weight', 'image_encoder.blocks.6.attn.qkv.bias', 'image_encoder.blocks.6.attn.proj.weight', 'image_encoder.blocks.6.attn.proj.bias', 'image_encoder.blocks.6.norm2.weight', 'image_encoder.blocks.6.norm2.bias', 'image_encoder.blocks.6.mlp.lin1.weight', 'image_encoder.blocks.6.mlp.lin1.bias', 'image_encoder.blocks.6.mlp.lin2.weight', 'image_encoder.blocks.6.mlp.lin2.bias', 'image_encoder.blocks.7.norm1.weight', 'image_encoder.blocks.7.norm1.bias', 'image_encoder.blocks.7.attn.rel_pos_h', 'image_encoder.blocks.7.attn.rel_pos_w', 'image_encoder.blocks.7.attn.qkv.weight', 'image_encoder.blocks.7.attn.qkv.bias', 'image_encoder.blocks.7.attn.proj.weight', 'image_encoder.blocks.7.attn.proj.bias', 'image_encoder.blocks.7.norm2.weight', 'image_encoder.blocks.7.norm2.bias', 'image_encoder.blocks.7.mlp.lin1.weight', 'image_encoder.blocks.7.mlp.lin1.bias', 'image_encoder.blocks.7.mlp.lin2.weight', 'image_encoder.blocks.7.mlp.lin2.bias', 'image_encoder.blocks.8.norm1.weight', 'image_encoder.blocks.8.norm1.bias', 'image_encoder.blocks.8.attn.rel_pos_h', 'image_encoder.blocks.8.attn.rel_pos_w', 'image_encoder.blocks.8.attn.qkv.weight', 'image_encoder.blocks.8.attn.qkv.bias', 'image_encoder.blocks.8.attn.proj.weight', 'image_encoder.blocks.8.attn.proj.bias', 'image_encoder.blocks.8.norm2.weight', 'image_encoder.blocks.8.norm2.bias', 'image_encoder.blocks.8.mlp.lin1.weight', 'image_encoder.blocks.8.mlp.lin1.bias', 'image_encoder.blocks.8.mlp.lin2.weight', 'image_encoder.blocks.8.mlp.lin2.bias', 'image_encoder.blocks.9.norm1.weight', 'image_encoder.blocks.9.norm1.bias', 'image_encoder.blocks.9.attn.rel_pos_h', 'image_encoder.blocks.9.attn.rel_pos_w', 'image_encoder.blocks.9.attn.qkv.weight', 'image_encoder.blocks.9.attn.qkv.bias', 'image_encoder.blocks.9.attn.proj.weight', 'image_encoder.blocks.9.attn.proj.bias', 'image_encoder.blocks.9.norm2.weight', 'image_encoder.blocks.9.norm2.bias', 'image_encoder.blocks.9.mlp.lin1.weight', 'image_encoder.blocks.9.mlp.lin1.bias', 'image_encoder.blocks.9.mlp.lin2.weight', 'image_encoder.blocks.9.mlp.lin2.bias', 'image_encoder.blocks.10.norm1.weight', 'image_encoder.blocks.10.norm1.bias', 'image_encoder.blocks.10.attn.rel_pos_h', 'image_encoder.blocks.10.attn.rel_pos_w', 'image_encoder.blocks.10.attn.qkv.weight', 'image_encoder.blocks.10.attn.qkv.bias', 'image_encoder.blocks.10.attn.proj.weight', 'image_encoder.blocks.10.attn.proj.bias', 'image_encoder.blocks.10.norm2.weight', 'image_encoder.blocks.10.norm2.bias', 'image_encoder.blocks.10.mlp.lin1.weight', 'image_encoder.blocks.10.mlp.lin1.bias', 'image_encoder.blocks.10.mlp.lin2.weight', 'image_encoder.blocks.10.mlp.lin2.bias', 'image_encoder.blocks.11.norm1.weight', 'image_encoder.blocks.11.norm1.bias', 'image_encoder.blocks.11.attn.rel_pos_h', 'image_encoder.blocks.11.attn.rel_pos_w', 'image_encoder.blocks.11.attn.qkv.weight', 'image_encoder.blocks.11.attn.qkv.bias', 'image_encoder.blocks.11.attn.proj.weight', 'image_encoder.blocks.11.attn.proj.bias', 'image_encoder.blocks.11.norm2.weight', 'image_encoder.blocks.11.norm2.bias', 'image_encoder.blocks.11.mlp.lin1.weight', 'image_encoder.blocks.11.mlp.lin1.bias', 'image_encoder.blocks.11.mlp.lin2.weight', 'image_encoder.blocks.11.mlp.lin2.bias', 'image_encoder.pos_embed']
+['cju1erep75us208553i4ofwwe.jpg', 'cju7g7ba42z310987bqzbi2bq.jpg', 'cju7dz5yy2i7z0801ausi7rna.jpg', 'cju85omszllp30850b6rm9mi3.jpg', 'cju77j66ez52p08019xygi0co.jpg', 'cju5ht88gedbu0755xrcuddcx.jpg', 'cju7fbndk2sl608015ravktum.jpg', 'cju8ashhnquqr0801rwduzt7d.jpg', 'cju774fmayxif0818u2g79usw.jpg', 'cju2s16zp317h0799gr67jqc2.jpg']
+['cju5fw37edaae0801vkwvocn7.jpg', 'cju2z9vlp9j0w0801oag91sy9.jpg', 'cju7cq6su27qv075574dir0r3.jpg', 'cju7azuu31mia0801pf9ib5ed.jpg', 'cju7efffp2ivf0817etg3jehl.jpg', 'cju330ofbc2l30801th5g3hw6.jpg', 'ck2bxqz3evvg20794iiyv5v2m.jpg', 'cjyzkpsbjdsjq07211dfi4sru.jpg', 'cju32jcdabepz0878d0cznmfe.jpg', 'cju43lcnum9y10755bjs7z87f.jpg', 'cju7ahtkb1jr90801jck4kbds.jpg', 'cju32phw2bv130801yj7bkouq.jpg', 'cju7dvl5m2n4t0755hlnnjjet.jpg', 'cju87q6yoneim0871dl4phvkd.jpg', 'cju5vbo6jldrt0871jf6f1700.jpg', 'cju2wx0gh7fpz0878wwyd9ep8.jpg', 'cju7fnfv02tt90801djnix9m8.jpg', 'cju8dk7eztzup08182yxko5zh.jpg', 'cju6wjm81vgsc0987enk9n3pr.jpg', 'cju5enq1tcn1i0755hnkon787.jpg', 'cju7dmlgf2ebw0871ieqas5fh.jpg', 'cju2hlm19vjjf0801o69qnber.jpg', 'cju2phaksnahz0993yxogjcpv.jpg', 'cju2nd7l7z98o0799gfjvyfmw.jpg', 'cju88trl3ogi208716qvti51b.jpg', 'cju7ez7r22qbc08015xfoz2wb.jpg', 'cju5x28nzm7t907558ocq4bt7.jpg', 'cju8bj2ssrmlm0871gc2ug2rs.jpg', 'cju8c82iosagu0817l74s4m5g.jpg', 'cju0s2a9ekvms080138tjjpxr.jpg', 'cju8c5mxls96t0850wvkvsity.jpg', 'cju2zkpdl9h7t0799ix60teqg.jpg', 'cju2lyynuymli0855g7fxgbhe.jpg', 'cju2otvvv0l7z0855x7we8cb0.jpg', 'cju846ec0kj7z08012o10klrb.jpg', 'cju40m0rjkpw80871z6n6yg1u.jpg', 'cju3u4lxmg59o0755rz42b9en.jpg', 'ck2da7fwcjfis07218r1rvm95.jpg', 'cju84dsvaklpx098750hp83x4.jpg', 'cju1dfeupuzlw0835gnxip369.jpg', 'cju34m7h536wq0988xz7gx79v.jpg', 'cju7crgxa28550755wbsgqkel.jpg', 'cju43o6n7m9nk087191ijwqq9.jpg', 'cju1cj3f0qi5n0993ut8f49rj.jpg', 'cju87xn2snfmv0987sc3d9xnq.jpg', 'cju5wqonpm0e60801z88ewmy1.jpg', 'cju8432cmkgq90871cxe4iptl.jpg', 'cju886ryxnsl50801r93jai7q.jpg', 'cju42u5bjlvi10801dc13sskp.jpg', 'cju16fpvhzypl0799p9phnlx6.jpg', 'cju41z76wlgbz0801qdetlvby.jpg', 'cju34eqjpcpm508788b3lhp97.jpg', 'cju8amfdtqi4x09871tygrgqe.jpg', 'cju85rkbnlo1c08503uxcpax1.jpg', 'cju7avvi51iox0817ym55y6tt.jpg', 'cju2hqt33lmra0988fr5ijv8j.jpg', 'cju2qdj95ru8g09886gfi9rsz.jpg', 'cju30ftgja7170855xl9bkdm0.jpg', 'cju2xlcqxy9c60988vjacdznb.jpg', 'cju2trtjf4qjd0878a2zle9v9.jpg', 'cju84gpefknwm098714oq8q61.jpg', 'cju7fen322ou10817ziqkob4k.jpg', 'cju5buy2bal250818ipl6fqwv.jpg', 'cju3xhpvvimda0987ygrpzni2.jpg', 'cju7ecl9i2i060987xawjp4l0.jpg', 'cju7ff97z2ow40817u2r83my5.jpg', 'cju77q10sz9ug0801449wu1nu.jpg', 'cju2qqn5ys4uo0988ewrt2ip2.jpg', 'cju6vrs1ov8cr098788h8gs6j.jpg', 'cju2t62nq45jl0799odpufwx6.jpg', 'cju84kplnl1y30755ropua1b0.jpg', 'cju34xspwzenf0993cyzajv9n.jpg', 'ck2bxlujamu330725szlc2jdu.jpg', 'cju2qfie4rvz508357kad9z5o.jpg', 'cju33yemn2qb20988wfjxximx.jpg', 'cjyzu9th0qt4r0a46pyl4zik0.jpg', 'cju1hp9i2xu8e0988u2dazk7m.jpg', 'cju160wshltz10993i1gmqxbe.jpg', 'cju2zwg05a0oy0801yr73ig7g.jpg', 'cju5xkwzxmf0z0818gk4xabdm.jpg', 'cju8ayeq7r1fb0818z1junacy.jpg', 'cju45ty6zn9oz0850qy4qnck1.jpg', 'cju892fesoq2g0801n0e0jyia.jpg', 'cju2y40d8ulqo0993q0adtgtb.jpg', 'cju7aez2x1jtj0871ztezs3oi.jpg', 'cju8aw9n1qyg10801jkjlmors.jpg', 'cju5huurrecm70801y680y13m.jpg', 'cju30525w04r10835ygp257sb.jpg', 'cju43h43am1dy08176gwfhmnt.jpg', 'cju5vxuc5loxw0818u8xgf45p.jpg', 'cju6ywm40wdbo0987pbftsvtg.jpg', 'cju2syxa93yw40799x2iuwabz.jpg', 'cju40u30gkuzc0871rq7t666d.jpg', 'cju33mirdc8mj0799k33wzoes.jpg', 'cju2top2ruxxy0988p1svx36g.jpg', 'cju41nz76lcxu0755cya2qefx.jpg', 'cju7dhpsc2dnn0818025m6857.jpg', 'cju2m71z2ywwv080131bcrsd3.jpg', 'cju85nr8elly209872w9n5m0s.jpg', 'cju2ricdv2iys0878sv1adh0u.jpg', 'cju8dqkrqu83i0818ev74qpxq.jpg', 'cju5u6wf0kh1t0755bg1ssixv.jpg', 'cju16whaj0e7n0855q7b6cjkm.jpg', 'cju1djtprvd7b0988thwwrg09.jpg', 'cju83nwu1jxte0987h1krpfmv.jpg', 'cju2igw4gvxds0878808qj398.jpg', 'cju2nsmwjlzyl0993jl80chvz.jpg', 'cju8aqq8uqmoq0987hphto9gg.jpg', 'cju83mki1jv5w0817kubxm31r.jpg', 'cju1dhfok4mhe0878jlgrag0h.jpg', 'cju2zrojo9kcd0878ld2epejq.jpg', 'cju5wuhm1lwm40987vugqn3vv.jpg', 'cju2rlqdnoz9k0993cpjae3x0.jpg', 'cju5wrrs0m2af0818vmnajbtw.jpg', 'cju5ddda9bkkt0850enzwatb1.jpg', 'cju7es23b2vcp0755gpbm9s7v.jpg', 'cju8b6rp0r5st0850184f79xt.jpg', 'cju7ea4om2l910801bohqjccy.jpg', 'cju6yywx1whbb0871ksgfgf9f.jpg', 'cju8c1a0ws7o208181c6lbsom.jpg', 'cju3xeexgii1j0817zs68tb4g.jpg', 'cju2hugv9vget0799hhk7ksvg.jpg', 'cju175facms5f0993a5tjikvt.jpg', 'cju2xd75m82720801q4s4ik3n.jpg', 'cju1f15k3w4ct0835cmde6ypo.jpg', 'cju87mrypnb1e0818scv1mxxg.jpg', 'cju2t3ibkuecr0835o7si16zv.jpg', 'cju2qozsk20cq0855ugrg3cri.jpg', 'cju5k503sfa5f0871lx0rpu5y.jpg', 'cju85je7vlht70817c9jcjwi4.jpg', 'cju1hirfi7ekp0855q0vgm9qq.jpg', 'cju6xa0qmvzun0818xjukgncj.jpg', 'cju5b9oyda4yr0850g9viziyv.jpg', 'cju13fwthn9mq0835gacxgy01.jpg', 'cju41s6nbleqy0755e2mslg0b.jpg', 'cju6vgdmivcvb08018fra5lnv.jpg', 'cju1c0qb4tzi308355wtsnp0y.jpg', 'cju5von04litr08718j8po40a.jpg', 'cju2qs32r1vys07999conmbvx.jpg', 'cju8bh8surexp0987o5pzklk1.jpg', 'cju2suk42469908015ngmq6f2.jpg', 'cju2nfnvxzdkd0878399axlco.jpg', 'cju42py9mlqyd0818u3d1d7ga.jpg', 'cju2qh5le1ock0878oahaql7d.jpg', 'cju85ia1slh220987y7c20sm2.jpg', 'cju302fqq9spc0878rrygyzzz.jpg', 'cju2z1nxlzaj40835wj81s1iy.jpg', 'cju843yjskhq30818qre4rwm2.jpg', 'cju5wrapcm2290818jsh26ppb.jpg', 'cju88q6h6obpd0871ckmiabbo.jpg']
+['cju5wtdu4m0im0871mix0yvc0.jpg', 'cju2nguelpmlj0835rojdn097.jpg', 'cju2mfjndoz700988b9lc3zeq.jpg', 'cju88y1mwoln50871emyfny1g.jpg', 'cju7epwj82koz098713apjnzo.jpg', 'cju2s2527pfyr0993l3h1149a.jpg', 'cju7ddtz729960801uazp1knc.jpg', 'cju5hl8nee8a40755fm8qjj0o.jpg', 'cju5u8gz4kj5b07552e2wpkwp.jpg', 'cju2nnqrqzp580855z8mhzgd6.jpg', 'cju6z2616wqbk07555bvnuyr1.jpg', 'cju1h89h6xbnx08352k2790o9.jpg', 'cju8a3nhbpwnb0850d37fo2na.jpg', 'cju2qtee81yd708787bsjr75d.jpg', 'cju3v72v5h1qz0818fggilwtq.jpg', 'cju1h5w4wxajx0835mc954kxy.jpg', 'cju5bmhdcafs909878qfzrqzi.jpg', 'cju2tjrog4jy30878pawyazqc.jpg', 'cju2hdr06v2bq0799mbm3bks1.jpg', 'cju3ul8dogf1z09872y2ecowp.jpg', 'cju83kxitjv340987z09m0ezy.jpg', 'cju3518w2d838079939fqztbc.jpg', 'cju2rga4psq9n09881z519xx0.jpg', 'cju8bysfgrzkl081786jwac09.jpg', 'cju1b3zgj3d8e0801kpolea6c.jpg', 'cju8apjewqrk00801k5d71gky.jpg', 'cju32csyfblyh080170aa3x5p.jpg', 'cju2urqpwvxw70835rvndvtsi.jpg', 'cju1f8w0t65en0799m9oacq0q.jpg', 'cju2lejzcy4pc0878c9rlonot.jpg', 'cju2xbk0080y80801eghyddi2.jpg', 'cju8a84g0q76m0818hwiggkod.jpg', 'cju5yhgznmkzb0801cji2vi8j.jpg', 'cju7atnm31if40817pqclnjer.jpg', 'cju87li0zn3yb0817kbwgjiz8.jpg', 'cjyztzaqtrv430848l8xgcerw.jpg', 'cju5fydrud94708507vo6oy21.jpg', 'cju8c5zcbsdfz0801o5t6jag1.jpg', 'cju17r8il13910799dr2wme2e.jpg', 'cju5yimthmlv80850zhoc90c2.jpg', 'cju5y7buemcw80987p0r30g9f.jpg', 'cju7fcgbe2z3p07550vaflqdb.jpg', 'cjyzjzssvd8pq0838f4nolj5l.jpg', 'cju358pwtdby20878cg7nm0np.jpg', 'cju8czvnztbf40871b4m7t78w.jpg', 'cju2r11x7sdgx0988o8ule0wl.jpg', 'cju1fmsyf6gxb0801cimx2gle.jpg', 'cju1c6yfz42md08550zgoz3pw.jpg', 'cju5yclrymlgj0818k426ud6z.jpg', 'cju414lf2l1lt0801rl3hjllj.jpg', 'cju83ipu3jwpx0801z5pvguf8.jpg', 'cju45lbgznahl08180xz1h7u6.jpg', 'cju85plp7lmkw0850rx42jdpf.jpg', 'cju884985nlmx0817vzpax3y4.jpg', 'cju43eigtm6ev0801mv0m96t1.jpg', 'cju6us80mv1b50871ebyq2wxa.jpg', 'cju2oq5570avm079959o20op1.jpg', 'cju8djdqztu6408506pzhlo18.jpg', 'cju6z7e4bwgdd0987ogkzq9kt.jpg', 'cju0t4oil7vzk099370nun5h9.jpg', 'cju8b4ja9r2s808509d45ma86.jpg', 'cju35fxqyzt5p0993vusm54qz.jpg', 'cju0u82z3cuma0835wlxrnrjv.jpg', 'cju7afqon1ip40850ue2308b6.jpg', 'cju2rmd2rsw9g09888hh1efu0.jpg', 'cju5bj926aiec07559rshy4wa.jpg', 'cju35oyvd3y850988km12hdz1.jpg', 'cju16b6ynq8e40988m8vx0xnj.jpg', 'cju2tpfa5uyx408359datxqqj.jpg', 'cju3tvffffx5f0818t5ov22al.jpg', 'cju7er4kc2opa0801anuxc0eb.jpg', 'cju5cky5xb0ay0801oxet697t.jpg', 'cju6v4szov55u0871qmqz3v8n.jpg', 'cju2xyd9vyi7m098831qcucse.jpg', 'cju2zy1e49pqk0878t6ncqn12.jpg', 'cju5cu8qkb84x08186jwo8yin.jpg', 'ck2bxskgxxzfv08386xkqtqdy.jpg', 'cju2ulk385h170799rlklxob0.jpg', 'cju3xvoo2iqlc0817eku2r3wl.jpg', 'cju2xf8e5y2wm08359vcgk09b.jpg', 'cju5ew4h9cqaf0818rrczkmqh.jpg', 'cju5v8pgplg6k0755rvi2t63h.jpg', 'cju34aozyyy830993bn16u32n.jpg', 'cju15ptjtppz40988odsm9azx.jpg', 'cju422cm8lfxn0818ojicxejb.jpg', 'cju5wj0faly5008187n6530af.jpg', 'cju45ofd9ne1j0801ri8dup7t.jpg', 'cju1cbokpuiw70988j4lq1fpi.jpg', 'cju3280wv1ir009882jze27tc.jpg', 'cju8bpctzrqkr0850zeldv9kt.jpg', 'cju33o12x2jm50988944mxq0v.jpg', 'cju8cdeazsm8h0801jxifmzur.jpg', 'cju6vvxsev9y30987kespucdg.jpg', 'cju3xwpgviwlx0871rwm15q7v.jpg', 'cju5tenjojp1j0755ms4949h2.jpg', 'cju5bbtwsa8cl0987wgfsqpao.jpg', 'cju2yg5ht8i4p087800js8hp4.jpg', 'cju3521y5d5mq0878t3ezsu4p.jpg', 'cju32pzh9bpw10855q4vaxfhe.jpg', 'cju5hwonqedw10801vsd3w6kk.jpg', 'cju7eueum2oqn0850rodmx8zo.jpg', 'cju33za6l2qy70988jhrlp2ev.jpg', 'cju2oo0wh0bqy0878biujeyhe.jpg', 'cju8buos5rz9b08715lfr0f4f.jpg', 'cju1cdxvz48hw0801i0fjwcnk.jpg', 'cju1ejj7dvqfa0835ra184v5m.jpg', 'cju17x0j4nfc10993y31pvlgs.jpg', 'cju1dia8hvc6v098827mgffnm.jpg', 'cju888fr7nveu0818r9uwtiit.jpg', 'cju34c1xfyz920993itxkkfad.jpg', 'cju2zr3c3vwb00993jn06bbaz.jpg', 'cju5yjq1pmlgc0801z0t24bly.jpg', 'cju412uwlkva50850d1ps1ww7.jpg', 'cju6x0yqbvxqt0755dhxislgb.jpg', 'cju5i39mreass0817au8p22zy.jpg', 'cju85citjlnfm0755i4rk5tqj.jpg', 'cju0u2g7pmnux0801vkk47ivj.jpg', 'cju7d9seq29zd0871nzl2uu5m.jpg', 'cju2saez63gxl08559ucjq3kt.jpg', 'cju7cl8zm1xcu0817ado0jpas.jpg', 'cju18ibp219ub08783i6o98g7.jpg', 'cju7d8m3b2e210755l8fj1yph.jpg', 'cju89y9h0puti0818i5yw29e6.jpg', 'cju7f0ec32txj08184asb8w5f.jpg', 'cju7f900s2o0k08175gl1giid.jpg', 'cju2mh8t6p07008350e01tx2a.jpg', 'cju15mhjczc8z0801kit5c6di.jpg', 'cju7dwe282dc309876rco45ts.jpg', 'cju43c92lm5cj0755lorsorfg.jpg', 'cju3128yi0rpu0988o4oo5n8n.jpg', 'cju1d96gsv62d09881b3wecw2.jpg', 'cju5fu081d8gc0818l3yylujk.jpg', 'cju5vutu7ll8w0871dfp92n9p.jpg', 'cju31t8xd17bk0835rnb893jk.jpg', 'cju30xqmh0ni00835ix3batv1.jpg', 'cju7b9vcs1luz0987ta60j1dy.jpg', 'cju8ando2qqdo0818ck7i1be1.jpg', 'cju2wve9v7esz0878mxsdcy04.jpg', 'cju43b8daly4408170e5ev06g.jpg', 'cju42wamblrqn098798r2yyok.jpg', 'cju45rj7ln8980850a7821fov.jpg', 'cju7ev2b12owa08500bpfpwyw.jpg', 'cju7dubap2g0w0801fgl42mg9.jpg', 'cju35mdz73x890835eynq1h9v.jpg', 'cju6vucxvvlda0755j7msqnya.jpg', 'cju88fpm4o0tl0871w1i6a4ds.jpg', 'cju6wuojavt740818b5qcv3iw.jpg', 'cju1fb9236a110801yvg0fwju.jpg', 'cju353d1eda8c07992afde611.jpg', 'cju2rkjfwoxys0993x768l1j2.jpg']
+dataset length: 10
+dataset length: 150
+dataset length: 150
+output_experiment/kvasir_cnn
+Train: [0][0/3]	loss 1.3334
+VALIDATE
+Epoch:  0 Loss: 0.6225
+Train: [1][0/3]	loss 1.2182
+VALIDATE
+Epoch:  1 Loss: 0.6185
+Train: [2][0/3]	loss 1.1792
+VALIDATE
+Epoch:  2 Loss: 0.6220
+Train: [3][0/3]	loss 1.1887
+VALIDATE
+Epoch:  3 Loss: 0.6152
+Train: [4][0/3]	loss 1.1026
+VALIDATE
+Epoch:  4 Loss: 0.6701
+Test
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5wtdu4m0im0871mix0yvc0
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2nguelpmlj0835rojdn097
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2mfjndoz700988b9lc3zeq
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju88y1mwoln50871emyfny1g
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7epwj82koz098713apjnzo
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2s2527pfyr0993l3h1149a
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7ddtz729960801uazp1knc
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5hl8nee8a40755fm8qjj0o
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5u8gz4kj5b07552e2wpkwp
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2nnqrqzp580855z8mhzgd6
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju6z2616wqbk07555bvnuyr1
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1h89h6xbnx08352k2790o9
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8a3nhbpwnb0850d37fo2na
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2qtee81yd708787bsjr75d
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju3v72v5h1qz0818fggilwtq
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1h5w4wxajx0835mc954kxy
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5bmhdcafs909878qfzrqzi
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2tjrog4jy30878pawyazqc
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2hdr06v2bq0799mbm3bks1
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju3ul8dogf1z09872y2ecowp
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju83kxitjv340987z09m0ezy
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju3518w2d838079939fqztbc
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2rga4psq9n09881z519xx0
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8bysfgrzkl081786jwac09
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1b3zgj3d8e0801kpolea6c
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8apjewqrk00801k5d71gky
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju32csyfblyh080170aa3x5p
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2urqpwvxw70835rvndvtsi
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1f8w0t65en0799m9oacq0q
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2lejzcy4pc0878c9rlonot
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2xbk0080y80801eghyddi2
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8a84g0q76m0818hwiggkod
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5yhgznmkzb0801cji2vi8j
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7atnm31if40817pqclnjer
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju87li0zn3yb0817kbwgjiz8
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cjyztzaqtrv430848l8xgcerw
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5fydrud94708507vo6oy21
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8c5zcbsdfz0801o5t6jag1
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju17r8il13910799dr2wme2e
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5yimthmlv80850zhoc90c2
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5y7buemcw80987p0r30g9f
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7fcgbe2z3p07550vaflqdb
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cjyzjzssvd8pq0838f4nolj5l
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju358pwtdby20878cg7nm0np
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8czvnztbf40871b4m7t78w
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2r11x7sdgx0988o8ule0wl
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1fmsyf6gxb0801cimx2gle
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1c6yfz42md08550zgoz3pw
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5yclrymlgj0818k426ud6z
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju414lf2l1lt0801rl3hjllj
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju83ipu3jwpx0801z5pvguf8
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju45lbgznahl08180xz1h7u6
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju85plp7lmkw0850rx42jdpf
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju884985nlmx0817vzpax3y4
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju43eigtm6ev0801mv0m96t1
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju6us80mv1b50871ebyq2wxa
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2oq5570avm079959o20op1
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8djdqztu6408506pzhlo18
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju6z7e4bwgdd0987ogkzq9kt
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju0t4oil7vzk099370nun5h9
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8b4ja9r2s808509d45ma86
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju35fxqyzt5p0993vusm54qz
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju0u82z3cuma0835wlxrnrjv
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7afqon1ip40850ue2308b6
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2rmd2rsw9g09888hh1efu0
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5bj926aiec07559rshy4wa
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju35oyvd3y850988km12hdz1
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju16b6ynq8e40988m8vx0xnj
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2tpfa5uyx408359datxqqj
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju3tvffffx5f0818t5ov22al
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7er4kc2opa0801anuxc0eb
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5cky5xb0ay0801oxet697t
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju6v4szov55u0871qmqz3v8n
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2xyd9vyi7m098831qcucse
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2zy1e49pqk0878t6ncqn12
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5cu8qkb84x08186jwo8yin
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: ck2bxskgxxzfv08386xkqtqdy
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2ulk385h170799rlklxob0
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju3xvoo2iqlc0817eku2r3wl
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2xf8e5y2wm08359vcgk09b
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5ew4h9cqaf0818rrczkmqh
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5v8pgplg6k0755rvi2t63h
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju34aozyyy830993bn16u32n
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju15ptjtppz40988odsm9azx
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju422cm8lfxn0818ojicxejb
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5wj0faly5008187n6530af
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju45ofd9ne1j0801ri8dup7t
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1cbokpuiw70988j4lq1fpi
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju3280wv1ir009882jze27tc
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8bpctzrqkr0850zeldv9kt
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju33o12x2jm50988944mxq0v
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8cdeazsm8h0801jxifmzur
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju6vvxsev9y30987kespucdg
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju3xwpgviwlx0871rwm15q7v
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5tenjojp1j0755ms4949h2
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5bbtwsa8cl0987wgfsqpao
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2yg5ht8i4p087800js8hp4
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju3521y5d5mq0878t3ezsu4p
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju32pzh9bpw10855q4vaxfhe
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5hwonqedw10801vsd3w6kk
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7eueum2oqn0850rodmx8zo
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju33za6l2qy70988jhrlp2ev
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2oo0wh0bqy0878biujeyhe
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8buos5rz9b08715lfr0f4f
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1cdxvz48hw0801i0fjwcnk
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1ejj7dvqfa0835ra184v5m
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju17x0j4nfc10993y31pvlgs
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1dia8hvc6v098827mgffnm
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju888fr7nveu0818r9uwtiit
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju34c1xfyz920993itxkkfad
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2zr3c3vwb00993jn06bbaz
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5yjq1pmlgc0801z0t24bly
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju412uwlkva50850d1ps1ww7
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju6x0yqbvxqt0755dhxislgb
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5i39mreass0817au8p22zy
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju85citjlnfm0755i4rk5tqj
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju0u2g7pmnux0801vkk47ivj
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7d9seq29zd0871nzl2uu5m
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2saez63gxl08559ucjq3kt
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7cl8zm1xcu0817ado0jpas
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju18ibp219ub08783i6o98g7
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7d8m3b2e210755l8fj1yph
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju89y9h0puti0818i5yw29e6
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7f0ec32txj08184asb8w5f
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7f900s2o0k08175gl1giid
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2mh8t6p07008350e01tx2a
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju15mhjczc8z0801kit5c6di
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7dwe282dc309876rco45ts
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju43c92lm5cj0755lorsorfg
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju3128yi0rpu0988o4oo5n8n
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1d96gsv62d09881b3wecw2
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5fu081d8gc0818l3yylujk
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju5vutu7ll8w0871dfp92n9p
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju31t8xd17bk0835rnb893jk
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju30xqmh0ni00835ix3batv1
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7b9vcs1luz0987ta60j1dy
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju8ando2qqdo0818ck7i1be1
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2wve9v7esz0878mxsdcy04
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju43b8daly4408170e5ev06g
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju42wamblrqn098798r2yyok
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju45rj7ln8980850a7821fov
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7ev2b12owa08500bpfpwyw
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju7dubap2g0w0801fgl42mg9
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju35mdz73x890835eynq1h9v
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju6vucxvvlda0755j7msqnya
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju88fpm4o0tl0871w1i6a4ds
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju6wuojavt740818b5qcv3iw
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju1fb9236a110801yvg0fwju
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju353d1eda8c07992afde611
+dataset length: 1
+(1, 320, 320) (320, 320)
+finish saving file: cju2rkjfwoxys0993x768l1j2
+cju0t4oil7vzk099370nun5h9.nii
+cju0t4oil7vzk099370nun5h9.nii
+cju0u2g7pmnux0801vkk47ivj.nii
+cju0u2g7pmnux0801vkk47ivj.nii
+cju0u82z3cuma0835wlxrnrjv.nii
+cju0u82z3cuma0835wlxrnrjv.nii
+cju15mhjczc8z0801kit5c6di.nii
+cju15mhjczc8z0801kit5c6di.nii
+cju15ptjtppz40988odsm9azx.nii
+cju15ptjtppz40988odsm9azx.nii
+cju16b6ynq8e40988m8vx0xnj.nii
+cju16b6ynq8e40988m8vx0xnj.nii
+cju17r8il13910799dr2wme2e.nii
+cju17r8il13910799dr2wme2e.nii
+cju17x0j4nfc10993y31pvlgs.nii
+cju17x0j4nfc10993y31pvlgs.nii
+cju18ibp219ub08783i6o98g7.nii
+cju18ibp219ub08783i6o98g7.nii
+cju1b3zgj3d8e0801kpolea6c.nii
+cju1b3zgj3d8e0801kpolea6c.nii
+cju1c6yfz42md08550zgoz3pw.nii
+cju1c6yfz42md08550zgoz3pw.nii
+cju1cbokpuiw70988j4lq1fpi.nii
+cju1cbokpuiw70988j4lq1fpi.nii
+cju1cdxvz48hw0801i0fjwcnk.nii
+cju1cdxvz48hw0801i0fjwcnk.nii
+cju1d96gsv62d09881b3wecw2.nii
+cju1d96gsv62d09881b3wecw2.nii
+cju1dia8hvc6v098827mgffnm.nii
+cju1dia8hvc6v098827mgffnm.nii
+cju1ejj7dvqfa0835ra184v5m.nii
+cju1ejj7dvqfa0835ra184v5m.nii
+cju1f8w0t65en0799m9oacq0q.nii
+cju1f8w0t65en0799m9oacq0q.nii
+cju1fb9236a110801yvg0fwju.nii
+cju1fb9236a110801yvg0fwju.nii
+cju1fmsyf6gxb0801cimx2gle.nii
+cju1fmsyf6gxb0801cimx2gle.nii
+cju1h5w4wxajx0835mc954kxy.nii
+cju1h5w4wxajx0835mc954kxy.nii
+cju1h89h6xbnx08352k2790o9.nii
+cju1h89h6xbnx08352k2790o9.nii
+cju2hdr06v2bq0799mbm3bks1.nii
+cju2hdr06v2bq0799mbm3bks1.nii
+cju2lejzcy4pc0878c9rlonot.nii
+cju2lejzcy4pc0878c9rlonot.nii
+cju2mfjndoz700988b9lc3zeq.nii
+cju2mfjndoz700988b9lc3zeq.nii
+cju2mh8t6p07008350e01tx2a.nii
+cju2mh8t6p07008350e01tx2a.nii
+cju2nguelpmlj0835rojdn097.nii
+cju2nguelpmlj0835rojdn097.nii
+cju2nnqrqzp580855z8mhzgd6.nii
+cju2nnqrqzp580855z8mhzgd6.nii
+cju2oo0wh0bqy0878biujeyhe.nii
+cju2oo0wh0bqy0878biujeyhe.nii
+cju2oq5570avm079959o20op1.nii
+cju2oq5570avm079959o20op1.nii
+cju2qtee81yd708787bsjr75d.nii
+cju2qtee81yd708787bsjr75d.nii
+cju2r11x7sdgx0988o8ule0wl.nii
+cju2r11x7sdgx0988o8ule0wl.nii
+cju2rga4psq9n09881z519xx0.nii
+cju2rga4psq9n09881z519xx0.nii
+cju2rkjfwoxys0993x768l1j2.nii
+cju2rkjfwoxys0993x768l1j2.nii
+cju2rmd2rsw9g09888hh1efu0.nii
+cju2rmd2rsw9g09888hh1efu0.nii
+cju2s2527pfyr0993l3h1149a.nii
+cju2s2527pfyr0993l3h1149a.nii
+cju2saez63gxl08559ucjq3kt.nii
+cju2saez63gxl08559ucjq3kt.nii
+cju2tjrog4jy30878pawyazqc.nii
+cju2tjrog4jy30878pawyazqc.nii
+cju2tpfa5uyx408359datxqqj.nii
+cju2tpfa5uyx408359datxqqj.nii
+cju2ulk385h170799rlklxob0.nii
+cju2ulk385h170799rlklxob0.nii
+cju2urqpwvxw70835rvndvtsi.nii
+cju2urqpwvxw70835rvndvtsi.nii
+cju2wve9v7esz0878mxsdcy04.nii
+cju2wve9v7esz0878mxsdcy04.nii
+cju2xbk0080y80801eghyddi2.nii
+cju2xbk0080y80801eghyddi2.nii
+cju2xf8e5y2wm08359vcgk09b.nii
+cju2xf8e5y2wm08359vcgk09b.nii
+cju2xyd9vyi7m098831qcucse.nii
+cju2xyd9vyi7m098831qcucse.nii
+cju2yg5ht8i4p087800js8hp4.nii
+cju2yg5ht8i4p087800js8hp4.nii
+cju2zr3c3vwb00993jn06bbaz.nii
+cju2zr3c3vwb00993jn06bbaz.nii
+cju2zy1e49pqk0878t6ncqn12.nii
+cju2zy1e49pqk0878t6ncqn12.nii
+cju30xqmh0ni00835ix3batv1.nii
+cju30xqmh0ni00835ix3batv1.nii
+cju3128yi0rpu0988o4oo5n8n.nii
+cju3128yi0rpu0988o4oo5n8n.nii
+cju31t8xd17bk0835rnb893jk.nii
+cju31t8xd17bk0835rnb893jk.nii
+cju3280wv1ir009882jze27tc.nii
+cju3280wv1ir009882jze27tc.nii
+cju32csyfblyh080170aa3x5p.nii
+cju32csyfblyh080170aa3x5p.nii
+cju32pzh9bpw10855q4vaxfhe.nii
+cju32pzh9bpw10855q4vaxfhe.nii
+cju33o12x2jm50988944mxq0v.nii
+cju33o12x2jm50988944mxq0v.nii
+cju33za6l2qy70988jhrlp2ev.nii
+cju33za6l2qy70988jhrlp2ev.nii
+cju34aozyyy830993bn16u32n.nii
+cju34aozyyy830993bn16u32n.nii
+cju34c1xfyz920993itxkkfad.nii
+cju34c1xfyz920993itxkkfad.nii
+cju3518w2d838079939fqztbc.nii
+cju3518w2d838079939fqztbc.nii
+cju3521y5d5mq0878t3ezsu4p.nii
+cju3521y5d5mq0878t3ezsu4p.nii
+cju353d1eda8c07992afde611.nii
+cju353d1eda8c07992afde611.nii
+cju358pwtdby20878cg7nm0np.nii
+cju358pwtdby20878cg7nm0np.nii
+cju35fxqyzt5p0993vusm54qz.nii
+cju35fxqyzt5p0993vusm54qz.nii
+cju35mdz73x890835eynq1h9v.nii
+cju35mdz73x890835eynq1h9v.nii
+cju35oyvd3y850988km12hdz1.nii
+cju35oyvd3y850988km12hdz1.nii
+cju3tvffffx5f0818t5ov22al.nii
+cju3tvffffx5f0818t5ov22al.nii
+cju3ul8dogf1z09872y2ecowp.nii
+cju3ul8dogf1z09872y2ecowp.nii
+cju3v72v5h1qz0818fggilwtq.nii
+cju3v72v5h1qz0818fggilwtq.nii
+cju3xvoo2iqlc0817eku2r3wl.nii
+cju3xvoo2iqlc0817eku2r3wl.nii
+cju3xwpgviwlx0871rwm15q7v.nii
+cju3xwpgviwlx0871rwm15q7v.nii
+cju412uwlkva50850d1ps1ww7.nii
+cju412uwlkva50850d1ps1ww7.nii
+cju414lf2l1lt0801rl3hjllj.nii
+cju414lf2l1lt0801rl3hjllj.nii
+cju422cm8lfxn0818ojicxejb.nii
+cju422cm8lfxn0818ojicxejb.nii
+cju42wamblrqn098798r2yyok.nii
+cju42wamblrqn098798r2yyok.nii
+cju43b8daly4408170e5ev06g.nii
+cju43b8daly4408170e5ev06g.nii
+cju43c92lm5cj0755lorsorfg.nii
+cju43c92lm5cj0755lorsorfg.nii
+cju43eigtm6ev0801mv0m96t1.nii
+cju43eigtm6ev0801mv0m96t1.nii
+cju45lbgznahl08180xz1h7u6.nii
+cju45lbgznahl08180xz1h7u6.nii
+cju45ofd9ne1j0801ri8dup7t.nii
+cju45ofd9ne1j0801ri8dup7t.nii
+cju45rj7ln8980850a7821fov.nii
+cju45rj7ln8980850a7821fov.nii
+cju5bbtwsa8cl0987wgfsqpao.nii
+cju5bbtwsa8cl0987wgfsqpao.nii
+cju5bj926aiec07559rshy4wa.nii
+cju5bj926aiec07559rshy4wa.nii
+cju5bmhdcafs909878qfzrqzi.nii
+cju5bmhdcafs909878qfzrqzi.nii
+cju5cky5xb0ay0801oxet697t.nii
+cju5cky5xb0ay0801oxet697t.nii
+cju5cu8qkb84x08186jwo8yin.nii
+cju5cu8qkb84x08186jwo8yin.nii
+cju5ew4h9cqaf0818rrczkmqh.nii
+cju5ew4h9cqaf0818rrczkmqh.nii
+cju5fu081d8gc0818l3yylujk.nii
+cju5fu081d8gc0818l3yylujk.nii
+cju5fydrud94708507vo6oy21.nii
+cju5fydrud94708507vo6oy21.nii
+cju5hl8nee8a40755fm8qjj0o.nii
+cju5hl8nee8a40755fm8qjj0o.nii
+cju5hwonqedw10801vsd3w6kk.nii
+cju5hwonqedw10801vsd3w6kk.nii
+cju5i39mreass0817au8p22zy.nii
+cju5i39mreass0817au8p22zy.nii
+cju5tenjojp1j0755ms4949h2.nii
+cju5tenjojp1j0755ms4949h2.nii
+cju5u8gz4kj5b07552e2wpkwp.nii
+cju5u8gz4kj5b07552e2wpkwp.nii
+cju5v8pgplg6k0755rvi2t63h.nii
+cju5v8pgplg6k0755rvi2t63h.nii
+cju5vutu7ll8w0871dfp92n9p.nii
+cju5vutu7ll8w0871dfp92n9p.nii
+cju5wj0faly5008187n6530af.nii
+cju5wj0faly5008187n6530af.nii
+cju5wtdu4m0im0871mix0yvc0.nii
+cju5wtdu4m0im0871mix0yvc0.nii
+cju5y7buemcw80987p0r30g9f.nii
+cju5y7buemcw80987p0r30g9f.nii
+cju5yclrymlgj0818k426ud6z.nii
+cju5yclrymlgj0818k426ud6z.nii
+cju5yhgznmkzb0801cji2vi8j.nii
+cju5yhgznmkzb0801cji2vi8j.nii
+cju5yimthmlv80850zhoc90c2.nii
+cju5yimthmlv80850zhoc90c2.nii
+cju5yjq1pmlgc0801z0t24bly.nii
+cju5yjq1pmlgc0801z0t24bly.nii
+cju6us80mv1b50871ebyq2wxa.nii
+cju6us80mv1b50871ebyq2wxa.nii
+cju6v4szov55u0871qmqz3v8n.nii
+cju6v4szov55u0871qmqz3v8n.nii
+cju6vucxvvlda0755j7msqnya.nii
+cju6vucxvvlda0755j7msqnya.nii
+cju6vvxsev9y30987kespucdg.nii
+cju6vvxsev9y30987kespucdg.nii
+cju6wuojavt740818b5qcv3iw.nii
+cju6wuojavt740818b5qcv3iw.nii
+cju6x0yqbvxqt0755dhxislgb.nii
+cju6x0yqbvxqt0755dhxislgb.nii
+cju6z2616wqbk07555bvnuyr1.nii
+cju6z2616wqbk07555bvnuyr1.nii
+cju6z7e4bwgdd0987ogkzq9kt.nii
+cju6z7e4bwgdd0987ogkzq9kt.nii
+cju7afqon1ip40850ue2308b6.nii
+cju7afqon1ip40850ue2308b6.nii
+cju7atnm31if40817pqclnjer.nii
+cju7atnm31if40817pqclnjer.nii
+cju7b9vcs1luz0987ta60j1dy.nii
+cju7b9vcs1luz0987ta60j1dy.nii
+cju7cl8zm1xcu0817ado0jpas.nii
+cju7cl8zm1xcu0817ado0jpas.nii
+cju7d8m3b2e210755l8fj1yph.nii
+cju7d8m3b2e210755l8fj1yph.nii
+cju7d9seq29zd0871nzl2uu5m.nii
+cju7d9seq29zd0871nzl2uu5m.nii
+cju7ddtz729960801uazp1knc.nii
+cju7ddtz729960801uazp1knc.nii
+cju7dubap2g0w0801fgl42mg9.nii
+cju7dubap2g0w0801fgl42mg9.nii
+cju7dwe282dc309876rco45ts.nii
+cju7dwe282dc309876rco45ts.nii
+cju7epwj82koz098713apjnzo.nii
+cju7epwj82koz098713apjnzo.nii
+cju7er4kc2opa0801anuxc0eb.nii
+cju7er4kc2opa0801anuxc0eb.nii
+cju7eueum2oqn0850rodmx8zo.nii
+cju7eueum2oqn0850rodmx8zo.nii
+cju7ev2b12owa08500bpfpwyw.nii
+cju7ev2b12owa08500bpfpwyw.nii
+cju7f0ec32txj08184asb8w5f.nii
+cju7f0ec32txj08184asb8w5f.nii
+cju7f900s2o0k08175gl1giid.nii
+cju7f900s2o0k08175gl1giid.nii
+cju7fcgbe2z3p07550vaflqdb.nii
+cju7fcgbe2z3p07550vaflqdb.nii
+cju83ipu3jwpx0801z5pvguf8.nii
+cju83ipu3jwpx0801z5pvguf8.nii
+cju83kxitjv340987z09m0ezy.nii
+cju83kxitjv340987z09m0ezy.nii
+cju85citjlnfm0755i4rk5tqj.nii
+cju85citjlnfm0755i4rk5tqj.nii
+cju85plp7lmkw0850rx42jdpf.nii
+cju85plp7lmkw0850rx42jdpf.nii
+cju87li0zn3yb0817kbwgjiz8.nii
+cju87li0zn3yb0817kbwgjiz8.nii
+cju884985nlmx0817vzpax3y4.nii
+cju884985nlmx0817vzpax3y4.nii
+cju888fr7nveu0818r9uwtiit.nii
+cju888fr7nveu0818r9uwtiit.nii
+cju88fpm4o0tl0871w1i6a4ds.nii
+cju88fpm4o0tl0871w1i6a4ds.nii
+cju88y1mwoln50871emyfny1g.nii
+cju88y1mwoln50871emyfny1g.nii
+cju89y9h0puti0818i5yw29e6.nii
+cju89y9h0puti0818i5yw29e6.nii
+cju8a3nhbpwnb0850d37fo2na.nii
+cju8a3nhbpwnb0850d37fo2na.nii
+cju8a84g0q76m0818hwiggkod.nii
+cju8a84g0q76m0818hwiggkod.nii
+cju8ando2qqdo0818ck7i1be1.nii
+cju8ando2qqdo0818ck7i1be1.nii
+cju8apjewqrk00801k5d71gky.nii
+cju8apjewqrk00801k5d71gky.nii
+cju8b4ja9r2s808509d45ma86.nii
+cju8b4ja9r2s808509d45ma86.nii
+cju8bpctzrqkr0850zeldv9kt.nii
+cju8bpctzrqkr0850zeldv9kt.nii
+cju8buos5rz9b08715lfr0f4f.nii
+cju8buos5rz9b08715lfr0f4f.nii
+cju8bysfgrzkl081786jwac09.nii
+cju8bysfgrzkl081786jwac09.nii
+cju8c5zcbsdfz0801o5t6jag1.nii
+cju8c5zcbsdfz0801o5t6jag1.nii
+cju8cdeazsm8h0801jxifmzur.nii
+cju8cdeazsm8h0801jxifmzur.nii
+cju8czvnztbf40871b4m7t78w.nii
+cju8czvnztbf40871b4m7t78w.nii
+cju8djdqztu6408506pzhlo18.nii
+cju8djdqztu6408506pzhlo18.nii
+cjyzjzssvd8pq0838f4nolj5l.nii
+cjyzjzssvd8pq0838f4nolj5l.nii
+cjyztzaqtrv430848l8xgcerw.nii
+cjyztzaqtrv430848l8xgcerw.nii
+ck2bxskgxxzfv08386xkqtqdy.nii
+ck2bxskgxxzfv08386xkqtqdy.nii
+done
+********************
+cju0t4oil7vzk099370nun5h9.nii
+********************
+cju0t4oil7vzk099370nun5h9.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju0u2g7pmnux0801vkk47ivj.nii
+********************
+cju0u2g7pmnux0801vkk47ivj.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju0u82z3cuma0835wlxrnrjv.nii
+********************
+cju0u82z3cuma0835wlxrnrjv.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju15mhjczc8z0801kit5c6di.nii
+********************
+cju15mhjczc8z0801kit5c6di.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju15ptjtppz40988odsm9azx.nii
+********************
+cju15ptjtppz40988odsm9azx.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju16b6ynq8e40988m8vx0xnj.nii
+********************
+cju16b6ynq8e40988m8vx0xnj.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju17r8il13910799dr2wme2e.nii
+********************
+cju17r8il13910799dr2wme2e.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju17x0j4nfc10993y31pvlgs.nii
+********************
+cju17x0j4nfc10993y31pvlgs.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju18ibp219ub08783i6o98g7.nii
+********************
+cju18ibp219ub08783i6o98g7.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju1b3zgj3d8e0801kpolea6c.nii
+********************
+cju1b3zgj3d8e0801kpolea6c.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju1c6yfz42md08550zgoz3pw.nii
+********************
+cju1c6yfz42md08550zgoz3pw.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju1cbokpuiw70988j4lq1fpi.nii
+********************
+cju1cbokpuiw70988j4lq1fpi.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju1cdxvz48hw0801i0fjwcnk.nii
+********************
+cju1cdxvz48hw0801i0fjwcnk.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju1d96gsv62d09881b3wecw2.nii
+********************
+cju1d96gsv62d09881b3wecw2.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju1dia8hvc6v098827mgffnm.nii
+********************
+cju1dia8hvc6v098827mgffnm.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju1ejj7dvqfa0835ra184v5m.nii
+********************
+cju1ejj7dvqfa0835ra184v5m.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju1f8w0t65en0799m9oacq0q.nii
+********************
+cju1f8w0t65en0799m9oacq0q.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju1fb9236a110801yvg0fwju.nii
+********************
+cju1fb9236a110801yvg0fwju.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju1fmsyf6gxb0801cimx2gle.nii
+********************
+cju1fmsyf6gxb0801cimx2gle.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju1h5w4wxajx0835mc954kxy.nii
+********************
+cju1h5w4wxajx0835mc954kxy.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju1h89h6xbnx08352k2790o9.nii
+********************
+cju1h89h6xbnx08352k2790o9.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2hdr06v2bq0799mbm3bks1.nii
+********************
+cju2hdr06v2bq0799mbm3bks1.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2lejzcy4pc0878c9rlonot.nii
+********************
+cju2lejzcy4pc0878c9rlonot.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2mfjndoz700988b9lc3zeq.nii
+********************
+cju2mfjndoz700988b9lc3zeq.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2mh8t6p07008350e01tx2a.nii
+********************
+cju2mh8t6p07008350e01tx2a.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2nguelpmlj0835rojdn097.nii
+********************
+cju2nguelpmlj0835rojdn097.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2nnqrqzp580855z8mhzgd6.nii
+********************
+cju2nnqrqzp580855z8mhzgd6.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2oo0wh0bqy0878biujeyhe.nii
+********************
+cju2oo0wh0bqy0878biujeyhe.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2oq5570avm079959o20op1.nii
+********************
+cju2oq5570avm079959o20op1.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2qtee81yd708787bsjr75d.nii
+********************
+cju2qtee81yd708787bsjr75d.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2r11x7sdgx0988o8ule0wl.nii
+********************
+cju2r11x7sdgx0988o8ule0wl.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2rga4psq9n09881z519xx0.nii
+********************
+cju2rga4psq9n09881z519xx0.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2rkjfwoxys0993x768l1j2.nii
+********************
+cju2rkjfwoxys0993x768l1j2.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2rmd2rsw9g09888hh1efu0.nii
+********************
+cju2rmd2rsw9g09888hh1efu0.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2s2527pfyr0993l3h1149a.nii
+********************
+cju2s2527pfyr0993l3h1149a.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2saez63gxl08559ucjq3kt.nii
+********************
+cju2saez63gxl08559ucjq3kt.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2tjrog4jy30878pawyazqc.nii
+********************
+cju2tjrog4jy30878pawyazqc.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2tpfa5uyx408359datxqqj.nii
+********************
+cju2tpfa5uyx408359datxqqj.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2ulk385h170799rlklxob0.nii
+********************
+cju2ulk385h170799rlklxob0.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2urqpwvxw70835rvndvtsi.nii
+********************
+cju2urqpwvxw70835rvndvtsi.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2wve9v7esz0878mxsdcy04.nii
+********************
+cju2wve9v7esz0878mxsdcy04.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2xbk0080y80801eghyddi2.nii
+********************
+cju2xbk0080y80801eghyddi2.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2xf8e5y2wm08359vcgk09b.nii
+********************
+cju2xf8e5y2wm08359vcgk09b.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2xyd9vyi7m098831qcucse.nii
+********************
+cju2xyd9vyi7m098831qcucse.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2yg5ht8i4p087800js8hp4.nii
+********************
+cju2yg5ht8i4p087800js8hp4.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2zr3c3vwb00993jn06bbaz.nii
+********************
+cju2zr3c3vwb00993jn06bbaz.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju2zy1e49pqk0878t6ncqn12.nii
+********************
+cju2zy1e49pqk0878t6ncqn12.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju30xqmh0ni00835ix3batv1.nii
+********************
+cju30xqmh0ni00835ix3batv1.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju3128yi0rpu0988o4oo5n8n.nii
+********************
+cju3128yi0rpu0988o4oo5n8n.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju31t8xd17bk0835rnb893jk.nii
+********************
+cju31t8xd17bk0835rnb893jk.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju3280wv1ir009882jze27tc.nii
+********************
+cju3280wv1ir009882jze27tc.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju32csyfblyh080170aa3x5p.nii
+********************
+cju32csyfblyh080170aa3x5p.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju32pzh9bpw10855q4vaxfhe.nii
+********************
+cju32pzh9bpw10855q4vaxfhe.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju33o12x2jm50988944mxq0v.nii
+********************
+cju33o12x2jm50988944mxq0v.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju33za6l2qy70988jhrlp2ev.nii
+********************
+cju33za6l2qy70988jhrlp2ev.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju34aozyyy830993bn16u32n.nii
+********************
+cju34aozyyy830993bn16u32n.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju34c1xfyz920993itxkkfad.nii
+********************
+cju34c1xfyz920993itxkkfad.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju3518w2d838079939fqztbc.nii
+********************
+cju3518w2d838079939fqztbc.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju3521y5d5mq0878t3ezsu4p.nii
+********************
+cju3521y5d5mq0878t3ezsu4p.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju353d1eda8c07992afde611.nii
+********************
+cju353d1eda8c07992afde611.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju358pwtdby20878cg7nm0np.nii
+********************
+cju358pwtdby20878cg7nm0np.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju35fxqyzt5p0993vusm54qz.nii
+********************
+cju35fxqyzt5p0993vusm54qz.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju35mdz73x890835eynq1h9v.nii
+********************
+cju35mdz73x890835eynq1h9v.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju35oyvd3y850988km12hdz1.nii
+********************
+cju35oyvd3y850988km12hdz1.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju3tvffffx5f0818t5ov22al.nii
+********************
+cju3tvffffx5f0818t5ov22al.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju3ul8dogf1z09872y2ecowp.nii
+********************
+cju3ul8dogf1z09872y2ecowp.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju3v72v5h1qz0818fggilwtq.nii
+********************
+cju3v72v5h1qz0818fggilwtq.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju3xvoo2iqlc0817eku2r3wl.nii
+********************
+cju3xvoo2iqlc0817eku2r3wl.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju3xwpgviwlx0871rwm15q7v.nii
+********************
+cju3xwpgviwlx0871rwm15q7v.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju412uwlkva50850d1ps1ww7.nii
+********************
+cju412uwlkva50850d1ps1ww7.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju414lf2l1lt0801rl3hjllj.nii
+********************
+cju414lf2l1lt0801rl3hjllj.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju422cm8lfxn0818ojicxejb.nii
+********************
+cju422cm8lfxn0818ojicxejb.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju42wamblrqn098798r2yyok.nii
+********************
+cju42wamblrqn098798r2yyok.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju43b8daly4408170e5ev06g.nii
+********************
+cju43b8daly4408170e5ev06g.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju43c92lm5cj0755lorsorfg.nii
+********************
+cju43c92lm5cj0755lorsorfg.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju43eigtm6ev0801mv0m96t1.nii
+********************
+cju43eigtm6ev0801mv0m96t1.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju45lbgznahl08180xz1h7u6.nii
+********************
+cju45lbgznahl08180xz1h7u6.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju45ofd9ne1j0801ri8dup7t.nii
+********************
+cju45ofd9ne1j0801ri8dup7t.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju45rj7ln8980850a7821fov.nii
+********************
+cju45rj7ln8980850a7821fov.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5bbtwsa8cl0987wgfsqpao.nii
+********************
+cju5bbtwsa8cl0987wgfsqpao.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5bj926aiec07559rshy4wa.nii
+********************
+cju5bj926aiec07559rshy4wa.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5bmhdcafs909878qfzrqzi.nii
+********************
+cju5bmhdcafs909878qfzrqzi.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5cky5xb0ay0801oxet697t.nii
+********************
+cju5cky5xb0ay0801oxet697t.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5cu8qkb84x08186jwo8yin.nii
+********************
+cju5cu8qkb84x08186jwo8yin.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5ew4h9cqaf0818rrczkmqh.nii
+********************
+cju5ew4h9cqaf0818rrczkmqh.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5fu081d8gc0818l3yylujk.nii
+********************
+cju5fu081d8gc0818l3yylujk.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5fydrud94708507vo6oy21.nii
+********************
+cju5fydrud94708507vo6oy21.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5hl8nee8a40755fm8qjj0o.nii
+********************
+cju5hl8nee8a40755fm8qjj0o.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5hwonqedw10801vsd3w6kk.nii
+********************
+cju5hwonqedw10801vsd3w6kk.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5i39mreass0817au8p22zy.nii
+********************
+cju5i39mreass0817au8p22zy.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5tenjojp1j0755ms4949h2.nii
+********************
+cju5tenjojp1j0755ms4949h2.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5u8gz4kj5b07552e2wpkwp.nii
+********************
+cju5u8gz4kj5b07552e2wpkwp.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5v8pgplg6k0755rvi2t63h.nii
+********************
+cju5v8pgplg6k0755rvi2t63h.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5vutu7ll8w0871dfp92n9p.nii
+********************
+cju5vutu7ll8w0871dfp92n9p.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5wj0faly5008187n6530af.nii
+********************
+cju5wj0faly5008187n6530af.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5wtdu4m0im0871mix0yvc0.nii
+********************
+cju5wtdu4m0im0871mix0yvc0.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5y7buemcw80987p0r30g9f.nii
+********************
+cju5y7buemcw80987p0r30g9f.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5yclrymlgj0818k426ud6z.nii
+********************
+cju5yclrymlgj0818k426ud6z.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5yhgznmkzb0801cji2vi8j.nii
+********************
+cju5yhgznmkzb0801cji2vi8j.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5yimthmlv80850zhoc90c2.nii
+********************
+cju5yimthmlv80850zhoc90c2.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju5yjq1pmlgc0801z0t24bly.nii
+********************
+cju5yjq1pmlgc0801z0t24bly.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju6us80mv1b50871ebyq2wxa.nii
+********************
+cju6us80mv1b50871ebyq2wxa.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju6v4szov55u0871qmqz3v8n.nii
+********************
+cju6v4szov55u0871qmqz3v8n.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju6vucxvvlda0755j7msqnya.nii
+********************
+cju6vucxvvlda0755j7msqnya.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju6vvxsev9y30987kespucdg.nii
+********************
+cju6vvxsev9y30987kespucdg.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju6wuojavt740818b5qcv3iw.nii
+********************
+cju6wuojavt740818b5qcv3iw.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju6x0yqbvxqt0755dhxislgb.nii
+********************
+cju6x0yqbvxqt0755dhxislgb.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju6z2616wqbk07555bvnuyr1.nii
+********************
+cju6z2616wqbk07555bvnuyr1.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju6z7e4bwgdd0987ogkzq9kt.nii
+********************
+cju6z7e4bwgdd0987ogkzq9kt.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju7afqon1ip40850ue2308b6.nii
+********************
+cju7afqon1ip40850ue2308b6.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju7atnm31if40817pqclnjer.nii
+********************
+cju7atnm31if40817pqclnjer.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju7b9vcs1luz0987ta60j1dy.nii
+********************
+cju7b9vcs1luz0987ta60j1dy.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju7cl8zm1xcu0817ado0jpas.nii
+********************
+cju7cl8zm1xcu0817ado0jpas.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju7d8m3b2e210755l8fj1yph.nii
+********************
+cju7d8m3b2e210755l8fj1yph.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju7d9seq29zd0871nzl2uu5m.nii
+********************
+cju7d9seq29zd0871nzl2uu5m.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju7ddtz729960801uazp1knc.nii
+********************
+cju7ddtz729960801uazp1knc.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju7dubap2g0w0801fgl42mg9.nii
+********************
+cju7dubap2g0w0801fgl42mg9.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju7dwe282dc309876rco45ts.nii
+********************
+cju7dwe282dc309876rco45ts.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju7epwj82koz098713apjnzo.nii
+********************
+cju7epwj82koz098713apjnzo.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju7er4kc2opa0801anuxc0eb.nii
+********************
+cju7er4kc2opa0801anuxc0eb.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju7eueum2oqn0850rodmx8zo.nii
+********************
+cju7eueum2oqn0850rodmx8zo.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju7ev2b12owa08500bpfpwyw.nii
+********************
+cju7ev2b12owa08500bpfpwyw.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju7f0ec32txj08184asb8w5f.nii
+********************
+cju7f0ec32txj08184asb8w5f.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju7f900s2o0k08175gl1giid.nii
+********************
+cju7f900s2o0k08175gl1giid.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju7fcgbe2z3p07550vaflqdb.nii
+********************
+cju7fcgbe2z3p07550vaflqdb.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju83ipu3jwpx0801z5pvguf8.nii
+********************
+cju83ipu3jwpx0801z5pvguf8.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju83kxitjv340987z09m0ezy.nii
+********************
+cju83kxitjv340987z09m0ezy.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju85citjlnfm0755i4rk5tqj.nii
+********************
+cju85citjlnfm0755i4rk5tqj.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju85plp7lmkw0850rx42jdpf.nii
+********************
+cju85plp7lmkw0850rx42jdpf.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju87li0zn3yb0817kbwgjiz8.nii
+********************
+cju87li0zn3yb0817kbwgjiz8.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju884985nlmx0817vzpax3y4.nii
+********************
+cju884985nlmx0817vzpax3y4.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju888fr7nveu0818r9uwtiit.nii
+********************
+cju888fr7nveu0818r9uwtiit.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju88fpm4o0tl0871w1i6a4ds.nii
+********************
+cju88fpm4o0tl0871w1i6a4ds.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju88y1mwoln50871emyfny1g.nii
+********************
+cju88y1mwoln50871emyfny1g.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju89y9h0puti0818i5yw29e6.nii
+********************
+cju89y9h0puti0818i5yw29e6.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju8a3nhbpwnb0850d37fo2na.nii
+********************
+cju8a3nhbpwnb0850d37fo2na.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju8a84g0q76m0818hwiggkod.nii
+********************
+cju8a84g0q76m0818hwiggkod.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju8ando2qqdo0818ck7i1be1.nii
+********************
+cju8ando2qqdo0818ck7i1be1.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju8apjewqrk00801k5d71gky.nii
+********************
+cju8apjewqrk00801k5d71gky.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju8b4ja9r2s808509d45ma86.nii
+********************
+cju8b4ja9r2s808509d45ma86.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju8bpctzrqkr0850zeldv9kt.nii
+********************
+cju8bpctzrqkr0850zeldv9kt.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju8buos5rz9b08715lfr0f4f.nii
+********************
+cju8buos5rz9b08715lfr0f4f.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju8bysfgrzkl081786jwac09.nii
+********************
+cju8bysfgrzkl081786jwac09.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju8c5zcbsdfz0801o5t6jag1.nii
+********************
+cju8c5zcbsdfz0801o5t6jag1.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju8cdeazsm8h0801jxifmzur.nii
+********************
+cju8cdeazsm8h0801jxifmzur.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju8czvnztbf40871b4m7t78w.nii
+********************
+cju8czvnztbf40871b4m7t78w.nii
+Dice_polyp: 0.0000
+********************
+********************
+cju8djdqztu6408506pzhlo18.nii
+********************
+cju8djdqztu6408506pzhlo18.nii
+Dice_polyp: 0.0000
+********************
+********************
+cjyzjzssvd8pq0838f4nolj5l.nii
+********************
+cjyzjzssvd8pq0838f4nolj5l.nii
+Dice_polyp: 0.0000
+********************
+********************
+cjyztzaqtrv430848l8xgcerw.nii
+********************
+cjyztzaqtrv430848l8xgcerw.nii
+Dice_polyp: 0.0000
+********************
+********************
+ck2bxskgxxzfv08386xkqtqdy.nii
+********************
+ck2bxskgxxzfv08386xkqtqdy.nii
+Dice_polyp: 0.0000
+********************
+********************
+Mean_Dice
+Dice_polyp0.0
+Mean_HD
+********************

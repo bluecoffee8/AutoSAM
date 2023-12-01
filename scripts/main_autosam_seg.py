@@ -33,7 +33,7 @@ from loss_functions.metrics import dice_pytorch, SegmentationMetric
 
 from models import sam_seg_model_registry
 from dataset import generate_dataset, generate_test_loader
-from evaluate import test_synapse, test_acdc, test_brats
+from evaluate import test_synapse, test_acdc, test_brats, test_kvasir
 
 
 parser = argparse.ArgumentParser(description='PyTorch ImageNet Training')
@@ -82,21 +82,21 @@ parser.add_argument('--multiprocessing-distributed', action='store_true',
                          'multi node data parallel training')
 
 parser.add_argument('--model_type', type=str, default="vit_b", help='path to splits file')
-parser.add_argument('--src_dir', type=str, default="ACDC/", help='path to splits file')
-parser.add_argument('--data_dir', type=str, default="ACDC/imgs/", help='path to datafolder')
+parser.add_argument('--src_dir', type=str, default="Kvasir-SEG/", help='path to splits file')
+parser.add_argument('--data_dir', type=str, default="Kvasir-SEG/images/", help='path to datafolder')
 parser.add_argument("--img_size", type=int, default=256)
-parser.add_argument("--classes", type=int, default=4)
+parser.add_argument("--classes", type=int, default=2)
 parser.add_argument("--do_contrast", default=False, action='store_true')
 parser.add_argument("--slice_threshold", type=float, default=0.05)
-parser.add_argument("--num_classes", type=int, default=4)
+parser.add_argument("--num_classes", type=int, default=2)
 parser.add_argument("--fold", type=int, default=0)
-parser.add_argument("--tr_size", type=int, default=5)
-parser.add_argument("--save_dir", type=str, default="vit120_5")
+parser.add_argument("--tr_size", type=int, default=700)
+parser.add_argument("--save_dir", type=str, default="kvasir_vit120_full")
 parser.add_argument("--load_saved_model", action='store_true',
                         help='whether freeze encoder of the segmenter')
 parser.add_argument("--saved_model_path", type=str, default=None)
 parser.add_argument("--load_pseudo_label", default=False, action='store_true')
-parser.add_argument("--dataset", type=str, default="ACDC")
+parser.add_argument("--dataset", type=str, default="KVASIR")
 
 
 def main():
@@ -269,6 +269,8 @@ def main_worker(gpu, ngpus_per_node, args):
         test_acdc(args)
     elif args.dataset == 'brats':
         test_brats(args)
+    elif args.dataset == 'KVASIR' or args.dataset == 'kvasir':
+        test_kvasir(args)
 
 
 def train(train_loader, model, optimizer, scheduler, epoch, args, writer):
@@ -442,11 +444,11 @@ def test_2(data_loader, model, args):
     print("Finished test")
 
 
-def save_checkpoint(state, is_best, filename='checkpoint_vit_5.pth.tar'):
+def save_checkpoint(state, is_best, filename='kvasir_checkpoint_vit_full.pth.tar'):
     # torch.save(state, filename)
     if is_best:
         torch.save(state, filename)
-        shutil.copyfile(filename, 'model_best_vit_5.pth.tar')
+        shutil.copyfile(filename, 'kvasir_model_best_vit_full.pth.tar')
 
 
 class AverageMeter(object):

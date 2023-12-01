@@ -2,6 +2,7 @@ import os
 import pickle
 from dataset.Synapse import SynapseDataset
 from dataset.ACDC import AcdcDataset
+from dataset.KVASIR import kvasirDataset
 # from dataset.SliceLoader import SliceDataset
 import torch
 
@@ -27,6 +28,11 @@ def generate_dataset(args):
         train_ds = AcdcDataset(keys=tr_keys, mode='train', args=args)
         val_ds = AcdcDataset(keys=val_keys, mode='val', args=args)
         test_ds = AcdcDataset(keys=test_keys, mode='val', args=args)
+    elif args.dataset == 'kvasir' or args.dataset == 'KVASIR':
+        args.img_size = 320
+        train_ds = kvasirDataset(keys=tr_keys, mode='train', args=args)
+        val_ds = kvasirDataset(keys=val_keys, mode='val', args=args)
+        test_ds = kvasirDataset(keys=test_keys, mode='val', args=args)
     else:
         raise NotImplementedError("dataset is not supported:", args.dataset)
 
@@ -60,6 +66,9 @@ def generate_test_loader(key, args):
     if args.dataset == 'acdc' or args.dataset == 'ACDC':
         args.img_size = 224
         test_ds = AcdcDataset(keys=key, mode='val', args=args)
+    elif args.dataset == 'kvasir' or args.dataset == 'KVASIR':
+        args.img_size = 320
+        test_ds = kvasirDataset(keys=key, mode='val', args=args)
     else:
         raise NotImplementedError("dataset is not supported:", args.dataset)
 

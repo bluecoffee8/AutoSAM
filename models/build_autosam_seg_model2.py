@@ -2,13 +2,13 @@ import torch
 
 from functools import partial
 
-from .SamFeatSeg import SamFeatSeg, SegDecoderCNN, SegDecoderLinear
-from .AutoSamSeg import AutoSamSeg
-from .sam_decoder import MaskDecoder
+from .SamFeatSeg import SamFeatSeg, SegDecoderCNN
+from .AutoSamSeg2 import AutoSamSeg2
+from .sam_decoder2 import MaskDecoder
 from segment_anything.modeling import ImageEncoderViT, TwoWayTransformer
+from .hardnet import HarDNet
 
-
-def _build_feat_seg_model(
+def _build_sam_seg_model(
     encoder_embed_dim,
     encoder_depth,
     encoder_num_heads,
@@ -19,7 +19,7 @@ def _build_feat_seg_model(
     prompt_embed_dim = 256
     image_size = 1024
     vit_patch_size = 16
-    sam_seg = SamFeatSeg(
+    sam_seg = AutoSamSeg2(
         image_encoder=ImageEncoderViT(
             depth=encoder_depth,
             embed_dim=encoder_embed_dim,
@@ -34,26 +34,38 @@ def _build_feat_seg_model(
             window_size=14,
             out_chans=prompt_embed_dim,
         ),
-        # seg_decoder=SegDecoderLinear(num_classes=num_classes),
-        seg_decoder=SegDecoderCNN(num_classes=num_classes, num_depth=4)
+        seg_decoder=MaskDecoder(
+            num_multimask_outputs=1,
+            transformer=TwoWayTransformer(
+                depth=2,
+                embedding_dim=prompt_embed_dim,
+                mlp_dim=2048,
+                num_heads=8,
+            ),
+            transformer_dim=prompt_embed_dim,
+            iou_head_depth=3,
+            iou_head_hidden_dim=256,
+            num_classes=num_classes,
+        ),
+        prompt_encoder=HarDNet(),
     )
 
     if checkpoint is not None:
         with open(checkpoint, "rb") as f:
             state_dict = torch.load(f)
 
-        loaded_keys = []
+        loaded_keys = {}
         for k in state_dict.keys():
-            if k in sam_seg.state_dict().keys():
-                loaded_keys.append(k)
-        sam_seg.load_state_dict(state_dict, strict=False)
-        print("loaded keys:", loaded_keys)
+            if k in sam_seg.state_dict().keys() and 'iou'not in k and "mask_tokens" not in k:
+                loaded_keys[k] = state_dict[k]
+        sam_seg.load_state_dict(loaded_keys, strict=False)
+        print("loaded keys:", loaded_keys.keys())
 
     return sam_seg
 
 
 def build_sam_vit_h_seg_cnn(num_classes=14, checkpoint=None):
-    return _build_feat_seg_model(
+    return _build_sam_seg_model(
         encoder_embed_dim=1280,
         encoder_depth=32,
         encoder_num_heads=16,
@@ -67,7 +79,7 @@ build_sam_seg = build_sam_vit_h_seg_cnn
 
 
 def build_sam_vit_l_seg_cnn(num_classes=14, checkpoint=None):
-    return _build_feat_seg_model(
+    return _build_sam_seg_model(
         encoder_embed_dim=1024,
         encoder_depth=24,
         encoder_num_heads=16,
@@ -78,7 +90,7 @@ def build_sam_vit_l_seg_cnn(num_classes=14, checkpoint=None):
 
 
 def build_sam_vit_b_seg_cnn(num_classes=14, checkpoint=None):
-    return _build_feat_seg_model(
+    return _build_sam_seg_model(
         encoder_embed_dim=768,
         encoder_depth=12,
         encoder_num_heads=12,
@@ -88,10 +100,11 @@ def build_sam_vit_b_seg_cnn(num_classes=14, checkpoint=None):
     )
 
 
-sam_feat_seg_model_registry = {
+sam_seg_model_registry2 = {
     "default": build_sam_seg,
     "vit_h": build_sam_seg,
     "vit_l": build_sam_vit_l_seg_cnn,
     "vit_b": build_sam_vit_b_seg_cnn,
+    "vit_b_original": build_sam_vit_b_seg_cnn, 
 }
 

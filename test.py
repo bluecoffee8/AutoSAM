@@ -31,13 +31,13 @@ import torchvision.models as models
 from loss_functions.dice_loss import SoftDiceLoss
 from loss_functions.metrics import dice_pytorch, SegmentationMetric
 
-from models import sam_feat_seg_model_registry, sam_seg_model_registry
+from models import sam_feat_seg_model_registry, sam_seg_model_registry, sam_seg_model_registry2
 from dataset import generate_dataset, generate_test_loader
 from evaluate import test_synapse, test_acdc
 
 
 parser = argparse.ArgumentParser(description='PyTorch ImageNet Training')
-parser.add_argument("--save_dir", type=str, default="eval/vit120_5")
+parser.add_argument("--save_dir", type=str, default="eval/g120")
 parser.add_argument('--data_dir', type=str, default="ACDC/imgs/")
 parser.add_argument('--src_dir', type=str, default="ACDC/")
 parser.add_argument("--dataset", type=str, default="ACDC")
@@ -146,19 +146,23 @@ def test_vit(model, args):
             print("finish saving file:", key)
 
 # model = sam_feat_seg_model_registry['vit_b'](num_classes=4, checkpoint='medsam_vit_b.pth') # for CNN/MLP model
-model = sam_seg_model_registry['vit_b'](num_classes=4, checkpoint='medsam_vit_b.pth') # for VIT model
+# model = sam_seg_model_registry['vit_b'](num_classes=4, checkpoint='medsam_vit_b.pth') # for VIT model
+model = sam_seg_model_registry2['vit_b'](num_classes=4, checkpoint='medsam_vit_b.pth') # for AutoSAM (Shaharabany) model
 
 torch.cuda.set_device(args.gpu) # set torch device cuda
 model = model.cuda(args.gpu) # move model to gpu
 loc = 'cuda:{}'.format(args.gpu) # location of gpu
 
 # checkpoint = torch.load('model_best_cnn_5.pth.tar', map_location=loc)
-checkpoint = torch.load('model_best_vit_5.pth.tar', map_location=loc)
+# checkpoint = torch.load('model_best_vit_5.pth.tar', map_location=loc)
+# checkpoint = torch.load('model_best_mlp_5.pth.tar', map_location=loc)
+checkpoint = torch.load('model_best_autosam.pth.tar', map_location=loc)
 
-model.mask_decoder.load_state_dict(checkpoint['state_dict'], strict=False)
+# model.mask_decoder.load_state_dict(checkpoint['state_dict'], strict=False) # for CNN/MLP/ViT model
+model.prompt_encoder.load_state_dict(checkpoint['state_dict']) # for AutoSAM (Shaharabany)
 
-# test_cnn(model, args) 
-test_vit(model, args)
+# test_cnn(model, args)  # use for CNN/MLP
+test_vit(model, args) # use for ViT/AutoSAM (Shaharabany)
 
 test_acdc(args)
 

@@ -31,9 +31,9 @@ import torchvision.models as models
 from loss_functions.dice_loss import SoftDiceLoss
 from loss_functions.metrics import dice_pytorch, SegmentationMetric
 
-from models import sam_feat_seg_model_registry
+from models import sam_seg_model_registry2
 from dataset import generate_dataset, generate_test_loader
-from evaluate import test_synapse, test_acdc, test_kvasir
+from evaluate import test_synapse, test_acdc, test_brats, test_kvasir
 
 
 parser = argparse.ArgumentParser(description='PyTorch ImageNet Training')
@@ -81,7 +81,7 @@ parser.add_argument('--multiprocessing-distributed', action='store_true',
                          'fastest way to use PyTorch for either single node or '
                          'multi node data parallel training')
 
-parser.add_argument('--model_type', type=str, default="vit_b", help='path to splits file')
+parser.add_argument('--model_type', type=str, default="vit_b_original", help='path to splits file')
 parser.add_argument('--src_dir', type=str, default="Kvasir-SEG/", help='path to splits file')
 parser.add_argument('--data_dir', type=str, default="Kvasir-SEG/images/", help='path to datafolder')
 parser.add_argument("--img_size", type=int, default=256)
@@ -91,12 +91,13 @@ parser.add_argument("--slice_threshold", type=float, default=0.05)
 parser.add_argument("--num_classes", type=int, default=2)
 parser.add_argument("--fold", type=int, default=0)
 parser.add_argument("--tr_size", type=int, default=700)
-parser.add_argument("--save_dir", type=str, default='kvasir_cnn120_full')
+parser.add_argument("--save_dir", type=str, default="kvasir_original_g120_full")
 parser.add_argument("--load_saved_model", action='store_true',
                         help='whether freeze encoder of the segmenter')
 parser.add_argument("--saved_model_path", type=str, default=None)
 parser.add_argument("--load_pseudo_label", default=False, action='store_true')
 parser.add_argument("--dataset", type=str, default="KVASIR")
+
 
 def main():
     args = parser.parse_args()
@@ -162,8 +163,10 @@ def main_worker(gpu, ngpus_per_node, args):
         model_checkpoint = 'sam_vit_l_0b3195.pth'
     elif args.model_type == 'vit_b':
         model_checkpoint = 'medsam_vit_b.pth'
+    elif args.model_type == 'vit_b_original':
+        model_checkpoint = 'sam_vit_b_01ec64.pth'
 
-    model = sam_feat_seg_model_registry[args.model_type](num_classes=args.num_classes, checkpoint=model_checkpoint)
+    model = sam_seg_model_registry2[args.model_type](num_classes=args.num_classes, checkpoint=model_checkpoint)
 
     if args.distributed:
         # For multiprocessing distributed, DistributedDataParallel constructor
@@ -193,13 +196,14 @@ def main_worker(gpu, ngpus_per_node, args):
         # this code only supports DistributedDataParallel.
         raise NotImplementedError("Only DistributedDataParallel is supported.")
 
-    # freeze weights in the image_encoder
+    # freeze weights in the image_encoder AND mask_decoder (READ THIS!)
     for name, param in model.named_parameters():
-        if param.requires_grad and "image_encoder" in name:
+        if param.requires_grad and ("image_encoder" in name or "iou" in name or "mask_decoder" in name):
             param.requires_grad = False
         else:
             param.requires_grad = True
         # param.requires_grad = True
+
     optimizer = torch.optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=args.lr)
     scheduler = ReduceLROnPlateau(optimizer, 'min')
 
@@ -257,7 +261,7 @@ def main_worker(gpu, ngpus_per_node, args):
                 and args.rank % ngpus_per_node == 0):
             save_checkpoint({
                 'epoch': epoch + 1,
-                'state_dict': model.mask_decoder.state_dict(),
+                'state_dict': model.prompt_encoder.state_dict(),
                 'optimizer' : optimizer.state_dict(),
             }, is_best=is_best, filename=filename)
     test(model, args)
@@ -265,6 +269,8 @@ def main_worker(gpu, ngpus_per_node, args):
         test_synapse(args)
     elif args.dataset == 'ACDC' or args.dataset == 'acdc':
         test_acdc(args)
+    elif args.dataset == 'brats':
+        test_brats(args)
     elif args.dataset == 'KVASIR' or args.dataset == 'kvasir':
         test_kvasir(args)
 
@@ -290,11 +296,16 @@ def train(train_loader, model, optimizer, scheduler, epoch, args, writer):
         else:
             img = tup[0].float()
             label = tup[1].long()
+        b, c, h, w = img.shape
 
         # compute output
-        pred = model(img)
-        pred_softmax = F.softmax(pred, dim=1)
-        loss = ce_loss(pred, label.squeeze(1)) + dice_loss(pred_softmax, label.squeeze(1))
+        # mask size: [batch*num_classes, num_multi_class, H, W], iou_pred: [batch*num_classes, 1]
+        mask, iou_pred = model(img)
+        mask = mask.view(b, -1, h, w)
+        iou_pred = iou_pred.squeeze().view(b, -1)
+
+        pred_softmax = F.softmax(mask, dim=1)
+        loss = ce_loss(mask, label.squeeze(1)) + dice_loss(pred_softmax, label.squeeze(1))
                # + dice_loss(pred_softmax, label.squeeze(1))
 
         # acc1/acc5 are (K+1)-way contrast classifier accuracy
@@ -319,7 +330,6 @@ def train(train_loader, model, optimizer, scheduler, epoch, args, writer):
 
 
 def validate(val_loader, model, epoch, args, writer):
-    print('VALIDATE')
     loss_list = []
     dice_list = []
     dice_loss = SoftDiceLoss(batch_dice=True, do_bg=False)
@@ -335,15 +345,19 @@ def validate(val_loader, model, epoch, args, writer):
             else:
                 img = tup[0]
                 label = tup[1]
+            b, c, h, w = img.shape
 
             # compute output
-            pred = model(img)
-            pred_softmax = F.softmax(pred, dim=1)
+            mask, iou_pred = model(img)
+            mask = mask.view(b, -1, h, w)
+            iou_pred = iou_pred.squeeze().view(b, -1)
+            iou_pred = torch.mean(iou_pred)
 
+            pred_softmax = F.softmax(mask, dim=1)
             loss = dice_loss(pred_softmax, label.squeeze(1))  # self.ce_loss(pred, target.squeeze())
             loss_list.append(loss.item())
 
-    print('Epoch: %2d Loss: %.4f' % (epoch, np.mean(loss_list)))
+    print('Validating: Epoch: %2d Loss: %.4f IoU_pred: %.4f' % (epoch, np.mean(loss_list), iou_pred.item()))
     writer.add_scalar("val_loss", np.mean(loss_list), epoch)
     return np.mean(loss_list)
 
@@ -376,12 +390,16 @@ def test(model, args):
                     img = tup[0]
                     label = tup[1]
 
-                mask = model(img)
+                b, c, h, w = img.shape
+
+                mask, iou_pred = model(img)
+                mask = mask.view(b, -1, h, w)
                 mask_softmax = F.softmax(mask, dim=1)
                 mask = torch.argmax(mask_softmax, dim=1)
 
                 preds.append(mask.cpu().numpy())
                 labels.append(label.cpu().numpy())
+
             preds = np.concatenate(preds, axis=0)
             labels = np.concatenate(labels, axis=0).squeeze()
             print(preds.shape, labels.shape)
@@ -393,12 +411,46 @@ def test(model, args):
             nib.save(ni_lb, join(args.save_dir, 'label', key + '.nii'))
         print("finish saving file:", key)
 
+def test_2(data_loader, model, args):
+    print('Test')
+    metric_val = SegmentationMetric(args.num_classes)
+    metric_val.reset()
+    model.eval()
 
-def save_checkpoint(state, is_best, filename='kvasir_checkpoint_cnn_full.pth.tar'):
+    with torch.no_grad():
+        for i, tup in enumerate(data_loader):
+            # measure data loading time
+
+            if args.gpu is not None:
+                img = tup[0].float().cuda(args.gpu, non_blocking=True)
+                label = tup[1].long().cuda(args.gpu, non_blocking=True)
+            else:
+                img = tup[0]
+                label = tup[1]
+
+            b, c, h, w = img.shape
+
+            # compute output
+            mask, iou_pred = model(img)
+            mask = mask.view(b, -1, h, w)
+
+            pred_softmax = F.softmax(mask, dim=1)
+            metric_val.update(label.squeeze(dim=1), pred_softmax)
+            pixAcc, mIoU, Dice = metric_val.get()
+
+            if i % args.print_freq == 0:
+                print("Index:%f, mean Dice:%.4f" % (i, Dice))
+
+    _, _, Dice = metric_val.get()
+    print("Overall mean dice score is:", Dice)
+    print("Finished test")
+
+
+def save_checkpoint(state, is_best, filename='checkpoint_kvasir_original_autosam_full.pth.tar'):
     # torch.save(state, filename)
     if is_best:
         torch.save(state, filename)
-        shutil.copyfile(filename, 'kvasir_model_best_cnn_full.pth.tar')
+        shutil.copyfile(filename, 'model_best_kvasir_original_autosam_full.pth.tar')
 
 
 class AverageMeter(object):
