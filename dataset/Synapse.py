@@ -1,83 +1,90 @@
-import pickle
-import numpy as np
-from PIL import Image
+# taken from SAMed repo
+
 import os
-
+import random
+import h5py
+import numpy as np
 import torch
-from torchvision import transforms, utils
-from torch.utils.data.dataset import Dataset
-from torchvision.transforms.functional import resize
+from scipy import ndimage
+from scipy.ndimage.interpolation import zoom
+from torch.utils.data import Dataset
+from einops import repeat
+from icecream import ic
 
-from batchgenerators.utilities.file_and_folder_operations import *
-from batchgenerators.transforms.abstract_transforms import Compose, RndTransform
-from batchgenerators.transforms.spatial_transforms import SpatialTransform, MirrorTransform, ResizeTransform
-from batchgenerators.transforms.color_transforms import BrightnessTransform, GammaTransform
-from batchgenerators.transforms.noise_transforms import GaussianNoiseTransform
-from batchgenerators.transforms.utility_transforms import NumpyToTensor
 
-join = os.path.join
+def random_rot_flip(image, label):
+    k = np.random.randint(0, 4)
+    image = np.rot90(image, k)
+    label = np.rot90(label, k)
+    axis = np.random.randint(0, 2)
+    image = np.flip(image, axis=axis).copy()
+    label = np.flip(label, axis=axis).copy()
+    return image, label
+
+
+def random_rotate(image, label):
+    angle = np.random.randint(-20, 20)
+    image = ndimage.rotate(image, angle, order=0, reshape=False)
+    label = ndimage.rotate(label, angle, order=0, reshape=False)
+    return image, label
+
+
+class RandomGenerator(object):
+    def __init__(self, output_size, low_res):
+        self.output_size = output_size
+        self.low_res = low_res
+
+    def __call__(self, sample):
+        image, label = sample['image'], sample['label']
+
+        if random.random() > 0.5:
+            image, label = random_rot_flip(image, label)
+        elif random.random() > 0.5:
+            image, label = random_rotate(image, label)
+        x, y = image.shape
+        if x != self.output_size[0] or y != self.output_size[1]:
+            image = zoom(image, (self.output_size[0] / x, self.output_size[1] / y), order=3)  # why not 3?
+            label = zoom(label, (self.output_size[0] / x, self.output_size[1] / y), order=0)
+        label_h, label_w = label.shape
+        low_res_label = zoom(label, (self.low_res[0] / label_h, self.low_res[1] / label_w), order=0)
+        image = torch.from_numpy(image.astype(np.float32)).unsqueeze(0)
+        image = repeat(image, 'c h w -> (repeat c) h w', repeat=3)
+        label = torch.from_numpy(label.astype(np.float32))
+        low_res_label = torch.from_numpy(low_res_label.astype(np.float32))
+        sample = {'image': image, 'label': label.long(), 'low_res_label': low_res_label.long()}
+        return sample
 
 
 class SynapseDataset(Dataset):
-    def __init__(self, keys, args, mode='train'):
-        super().__init__()
-        self.patch_size = (args.img_size, args.img_size)
-        self.files = []
-        self.mode = mode
-
-        for key in keys:
-            key = key.split(".")[0]
-            slices = subfiles(join(args.data_dir, key))
-            for sl in slices:
-                self.files.append(sl)
-
-        print(f'dataset length: {len(self.files)}')
+    def __init__(self, base_dir, list_dir, split, transform=None, tr_size=2211):
+        self.transform = transform  # using transform in torch!
+        self.split = split
+        self.sample_list = open(os.path.join(list_dir, self.split+'.txt')).readlines()[:tr_size]
+        self.data_dir = base_dir
 
     def __len__(self):
-        return len(self.files)
+        return len(self.sample_list)
 
-    def __getitem__(self, index):
-        img = Image.open(self.files[index])
-        label = Image.open(self.files[index].replace('imgs/', 'annotations/'))
-        label = np.asarray(label)
-
-        img, label = self.transform(img, label)
-        return img, label, self.files[index]
-
-    def transform(self, img, label):
-        # normalize to [0, 1]
-        img = np.asarray(img).astype(np.float32).transpose([2, 0, 1])
-        img = (img - img.min()) / (img.max() - img.min())
-        data_dict = {'data': img[None], 'seg': label[None, None]}
-        if self.mode == 'train':
-            aug_list = [  # CenterCropTransform(crop_size=target_size),
-                BrightnessTransform(mu=1, sigma=1, p_per_sample=0.5),
-                GammaTransform(p_per_sample=0.5),
-                GaussianNoiseTransform(p_per_sample=0.5),
-                ResizeTransform(target_size=self.patch_size, order=1),  # resize
-                MirrorTransform(axes=(1,)),
-                SpatialTransform(patch_size=self.patch_size, random_crop=False,
-                                 patch_center_dist_from_border=self.patch_size[0] // 2,
-                                 do_elastic_deform=True, alpha=(100., 350.), sigma=(40., 60.),
-                                 do_rotation=True, p_rot_per_sample=0.5,
-                                 angle_x=(-0.1, 0.1), angle_y=(0, 1e-8), angle_z=(0, 1e-8),
-                                 scale=(0.5, 1.9), p_scale_per_sample=0.5,
-                                 border_mode_data="nearest", border_mode_seg="nearest"),
-                NumpyToTensor(),
-            ]
-
-            aug = Compose(aug_list)
+    def __getitem__(self, idx):
+        if self.split == "train":
+            slice_name = self.sample_list[idx].strip('\n')
+            data_path = os.path.join(self.data_dir, slice_name+'.npz')
+            data = np.load(data_path)
+            image, label = data['image'], data['label']
         else:
-            aug_list = [
-                ResizeTransform(target_size=self.patch_size, order=1),
-                NumpyToTensor(),
-            ]
-            aug = Compose(aug_list)
+            vol_name = self.sample_list[idx].strip('\n')
+            filepath = self.data_dir + "/{}.npy.h5".format(vol_name)
+            data = h5py.File(filepath)
+            image, label = data['image'][:], data['label'][:]
 
-        data_dict = aug(**data_dict)
-        img = data_dict.get('data')[0]
-        label = data_dict.get('seg')[0]
-        return img, label
+        # Input dim should be consistent
+        # Since the channel dimension of nature image is 3, that of medical image should also be 3
 
-
-
+        sample = {'image': image, 'label': label}
+        if self.transform:
+            sample = self.transform(sample)
+        sample['case_name'] = self.sample_list[idx].strip('\n')
+        if self.split == "train":
+            return sample['image'], sample['label']
+        else:
+            return sample

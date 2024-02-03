@@ -56,18 +56,18 @@ class kvasirDataset(Dataset):
         data_dict = {'data': img[None], 'seg': label[None, None]}
         if self.mode == 'train':
             aug_list = [  # CenterCropTransform(crop_size=target_size),
-                BrightnessTransform(mu=1, sigma=1, p_per_sample=0.5),
-                GammaTransform(p_per_sample=0.5),
-                GaussianNoiseTransform(p_per_sample=0.5),
+                # BrightnessTransform(mu=1, sigma=1, p_per_sample=0.5),
+                # GammaTransform(p_per_sample=0.5),
+                # GaussianNoiseTransform(p_per_sample=0.5),
                 ResizeTransform(target_size=self.patch_size, order=1),  # resize
-                MirrorTransform(axes=(1,)),
-                SpatialTransform(patch_size=self.patch_size, random_crop=False,
-                                 patch_center_dist_from_border=self.patch_size[0] // 2,
-                                 do_elastic_deform=True, alpha=(100., 350.), sigma=(40., 60.),
-                                 do_rotation=True, p_rot_per_sample=0.5,
-                                 angle_x=(-0.1, 0.1), angle_y=(0, 1e-8), angle_z=(0, 1e-8),
-                                 scale=(0.5, 1.9), p_scale_per_sample=0.5,
-                                 border_mode_data="nearest", border_mode_seg="nearest"),
+                # MirrorTransform(axes=(1,)),
+                # SpatialTransform(patch_size=self.patch_size, random_crop=False,
+                #                  patch_center_dist_from_border=self.patch_size[0] // 2,
+                #                  do_elastic_deform=True, alpha=(100., 350.), sigma=(40., 60.),
+                #                  do_rotation=True, p_rot_per_sample=0.5,
+                #                  angle_x=(-0.1, 0.1), angle_y=(0, 1e-8), angle_z=(0, 1e-8),
+                #                  scale=(0.5, 1.9), p_scale_per_sample=0.5,
+                #                  border_mode_data="nearest", border_mode_seg="nearest"),
                 NumpyToTensor(),
             ]
 

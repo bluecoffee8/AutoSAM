@@ -2,6 +2,7 @@ import pickle
 import numpy as np
 from PIL import Image
 import os
+import nibabel as nib 
 
 import torch
 import torch.nn as nn
@@ -11,6 +12,13 @@ from torchvision.transforms.functional import resize
 
 from models import HarDNet
 from models import sam_seg_model_registry2
+
+# img = Image.open('./SYNAPSE/img_processed/img0001_slice0.jpg').convert('RGB')
+# img = np.asarray(img).astype(np.float32)
+# print(img.shape)
+
+# label = np.load('./SYNAPSE/label_processed/label0001_slice70.npz')['label']
+# print(np.unique(label))
 
 # from dataset import generate_dataset
 
@@ -63,7 +71,7 @@ from models import sam_seg_model_registry2
 # print(img.shape)
 # print(label.shape)
 
-split_dir = os.path.join('ACDC', "splits.pkl")
+split_dir = os.path.join('SYNAPSE', "splits.pkl")
 with open(split_dir, "rb") as f:
     splits = pickle.load(f)
 tr_keys = splits[0]['train']

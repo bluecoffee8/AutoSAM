@@ -41,7 +41,7 @@ parser = argparse.ArgumentParser(description='PyTorch ImageNet Training')
 
 parser.add_argument('-j', '--workers', default=1, type=int, metavar='N',
                     help='number of data loading workers (default: 32)')
-parser.add_argument('--epochs', default=120, type=int, metavar='N',
+parser.add_argument('--epochs', default=5, type=int, metavar='N',
                     help='number of total epochs to run')
 parser.add_argument('--start-epoch', default=0, type=int, metavar='N',
                     help='manual epoch number (useful on restarts)')
@@ -82,22 +82,23 @@ parser.add_argument('--multiprocessing-distributed', action='store_true',
                          'multi node data parallel training')
 
 parser.add_argument('--model_type', type=str, default="vit_b", help='path to splits file')
-parser.add_argument('--src_dir', type=str, default="Kvasir-SEG/", help='path to splits file')
-parser.add_argument('--data_dir', type=str, default="Kvasir-SEG/images/", help='path to datafolder')
-parser.add_argument("--img_size", type=int, default=256)
-parser.add_argument("--classes", type=int, default=2)
+parser.add_argument('--src_dir', type=str, default="../SAMed", help='path to splits file')
+parser.add_argument('--data_dir', type=str, default="../SAMed/train_npz_new_224/", help='path to datafolder')
+parser.add_argument("--img_size", type=int, default=224)
+parser.add_argument("--classes", type=int, default=9)
 parser.add_argument("--do_contrast", default=False, action='store_true')
 parser.add_argument("--slice_threshold", type=float, default=0.05)
-parser.add_argument("--num_classes", type=int, default=2)
+parser.add_argument("--num_classes", type=int, default=9)
 parser.add_argument("--fold", type=int, default=0)
-parser.add_argument("--tr_size", type=int, default=700)
-parser.add_argument("--save_dir", type=str, default="kvasir_vit120_full")
+parser.add_argument("--tr_size", type=int, default=2211)
+parser.add_argument("--save_dir", type=str, default="synapse_vit_full")
 parser.add_argument("--load_saved_model", action='store_true',
                         help='whether freeze encoder of the segmenter')
 parser.add_argument("--saved_model_path", type=str, default=None)
 parser.add_argument("--load_pseudo_label", default=False, action='store_true')
-parser.add_argument("--dataset", type=str, default="KVASIR")
-
+parser.add_argument("--dataset", type=str, default="SYNAPSE")
+parser.add_argument("--synapse_save_path", type=str, default="./output_test/synapse_vit_full")
+parser.add_argument("--synapse_dice_weight", type=float, default=0.8)
 
 def main():
     args = parser.parse_args()
@@ -163,6 +164,8 @@ def main_worker(gpu, ngpus_per_node, args):
         model_checkpoint = 'sam_vit_l_0b3195.pth'
     elif args.model_type == 'vit_b':
         model_checkpoint = 'medsam_vit_b.pth'
+    elif args.model_type == 'vit_b_original':
+        model_checkpoint = 'sam_vit_b_01ec64.pth'
 
     model = sam_seg_model_registry[args.model_type](num_classes=args.num_classes, checkpoint=model_checkpoint)
 
@@ -239,6 +242,9 @@ def main_worker(gpu, ngpus_per_node, args):
 
     best_loss = 100
 
+    if args.dataset == 'SYNAPSE' or args.dataset == 'synapse':
+        args.print_freq = 50
+
     for epoch in range(args.start_epoch, args.epochs):
         is_best = False
         if args.distributed:
@@ -249,22 +255,25 @@ def main_worker(gpu, ngpus_per_node, args):
 
         # train for one epoch
         train(train_loader, model, optimizer, scheduler, epoch, args, writer)
-        loss = validate(val_loader, model, epoch, args, writer)
+        if args.dataset != 'SYNAPSE' and args.dataset != 'synapse':
+            loss = validate(val_loader, model, epoch, args, writer)
 
-        if loss < best_loss:
-            is_best = True
-            best_loss = loss
+            if loss < best_loss:
+                is_best = True
+                best_loss = loss
 
-        if not args.multiprocessing_distributed or (args.multiprocessing_distributed
-                and args.rank % ngpus_per_node == 0):
-            save_checkpoint({
-                'epoch': epoch + 1,
-                'state_dict': model.mask_decoder.state_dict(),
-                'optimizer' : optimizer.state_dict(),
-            }, is_best=is_best, filename=filename)
-    test(model, args)
-    if args.dataset == 'synapse':
-        test_synapse(args)
+            # if not args.multiprocessing_distributed or (args.multiprocessing_distributed
+            #         and args.rank % ngpus_per_node == 0):
+            #     save_checkpoint({
+            #         'epoch': epoch + 1,
+            #         'state_dict': model.mask_decoder.state_dict(),
+            #         'optimizer' : optimizer.state_dict(),
+            #     }, is_best=is_best, filename=filename)
+    if args.dataset != 'SYNAPSE' and args.dataset != 'synapse':
+        test(model, args)
+    
+    if args.dataset == 'synapse' or args.dataset == 'SYNAPSE':
+        test_synapse(args, model)
     elif args.dataset == 'ACDC' or args.dataset == 'acdc':
         test_acdc(args)
     elif args.dataset == 'brats':
@@ -303,8 +312,11 @@ def train(train_loader, model, optimizer, scheduler, epoch, args, writer):
         iou_pred = iou_pred.squeeze().view(b, -1)
 
         pred_softmax = F.softmax(mask, dim=1)
-        loss = ce_loss(mask, label.squeeze(1)) + dice_loss(pred_softmax, label.squeeze(1))
-               # + dice_loss(pred_softmax, label.squeeze(1))
+        if args.dataset == 'SYNAPSE' or args.dataset == 'synapse':
+            loss = (1 - args.synapse_dice_weight) * ce_loss(mask, label.squeeze(1)) + args.synapse_dice_weight * dice_loss(pred_softmax, label.squeeze(1))
+        else:
+            loss = ce_loss(mask, label.squeeze(1)) + dice_loss(pred_softmax, label.squeeze(1))
+                # + dice_loss(pred_softmax, label.squeeze(1))
 
         # acc1/acc5 are (K+1)-way contrast classifier accuracy
         # measure accuracy and record loss

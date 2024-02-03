@@ -8,7 +8,10 @@ import torch
 
 from functools import partial
 
-from .modeling import ImageEncoderViT, MaskDecoder, PromptEncoder, Sam, TwoWayTransformer
+from .sam import Sam
+from segment_anything.modeling import ImageEncoderViT, TwoWayTransformer
+from .sam_decoder import MaskDecoder
+from .prompt_encoder import PromptEncoder
 
 
 def build_sam_vit_h(checkpoint=None):
@@ -85,8 +88,8 @@ def _build_sam(
             mask_in_chans=16,
         ),
         mask_decoder=MaskDecoder(
-            # num_multimask_outputs=3,
-            num_multimask_outputs=4,
+            num_multimask_outputs=3,
+            # num_multimask_outputs=4,
             transformer=TwoWayTransformer(
                 depth=2,
                 embedding_dim=prompt_embed_dim,

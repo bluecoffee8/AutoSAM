@@ -104,5 +104,6 @@ sam_seg_model_registry = {
     "vit_h": build_sam_seg,
     "vit_l": build_sam_vit_l_seg_cnn,
     "vit_b": build_sam_vit_b_seg_cnn,
+    "vit_b_original": build_sam_vit_b_seg_cnn,
 }
 
